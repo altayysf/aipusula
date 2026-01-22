@@ -15,14 +15,20 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Pusula – En İyi Yapay Zeka Araçları (2026)",
+    default: "AI Pusula 🧭 En İyi Yapay Zeka Araçları (2026)",
     template: "%s | AI Pusula",
   },
   description:
-    "AI Pusula, en iyi yapay zeka araçlarını keşfetmen, karşılaştırman ve ihtiyacına uygun çözümleri bulman için hazırlanmış kapsamlı bir platformdur.",
+    "AI Pusula, en iyi yapay zeka araçlarını keşfetmen, karşılaştırman ve ihtiyacına uygun çözümleri bulman için hazırlanmıştır.",
+
   metadataBase: new URL("https://www.aipusula.com"),
+
   alternates: {
     canonical: "https://www.aipusula.com",
+  },
+
+  verification: {
+    google: "kerYjltAUZJCdlp7tBODEmCZuFLn8vF8mTZ435wm37g",
   },
 };
 
