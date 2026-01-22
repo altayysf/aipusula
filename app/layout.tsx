@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Pusula 🧭 En İyi Yapay Zeka Araçları (2026)",
+    default: "En İyi Yapay Zeka Araçları (2026) | AI Pusula",
     template: "%s | AI Pusula",
   },
   description:
-    "AI Pusula, en iyi yapay zeka araçlarını keşfetmen, karşılaştırman ve ihtiyacına uygun çözümleri bulman için hazırlanmıştır.",
+    "AI Pusula ile en iyi yapay zeka araçlarını keşfet, karşılaştır ve ihtiyacına en uygun AI çözümlerini anında bul. Güncel ve tarafsız liste.",
 
   metadataBase: new URL("https://www.aipusula.com"),
 
