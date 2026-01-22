@@ -32,14 +32,13 @@ export default function PageTR() {
           <section className="rounded-[28px] border border-black/10 bg-white shadow-sm px-8 py-6">
             <div className="flex items-start justify-between gap-6">
               <div className="max-w-2xl">
-                <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-                  AI Pusula <span className="ml-2">🧭</span>
+                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                  En İyi Yapay Zeka Araçları (2026)
                 </h1>
-
-                <p className="mt-3 text-gray-700">
-                  Yapay zekâ araçlarını keşfet, karşılaştır ve ihtiyacına en uygun
-                  çözümleri bul.
+                <p className="mt-2 text-gray-600">
+                  AI araçlarını keşfet, karşılaştır ve ihtiyacına en uygun çözümü bul.
                 </p>
+
 
                 <div className="mt-4 flex flex-wrap gap-3">
                   <a

@@ -30,12 +30,11 @@ export default function PageEN() {
           <section className="rounded-[28px] border border-black/10 bg-white shadow-sm px-8 py-6">
             <div className="flex items-start justify-between gap-6">
               <div className="max-w-2xl">
-                <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-                  AI Pusula <span className="ml-2">🧭</span>
+                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                    Best AI Tools (2026)
                 </h1>
-
-                <p className="mt-3 text-gray-700">
-                  Discover, compare, and choose the best AI tools for your needs.
+                <p className="mt-2 text-gray-600">
+                    Discover, compare, and pick the best AI tool for your needs.
                 </p>
 
                 <div className="mt-4 flex flex-wrap gap-3">
