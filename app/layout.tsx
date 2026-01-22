@@ -30,6 +30,32 @@ export const metadata: Metadata = {
   verification: {
     google: "kerYjltAUZJCdlpZtBoDEmCzuFLn8vF8mTZ435wm3Zg",
   },
+  openGraph: {
+  title: "En İyi Yapay Zeka Araçları (2026) | AI Pusula",
+  description:
+    "AI Pusula ile en iyi yapay zeka araçlarını keşfet, karşılaştır ve ihtiyacına en uygun AI çözümlerini anında bul.",
+  url: "https://www.aipusula.com",
+  siteName: "AI Pusula",
+  images: [
+    {
+      url: "/og.png",
+      width: 1200,
+      height: 630,
+      alt: "AI Pusula",
+    },
+  ],
+  locale: "tr_TR",
+  type: "website",
+},
+
+twitter: {
+  card: "summary_large_image",
+  title: "En İyi Yapay Zeka Araçları (2026) | AI Pusula",
+  description:
+    "AI Pusula ile en iyi yapay zeka araçlarını keşfet, karşılaştır ve ihtiyacına en uygun AI çözümleri bul.",
+  images: ["/og.png"],
+},
+
 };
 
 export default function RootLayout({
