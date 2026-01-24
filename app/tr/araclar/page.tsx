@@ -20,9 +20,8 @@ const FILTERS: { key: FilterKey; label: string }[] = [
 function normalizeCategory(value: unknown): FilterKey | null {
   const v = String(value ?? "").toLowerCase();
 
-  // Senin datandaki olası yazımlar:
-  if (v.includes("yaz")) return "yazi";          // yazı, text, writing
-  if (v.includes("gör") || v.includes("gor") || v.includes("image")) return "gorsel";
+  if (v.includes("yaz") || v.includes("text") || v.includes("write")) return "yazi";
+  if (v.includes("gör") || v.includes("gor") || v.includes("image") || v.includes("visual")) return "gorsel";
   if (v.includes("video")) return "video";
   if (v.includes("ses") || v.includes("audio") || v.includes("voice")) return "ses";
   if (v.includes("kod") || v.includes("code") || v.includes("dev")) return "kod";
@@ -36,12 +35,7 @@ export default function AllToolsTR() {
 
   const filteredTools = useMemo(() => {
     if (active === "all") return tools;
-
-    return tools.filter((t) => {
-      // tool.category senin datanda neyse ona göre normalize ediyoruz
-      const cat = normalizeCategory((t as any).category);
-      return cat === active;
-    });
+    return tools.filter((t) => normalizeCategory((t as any).category) === active);
   }, [active]);
 
   return (
@@ -62,7 +56,6 @@ export default function AllToolsTR() {
           <div className="mt-5 flex flex-wrap items-center gap-3">
             {FILTERS.map((f) => {
               const isActive = active === f.key;
-
               return (
                 <button
                   key={f.key}
@@ -80,20 +73,13 @@ export default function AllToolsTR() {
               );
             })}
 
-            <span className="text-sm text-gray-500 ml-1">
-              ({filteredTools.length})
-            </span>
+            <span className="text-sm text-gray-500 ml-1">({filteredTools.length})</span>
           </div>
 
           {/* GRID */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
             {filteredTools.map((tool) => (
-              <ToolCard
-                key={tool.slug}
-                tool={tool}
-                lang="tr"
-                href={`/tr/araclar/${tool.slug}`}
-              />
+              <ToolCard key={tool.slug} tool={tool} lang="tr" href={`/tr/araclar/${tool.slug}`} />
             ))}
           </div>
         </div>
