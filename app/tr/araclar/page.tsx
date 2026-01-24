@@ -1,7 +1,11 @@
+"use client";
+
 import Navbar from "../../../components/Navbar";
 import ToolCard from "../../../components/ToolCard";
 import { tools } from "../../../data/tools";
 import Link from "next/link";
+import { useMemo } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type CategoryKey =
   | "all"
@@ -22,20 +26,30 @@ const categories: { key: CategoryKey; label: string }[] = [
   { key: "productivity", label: "Üretkenlik" },
 ];
 
-export default function AllToolsTR({
-  searchParams,
-}: {
-  searchParams?: { cat?: string };
-}) {
-  const catRaw = searchParams?.cat;
+export default function AllToolsTR() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-  const selected: CategoryKey =
-    categories.some((c) => c.key === catRaw) ? (catRaw as CategoryKey) : "all";
+  const catRaw = searchParams.get("cat") || "all";
 
-  const filteredTools =
-    selected === "all"
-      ? tools
-      : tools.filter((t) => t.category === selected);
+  const selected: CategoryKey = categories.some((c) => c.key === catRaw)
+    ? (catRaw as CategoryKey)
+    : "all";
+
+  const filteredTools = useMemo(() => {
+    return selected === "all" ? tools : tools.filter((t) => t.category === selected);
+  }, [selected]);
+
+  function setCategory(cat: CategoryKey) {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (cat === "all") params.delete("cat");
+    else params.set("cat", cat);
+
+    const qs = params.toString();
+    router.push(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+  }
 
   return (
     <>
@@ -48,21 +62,20 @@ export default function AllToolsTR({
           </h1>
 
           <p className="mt-2 text-gray-600 text-sm">
-            Tüm yapay zekâ araçlarına göz at. Bir araca tıklayıp detay sayfasını
-            ve resmi linki gör.
+            Tüm yapay zekâ araçlarına göz at. Bir araca tıklayıp detay sayfasını ve resmi
+            linki gör.
           </p>
 
           {/* ✅ FİLTRE BAR */}
           <div className="mt-5 flex flex-wrap items-center gap-2">
             {categories.map((c) => {
               const isActive = selected === c.key;
-              const href =
-                c.key === "all" ? "/tr/araclar" : `/tr/araclar?cat=${c.key}`;
 
               return (
-                <Link
+                <button
                   key={c.key}
-                  href={href}
+                  type="button"
+                  onClick={() => setCategory(c.key)}
                   className={[
                     "rounded-full px-4 py-2 text-sm font-semibold transition shadow-sm",
                     "border border-black/15",
@@ -72,13 +85,11 @@ export default function AllToolsTR({
                   ].join(" ")}
                 >
                   {c.label}
-                </Link>
+                </button>
               );
             })}
 
-            <span className="ml-2 text-sm text-gray-500">
-              ({filteredTools.length})
-            </span>
+            <span className="ml-2 text-sm text-gray-500">({filteredTools.length})</span>
           </div>
 
           {/* ✅ GRID (YAPI AYNI) */}
@@ -91,6 +102,11 @@ export default function AllToolsTR({
                 href={`/tr/araclar/${tool.slug}`}
               />
             ))}
+          </div>
+
+          {/* İstersen küçük geri dönüş linki kalsın (opsiyonel) */}
+          <div className="mt-8 text-sm text-gray-500">
+            Seçili filtre URL’de tutulur (paylaşılabilir).
           </div>
         </div>
       </main>
