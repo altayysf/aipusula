@@ -10,7 +10,9 @@ export default function AllToolsTR() {
 
       <main className="min-h-screen bg-white">
         <div className="mx-auto max-w-6xl px-6 py-8">
-          <h1 className="text-3xl font-extrabold text-gray-900">Diğer Araçlar</h1>
+                          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+                  En İyi Yapay Zeka Araçları (2026)
+                </h1>
           <p className="mt-2 text-gray-600 text-sm">
             Tüm yapay zekâ araçlarına göz at. Bir araca tıklayıp detay sayfasını ve resmi linki gör.
           </p>
