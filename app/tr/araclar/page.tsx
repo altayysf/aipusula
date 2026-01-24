@@ -1,55 +1,48 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import Navbar from "../../../components/Navbar";
 import ToolCard from "../../../components/ToolCard";
 import { tools } from "../../../data/tools";
-import Link from "next/link";
-import { useMemo } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-type CategoryKey =
-  | "all"
-  | "text"
-  | "image"
-  | "video"
-  | "audio"
-  | "code"
-  | "productivity";
+type FilterKey = "all" | "yazi" | "gorsel" | "video" | "ses" | "kod" | "uretkenlik";
 
-const categories: { key: CategoryKey; label: string }[] = [
+const FILTERS: { key: FilterKey; label: string }[] = [
   { key: "all", label: "Tümü" },
-  { key: "text", label: "Yazı" },
-  { key: "image", label: "Görsel" },
+  { key: "yazi", label: "Yazı" },
+  { key: "gorsel", label: "Görsel" },
   { key: "video", label: "Video" },
-  { key: "audio", label: "Ses" },
-  { key: "code", label: "Kod" },
-  { key: "productivity", label: "Üretkenlik" },
+  { key: "ses", label: "Ses" },
+  { key: "kod", label: "Kod" },
+  { key: "uretkenlik", label: "Üretkenlik" },
 ];
 
+function normalizeCategory(value: unknown): FilterKey | null {
+  const v = String(value ?? "").toLowerCase();
+
+  // Senin datandaki olası yazımlar:
+  if (v.includes("yaz")) return "yazi";          // yazı, text, writing
+  if (v.includes("gör") || v.includes("gor") || v.includes("image")) return "gorsel";
+  if (v.includes("video")) return "video";
+  if (v.includes("ses") || v.includes("audio") || v.includes("voice")) return "ses";
+  if (v.includes("kod") || v.includes("code") || v.includes("dev")) return "kod";
+  if (v.includes("üret") || v.includes("uret") || v.includes("prod")) return "uretkenlik";
+
+  return null;
+}
+
 export default function AllToolsTR() {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const catRaw = searchParams.get("cat") || "all";
-
-  const selected: CategoryKey = categories.some((c) => c.key === catRaw)
-    ? (catRaw as CategoryKey)
-    : "all";
+  const [active, setActive] = useState<FilterKey>("all");
 
   const filteredTools = useMemo(() => {
-    return selected === "all" ? tools : tools.filter((t) => t.category === selected);
-  }, [selected]);
+    if (active === "all") return tools;
 
-  function setCategory(cat: CategoryKey) {
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (cat === "all") params.delete("cat");
-    else params.set("cat", cat);
-
-    const qs = params.toString();
-    router.push(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-  }
+    return tools.filter((t) => {
+      // tool.category senin datanda neyse ona göre normalize ediyoruz
+      const cat = normalizeCategory((t as any).category);
+      return cat === active;
+    });
+  }, [active]);
 
   return (
     <>
@@ -62,37 +55,37 @@ export default function AllToolsTR() {
           </h1>
 
           <p className="mt-2 text-gray-600 text-sm">
-            Tüm yapay zekâ araçlarına göz at. Bir araca tıklayıp detay sayfasını ve resmi
-            linki gör.
+            Tüm yapay zekâ araçlarına göz at. Bir araca tıklayıp detay sayfasını ve resmi linki gör.
           </p>
 
-          {/* ✅ FİLTRE BAR */}
-          <div className="mt-5 flex flex-wrap items-center gap-2">
-            {categories.map((c) => {
-              const isActive = selected === c.key;
+          {/* FILTER BAR */}
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            {FILTERS.map((f) => {
+              const isActive = active === f.key;
 
               return (
                 <button
-                  key={c.key}
+                  key={f.key}
                   type="button"
-                  onClick={() => setCategory(c.key)}
+                  onClick={() => setActive(f.key)}
                   className={[
-                    "rounded-full px-4 py-2 text-sm font-semibold transition shadow-sm",
-                    "border border-black/15",
+                    "rounded-full px-4 py-2 text-sm font-semibold border shadow-sm transition",
                     isActive
-                      ? "bg-gray-900 text-white"
-                      : "bg-white/85 text-gray-900 hover:bg-white",
+                      ? "bg-gray-900 text-white border-gray-900"
+                      : "bg-white text-gray-900 border-black/10 hover:bg-gray-50",
                   ].join(" ")}
                 >
-                  {c.label}
+                  {f.label}
                 </button>
               );
             })}
 
-            <span className="ml-2 text-sm text-gray-500">({filteredTools.length})</span>
+            <span className="text-sm text-gray-500 ml-1">
+              ({filteredTools.length})
+            </span>
           </div>
 
-          {/* ✅ GRID (YAPI AYNI) */}
+          {/* GRID */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
             {filteredTools.map((tool) => (
               <ToolCard
@@ -102,11 +95,6 @@ export default function AllToolsTR() {
                 href={`/tr/araclar/${tool.slug}`}
               />
             ))}
-          </div>
-
-          {/* İstersen küçük geri dönüş linki kalsın (opsiyonel) */}
-          <div className="mt-8 text-sm text-gray-500">
-            Seçili filtre URL’de tutulur (paylaşılabilir).
           </div>
         </div>
       </main>
