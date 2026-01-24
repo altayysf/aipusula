@@ -403,13 +403,14 @@ function InlineForm(props: {
       <div className="mt-4 grid gap-3">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <input
-            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
             placeholder="Ad Soyad"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+
             placeholder="E-posta"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -418,7 +419,7 @@ function InlineForm(props: {
 
         {type === "bug" ? (
           <input
-            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
             placeholder="Hata aldığın sayfa linki (opsiyonel)"
             value={pageUrl}
             onChange={(e) => setPageUrl(e.target.value)}
@@ -428,13 +429,13 @@ function InlineForm(props: {
         {type === "tool" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
               placeholder="Araç adı (önerilir)"
               value={toolName}
               onChange={(e) => setToolName(e.target.value)}
             />
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
               placeholder="Resmi link (https://...)"
               value={toolUrl}
               onChange={(e) => setToolUrl(e.target.value)}
@@ -445,13 +446,14 @@ function InlineForm(props: {
         {type === "offer" || type === "web" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+
               placeholder="Şirket / Marka (opsiyonel)"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
             />
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
               placeholder="Bütçe aralığı (opsiyonel)"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
@@ -460,7 +462,7 @@ function InlineForm(props: {
         ) : null}
 
         <textarea
-          className="min-h-[140px] w-full resize-none rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white"
+          className="min-h-[140px] w-full resize-none rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
           placeholder={
             type === "web"
               ? "Ne tür site istiyorsun? (ör. kurumsal, kişisel, landing page) İçerik, örnek site linkleri, istediğin özellikler…"
