@@ -34,7 +34,7 @@ export default function PrivacyTR() {
                 Son güncelleme: {updatedAt}
               </span>
               <span className="rounded-full bg-white/70 border border-black/10 px-3 py-1 text-[11px] text-gray-800 whitespace-nowrap">
-                İletişim: ysfaltay25@gmail.com
+                İletişim: aipusula2026@gmail.com
               </span>
             </div>
           </section>
@@ -135,10 +135,10 @@ export default function PrivacyTR() {
                 Gizlilik politikamızla ilgili sorularınız için bize yazın:
               </p>
               <a
-                href="mailto:ysfaltay25@gmail.com?subject=AI%20Pusula%20-%20Gizlilik%20Politikasi"
+                href="mailto:aipusula2026@gmail.com?subject=AI%20Pusula%20-%20Gizlilik%20Politikasi"
                 className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
-                ysfaltay25@gmail.com →
+                aipusula2026@gmail.com →
               </a>
             </section>
 

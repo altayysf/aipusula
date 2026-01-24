@@ -33,7 +33,7 @@ export default function PrivacyEN() {
                 Last updated: {updatedAt}
               </span>
               <span className="rounded-full bg-white/70 border border-black/10 px-3 py-1 text-[11px] text-gray-800 whitespace-nowrap">
-                Contact: ysfaltay25@gmail.com
+                Contact: aipusula2026@gmail.com
               </span>
             </div>
           </section>
@@ -131,11 +131,11 @@ export default function PrivacyEN() {
                 For questions about this policy, contact us:
               </p>
               <a
-                href="mailto:ysfaltay25@gmail.com?subject=AI%20Pusula%20-%20Privacy%20Policy"
+                href="mailto:aipusula2026@gmail.com?subject=AI%20Pusula%20-%20Privacy%20Policy"
                 className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
-                ysfaltay25@gmail.com →
-              </a>
+                aipusula2026@gmail.com →
+              </a>  
             </section>
 
             <div className="text-sm text-gray-600">
