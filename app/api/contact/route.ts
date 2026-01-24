@@ -89,7 +89,7 @@ export async function POST(req: Request) {
 
     // ✅ FROM: Resend’de doğrulanmadıysa bile çalışması için bunu kullan
     // (Sonra domain doğrulayınca from'u info@aipusula.com yaparız)
-    const from = "AI Pusula <onboarding@resend.dev>";
+    const from = "AI Pusula <info@aipusula.com>";
 
     const { error } = await resend.emails.send({
       from,
