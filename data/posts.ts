@@ -203,31 +203,82 @@ export const posts: BlogPost[] = [
   featured: true,
 },
 
-  // {
-  //   slug: "en-iyi-gorsel-olusturucular",
-  //   dateISO: "2026-02-01",
-  //   categoryTR: "Liste",
-  //   categoryEN: "List",
-  //   titleTR: "En İyi Yapay Zekâ Görsel Oluşturucular",
-  //   titleEN: "Best AI Image Generators",
-  //   excerptTR:
-  //     "DALL·E’den Midjourney’e: kalite, hız ve stil kontrolü açısından en iyi seçenekler.",
-  //   excerptEN:
-  //     "From DALL·E to Midjourney: the best options for quality, speed, and style control.",
-  //   contentTR: [
-  //     "Görsel üretimde asıl farkı yaratan şey: prompt disiplini + modelin stil gücü. Aynı istemi 2–3 farklı araçta denemek genelde en iyi sonuç veriyor.",
-  //     "Bu yazıda hem hızlı içerik üretimine uygun araçları hem de stil/kalite odaklı seçenekleri sıraladım.",
-  //     "Bonus ipucu: sonuçları tutarlı yapmak için kendi “prompt şablonunu” oluştur.",
-  //   ],
-  //   contentEN: [
-  //     "In image generation, the real difference comes from prompt discipline + the model’s stylistic strength. Testing the same prompt across 2–3 tools often yields the best outcome.",
-  //     "This post covers both fast content-ready tools and higher control/style-focused options.",
-  //     "Bonus tip: build your own prompt template for consistent results.",
-  //   ],
-  //   cover: "/blog/best-image-generators.jpg",
-  //   readingMinutes: 4,
-  //   featured: false,
-  // },
+{
+  slug: "en-iyi-gorsel-olusturucular",
+  dateISO: "2026-02-01",
+  categoryTR: "Liste",
+  categoryEN: "List",
+
+  titleTR: "En İyi Yapay Zekâ Görsel Oluşturucular (2026)",
+  titleEN: "Best AI Image Generators (2026)",
+
+  excerptTR:
+    "DALL·E’den Midjourney’e: kalite, hız ve stil kontrolü açısından 2026’da öne çıkan en iyi yapay zekâ görsel oluşturma araçları.",
+
+  excerptEN:
+    "From DALL·E to Midjourney: the top AI image generators of 2026 for quality, speed, and style control.",
+
+  contentTR: [
+    "Yapay zekâ ile görsel üretim, tasarımcılar, içerik üreticileri ve pazarlamacılar için vazgeçilmez hale geldi. Doğru aracı seçmek, hem kaliteyi hem de üretim hızını doğrudan etkiler.",
+
+    "Bu yazıda 2026 yılında kullanabileceğin en iyi yapay zekâ görsel oluşturucuları, güçlü yönleriyle birlikte sıraladım.",
+
+    "1. DALL·E",
+    "Metinden yüksek kaliteli ve yaratıcı görseller üretir. Blog kapakları ve sosyal medya görselleri için idealdir.",
+
+    "2. Midjourney",
+    "Sanatsal ve sinematik görseller üretmede çok başarılıdır.",
+
+    "3. Leonardo AI",
+    "Oyun varlıkları ve konsept tasarımlar için güçlü bir seçenektir.",
+
+    "4. Stable Diffusion",
+    "Açık kaynaklı yapısı sayesinde geniş özelleştirme imkânı sunar.",
+
+    "5. Bing Image Creator",
+    "Hızlı ve ücretsiz görsel üretimi sağlar.",
+
+    "6. Canva AI",
+    "Tasarım bilgisi olmadan profesyonel görseller oluşturmanı sağlar.",
+
+    "Görsel üretimde en iyi sonucu almak için aynı promptu birden fazla araçta denemeni öneririm.",
+
+    "Bonus ipucu: Tutarlı sonuçlar için kendi prompt şablonunu oluştur."
+  ],
+
+  contentEN: [
+    "AI image generation has become essential for designers, marketers, and content creators. Choosing the right tool impacts both quality and speed.",
+
+    "Here are the best AI image generators you can use in 2026.",
+
+    "1. DALL·E",
+    "Great for creative and high-quality images.",
+
+    "2. Midjourney",
+    "Excellent for artistic visuals.",
+
+    "3. Leonardo AI",
+    "Strong for game assets and concept art.",
+
+    "4. Stable Diffusion",
+    "Open-source and highly customizable.",
+
+    "5. Bing Image Creator",
+    "Fast and free image generation.",
+
+    "6. Canva AI",
+    "Easy-to-use design tool with AI features.",
+
+    "Test the same prompt across multiple tools for best results.",
+
+    "Bonus tip: build a prompt template for consistency."
+  ],
+
+  cover: "/blog/best-image-generators.jpg",
+  readingMinutes: 5,
+  featured: false
+},
+
 ];
 
 // yardımcı: tarihe göre sırala
