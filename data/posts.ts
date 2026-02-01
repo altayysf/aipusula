@@ -18,29 +18,97 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
-    slug: "25-ucretsiz-yapay-zeka-araci-2026",
-    dateISO: "2026-02-01",
-    categoryTR: "Liste",
-    categoryEN: "List",
-    titleTR: "25 Ücretsiz Yapay Zekâ Aracı (2026)",
-    titleEN: "25 Free AI Tools (2026)",
-    excerptTR:
-      "Yazı, görsel, video, ses ve üretkenlik için ücretsiz/deneme sunan popüler araçların derli toplu listesi.",
-    excerptEN:
-      "A curated list of popular tools offering free tiers or trials for text, image, video, audio, and productivity.",
-    contentTR: [
-      "Bu listede günlük kullanımda en çok işe yarayan AI araçlarını tek sayfada topladım. Amaç: Hızlıca karşılaştırıp ihtiyacına uygun aracı seçebilmen.",
-      "Araçları kategoriye göre ayırdım: Yazı, Görsel, Video, Ses, Kod ve Üretkenlik. Her biri için kısa kullanım önerileri ekledim.",
-      "Not: Ücret planları zamanla değişebilir. Resmi sayfadan güncel bilgiyi kontrol etmeni öneririm.",
-    ],
-    contentEN: [
-      "In this post, I gathered practical AI tools you can actually use day-to-day. The goal: help you compare quickly and pick the right one.",
-      "Tools are grouped by category: Text, Image, Video, Audio, Code, and Productivity. I also included quick usage tips.",
-      "Note: Pricing changes over time—always double-check the official pages for the latest info.",
-    ],
-    cover: "/blog/ai-tools-2024.jpg",
-    readingMinutes: 4,
-    featured: true,
+  slug: "en-iyi-ucretsiz-yapay-zeka-araclari-2026",
+  dateISO: "2026-02-01",
+  categoryTR: "Liste",
+  categoryEN: "List",
+
+  titleTR: "2026'da Kullanabileceğiniz En İyi Ücretsiz Yapay Zekâ Araçları",
+  titleEN: "Best Free AI Tools You Can Use in 2026",
+
+  excerptTR:
+    "Metin yazma, görsel üretme, video oluşturma, kodlama ve üretkenlik için ücretsiz yapay zekâ araçlarının kapsamlı ve güncel listesi.",
+
+  excerptEN:
+    "A comprehensive and updated list of free AI tools for writing, image generation, video creation, coding, and productivity.",
+
+  contentTR: [
+    "Yapay zekâ artık yalnızca büyük şirketlerin kullandığı karmaşık bir teknoloji değil. Günümüzde herkes ücretsiz yapay zekâ araçları sayesinde içerik üretebiliyor, tasarım yapabiliyor, kod yazabiliyor ve işlerini çok daha hızlı tamamlayabiliyor.",
+
+    "Bu yazıda 2026 yılında ücretsiz olarak kullanabileceğin en iyi yapay zekâ araçlarını tek bir yerde topladım. Araçları kullanım alanlarına göre gruplandırdım ve her biri için kısa açıklamalar ekledim.",
+
+    "### Metin ve İçerik Üretimi İçin AI Araçları",
+
+    "- ChatGPT: Blog yazıları, sosyal medya içerikleri, e-postalar ve fikir üretimi için en popüler araçlardan biridir.",
+    "- Google Gemini: Araştırma, özet çıkarma ve bilgi tabanlı içerikler için güçlü bir alternatiftir.",
+    "- Poe: Birden fazla yapay zekâ modelini tek platformda deneme imkânı sunar.",
+
+    "### Görsel Oluşturma İçin AI Araçları",
+
+    "- Bing Image Creator (DALL·E): Metinden görsel üretir.",
+    "- Leonardo AI: Oyun ve illüstrasyon tasarımlarında öne çıkar.",
+    "- Canva AI: Tasarım bilgisi olmadan profesyonel görseller oluşturmayı sağlar.",
+
+    "### Video Üretimi İçin AI Araçları",
+
+    "- Pictory: Metni otomatik olarak videoya dönüştürür.",
+    "- CapCut AI: Video düzenleme, altyazı ve efekt işlemleri için idealdir.",
+
+    "### Kodlama İçin AI Araçları",
+
+    "- Codeium: Ücretsiz kod tamamlama ve hata düzeltme aracı.",
+    "- GitHub Copilot: Sınırlı ücretsiz sürümü ile kod yazmayı hızlandırır.",
+
+    "### Üretkenlik ve Günlük İşler",
+
+    "- Notion AI: Not alma, özet çıkarma ve planlama.",
+    "- Otter AI: Toplantıları yazıya döker.",
+
+    "Ücretsiz yapay zekâ araçlarını seçerken ücretsiz plan sınırlarını, gizlilik politikasını ve Türkçe destek durumunu mutlaka kontrol etmelisin.",
+
+    "Sonuç olarak bu araçlar, bütçe ayırmadan dijital dünyada üretken olmak isteyen herkes için büyük avantaj sağlar."
+  ],
+
+  contentEN: [
+    "Artificial intelligence is no longer limited to big tech companies. Today, anyone can create content, design visuals, write code, and automate tasks using free AI tools.",
+
+    "In this article, I compiled the best free AI tools you can use in 2026. Tools are grouped by category with short explanations.",
+
+    "### Text & Content Creation Tools",
+
+    "- ChatGPT: Writing blogs, social posts, and emails.",
+    "- Google Gemini: Research and summaries.",
+    "- Poe: Access multiple AI models in one place.",
+
+    "### Image Generation Tools",
+
+    "- Bing Image Creator (DALL·E).",
+    "- Leonardo AI.",
+    "- Canva AI.",
+
+    "### Video Tools",
+
+    "- Pictory.",
+    "- CapCut AI.",
+
+    "### Coding Tools",
+
+    "- Codeium.",
+    "- GitHub Copilot.",
+
+    "### Productivity Tools",
+
+    "- Notion AI.",
+    "- Otter AI.",
+
+    "Always check free plan limitations and privacy policies before choosing a tool.",
+
+    "These tools help you stay productive without spending money."
+  ],
+
+  cover: "/blog/ai-tools-2026.jpg",
+  readingMinutes: 5,
+  featured: true,
   },
   {
     slug: "chatgpt-alternatifleri-en-iyi-chatbotlar",
