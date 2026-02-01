@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer({ lang }: { lang: "tr" | "en" }) {
@@ -39,7 +40,28 @@ export default function Footer({ lang }: { lang: "tr" | "en" }) {
           {/* Left */}
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-2xl bg-white/80 border border-black/10 shadow-sm flex items-center justify-center">
-              <span className="text-lg">🧭</span>
+              <span className="text-lg">
+                <span className="flex items-center gap-2 font-extrabold text-gray-900 hover:tracking-wide transition-all">
+
+<Image
+  src="/favicon.png"
+  alt="AI Pusula Logo"
+  width={26}
+  height={26}
+  className="
+    rounded-full
+    shadow-md
+    hover:scale-110
+    transition-transform
+    duration-300
+    ring-1 ring-black/10
+    hover:shadow-[0_0_12px_rgba(0,0,0,0.35)]
+
+  "
+/>
+</span>
+
+              </span>
             </div>
             <div className="leading-tight">
               <div className="font-extrabold text-gray-900">AI Pusula</div>
