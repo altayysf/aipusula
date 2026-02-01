@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { tools } from "./data/tools";
-import { posts } from "./data/posts";
+import { tools } from "../data/tools";
+import { posts } from "../data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.aipusula.com";
@@ -25,11 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolRoutesTR = tools.map((t) => `/tr/araclar/${t.slug}`);
   const toolRoutesEN = tools.map((t) => `/en/tools/${t.slug}`);
 
-  // Blog post detail pages
+  // Blog detail pages
   const blogRoutesTR = posts.map((p) => `/tr/blog/${p.slug}`);
   const blogRoutesEN = posts.map((p) => `/en/blog/${p.slug}`);
 
-  // (İsteğe bağlı) duplicate olmasın diye Set ile temizleyelim
   const allRoutes = Array.from(
     new Set([
       ...staticRoutes,
