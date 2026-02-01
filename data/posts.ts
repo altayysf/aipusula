@@ -199,7 +199,7 @@ export const posts: BlogPost[] = [
   ],
 
   cover: "/blog/chatgpt-alternatives.jpg",
-  readingMinutes: 6,
+  readingMinutes: 4,
   featured: true,
 },
 
