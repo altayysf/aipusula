@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { tools } from "../data/tools";
+import { tools } from "./data/tools";
+import { posts } from "./data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.aipusula.com";
@@ -20,15 +21,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en/privacy-policy",
   ];
 
+  // Tool detail pages
   const toolRoutesTR = tools.map((t) => `/tr/araclar/${t.slug}`);
-  const toolRoutesTR = tools.map((t) => `/tr/blog/${t.slug}`);
   const toolRoutesEN = tools.map((t) => `/en/tools/${t.slug}`);
-  const toolRoutesEN = tools.map((t) => `/en/blog/${t.slug}`);
 
-  const allRoutes = [...staticRoutes, ...toolRoutesTR, ...toolRoutesEN];
+  // Blog post detail pages
+  const blogRoutesTR = posts.map((p) => `/tr/blog/${p.slug}`);
+  const blogRoutesEN = posts.map((p) => `/en/blog/${p.slug}`);
+
+  // (İsteğe bağlı) duplicate olmasın diye Set ile temizleyelim
+  const allRoutes = Array.from(
+    new Set([
+      ...staticRoutes,
+      ...toolRoutesTR,
+      ...toolRoutesEN,
+      ...blogRoutesTR,
+      ...blogRoutesEN,
+    ])
+  );
+
+  const now = new Date();
 
   return allRoutes.map((path) => ({
     url: `${baseUrl}${path}`,
-    lastModified: new Date(),
+    lastModified: now,
   }));
 }
