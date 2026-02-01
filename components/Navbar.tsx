@@ -38,6 +38,10 @@ export default function Navbar({ lang }: { lang: "tr" | "en" }) {
             {lang === "tr" ? "Hakkımızda" : "About"}
           </Link>
 
+          <Link href={lang === "tr" ? "/tr/blog" : "/en/blog"} className="hover:underline">
+            {lang === "tr" ? "Blog" : "Blog"}
+          </Link>
+
           <Link href={lang === "tr" ? "/en" : "/tr"} className="hover:underline">
             {lang === "tr" ? "EN" : "TR"}
           </Link>
