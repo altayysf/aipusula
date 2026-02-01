@@ -13,6 +13,9 @@ export default function Navbar({ lang }: { lang: "tr" | "en" }) {
             {lang === "tr" ? "Yapay Zeka Araçları" : "AI Tools"}
           </Link>
 
+          <Link href="/tr/hakkimizda">Hakkımızda</Link>
+
+
           <Link href={lang === "tr" ? "/en" : "/tr"} className="hover:underline">
             {lang === "tr" ? "EN" : "TR"}
           </Link>
