@@ -281,7 +281,7 @@ export const posts: BlogPost[] = [
 
         {
           slug: "yapay-zeka-nedir",
-          dateISO: "2026-02-01",
+          dateISO: "2026-02-02",
           categoryTR: "Rehber",
           categoryEN: "Guide",
 
