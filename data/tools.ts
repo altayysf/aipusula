@@ -425,8 +425,8 @@ export const tools: Tool[] = [
     "Murf AI; metinleri doğal ve profesyonel seslere dönüştürmeye odaklanan bir yapay zekâ seslendirme platformudur. Podcast, video, reklam ve eğitim içerikleri için farklı dillerde ve tonlarda ses seçenekleri sunar.",
   detailEN:
     "Murf AI is a text-to-speech platform that converts text into natural and professional-sounding voices. It’s widely used for podcasts, videos, ads, and educational content with multiple languages and voice styles.",
-  logo: "/logos/murf.png",
-  screenshots: ["/screenshots/murf-1.png"],
+  logo: "/logos/murfai.png",
+  screenshots: ["/screenshots/murfai-1.png"],
   featured: false,
   },
 
