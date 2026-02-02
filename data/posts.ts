@@ -289,7 +289,7 @@ export const posts: BlogPost[] = [
           titleEN: "What Is Artificial Intelligence? Let’s Simply Explain the Technology Shaping the Future",
 
           excerptTR:
-            "Yapay zekâ nedir, yapay zekâ nasıl çalışır, yapay zekâ kullanım alanları ve örnekleri hakkında basit anlatım.",
+            "Yapay zeka nedir, yapay zeka nasıl çalışır, yapay zekâ kullanım alanları ve örnekleri hakkında basit anlatım.",
 
           excerptEN:
             "What is artificial intelligence, how does AI work, AI use cases and examples explained simply.",
