@@ -24,27 +24,42 @@ export default function AboutTR() {
             </h1>
 
             <p className="mt-4 text-gray-700">
-              AI Pusula, kullanıcıların ihtiyaçlarına en uygun yapay zekâ
-              araçlarını keşfetmesini, karşılaştırmasını ve doğru aracı
-              seçmesini kolaylaştırmak amacıyla oluşturulmuş bir yapay zekâ
-              araçları rehberidir.
+              AI Pusula, kullanıcıların ihtiyaçlarına en uygun yapay zekâ araçlarını 
+              kolayca keşfetmesini, karşılaştırmasını ve bilinçli seçimler yapmasını 
+              sağlamak amacıyla oluşturulmuş kapsamlı bir yapay zekâ araçları rehberidir.
             </p>
 
             <p className="mt-4 text-gray-700">
-              Sitemizde; yazı yazma, görsel üretim, video oluşturma, ses
-              düzenleme, kodlama ve üretkenlik gibi farklı kategorilerdeki
-              yapay zekâ araçlarını bir arada bulabilirsiniz.
+              Sitemizde; içerik üretimi, görsel tasarım, video oluşturma, ses düzenleme, kodlama, 
+              pazarlama, otomasyon ve üretkenlik gibi birçok farklı alanda kullanılan 
+              yapay zekâ araçlarını detaylı incelemelerle bulabilirsiniz. Her araç; kullanım alanı, 
+              öne çıkan özellikleri, avantajları ve potansiyel kullanım senaryoları ile birlikte 
+              sunulmaktadır.
             </p>
 
             <p className="mt-4 text-gray-700">
-              Amacımız; hem bireysel kullanıcılar hem de işletmeler için
-              güvenilir, güncel ve anlaşılır bir yapay zekâ kaynak merkezi
-              oluşturmaktır.
+              AI Pusula’nın temel hedefi, hem bireysel kullanıcılar hem de işletmeler için güvenilir, 
+              güncel ve anlaşılır bir yapay zekâ kaynak merkezi oluşturmaktır. 
+              Yapay zekâ dünyasında hızla ortaya çıkan yeni çözümleri takip ederek, 
+              kullanıcılarımıza doğru ve tarafsız bilgiler sunmayı önceliğimiz olarak görüyoruz.
             </p>
 
             <p className="mt-4 text-gray-700">
-              AI Pusula sürekli gelişen bir projedir. Yeni araçlar düzenli
-              olarak eklenir ve içerikler güncellenir.
+              Ayrıca blog bölümümüzde; yapay zekâ trendleri, rehberler, karşılaştırmalar, 
+              kullanım ipuçları ve sektörel analizler gibi içeriklere düzenli olarak yer veriyoruz. 
+              Amacımız, yapay zekâyı herkes için daha erişilebilir ve anlaşılır hale getirmek.
+            </p>
+
+            <p className="mt-4 text-gray-700">
+              AI Pusula sürekli gelişen bir projedir. Yeni araçlar düzenli olarak eklenir, 
+              mevcut içerikler güncellenir ve kullanıcı geri bildirimleri doğrultusunda site 
+              sürekli iyileştirilir.
+            </p>
+
+            <p className="mt-4 text-gray-700">
+              Eğer yapay zekâ araçlarını daha verimli kullanmak, doğru aracı hızlıca bulmak ve 
+              teknolojinin sunduğu fırsatlardan en iyi şekilde yararlanmak istiyorsanız, 
+              AI Pusula sizin için doğru adrestir.
             </p>
 
             <p className="mt-4 text-gray-700">
