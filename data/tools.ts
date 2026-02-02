@@ -413,4 +413,21 @@ export const tools: Tool[] = [
     logo: "/logos/canva.png",
     screenshots: ["/screenshots/canva-1.png"],
   },
+  {
+  slug: "murf-ai",
+  name: "Murf AI",
+  website: "https://murf.ai/",
+  category: "audio",
+  pricing: "freemium",
+  taglineTR: "Gerçekçi yapay zekâ seslendirme ve metin okuma aracı.",
+  taglineEN: "AI voice generator with realistic text-to-speech.",
+  detailTR:
+    "Murf AI; metinleri doğal ve profesyonel seslere dönüştürmeye odaklanan bir yapay zekâ seslendirme platformudur. Podcast, video, reklam ve eğitim içerikleri için farklı dillerde ve tonlarda ses seçenekleri sunar.",
+  detailEN:
+    "Murf AI is a text-to-speech platform that converts text into natural and professional-sounding voices. It’s widely used for podcasts, videos, ads, and educational content with multiple languages and voice styles.",
+  logo: "/logos/murf.png",
+  screenshots: ["/screenshots/murf-1.png"],
+  featured: false,
+  },
+
 ];
