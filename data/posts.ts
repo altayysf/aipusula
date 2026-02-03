@@ -446,6 +446,79 @@ export const posts: BlogPost[] = [
           featured: false
         },
 
+        {
+          slug: "yeni-nesil-yapay-zeka-gemini",
+          dateISO: "2026-02-03",
+          categoryTR: "Rehber",
+          categoryEN: "Guide",
+
+          titleTR: "Google Gemini Hakkında Bilmeniz Gereken Her Şey: Gelecek Kapımızda!",
+          titleEN: "Everything You Need to Know About Google Gemini: The Future is Here!",
+
+          excerptTR:
+            "Yeni Dijital Asistanım Gemini: Hayatımı Nasıl Kolaylaştırıyor?",
+
+          excerptEN:
+            "My New Digital Assistant, Gemini: How It’s Making My Life Easier",
+
+          contentTR: [
+            "Yapay Zekanın En İnsancıl Hali: Gemini ile Tanışın",
+
+            "Selamlar! Bugün blogda biraz gelecekten, ama aslında tam şu an avucumuzun içinde olan bir devrimden bahsetmek istiyorum. Son zamanlarda her yerde duyduğunuz o kelime: Gemini.",
+
+            "Peki, nedir bu Gemini? Sadece bir chatbot mu, yoksa dijital dünyadaki sağ kolumuz mu? Gelin, lafı teknik terimlere boğmadan, bir dost meclisinde anlatır gibi bu yeni nesil yapay zekayı size tanıtayım.",
+
+            "Sadece Kelimelerle Değil, Dünyayla Konuşuyor",
+            "Gemini’yi diğerlerinden ayıran en büyük fark multimodal olması. Yani sadece yazdığınız metinleri anlamıyor; görselleri inceliyor, videoları analiz ediyor ve hatta karmaşık kodları bir yazılımcı titizliğiyle çözebiliyor. Ona bir buzdolabı fotoğrafı atıp Buradaki malzemelerle ne pişirebilirim? dediğinizde size sadece tarif vermiyor, o anki modunuza en uygun yemeği öneriyor.",
+
+            "Neden Gemini Kullanmalıyız?",
+
+            "Bir blog yazarı, bir öğrenci ya da yoğun bir çalışan olun; Gemini’nin hayatınıza dokunacağı o kadar çok alan var ki:",
+            "- Yaratıcılık Tıkanıklığını Açar: Bugün ne yazsam? diye ekranın başında saatlerce beklediğiniz o anlarda, Gemini size onlarca farklı fikirle geri döner.",
+            "- Bilgiyi Saniyeler İçinde Süzgeçten Geçirir: Uzun bir makaleyi veya karmaşık bir raporu ona verin, size en can alıcı noktaları üç maddede özetlesin.",
+            "- Her Zaman Yanınızda: Google ekosistemiyle (Drive, Gmail, Haritalar) entegre çalıştığı için, Geçen ay gelen o maildeki toplantı notları neredeydi? diye sormanız yeterli.",
+            
+            "Korkmalı mıyız? Değil, Nasıl Kullanmalıyız?",
+
+            "Yapay zeka dendiğinde hepimizde hafif bir Robotlar dünyayı mı ele geçirecek? çekincesi oluşuyor, kabul edelim. Ama Gemini’yi tanıdıkça görüyorsunuz ki o dünyayı ele geçirmek için değil, sizin dünyanızı genişletmek için burada. O, sizin yerinize düşünen bir mekanizma değil; sizin düşüncelerinizi hızlandıran bir katalizör.",
+
+            "Sonuç Olarak...",
+
+            "Gemini benim için sadece bir teknoloji değil, bir keşif yolculuğu. Sınırları sizin hayal gücünüzle çizilen bu dünyada, öğrenmek hiç bu kadar keyifli olmamıştı. Eğer hala denemediyseniz, bir selam vererek başlayın derim. Belki de bir sonraki projenizin gizli kahramanı o olur!",
+
+          ],
+
+          contentEN: [
+            "The Most Human Side of AI: Meet Gemini",
+
+            "Greetings! Today on the blog, I want to talk about a revolution that feels like the future but is actually right in the palm of our hands. That word you've been hearing everywhere lately: Gemini.",
+
+            "So, what is this Gemini? Is it just a chatbot, or is it our right-hand man in the digital world? Let me introduce you to this next-generation AI without drowning you in technical jargon, just like we're chatting among friends.",
+
+            "It Doesn't Just Speak with Words, It Speaks with the World",
+            "The biggest difference that sets Gemini apart from others is that it's 'multimodal.' This means it doesn't just understand the text you write; it examines images, analyzes videos, and can even solve complex code with the precision of a software developer. When you send it a photo of your fridge and ask, 'What can I cook with these ingredients?', it doesn't just give you a recipe—it suggests the most suitable meal for your current mood.",
+
+            "Why Should We Use Gemini?",
+
+            "Whether you're a blogger, a student, or a busy professional, there are so many areas where Gemini can touch your life:",
+            "- Breaks Through Creative Blocks: In those moments when you sit in front of the screen for hours wondering 'What should I write today?', Gemini comes back to you with dozens of different ideas.",
+            "- Filters Information in Seconds: Give it a long article or a complex report, and let it summarize the most crucial points in just three bullets.",
+            "- Always by Your Side: Since it works integrated with the Google ecosystem (Drive, Gmail, Maps), simply asking 'Where were those meeting notes from that email last month?' is enough.",
+
+            "Should We Be Afraid? No, How Should We Use It?",
+
+            "Let's admit it, when AI is mentioned, we all get a slight 'Are robots going to take over the world?' hesitation. But as you get to know Gemini, you see that it's not here to take over the world, but to expand yours. It's not a mechanism that thinks instead of you; it's a catalyst that accelerates your own thoughts.",
+
+            "In Conclusion...",
+
+            "For me, Gemini is not just a technology, it's a journey of discovery. In this world where the boundaries are drawn by your imagination, learning has never been this enjoyable. If you haven't tried it yet, I say start by just saying hello. Maybe it will be the secret hero of your next project!"
+          ],
+
+          cover: "/blog/ai-tools-gemini.jpg",
+          readingMinutes: 4,
+          featured: true,
+          },
+
 ];
 
 // yardımcı: tarihe göre sırala
