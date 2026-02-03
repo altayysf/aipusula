@@ -19,6 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en/about",
     "/en/contact",
     "/en/privacy-policy",
+
+    // ✅ favicon / icons (Google'ın daha hızlı keşfetmesi için)
+    "/favicon.ico",
+    "/icon.png",
   ];
 
   // Tool detail pages
