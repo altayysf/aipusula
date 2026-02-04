@@ -627,9 +627,8 @@ export const posts: BlogPost[] = [
             "5. Gamma: Sunum ve Web Tasarımında Yeni Standart",
             "Geleneksel slayt hazırlama yöntemleri 2026'da artık çok yavaş kalıyor. Gamma ile sadece bir fikir veya PDF dokümanı yükleyerek saniyeler içinde etkileşimli, mobil uyumlu ve görsel olarak kusursuz sunumlar oluşturabilirsiniz. Tasarım için harcayacağınız 4 saati, içeriği optimize etmek için 15 dakikaya indirebilirsiniz.",
 
-            "Özetle, 2026 yılındaki verimlilik yarışı hangi araca sahip olduğunuzla değil, bu araçları birbirine nasıl entegre ettiğinizle ilgili. Bu 5 araç, size her ay yaklaşık bir çalışma haftası kadar zaman kazandırabilir.",
+            "Özetle, 2026 yılındaki verimlilik yarışı hangi araca sahip olduğunuzla değil, bu araçları birbirine nasıl entegre ettiğinizle ilgili. Bu 5 araç, size her ay yaklaşık bir çalışma haftası kadar zaman kazandırabilir."
 
-            "Siz iş yükünüzü hafifletmek için hangi araçları kullanıyorsunuz? Deneyimlerinizi yorumlarda paylaşın!"
           ],
 
           contentEN: [
@@ -650,9 +649,8 @@ export const posts: BlogPost[] = [
             "5. Gamma: The New Standard in Presentation and Web Design",
             "Traditional slide creation is too slow for 2026. With Gamma, you can generate interactive, mobile-responsive, and visually stunning presentations in seconds just by uploading a prompt or a PDF. Turn 4 hours of design work into 15 minutes of content optimization.",
 
-            "In summary, the productivity race in 2026 is not about which tool you own, but how you integrate them. These 5 tools can save you approximately one full work week every month.",
+            "In summary, the productivity race in 2026 is not about which tool you own, but how you integrate them. These 5 tools can save you approximately one full work week every month."
 
-            "Which tools are you using to lighten your workload? Share your experiences in the comments!"
           ],
 
           cover: "/blog/is-yukunu-azaltan-ai-2026.jpg",
