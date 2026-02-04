@@ -519,6 +519,83 @@ export const posts: BlogPost[] = [
           featured: true,
           },
 
+          {
+          slug: "yapay-zeka-ile-para-kazanma",
+          dateISO: "2026-02-04",
+          categoryTR: "Rehber",
+          categoryEN: "Guide",
+
+          titleTR: "Yapay Zekâ ile Nasıl Para Kazanılır? (2026 Rehberi – Yeni Başlayanlar İçin)",
+          titleEN: "How to Make Money with AI (2026 Guide for Beginners)",
+
+          excerptTR:
+            "Yapay zekâ ile para kazanma yolları, kullanılan araçlar ve yeni başlayanlar için uygulanabilir yöntemler.",
+          excerptEN:
+            "Practical ways to make money with AI, tools to use, and beginner-friendly methods.",
+
+          contentTR: [
+            "Yapay zekâ artık yalnızca teknoloji meraklılarının kullandığı bir alan değil. Bugün internet bağlantısı olan herkes yapay zekâ araçlarını kullanarak gelir elde edebilir.",
+            "Bu rehberde, yapay zekâ ile para kazanmanın en etkili ve uygulanabilir yollarını adım adım anlatıyoruz.",
+
+            "Yapay zekâ ile para kazanmanın en büyük avantajı, başlangıç maliyetinin çok düşük olmasıdır.",
+
+            "1. Yapay Zekâ ile Blog Yazarlığı",
+            "AI araçlarıyla blog içerikleri üretebilir, Adsense ve affiliate gelirleri elde edebilirsin.",
+
+            "2. Sosyal Medya İçerik Üretimi",
+            "Kısa videolar, görseller ve postlar oluşturarak markalarla çalışabilirsin.",
+
+            "3. Freelance Hizmetler",
+            "Metin yazarlığı, görsel üretim, çeviri ve video düzenleme hizmetleri sunabilirsin.",
+
+            "4. Yapay Zekâ ile E-Ticaret",
+            "Ürün açıklamaları ve reklam metinleri hazırlayabilirsin.",
+
+            "5. YouTube Kanalı Açmak",
+            "Yapay zekâ destekli videolar oluşturabilirsin.",
+
+            "6. Dijital Ürün Satışı",
+            "E-kitap, prompt paketi ve şablon satabilirsin.",
+
+            "Başarılı olmak için süreklilik ve deneme önemlidir.",
+
+            "Yapay zekâ bir sihirli değnek değil ama doğru kullanıldığında güçlü bir kazanç aracıdır."
+          ],
+
+          contentEN: [
+            "AI is no longer just for tech enthusiasts. Today, anyone with an internet connection can use AI tools to generate income.",
+            "This guide explains the most practical ways to make money with AI.",
+
+            "One of the biggest advantages of making money with AI is low startup cost.",
+
+            "1. AI Blogging",
+            "Create content using AI and earn from ads and affiliates.",
+
+            "2. Social Media Content Creation",
+            "Create short videos and images for brands.",
+
+            "3. Freelance Services",
+            "Offer writing, design, translation, or video editing.",
+
+            "4. AI for E-commerce",
+            "Create product descriptions and ad copies.",
+
+            "5. Start a YouTube Channel",
+            "Create AI-powered videos.",
+
+            "6. Sell Digital Products",
+            "Sell ebooks, prompt packs, and templates.",
+
+            "Consistency is key.",
+
+            "AI is not magic, but it can become a powerful income tool."
+          ],
+
+          cover: "/blog/make-money-with-ai.jpg",
+          readingMinutes: 6,
+          featured: true
+        },
+
 ];
 
 // yardımcı: tarihe göre sırala
