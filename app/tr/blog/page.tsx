@@ -34,13 +34,6 @@ export default function BlogTRPage() {
             ))}
           </div>
 
-          {/* Adsense örnek slot (istersen sonra açarız)
-          <Adsense
-            client="ca-pub-XXXXXXXXXXXX"
-            slot="1234567890"
-            className="mt-10"
-          />
-          */}
         </div>
       </main>
     </>
