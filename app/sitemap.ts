@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en/privacy-policy",
 
     // ✅ favicon / icons (Google'ın daha hızlı keşfetmesi için)
-    "/favicon.ico",
+    "/favicon-2026.ico",
     "/icon.png",
   ];
 
