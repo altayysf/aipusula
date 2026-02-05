@@ -2,7 +2,7 @@ import Navbar from "../../../components/Navbar";
 import Link from "next/link";
 
 export default function PrivacyTR() {
-  const updatedAt = "16 Ocak 2026";
+  const updatedAt = "05 Şubat 2026";
 
   return (
     <>

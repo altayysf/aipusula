@@ -2,7 +2,7 @@ import Navbar from "../../../components/Navbar";
 import Link from "next/link";
 
 export default function PrivacyEN() {
-  const updatedAt = "January 16, 2026";
+  const updatedAt = "February 05, 2026";
 
   return (
     <>
