@@ -1,26 +1,42 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Navbar from "../../components/Navbar";
 import ToolCard from "../../components/ToolCard";
 import { tools } from "../../data/tools";
 
+type FilterKey = "all" | "yazi" | "gorsel" | "video" | "ses" | "kod" | "uretkenlik";
 
-function getDailyFive(all: typeof tools) {
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-  let seed = 0;
-  for (let i = 0; i < today.length; i++) seed += today.charCodeAt(i);
+const FILTERS: { key: FilterKey; label: string }[] = [
+  { key: "all", label: "Tümü" },
+  { key: "yazi", label: "Yazı" },
+  { key: "gorsel", label: "Görsel" },
+  { key: "video", label: "Video" },
+  { key: "ses", label: "Ses" },
+  { key: "kod", label: "Kod" },
+  { key: "uretkenlik", label: "Üretkenlik" },
+];
 
-  const shuffled = [...all].sort((a, b) => {
-    const aHash =
-      a.slug.split("").reduce((s, c) => s + c.charCodeAt(0), seed) % 1000;
-    const bHash =
-      b.slug.split("").reduce((s, c) => s + c.charCodeAt(0), seed) % 1000;
-    return aHash - bHash;
-  });
+function normalizeCategory(value: unknown): FilterKey | null {
+  const v = String(value ?? "").toLowerCase();
 
-  return shuffled.slice(0, 5);
+  if (v.includes("yaz") || v.includes("text") || v.includes("write")) return "yazi";
+  if (v.includes("gör") || v.includes("gor") || v.includes("image") || v.includes("visual")) return "gorsel";
+  if (v.includes("video")) return "video";
+  if (v.includes("ses") || v.includes("audio") || v.includes("voice")) return "ses";
+  if (v.includes("kod") || v.includes("code") || v.includes("dev")) return "kod";
+  if (v.includes("üret") || v.includes("uret") || v.includes("prod")) return "uretkenlik";
+
+  return null;
 }
 
-export default function PageTR() {
-  const dailyFive = getDailyFive(tools);
+export default function AllToolsTR() {
+  const [active, setActive] = useState<FilterKey>("all");
+
+  const filteredTools = useMemo(() => {
+    if (active === "all") return tools;
+    return tools.filter((t) => normalizeCategory((t as any).category) === active);
+  }, [active]);
 
   return (
     <>
@@ -28,84 +44,44 @@ export default function PageTR() {
 
       <main className="min-h-screen bg-white">
         <div className="mx-auto max-w-6xl px-6 py-8">
-          {/* HERO (daha dar) */}
-          <section className="rounded-[28px] border border-black/10 bg-white shadow-sm px-8 py-6">
-            <div className="flex items-start justify-between gap-6">
-              <div className="max-w-2xl">
-                <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-                  En İyi Yapay Zeka Araçları (2026)
-                </h1>
-                <p className="mt-2 text-gray-600">
-                  AI araçlarını keşfet, karşılaştır ve ihtiyacına en uygun çözümü bul.
-                </p>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
+            En İyi Yapay Zeka Araçları (2026)
+          </h1>
 
+          <p className="mt-2 text-gray-600 text-sm">
+            Tüm yapay zekâ araçlarına göz at. Bir araca tıklayıp detay sayfasını ve resmi linki gör.
+          </p>
 
-                <div className="mt-4 flex flex-wrap gap-3">
-                  <a
-                    href="/tr/araclar"
-                    className="rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm text-gray-900 hover:bg-gray-50 transition"
-                  >
-                    Diğer araçları gör →
-                  </a>
-                  <a
-                    href="/en"
-                    className="rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm text-gray-900 hover:bg-gray-50 transition"
-                  >
-                    English version
-                  </a>
-                </div>
-              </div>
-
-              <div className="hidden md:flex gap-3 shrink-0">
-                <a
-                  href="/tr/araclar"
-                  className="rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm text-gray-900 hover:bg-gray-50 transition"
+          {/* FILTER BAR */}
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            {FILTERS.map((f) => {
+              const isActive = active === f.key;
+              return (
+                <button
+                  key={f.key}
+                  type="button"
+                  onClick={() => setActive(f.key)}
+                  className={[
+                    "rounded-full px-4 py-2 text-sm font-semibold border shadow-sm transition",
+                    isActive
+                      ? "bg-gray-900 text-white border-gray-900"
+                      : "bg-white text-gray-900 border-black/10 hover:bg-gray-50",
+                  ].join(" ")}
                 >
-                  Diğer Araçlar →
-                </a>
-                <a
-                  href="/en"
-                  className="rounded-full border border-black/10 bg-white px-4 py-2.5 text-sm text-gray-900 hover:bg-gray-50 transition"
-                >
-                  EN
-                </a>
-              </div>
-            </div>
-          </section>
+                  {f.label}
+                </button>
+              );
+            })}
 
-          {/* Başlık */}
-          <section className="mt-7">
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <h2 className="text-3xl font-extrabold text-gray-900">
-                  Editör Seçimi: Günün 5 Aracı
-                </h2>
-                <p className="mt-2 text-gray-600 text-sm">
-                  Seçkiler günlük güncellenir; sıralama kişisel kullanım/ilgiye göre değişebilir.
-                </p>
-              </div>
+            <span className="text-sm text-gray-500 ml-1">({filteredTools.length})</span>
+          </div>
 
-              <a
-                href="/tr/araclar"
-                className="text-sm text-gray-800 hover:underline"
-              >
-                Diğer araçlar →
-              </a>
-            </div>
-
-            {/* 5 kart (aynı boyut, daha kibar) */}
-            <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-5">
-              {dailyFive.map((tool) => (
-                <ToolCard
-                  key={tool.slug}
-                  tool={tool}
-                  lang="tr"
-                  href={`/tr/araclar/${tool.slug}`}
-                  badge="featured"
-                />
-              ))}
-            </div>
-          </section>
+          {/* GRID */}
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
+            {filteredTools.map((tool) => (
+              <ToolCard key={tool.slug} tool={tool} lang="tr" href={`/tr/araclar/${tool.slug}`} />
+            ))}
+          </div>
         </div>
       </main>
     </>

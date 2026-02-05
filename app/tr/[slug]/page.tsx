@@ -1,10 +1,10 @@
-import Navbar from "../../../../components/Navbar";
-import { tools } from "../../../../data/tools";
+import Navbar from "../../../components/Navbar";
+import { tools } from "../../../data/tools";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { tCategory, tPricing } from "../../../../components/i18n";
-import ScreenshotGrid from "../../../../components/ScreenshotGrid";
+import { tCategory, tPricing } from "../../../components/i18n";
+import ScreenshotGrid from "../../../components/ScreenshotGrid";
 
 function themeBySlug(slug: string) {
   const themes = [
