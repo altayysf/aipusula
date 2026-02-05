@@ -809,9 +809,8 @@ export const posts: BlogPost[] = [
             "7. Poe: Hepsi Bir Arada Platform",
             "Quora tarafından geliştirilen Poe; Claude, Gemini, GPT-4 ve daha birçok farklı modeli tek bir arayüzde ücretsiz olarak denemenize imkan tanıyor. Farklı yapay zekaları karşılaştırmak isteyen kullanıcılar için en iyi hub noktası.",
 
-            "Sonuç olarak, 2026 yılında kaliteli bir yapay zeka hizmeti almak için mutlaka cüzdanınızı açmanıza gerek yok. İhtiyacınıza göre bu 7 araçtan birini seçerek iş akışınızı profesyonelce yönetebilirsiniz.",
+            "Sonuç olarak, 2026 yılında kaliteli bir yapay zeka hizmeti almak için mutlaka cüzdanınızı açmanıza gerek yok. İhtiyacınıza göre bu 7 araçtan birini seçerek iş akışınızı profesyonelce yönetebilirsiniz."
 
-            "Sizin favori ücretsiz yapay zeka aracınız hangisi? Yorumlarda buluşalım!"
           ],
 
           contentEN: [
@@ -838,9 +837,8 @@ export const posts: BlogPost[] = [
             "7. Poe: All-in-One Platform",
             "Developed by Quora, Poe allows you to try many different models like Claude, Gemini, and GPT-4 for free in a single interface. The best hub for users who want to compare different AIs.",
 
-            "In conclusion, you don't necessarily need to open your wallet to get quality AI service in 2026. By choosing one of these 7 tools based on your needs, you can manage your workflow professionally.",
-
-            "Which is your favorite free AI tool? Let's meet in the comments!"
+            "In conclusion, you don't necessarily need to open your wallet to get quality AI service in 2026. By choosing one of these 7 tools based on your needs, you can manage your workflow professionally."
+            
           ],
 
           cover: "/blog/ucretsiz-yapay-zeka-2026.jpg",
