@@ -24,8 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Tool detail pages
-  const toolRoutesTR = tools.map((t) => `/tr/araclar/${t.slug}`);
-  const toolRoutesEN = tools.map((t) => `/en/tools/${t.slug}`);
+  const toolRoutesTR = tools.map((t) => `/tr/${t.slug}`);
+  const toolRoutesEN = tools.map((t) => `/en/${t.slug}`);
 
   // Blog detail pages
   const blogRoutesTR = posts.map((p) => `/tr/blog/${p.slug}`);
