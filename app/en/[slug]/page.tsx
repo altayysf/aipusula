@@ -1,10 +1,10 @@
-import Navbar from "../../../../components/Navbar";
-import { tools } from "../../../../data/tools";
+import Navbar from "../../../components/Navbar";
+import { tools } from "../../../data/tools";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { tCategory, tPricing } from "../../../../components/i18n";
-import ScreenshotGrid from "../../../../components/ScreenshotGrid";
+import { tCategory, tPricing } from "../../../components/i18n";
+import ScreenshotGrid from "../../../components/ScreenshotGrid";
 
 function themeBySlug(slug: string) {
   const themes = [
@@ -18,7 +18,7 @@ function themeBySlug(slug: string) {
   return themes[h % themes.length];
 }
 
-export default async function ToolDetailTR({
+export default async function ToolDetailEN({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -31,22 +31,22 @@ export default async function ToolDetailTR({
 
   return (
     <>
-      <Navbar lang="tr" />
+      <Navbar lang="en" />
 
       <main className="min-h-screen bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
           <div className="text-sm text-gray-600 mb-6">
-            <Link href="/tr" className="hover:underline">
-              Ana Sayfa
+            <Link href="/en" className="hover:underline">
+              Home
             </Link>{" "}
             /{" "}
-            <Link href="/tr/araclar" className="hover:underline">
-              Araçlar
+            <Link href="/en/tools" className="hover:underline">
+              Tools
             </Link>{" "}
             / <span className="text-gray-900 font-medium">{tool.name}</span>
           </div>
 
-          {/* ÜST KART */}
+          {/* TOP CARD */}
           <section
             className={[
               "rounded-[32px] border bg-gradient-to-r p-7",
@@ -77,18 +77,18 @@ export default async function ToolDetailTR({
                   <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
                     {tool.name}
                   </h1>
-                  <p className="mt-2 text-gray-800/80">{tool.taglineTR}</p>
+                  <p className="mt-2 text-gray-800/80">{tool.taglineEN}</p>
 
                   <p className="mt-4 text-gray-800 leading-relaxed max-w-2xl">
-                    {tool.detailTR}
+                    {tool.detailEN}
                   </p>
 
                   <div className="mt-5 flex items-center gap-2">
                     <span className="rounded-full bg-white/70 border border-black/10 px-3 py-1 text-[11px] text-gray-800 whitespace-nowrap">
-                      {tCategory("tr", tool.category)}
+                      {tCategory("en", tool.category)}
                     </span>
                     <span className="rounded-full bg-white/70 border border-black/10 px-3 py-1 text-[11px] text-gray-800 whitespace-nowrap">
-                      {tPricing("tr", tool.pricing)}
+                      {tPricing("en", tool.pricing)}
                     </span>
                   </div>
                 </div>
@@ -101,14 +101,14 @@ export default async function ToolDetailTR({
                   rel="noopener noreferrer"
                   className="rounded-full bg-gray-900 text-white px-6 py-3 text-sm font-medium hover:bg-black transition"
                 >
-                  Resmi siteye git →
+                  Visit official site →
                 </a>
 
                 <Link
-                  href="/tr/araclar"
+                  href="/en/tools"
                   className="rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
                 >
-                  Diğer araçlara dön
+                  Back to other tools
                 </Link>
               </div>
             </div>
@@ -119,10 +119,10 @@ export default async function ToolDetailTR({
             <div className="flex items-end justify-between">
               <div>
                 <h2 className="text-2xl font-extrabold text-gray-900">
-                  Ekran Görüntüsü
+                  Screenshots
                 </h2>
                 <p className="mt-2 text-gray-600">
-                  Görsele tıklayıp büyütebilirsiniz.
+                  Click an image to zoom in.
                 </p>
               </div>
 
@@ -132,7 +132,7 @@ export default async function ToolDetailTR({
                 rel="noopener noreferrer"
                 className="text-sm text-gray-800 hover:underline"
               >
-                Resmi site →
+                Official site →
               </a>
             </div>
 

@@ -79,7 +79,7 @@ export default function AllToolsTR() {
           {/* GRID */}
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-5">
             {filteredTools.map((tool) => (
-              <ToolCard key={tool.slug} tool={tool} lang="tr" href={`/tr/araclar/${tool.slug}`} />
+              <ToolCard key={tool.slug} tool={tool} lang="tr" href={`/tr/${tool.slug}`} />
             ))}
           </div>
         </div>

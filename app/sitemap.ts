@@ -8,13 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/tr",
-    "/tr/araclar",
     "/tr/blog",
     "/tr/hakkimizda",
     "/tr/iletisim",
     "/tr/gizlilik-politikasi",
     "/en",
-    "/en/tools",
     "/en/blog",
     "/en/about",
     "/en/contact",

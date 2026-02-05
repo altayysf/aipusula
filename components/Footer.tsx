@@ -7,26 +7,22 @@ export default function Footer({ lang }: { lang: "tr" | "en" }) {
   const t = {
     tr: {
       rights: "Tüm hakları saklıdır.",
-      editors: "Editör Seçimi",
       tools: "Araçlar",
       contact: "İletişim",
       privacy: "Gizlilik Politikası",
       switchLabel: "English",
-      editorsHref: "/tr",
-      toolsHref: "/tr/araclar",
+      toolsHref: "/tr",
       contactHref: "/tr/iletisim",
       privacyHref: "/tr/gizlilik-politikasi",
       switchHref: "/en",
     },
     en: {
       rights: "All rights reserved.",
-      editors: "Editor's Picks",
       tools: "Tools",
       contact: "Contact",
       privacy: "Privacy Policy",
       switchLabel: "Türkçe",
-      editorsHref: "/en",
-      toolsHref: "/en/tools",
+      toolsHref: "/en",
       contactHref: "/en/contact",
       privacyHref: "/en/privacy-policy",
       switchHref: "/tr",
@@ -73,13 +69,6 @@ export default function Footer({ lang }: { lang: "tr" | "en" }) {
 
           {/* Right links */}
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-            <Link
-              href={t.editorsHref}
-              className="text-gray-700 hover:text-gray-900 hover:underline"
-            >
-              {t.editors}
-            </Link>
-
             <Link
               href={t.toolsHref}
               className="text-gray-700 hover:text-gray-900 hover:underline"

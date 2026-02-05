@@ -30,18 +30,15 @@ export default function Navbar({ lang }: { lang: "tr" | "en" }) {
         </Link>
 
         <nav className="flex items-center gap-6 text-sm text-gray-800">
-          <Link href={lang === "tr" ? "/tr/araclar" : "/en/tools"} className="hover:underline">
-            {lang === "tr" ? "Yapay Zeka Araçları" : "AI Tools"}
+          <Link href={lang === "tr" ? "/tr" : "/en"} className="hover:underline">
+            {lang === "tr" ? "Araçlar" : "Tools"}
           </Link>
-
-          <Link href={lang === "tr" ? "/tr/hakkimizda" : "/en/about"} className="hover:underline">
-            {lang === "tr" ? "Hakkımızda" : "About"}
-          </Link>
-
           <Link href={lang === "tr" ? "/tr/blog" : "/en/blog"} className="hover:underline">
             {lang === "tr" ? "Blog" : "Blog"}
           </Link>
-
+          <Link href={lang === "tr" ? "/tr/hakkimizda" : "/en/about"} className="hover:underline">
+            {lang === "tr" ? "Hakkımızda" : "About"}
+          </Link>
           <Link href={lang === "tr" ? "/en" : "/tr"} className="hover:underline">
             {lang === "tr" ? "EN" : "TR"}
           </Link>
