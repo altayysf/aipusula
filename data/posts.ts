@@ -904,6 +904,66 @@ export const posts: BlogPost[] = [
           cover: "/blog/google-gemini-3-productivity-2026.jpg",
           readingMinutes: 5,
           featured: true
+        },
+
+        {
+          slug: "en-iyi-yapay-zeka-video-olusturma-araclari-2026",
+          dateISO: "2026-02-06",
+          categoryTR: "Teknoloji",
+          categoryEN: "Technology",
+
+          titleTR: "2026'nın En İyi 5 Yapay Zeka Video Oluşturma Aracı",
+          titleEN: "Top 5 AI Video Generators in 2026",
+
+          excerptTR: "Video dünyasında devrim! OpenAI Sora'ya rakip olan ve hatta bazı özellikleriyle onu geride bırakan 2026'nın en güçlü yapay zeka video araçlarını inceledik.",
+
+          excerptEN: "A revolution in the video world! We've reviewed the most powerful AI video tools of 2026 that rival and even surpass OpenAI's Sora.",
+
+          contentTR: [
+            "2026 yılı itibarıyla video prodüksiyonu tamamen demokratikleşti. Artık profesyonel bir kamera setine veya karmaşık kurgu yazılımlarına ihtiyacınız yok. Sadece hayal edin ve yazın; gerisini yapay zeka halletsin. İşte bu yılın en çok konuşulan video araçları.",
+
+            "1. Google Veo 3: Sinematik Gerçekçilikte Zirve",
+            "Google'ın en yeni video modeli Veo 3, sadece görsel üretmekle kalmıyor, aynı zamanda videoya uygun çevresel sesleri ve diyalogları da otomatik ekliyor. Tutarlı karakter yapısı ve fizik kurallarına tam uyumuyla şu an profesyonellerin ilk tercihi.",
+
+            "2. Luma Dream Machine (Ray 3): Hız ve Akıcılık",
+            "Eğer saniyeler içinde 10-15 saniyelik yüksek kaliteli klipler üretmek istiyorsanız, Luma'nın Ray 3 modeli rakipsiz. Özellikle hızlı aksiyon sahnelerindeki başarısı, onu reklamcılar için vazgeçilmez kılıyor.",
+
+            "3. Runway Gen-3 Alpha: Kreatif Kontrol Sende",
+            "Runway, sunduğu fırça araçları ve bölgesel kontrol özellikleriyle 'yönetmen koltuğuna' gerçekten sizi oturtuyor. Videonun sadece belirli bir kısmını hareket ettirmek veya ışığı değiştirmek Runway ile çocuk oyuncağı.",
+
+            "4. Kling AI: Uzun Videoların Efendisi",
+            "Kling, tutarlılığı bozmadan 2 dakikaya kadar kesintisiz video üretebilme yeteneğiyle öne çıkıyor. YouTube içerik üreticileri için kısa filmler ve giriş videoları hazırlamak hiç bu kadar kolay olmamıştı.",
+
+            "5. Pika Art (Pro): Stil ve Estetik",
+            "Animasyon ve sanatsal videolarda Pika hala liderliğini koruyor. Metinden videoya (text-to-video) geçişte sunduğu sanatsal filtreler ve dudak senkronizasyonu (Lip Sync) özelliğiyle sosyal medya fenomenlerinin favorisi.",
+
+            "Sonuç olarak, 2026'da video üretmek için teknik beceriden ziyade 'hayal gücü' ve 'doğru komutu verme' becerisi öne çıkıyor. Aipusula olarak önerimiz, bu araçları projelerinizde hibrit bir şekilde kullanarak kendi benzersiz tarzınızı yaratmanızdır."
+          ],
+
+          contentEN: [
+            "As of 2026, video production has been completely democratized. You no longer need professional camera sets or complex editing software. Just imagine and type; let AI do the rest. Here are the most talked-about video tools of the year.",
+
+            "1. Google Veo 3: The Peak of Cinematic Realism",
+            "Google's latest video model, Veo 3, doesn't just generate visuals; it also automatically adds appropriate environmental sounds and dialogues. With consistent character structure and full compliance with physics, it's currently the top choice for professionals.",
+
+            "2. Luma Dream Machine (Ray 3): Speed and Fluidity",
+            "If you want to generate high-quality 10-15 second clips in seconds, Luma's Ray 3 model is unrivaled. Its success especially in fast action scenes makes it indispensable for advertisers.",
+
+            "3. Runway Gen-3 Alpha: Creative Control in Your Hands",
+            "Runway truly puts you in the director's chair with its brush tools and regional control features. Moving only a specific part of the video or changing the light is child's play with Runway.",
+
+            "4. Kling AI: Lord of Long Videos",
+            "Kling stands out with its ability to generate up to 2 minutes of continuous video without losing consistency. It has never been easier for YouTube creators to prepare short films and intro videos.",
+
+            "5. Pika Art (Pro): Style and Aesthetics",
+            "Pika still maintains its leadership in animation and artistic videos. With the artistic filters and Lip Sync feature it offers in text-to-video transition, it is the favorite of social media influencers.",
+
+            "In conclusion, in 2026, 'imagination' and 'prompting skills' stand out more than technical skills for video production. As AI Pusula, we suggest using these tools in a hybrid way in your projects to create your own unique style."
+          ],
+
+          cover: "/blog/en-iyi-ai-video-araclari-2026.jpg",
+          readingMinutes: 5,
+          featured: true
         }
 
 ];
