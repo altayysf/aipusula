@@ -145,7 +145,7 @@ export default function ContactEN() {
               </button>
 
               <Link
-                href="/en/tools"
+                href="/en"
                 className="rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
                 Browse all tools

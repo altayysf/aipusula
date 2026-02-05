@@ -144,7 +144,7 @@ export default function ContactTR() {
               </button>
 
               <Link
-                href="/tr/araclar"
+                href="/tr"
                 className="rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
                 Tüm araçlara göz at
