@@ -909,8 +909,8 @@ export const posts: BlogPost[] = [
         {
           slug: "en-iyi-yapay-zeka-video-olusturma-araclari-2026",
           dateISO: "2026-02-06",
-          categoryTR: "Teknoloji",
-          categoryEN: "Technology",
+          categoryTR: "Liste",
+          categoryEN: "List",
 
           titleTR: "2026'nın En İyi 5 Yapay Zeka Video Oluşturma Aracı",
           titleEN: "Top 5 AI Video Generators in 2026",
