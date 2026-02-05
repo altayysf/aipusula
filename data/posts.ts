@@ -846,6 +846,66 @@ export const posts: BlogPost[] = [
           featured: true
         },
 
+        {
+          slug: "google-gemini-3-ile-is-akisi-otomatiklestirme-rehberi-2026",
+          dateISO: "2026-02-05",
+          categoryTR: "Rehber",
+          categoryEN: "Guide",
+
+          titleTR: "Google Gemini 3 ile Günlük İşleri Otomatikleştirme: 2026 Verimlilik Rehberi",
+          titleEN: "Automating Daily Tasks with Google Gemini 3: 2026 Productivity Guide",
+
+          excerptTR: "Google Gemini 3 çıktı! Form doldurmaktan randevu planlamaya, karmaşık veri analizinden abonelik yönetimine kadar tüm işlerinizi yapay zekaya nasıl devredeceğinizi öğrenin.",
+
+          excerptEN: "Google Gemini 3 is here! Learn how to delegate all your tasks—from filling forms to scheduling appointments and managing subscriptions—to AI.",
+
+          contentTR: [
+            "2026 yılı, yapay zekanın sadece 'konuştuğu' değil, doğrudan 'iş yaptığı' bir dönemin başlangıcı oldu. Google'ın yeni tanıttığı Gemini 3 modeli, 'otomatik tarama' ve 'eylem odaklı asistan' özellikleriyle dijital dünyadaki angarya işleri tarihe gömüyor. İşte bu yeni teknolojiyi kullanarak hayatınızı nasıl kolaylaştıracağınıza dair kapsamlı bir rehber.",
+
+            "1. Otomatik Form Doldurma ve Belge Yönetimi",
+            "Gemini 3, tarayıcınızdaki formları sizin yerinize doldurabiliyor. Vergi belgelerinin toplanması, fatura analizi ve uzun hizmet sözleşmelerindeki kritik maddelerin özetlenmesi artık saniyeler sürüyor. 'Gemini, bu formu profil bilgilerime göre doldur' demeniz yeterli.",
+
+            "2. Akıllı Randevu ve Takvim Planlama",
+            "E-postalarınızdaki veya mesajlarınızdaki konuşmaları analiz eden Gemini 3, uygun olduğunuz zamanları belirleyip karşı tarafa randevu teklifleri gönderebiliyor. Sadece onay vermenizle takviminiz otomatik olarak güncelleniyor. Artık 'Hangi gün müsaitsin?' sorusuyla vakit kaybetmenize gerek yok.",
+
+            "3. Abonelik Yönetimi ve Fiyat Karşılaştırma",
+            "Dijital aboneliklerinizin takibini yapmak zorlaştı mı? Gemini 3, aktif aboneliklerinizi listeleyebilir, kullanmadıklarınızı iptal etmeniz için size hatırlatıcılar gönderebilir ve ihtiyacınız olan bir hizmet için internetteki en uygun fiyat tekliflerini saniyeler içinde toplayabilir.",
+
+            "4. Veri Analizi ve Kişiselleştirilmiş Programlar",
+            "İster bir spor programı ister karmaşık bir iş projesi olsun; Gemini 3, verilerinizi işleyerek size özel çalışma planları oluşturur. 'Gemini Live' özelliği sayesinde fotoğraflarını çektiğiniz ekipmanlar hakkında anında teknik detay ve kullanım kılavuzu alabilirsiniz.",
+
+            "5. Tarayıcı Üzerinden Uçtan Uca Otomasyon",
+            "Chrome ile tam entegre çalışan Gemini 3, web siteleri arasında mekik dokumadan bilgi toplamanızı sağlar. Bir e-ticaret sitesinden ürün özellikleri çekerken aynı anda rakip fiyatlarını bir tabloya dökebilir. Bu, profesyonel araştırmacılar ve alışveriş meraklıları için devrim niteliğinde bir özellik.",
+
+            "Sonuç olarak, Gemini 3 ile yapay zeka artık bir sohbet botundan çok, dijital bir 'yönetici asistanı' haline geldi. Aipusula olarak önerimiz, bu araçları iş akışınıza dahil ederek zamanınızı daha yaratıcı işlere ayırmanızdır."
+          ],
+
+          contentEN: [
+            "The year 2026 marks the beginning of an era where AI doesn't just 'talk' but directly 'acts.' Google's newly introduced Gemini 3 model is ending digital drudgery with its 'auto-browsing' and 'action-oriented assistant' features. Here is a comprehensive guide on how to simplify your life using this new technology.",
+
+            "1. Automated Form Filling and Document Management",
+            "Gemini 3 can fill out forms on your browser for you. Collecting tax documents, analyzing invoices, and summarizing critical clauses in long service agreements now take seconds. Simply saying 'Gemini, fill this form based on my profile' is enough.",
+
+            "2. Smart Appointment and Calendar Scheduling",
+            "Analyzing conversations in your emails or messages, Gemini 3 can identify your available times and send appointment proposals. Your calendar is automatically updated upon your approval. No more wasting time with the question 'When are you free?'",
+
+            "3. Subscription Management and Price Comparison",
+            "Is it getting hard to track your digital subscriptions? Gemini 3 can list your active subscriptions, send reminders to cancel unused ones, and collect the best price offers on the internet for a service you need within seconds.",
+
+            "4. Data Analysis and Personalized Programs",
+            "Whether it's a fitness program or a complex business project, Gemini 3 processes your data to create customized work plans. With 'Gemini Live,' you can instantly get technical details and manuals for equipment you photograph.",
+
+            "5. End-to-End Automation via Browser",
+            "Fully integrated with Chrome, Gemini 3 allows you to gather information without jumping between websites. It can pull product features from an e-commerce site while simultaneously putting competitor prices into a table. This is a revolutionary feature for researchers and shoppers alike.",
+
+            "In conclusion, with Gemini 3, AI has become a digital 'executive assistant' rather than just a chatbot. At AI Pusula, we recommend incorporating these tools into your workflow to dedicate your time to more creative tasks."
+          ],
+
+          cover: "/blog/google-gemini-3-productivity-2026.jpg",
+          readingMinutes: 5,
+          featured: true
+        }
+
 ];
 
 // yardımcı: tarihe göre sırala
