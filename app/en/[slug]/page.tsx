@@ -39,10 +39,6 @@ export default async function ToolDetailEN({
             <Link href="/en" className="hover:underline">
               Home
             </Link>{" "}
-            /{" "}
-            <Link href="/en/tools" className="hover:underline">
-              Tools
-            </Link>{" "}
             / <span className="text-gray-900 font-medium">{tool.name}</span>
           </div>
 
@@ -103,13 +99,6 @@ export default async function ToolDetailEN({
                 >
                   Visit official site →
                 </a>
-
-                <Link
-                  href="/en/tools"
-                  className="rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
-                >
-                  Back to other tools
-                </Link>
               </div>
             </div>
           </section>

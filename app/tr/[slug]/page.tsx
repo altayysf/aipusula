@@ -39,10 +39,6 @@ export default async function ToolDetailTR({
             <Link href="/tr" className="hover:underline">
               Ana Sayfa
             </Link>{" "}
-            /{" "}
-            <Link href="/tr/araclar" className="hover:underline">
-              Araçlar
-            </Link>{" "}
             / <span className="text-gray-900 font-medium">{tool.name}</span>
           </div>
 
@@ -103,13 +99,6 @@ export default async function ToolDetailTR({
                 >
                   Resmi siteye git →
                 </a>
-
-                <Link
-                  href="/tr/araclar"
-                  className="rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
-                >
-                  Diğer araçlara dön
-                </Link>
               </div>
             </div>
           </section>
