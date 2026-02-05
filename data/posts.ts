@@ -778,8 +778,8 @@ export const posts: BlogPost[] = [
           categoryTR: "Liste",
           categoryEN: "List",
 
-          titleTR: "ChatGPT'ye Para Ödemeyin: 2026'nın En İyi 7 Ücretsiz Yapay Zeka Alternatifi",
-          titleEN: "Don't Pay for ChatGPT: 7 Best Free AI Alternatives in 2026",
+          titleTR: "2026'nın En İyi 7 Ücretsiz Yapay Zeka Alternatifi",
+          titleEN: "7 Best Free AI Alternatives in 2026",
 
           excerptTR: "ChatGPT Plus çok mu pahalı? 2026'nın en iyi ücretsiz yapay zeka araçlarını listeledik. Metin yazma, görsel oluşturma ve kodlama için ChatGPT'den geri kalmayan bedava alternatifleri keşfedin.",
 
