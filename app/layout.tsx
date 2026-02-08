@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     google: "kerYjltAUZJCdlpZtBoDEmCzuFLn8vF8mTZ435wm3Zg",
   },
 
+  // ✅ AdSense meta (kalabilir, sorun yok)
+  other: {
+    "google-adsense-account": "ca-pub-6397577664152215",
+  },
+
   openGraph: {
     title: "En İyi Yapay Zeka Araçları (2026) | AI Pusula",
     description:
@@ -64,12 +69,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="tr">
       <head>
+        {/* ✅ Google AdSense doğrulama & script */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6397577664152215"
