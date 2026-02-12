@@ -1112,7 +1112,7 @@ export const posts: BlogPost[] = [
 
 {
   slug: "yapay-zeka-ajanlari-ile-otonom-is-kurma-rehberi-2026",
-  dateISO: "2026-02-10",
+  dateISO: "2026-02-12",
   categoryTR: "Rehber & Finans",
   categoryEN: "Guide & Finance",
 
