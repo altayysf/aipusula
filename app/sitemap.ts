@@ -4,50 +4,47 @@ import { posts } from "../data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.aipusula.com";
-  const now = new Date();
 
-  // Static pages (TR + EN)
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/tr`, lastModified: now, changeFrequency: "daily", priority: 1 },
-    { url: `${baseUrl}/tr/blog`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/tr/hakkimizda`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/tr/iletisim`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/tr/gizlilik-politikasi`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+  const staticRoutes = [
+    "",
+    "/tr",
+    "/tr/blog",
+    "/tr/hakkimizda",
+    "/tr/iletisim",
+    "/tr/gizlilik-politikasi",
+    "/en",
+    "/en/blog",
+    "/en/about",
+    "/en/contact",
+    "/en/privacy-policy",
 
-    { url: `${baseUrl}/en`, lastModified: now, changeFrequency: "daily", priority: 1 },
-    { url: `${baseUrl}/en/blog`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/en/about`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/en/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/en/privacy-policy`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    // ✅ favicon / icons (Google'ın daha hızlı keşfetmesi için)
+    "/favicon-2026.ico",
+    "/icon.png",
   ];
 
-  // Tool pages (TR + EN)
-  const toolRoutes: MetadataRoute.Sitemap = tools.flatMap((t) => [
-    { url: `${baseUrl}/tr/${t.slug}`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${baseUrl}/en/${t.slug}`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
-  ]);
+  // Tool detail pages
+  const toolRoutesTR = tools.map((t) => `/tr/${t.slug}`);
+  const toolRoutesEN = tools.map((t) => `/en/${t.slug}`);
 
-  // Blog posts (TR + EN) - dateISO varsa onu kullan
-  const blogRoutes: MetadataRoute.Sitemap = posts.flatMap((p) => {
-    const last = p.dateISO ? new Date(p.dateISO) : now;
-    const pr = p.featured ? 0.9 : 0.8;
+  // Blog detail pages
+  const blogRoutesTR = posts.map((p) => `/tr/blog/${p.slug}`);
+  const blogRoutesEN = posts.map((p) => `/en/blog/${p.slug}`);
 
-    return [
-      { url: `${baseUrl}/tr/blog/${p.slug}`, lastModified: last, changeFrequency: "weekly", priority: pr },
-      { url: `${baseUrl}/en/blog/${p.slug}`, lastModified: last, changeFrequency: "weekly", priority: pr },
-    ];
-  });
-
-  // Blog pagination (auto)
-  const PAGE_SIZE = 12;
-  const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
-
-  const blogPagination: MetadataRoute.Sitemap = Array.from({ length: totalPages }, (_, i) => i + 1).flatMap(
-    (page) => [
-      { url: `${baseUrl}/tr/blog/page/${page}`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
-      { url: `${baseUrl}/en/blog/page/${page}`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
-    ]
+  const allRoutes = Array.from(
+    new Set([
+      ...staticRoutes,
+      ...toolRoutesTR,
+      ...toolRoutesEN,
+      ...blogRoutesTR,
+      ...blogRoutesEN,
+    ])
   );
 
-  return [...staticRoutes, ...toolRoutes, ...blogRoutes, ...blogPagination];
+  const now = new Date();
+
+  return allRoutes.map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: now,
+  }));
 }
