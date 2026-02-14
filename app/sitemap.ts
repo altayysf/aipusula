@@ -1,63 +1,74 @@
-import { MetadataRoute } from 'next';
-import { posts } from '../data/posts';
+import { MetadataRoute } from "next";
+import { posts } from "../data/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.aipusula.com';
-  const currentDate = new Date().toISOString();
+  const baseUrl = "https://www.aipusula.com";
 
-  // Ana sayfalar
+  const now = new Date();
+
   const staticPages: MetadataRoute.Sitemap = [
+    // TR
     {
       url: `${baseUrl}/tr`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 1.0,
-      alternates: {
-        languages: {
-          tr: `${baseUrl}/tr`,
-          en: `${baseUrl}/en`,
-        },
-      },
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1,
     },
     {
       url: `${baseUrl}/tr/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
+      lastModified: now,
+      changeFrequency: "daily",
       priority: 0.9,
-      alternates: {
-        languages: {
-          tr: `${baseUrl}/tr/blog`,
-          en: `${baseUrl}/en/blog`,
-        },
-      },
     },
     {
       url: `${baseUrl}/tr/hakkimizda`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
+      lastModified: now,
+      changeFrequency: "monthly",
       priority: 0.5,
-      alternates: {
-        languages: {
-          tr: `${baseUrl}/tr/hakkimizda`,
-          en: `${baseUrl}/en/about`,
-        },
-      },
+    },
+
+    // EN
+    {
+      url: `${baseUrl}/en`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
+      url: `${baseUrl}/en/blog`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/en/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
     },
   ];
 
-  // Blog yazıları
-  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${baseUrl}/tr/blog/${post.slug}`,
-    lastModified: post.dateISO,
-    changeFrequency: 'weekly' as const,
-    priority: post.featured ? 0.9 : 0.8,
-    alternates: {
-      languages: {
-        tr: `${baseUrl}/tr/blog/${post.slug}`,
-        en: `${baseUrl}/en/blog/${post.slug}`,
+  const blogPages: MetadataRoute.Sitemap = posts.flatMap((post) => {
+    const last = post.dateISO ? new Date(post.dateISO) : now;
+    const priority = post.featured ? 0.9 : 0.8;
+
+    return [
+      // TR post
+      {
+        url: `${baseUrl}/tr/blog/${post.slug}`,
+        lastModified: last,
+        changeFrequency: "weekly",
+        priority,
       },
-    },
-  }));
+      // EN post
+      {
+        url: `${baseUrl}/en/blog/${post.slug}`,
+        lastModified: last,
+        changeFrequency: "weekly",
+        priority,
+      },
+    ];
+  });
 
   return [...staticPages, ...blogPages];
 }
