@@ -429,5 +429,21 @@ export const tools: Tool[] = [
   screenshots: ["/screenshots/murfai-1.png"],
   featured: false,
   },
+  {
+  slug: "yandex-ai",
+  name: "Yandex AI",
+  website: "https://ai.yandex.com/",
+  category: "text",
+  pricing: "free",
+  taglineTR: "Yandex’in yapay zekâ destekli sohbet ve içerik üretim aracı.",
+  taglineEN: "Yandex’s AI-powered chatbot and content assistant.",
+  detailTR:
+    "Yandex AI; metin yazma, soruları yanıtlama ve içerik üretme için kullanılan yapay zekâ destekli bir asistandır.",
+  detailEN:
+    "Yandex AI is an assistant used for writing text, answering questions, and generating content.",
+  logo: "/logos/yandex-ai.png",
+  screenshots: ["/screenshots/yandex-ai-1.png"],
+  featured: false,
+},
 
 ];
