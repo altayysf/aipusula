@@ -1,50 +1,63 @@
-import type { MetadataRoute } from "next";
-import { tools } from "../data/tools";
-import { posts } from "../data/posts";
+import { MetadataRoute } from 'next';
+import { posts } from '../data/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.aipusula.com";
+  const baseUrl = 'https://www.aipusula.com';
+  const currentDate = new Date().toISOString();
 
-  const staticRoutes = [
-    "",
-    "/tr",
-    "/tr/blog",
-    "/tr/hakkimizda",
-    "/tr/iletisim",
-    "/tr/gizlilik-politikasi",
-    "/en",
-    "/en/blog",
-    "/en/about",
-    "/en/contact",
-    "/en/privacy-policy",
-
-    // ✅ favicon / icons (Google'ın daha hızlı keşfetmesi için)
-    "/favicon-2026.ico",
-    "/icon.png",
+  // Ana sayfalar
+  const staticPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/tr`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1.0,
+      alternates: {
+        languages: {
+          tr: `${baseUrl}/tr`,
+          en: `${baseUrl}/en`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/tr/blog`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.9,
+      alternates: {
+        languages: {
+          tr: `${baseUrl}/tr/blog`,
+          en: `${baseUrl}/en/blog`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/tr/hakkimizda`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      alternates: {
+        languages: {
+          tr: `${baseUrl}/tr/hakkimizda`,
+          en: `${baseUrl}/en/about`,
+        },
+      },
+    },
   ];
 
-  // Tool detail pages
-  const toolRoutesTR = tools.map((t) => `/tr/${t.slug}`);
-  const toolRoutesEN = tools.map((t) => `/en/${t.slug}`);
-
-  // Blog detail pages
-  const blogRoutesTR = posts.map((p) => `/tr/blog/${p.slug}`);
-  const blogRoutesEN = posts.map((p) => `/en/blog/${p.slug}`);
-
-  const allRoutes = Array.from(
-    new Set([
-      ...staticRoutes,
-      ...toolRoutesTR,
-      ...toolRoutesEN,
-      ...blogRoutesTR,
-      ...blogRoutesEN,
-    ])
-  );
-
-  const now = new Date();
-
-  return allRoutes.map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: now,
+  // Blog yazıları
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/tr/blog/${post.slug}`,
+    lastModified: post.dateISO,
+    changeFrequency: 'weekly' as const,
+    priority: post.featured ? 0.9 : 0.8,
+    alternates: {
+      languages: {
+        tr: `${baseUrl}/tr/blog/${post.slug}`,
+        en: `${baseUrl}/en/blog/${post.slug}`,
+      },
+    },
   }));
+
+  return [...staticPages, ...blogPages];
 }

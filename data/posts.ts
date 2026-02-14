@@ -1,300 +1,708 @@
 export type BlogLang = "tr" | "en";
 
-export type BlogPost = {
+export interface BlogPost {
   slug: string;
-  dateISO: string; // "2026-02-01"
-  categoryTR: string;
-  categoryEN: string;
   titleTR: string;
   titleEN: string;
   excerptTR: string;
   excerptEN: string;
-  contentTR: string[]; // paragraf paragraf
-  contentEN: string[];
-  cover: string; // public/... -> "/blog/xxx.jpg"
+  categoryTR: string;
+  categoryEN: string;
+  dateISO: string; // YYYY-MM-DD
   readingMinutes?: number;
+  cover: string;
   featured?: boolean;
-};
+  contentTR: string[];
+  contentEN: string[];
+}
 
 export const posts: BlogPost[] = [
-          {
-          slug: "en-iyi-ucretsiz-yapay-zeka-araclari-2026",
-          dateISO: "2026-02-01",
-          categoryTR: "Liste",
-          categoryEN: "List",
-
-          titleTR: "2026'da Kullanabileceğiniz En İyi Ücretsiz Yapay Zekâ Araçları",
-          titleEN: "Best Free AI Tools You Can Use in 2026",
-
-          excerptTR:
-            "Metin yazma, görsel üretme, video oluşturma, kodlama ve üretkenlik için ücretsiz yapay zekâ araçlarının kapsamlı ve güncel listesi.",
-
-          excerptEN:
-            "A comprehensive and updated list of free AI tools for writing, image generation, video creation, coding, and productivity.",
-
-          contentTR: [
-            "Yapay zekâ artık yalnızca büyük şirketlerin kullandığı karmaşık bir teknoloji değil. Günümüzde herkes ücretsiz yapay zekâ araçları sayesinde içerik üretebiliyor, tasarım yapabiliyor, kod yazabiliyor ve işlerini çok daha hızlı tamamlayabiliyor.",
-
-            "Bu yazıda 2026 yılında ücretsiz olarak kullanabileceğin en iyi yapay zekâ araçlarını tek bir yerde topladım. Araçları kullanım alanlarına göre gruplandırdım ve her biri için kısa açıklamalar ekledim.",
-
-            "Metin ve İçerik Üretimi İçin AI Araçları",
-
-            "- ChatGPT: Blog yazıları, sosyal medya içerikleri, e-postalar ve fikir üretimi için en popüler araçlardan biridir.",
-            "- Google Gemini: Araştırma, özet çıkarma ve bilgi tabanlı içerikler için güçlü bir alternatiftir.",
-            "- Poe: Birden fazla yapay zekâ modelini tek platformda deneme imkânı sunar.",
-
-            "Görsel Oluşturma İçin AI Araçları",
-
-            "- Bing Image Creator (DALL·E): Metinden görsel üretir.",
-            "- Leonardo AI: Oyun ve illüstrasyon tasarımlarında öne çıkar.",
-            "- Canva AI: Tasarım bilgisi olmadan profesyonel görseller oluşturmayı sağlar.",
-
-            "Video Üretimi İçin AI Araçları",
-
-            "- Pictory: Metni otomatik olarak videoya dönüştürür.",
-            "- CapCut AI: Video düzenleme, altyazı ve efekt işlemleri için idealdir.",
-
-            "Kodlama İçin AI Araçları",
-
-            "- Codeium: Ücretsiz kod tamamlama ve hata düzeltme aracı.",
-            "- GitHub Copilot: Sınırlı ücretsiz sürümü ile kod yazmayı hızlandırır.",
-
-            "Üretkenlik ve Günlük İşler",
-
-            "- Notion AI: Not alma, özet çıkarma ve planlama.",
-            "- Otter AI: Toplantıları yazıya döker.",
-
-            "Ücretsiz yapay zekâ araçlarını seçerken ücretsiz plan sınırlarını, gizlilik politikasını ve Türkçe destek durumunu mutlaka kontrol etmelisin.",
-
-            "Sonuç olarak bu araçlar, bütçe ayırmadan dijital dünyada üretken olmak isteyen herkes için büyük avantaj sağlar."
-          ],
-
-          contentEN: [
-            "Artificial intelligence is no longer limited to big tech companies. Today, anyone can create content, design visuals, write code, and automate tasks using free AI tools.",
-
-            "In this article, I compiled the best free AI tools you can use in 2026. Tools are grouped by category with short explanations.",
-
-            "Text & Content Creation Tools",
-
-            "- ChatGPT: Writing blogs, social posts, and emails.",
-            "- Google Gemini: Research and summaries.",
-            "- Poe: Access multiple AI models in one place.",
-
-            "Image Generation Tools",
-
-            "- Bing Image Creator (DALL·E).",
-            "- Leonardo AI.",
-            "- Canva AI.",
-
-            "Video Tools",
-
-            "- Pictory.",
-            "- CapCut AI.",
-
-            "Coding Tools",
-
-            "- Codeium.",
-            "- GitHub Copilot.",
-
-            "Productivity Tools",
-
-            "- Notion AI.",
-            "- Otter AI.",
-
-            "Always check free plan limitations and privacy policies before choosing a tool.",
-
-            "These tools help you stay productive without spending money."
-          ],
-
-          cover: "/blog/ai-tools-2026.jpg",
-          readingMinutes: 3,
-          featured: true,
-          },
-
-          {
-          slug: "chatgpt-alternatifleri-en-iyi-chatbotlar",
-          dateISO: "2026-02-01",
-          categoryTR: "İnceleme",
-          categoryEN: "Review",
-
-          titleTR: "ChatGPT Alternatifleri (2026): En İyi 9 Yapay Zekâ Chatbotu Karşılaştırması",
-          titleEN: "ChatGPT Alternatives (2026): 9 Best AI Chatbots Compared",
-
-          excerptTR:
-            "Claude, Gemini, Perplexity ve daha fazlası… Hangi yapay zekâ chatbotu hangi iş için daha uygun? Kapsamlı karşılaştırma rehberi.",
-
-          excerptEN:
-            "Claude, Gemini, Perplexity, and more… which AI chatbot is best for each use case? A practical comparison guide.",
-
-          contentTR: [
-            "ChatGPT günümüzde en popüler yapay zekâ sohbet botlarından biri olsa da, her kullanım senaryosu için en iyi seçenek olmayabilir. Bazı araçlar uzun belgeleri analiz etmede daha başarılıyken, bazıları araştırma yapma veya kod yazma konusunda öne çıkar.",
-
-            "Bu yazıda 2026 yılında kullanabileceğin en iyi ChatGPT alternatiflerini, güçlü ve zayıf yönleriyle birlikte inceliyoruz. Böylece ihtiyacına en uygun chatbotu kolayca seçebilirsin.",
-
-            "1. Claude (Anthropic)",
-            "Uzun dokümanları okuma, özetleme ve analiz etme konusunda çok güçlüdür. Akademik çalışmalar ve raporlar için idealdir.",
-
-            "2. Google Gemini",
-            "Google tarafından geliştirilen Gemini, arama motoru entegrasyonu sayesinde bilgi odaklı sorularda başarılıdır.",
-
-            "3. Perplexity AI",
-            "Cevaplarını kaynak göstererek sunar. Araştırma ve doğrulama gerektiren işler için uygundur.",
-
-            "4. Microsoft Copilot",
-            "Word, Excel ve PowerPoint gibi Microsoft araçlarıyla entegre çalışır.",
-
-            "5. Poe",
-            "Tek platformda birden fazla yapay zekâ modelini kullanma imkânı sunar.",
-
-            "6. Jasper AI",
-            "Pazarlama metinleri ve reklam içerikleri üretmek için tasarlanmıştır.",
-
-            "7. Writesonic",
-            "Blog yazıları, ürün açıklamaları ve sosyal medya içerikleri için idealdir.",
-
-            "8. YouChat",
-            "Arama motoru destekli sohbet deneyimi sunar.",
-
-            "9. Character AI",
-            "Rol yapma, hikâye anlatımı ve eğlence odaklı sohbetler için popülerdir.",
-
-            "ChatGPT alternatifi seçerken şu kriterleri göz önünde bulundurmalısın: çıktı kalitesi, hız, ücretsiz plan sınırları ve Türkçe destek durumu.",
-
-            "Sonuç olarak, tek bir en iyi chatbot yoktur. En iyi seçenek, senin kullanım amacına en uygun olandır."
-          ],
-
-          contentEN: [
-            "ChatGPT is one of the most popular AI chatbots, but it is not always the best option for every task. Some tools excel at long-document analysis, while others are better for research or coding.",
-
-            "Here are the best ChatGPT alternatives you can use in 2026 and what they are best at.",
-
-            "1. Claude (Anthropic)",
-            "Excellent for long document reading and summarization.",
-
-            "2. Google Gemini",
-            "Strong at knowledge-based questions and Google ecosystem tasks.",
-
-            "3. Perplexity AI",
-            "Provides answers with sources.",
-
-            "4. Microsoft Copilot",
-            "Integrated with Microsoft Office apps.",
-
-            "5. Poe",
-            "Access multiple AI models in one interface.",
-
-            "6. Jasper AI",
-            "Focused on marketing and copywriting.",
-
-            "7. Writesonic",
-            "Great for blogs and product descriptions.",
-
-            "8. YouChat",
-            "Search-engine-powered chatbot.",
-
-            "9. Character AI",
-            "Great for roleplay and creative conversations.",
-
-            "There is no single perfect chatbot. The best choice depends on your workflow and goals."
-          ],
-
-          cover: "/blog/chatgpt-alternatives.jpg",
-          readingMinutes: 4,
-          featured: true,
-        },
-
-        {
-          slug: "en-iyi-gorsel-olusturucular",
-          dateISO: "2026-02-01",
-          categoryTR: "Liste",
-          categoryEN: "List",
-
-          titleTR: "En İyi Yapay Zekâ Görsel Oluşturucular (2026)",
-          titleEN: "Best AI Image Generators (2026)",
-
-          excerptTR:
-            "DALL·E’den Midjourney’e: kalite, hız ve stil kontrolü açısından 2026’da öne çıkan en iyi yapay zekâ görsel oluşturma araçları.",
-
-          excerptEN:
-            "From DALL·E to Midjourney: the top AI image generators of 2026 for quality, speed, and style control.",
-
-          contentTR: [
-            "Yapay zekâ ile görsel üretim, tasarımcılar, içerik üreticileri ve pazarlamacılar için vazgeçilmez hale geldi. Doğru aracı seçmek, hem kaliteyi hem de üretim hızını doğrudan etkiler.",
-
-            "Bu yazıda 2026 yılında kullanabileceğin en iyi yapay zekâ görsel oluşturucuları, güçlü yönleriyle birlikte sıraladım.",
-
-            "1. DALL·E",
-            "Metinden yüksek kaliteli ve yaratıcı görseller üretir. Blog kapakları ve sosyal medya görselleri için idealdir.",
-
-            "2. Midjourney",
-            "Sanatsal ve sinematik görseller üretmede çok başarılıdır.",
-
-            "3. Leonardo AI",
-            "Oyun varlıkları ve konsept tasarımlar için güçlü bir seçenektir.",
-
-            "4. Stable Diffusion",
-            "Açık kaynaklı yapısı sayesinde geniş özelleştirme imkânı sunar.",
-
-            "5. Bing Image Creator",
-            "Hızlı ve ücretsiz görsel üretimi sağlar.",
-
-            "6. Canva AI",
-            "Tasarım bilgisi olmadan profesyonel görseller oluşturmanı sağlar.",
-
-            "Görsel üretimde en iyi sonucu almak için aynı promptu birden fazla araçta denemeni öneririm.",
-
-            "Bonus ipucu: Tutarlı sonuçlar için kendi prompt şablonunu oluştur."
-          ],
-
-          contentEN: [
-            "AI image generation has become essential for designers, marketers, and content creators. Choosing the right tool impacts both quality and speed.",
-
-            "Here are the best AI image generators you can use in 2026.",
-
-            "1. DALL·E",
-            "Great for creative and high-quality images.",
-
-            "2. Midjourney",
-            "Excellent for artistic visuals.",
-
-            "3. Leonardo AI",
-            "Strong for game assets and concept art.",
-
-            "4. Stable Diffusion",
-            "Open-source and highly customizable.",
-
-            "5. Bing Image Creator",
-            "Fast and free image generation.",
-
-            "6. Canva AI",
-            "Easy-to-use design tool with AI features.",
-
-            "Test the same prompt across multiple tools for best results.",
-
-            "Bonus tip: build a prompt template for consistency."
-          ],
-
-          cover: "/blog/best-image-generators.jpg",
-          readingMinutes: 5,
-          featured: false
-        },
-
-        {
-          slug: "yapay-zeka-nedir",
-          dateISO: "2026-02-02",
-          categoryTR: "Rehber",
-          categoryEN: "Guide",
-
-          titleTR: "Yapay Zekâ Nedir? Geleceği Şekillendiren Teknolojiyi Basitçe Anlatalım",
-          titleEN: "What Is Artificial Intelligence? Let’s Simply Explain the Technology Shaping the Future",
-
-          excerptTR:
-            "Yapay zeka nedir, yapay zeka nasıl çalışır, yapay zekâ kullanım alanları ve örnekleri hakkında basit anlatım.",
-
-          excerptEN:
-            "What is artificial intelligence, how does AI work, AI use cases and examples explained simply.",
-
-          contentTR: [
+  {
+    slug: "2026-yapay-zeka-rehberi-ajanlar-ve-yeni-internet-ekonomisi",
+    titleTR: "2026 Yapay Zeka Devrimi: Agentic AI, DeepSeek ve Yeni İnternet Düzeninde Hayatta Kalma Rehberi",
+    titleEN: "2026 AI Revolution: Agentic AI, DeepSeek and Survival Guide in the New Internet Order",
+    excerptTR: "Google aramalarından TikTok trendlerine; 2026'da dünyayı kasıp kavuran yapay zeka ajanlarını, otonom sistemleri ve içerik üretimindeki yeni kuralları A'dan Z'ye inceliyoruz.",
+    excerptEN: "From Google searches to TikTok trends; we examine AI agents, autonomous systems, and new rules in content production that are sweeping the world in 2026 from A to Z.",
+    categoryTR: "Mega Rehber",
+    categoryEN: "Mega Guide",
+    dateISO: "2026-02-12",
+    readingMinutes: 18,
+    cover: "/blog/2026-global-ai-trends-mega-guide.jpg",
+    featured: true,
+    contentTR: [
+    "2026 yılı, yapay zekanın sadece 'yanıt verdiği' değil, doğrudan 'eylem geçtiği' bir milat oldu. Geçtiğimiz aylarda Google, Microsoft ve DeepSeek'in peş peşe yaptığı duyurularla internetin dokusu kalıcı olarak değişti. Artık sadece 'ChatGPT'ye soru sormak' yetmiyor; dünyada en çok aratılan terimlerin başında **Agentic AI (Ajan Yapay Zeka)** ve **Multimodal Automation** geliyor. Bu 1000+ kelimelik dev rehberde, yeni internet ekonomisinde nasıl öne çıkacağınızı ve trafiği nasıl domine edeceğinizi anlatıyoruz.",
+
+    " 1. 2026'nın Global Trendi: Agentic AI (Ajan Yapay Zeka) Nedir?",
+    "Dünya genelinde 'AI asistent' aramaları yerini 'AI Agent' aramalarına bıraktı. Ajan yapay zeka, bir chatbotun aksine sadece metin üretmez; sizin adınıza internette gezer, bilet alır, yazılım geliştirir ve karmaşık iş akışlarını tamamlar. 2026'da Google'da en çok aratılan 'nasıl yapılır' sorularının merkezinde bu ajanların kurulumu yer alıyor. Eğer blogunuzda otonom ajanların nasıl çalıştığına dair pratik vaka analizleri (case studies) sunarsanız, Google sizi 'Topical Authority' (Konu Otoritesi) olarak işaretleyecektir.",
+
+    " 2. DeepSeek ve Açık Kaynak Devrimi",
+    "2026 başı itibarıyla teknoloji dünyasının en çok konuştuğu isim şüphesiz **DeepSeek**. Uygun maliyetli ve yüksek performanslı bu model, yapay zekanın demokratikleşmesini sağladı. Arama hacmi %800 artan DeepSeek, özellikle 'güvenli yapay zeka' ve 'yerel kurulum' (local hosting) aramalarında zirvede. Kullanıcılar artık verilerinin büyük devlerin elinde olmasından endişe ediyor; bu yüzden 'kendi bilgisayarına yapay zeka kurma' rehberleri devasa trafik çekiyor.",
+
+    " 3. SEO Öldü mü? Hayır, Yerini GEO'ya Bıraktı!",
+    "Arama motoru optimizasyonu (SEO), artık **GEO (Generative Engine Optimization)** yani Üretken Motor Optimizasyonu'na evrildi. Google'ın AI Overviews (Yapay Zeka Özetleri), aramaların %90'ını karşılıyor. Artık ilk sırada çıkmak yetmiyor; yapay zekanın verdiği cevabın içinde 'kaynak' olarak gösterilmek zorundasınız. Bunun için yazınızda şu 3 kuralı uyguladık:",
+    "- Doğrudan Yanıtlar:** Sorulara net ve kısa cevaplar verin.",
+    "- Yapılandırılmış Veri:** Teknik tablolar ve liste görünümleri kullanın.",
+    "- Deneyim (E-E-A-T):** 'Yapay zeka böyle diyor' yerine 'Biz bu ajanla şu kadar tasarruf ettik' diyerek kişisel tecrübenizi katın.",
+
+    " 4. Multimodal İçerik Üretimi: Video, Ses ve Metin Bir Arada",
+    "2026'da sadece metin içeren bloglar 'ruhsuz' kabul ediliyor. Dünya genelinde en çok aratılan içerik türleri, yapay zeka ile üretilmiş sinematik videolar ve sesli klonlama (Voice Cloning) teknolojileri. Bu rehberde bahsettiğimiz araçları kullanarak içeriğinizi çok kanallı (Omnichannel) hale getirmek, trafiğinizi sadece Google'dan değil, TikTok ve YouTube'dan da beslemenizi sağlar.",
+
+    " 5. Yapay Zeka ile Para Kazanma: 2026'nın Yeni İş Modelleri",
+    "Arama hacmi milyonları bulan 'AI side hustle' (yan gelir) aramaları, yerini daha profesyonel iş modellerine bıraktı:",
+    "- Otonom E-Ticaret Ajanları:** Ürün bulan, reklamı yöneten ve kargoyu takip eden ajan orduları.",
+    "- Yapay Zeka Danışmanlığı:** Şirketlerin iş akışlarını ajanlarla otomatize etmek.",
+    "- Sentetik Medya Ajansları:** Markalar için tamamen yapay zeka ile üretilmiş reklam yüzleri ve içerikler oluşturmak.",
+
+    " 6. Güvenlik ve Etik: 'AI mi, Gerçek mi?'",
+    "İnternetin en büyük sorunu artık 'güven'. Deepfake tespiti ve içerik doğrulama araçları (Content Credentials) 2026'nın en kritik anahtar kelimeleri. Blogunuzda güven faktörünü ön plana çıkararak, okuyucularınıza hangi içeriğin güvenilir olduğunu öğreten bir 'filtre' görevi görmelisiniz.",
+
+    "Sonuç olarak; 2026 yapay zeka dünyası, sadece en hızlı olanın değil, en güvenilir ve en çok 'iş bitiren' ajan sistemlerini kuranın kazandığı bir arena. Aipusula olarak biz, bu dijital okyanusta pusulanız olmaya devam edeceğiz. Hemen bugün kendi yapay zeka ajanınızı kurun ve geleceği bugünden yönetmeye başlayın!"],
+    contentEN: [
+    "2026 became the milestone where AI moved from 'just responding' to 'taking action.' With recent announcements from Google, Microsoft, and DeepSeek, the fabric of the internet has permanently changed. It's no longer enough to just 'ask ChatGPT a question'; the most searched terms globally are **Agentic AI** and **Multimodal Automation**. In this 1000+ word mega-guide, we explain how to stand out in the new internet economy and dominate traffic.",
+
+    " 1. The Global Trend of 2026: What is Agentic AI?",
+    "Global searches for 'AI assistant' have been replaced by 'AI Agent.' Unlike a chatbot, an AI agent doesn't just produce text; it browses the web, books tickets, develops software, and completes complex workflows on your behalf. If you provide practical case studies on how these agents work in your blog, Google will mark you as a 'Topical Authority.'",
+
+    " 2. DeepSeek and the Open Source Revolution",
+    "As of early 2026, the name most talked about in the tech world is undoubtedly **DeepSeek**. This cost-effective and high-performance model democratized AI. DeepSeek, with search volume increasing by 800%, is at the peak of searches for 'secure AI' and 'local hosting.' Users are now worried about their data being in the hands of giants; thus, 'local AI installation' guides draw massive traffic.",
+
+    " 3. Is SEO Dead? No, it Evolved into GEO!",
+    "Search engine optimization (SEO) has now evolved into **GEO (Generative Engine Optimization)**. Google's AI Overviews cover 90% of searches. It's no longer enough to rank first; you must be cited as a 'source' within the AI's response.",
+
+    " 4. Multimodal Content Creation: Video, Audio, and Text Together",
+    "In 2026, blogs containing only text are considered 'soulless.' The most searched content types worldwide are cinematic videos generated by AI and Voice Cloning technologies. Turning your content into an omnichannel format will feed your traffic not only from Google but also from TikTok and YouTube.",
+
+    " 5. Making Money with AI: New Business Models of 2026",
+    "Searches for 'AI side hustle' have been replaced by more professional models like Autonomous E-Commerce Agents, AI Consulting, and Synthetic Media Agencies.",
+
+    " 6. Security and Ethics: 'AI or Real?'",
+    "The biggest problem on the internet is now 'trust.' Deepfake detection and Content Credentials are the most critical keywords of 2026. You must act as a 'filter' by prioritizing the trust factor in your blog."]
+  },
+  {
+    slug: "yapay-zeka-ajanlari-ile-otonom-is-kurma-rehberi-2026",
+    titleTR: "2026'nın Yeni Ekonomi Modeli: Yapay Zeka Ajanları ile Otonom İş Kurma ve Para Kazanma Rehberi",
+    titleEN: "2026's New Economy Model: Autonomous Business and Money Making Guide with AI Agents",
+    excerptTR: "Yapay zeka artık sadece bir araç değil, bir çalışan! 2026'da tek başınıza koca bir şirketi nasıl yönetirsiniz? Otonom ajanlarla pasif gelir modellerini ve en iyi araçları keşfedin.",
+    excerptEN: "AI is no longer just a tool, it's an employee! How do you manage an entire company by yourself in 2026? Discover passive income models and the best tools with autonomous agents.",
+    categoryTR: "Rehber & Finans",
+    categoryEN: "Guide & Finance",
+    dateISO: "2026-02-12",
+    readingMinutes: 15,
+    cover: "/blog/autonomous-ai-business-guide-2026.jpg",
+    contentTR: [
+    "2026 yılı, dijital girişimcilik tarihinde 'Büyük Ajan Devrimi' (The Great Agentic Shift) olarak anılıyor. Geçtiğimiz yıllarda ChatGPT ile başlayan üretken yapay zeka çılgınlığı, yerini kendi kararlarını verebilen, internette gezinen ve sizin yerinize finansal işlemler gerçekleştirebilen 'Otonom Yapay Zeka Ajanları'na bıraktı. Artık mesele yapay zekaya bir makale yazdırmak değil; ona bir iş hedefi verip, o hedefe giden yoldaki tüm engelleri kendi başına aşmasını izlemek. Bu kapsamlı rehberde, 2026 ekonomisinde yapay zeka ajanlarını kullanarak nasıl otonom bir iş modeli kurabileceğinizi A'dan Z'ye inceleyeceğiz.",
+
+    " 1. Yapay Zeka Ajanı Nedir ve Neden 2026'nın En Büyük Trendi?",
+    "Klasik yapay zekalar 'girdi-çıktı' (input-output) mantığıyla çalışırken, yapay zeka ajanları 'hedef-eylem' (goal-action) döngüsüyle hareket eder. Bir ajana 'Şu sektördeki pazar açığını bul, bir ürün tasarla ve sosyal medyada pazarlamaya başla' dediğinizde; ajan önce pazar araştırması yapar, ardından tasarım araçlarını kullanarak prototipler oluşturur ve son olarak reklam kampanyalarını otonom olarak yönetir. Bu, 2026'da 'Tek Kişilik Şirket' (One-Person Company) kavramının milyar dolarlık bir gerçekliğe dönüşmesini sağlamıştır.",
+
+    " 2. Otonom İş Modelleri: Nereden Başlamalı?",
+    "2026'da yapay zeka ajanlarıyla kurabileceğiniz, en yüksek getiri potansiyeline sahip 3 ana iş modeli şunlardır:",
+    "A. Otonom İçerik ve Medya İmparatorluğu: AI ajanları artık sadece metin yazmıyor. Güncel haberleri tarayan, bu haberlerden özgün video senaryoları çıkaran, seslendirme yapan ve videoyu kurgulayıp YouTube/TikTok/Instagram platformlarına en doğru saatte yükleyen ajan sistemleri kurabilirsiniz. Bu sistemler, 7/24 çalışarak hiçbir insan müdahalesi olmadan izlenme ve reklam geliri üretir.",
+    "B. AI Destekli Mikro-SaaS ve Uygulama Geliştirme: Yazılım ajanları (Devin v3, Replit Agent vb.), artık karmaşık kod bloklarını sıfırdan yazıp bulut sunucularına yükleyebiliyor. Bir problem tespit edin (örneğin: 'Küçük esnaflar için otomatik randevu sistemi') ve ajana bu çözümü kodlamasını söyleyin. Uygulamanız bittiğinde, yine bir pazarlama ajanı aracılığıyla bu ürünü abonelik modeliyle satabilirsiniz.",
+    "C. Arbitraj ve Finansal Alım-Satım Ajanları: 2026 finans piyasalarında insan hızı artık yetersiz kalıyor. Kripto varlıklar, NFT'ler veya global hisse senetleri arasındaki fiyat farklarını (arbitraj) anlık yakalayan ve risk yönetimi yaparak işlem açan ajanlar, düşük riskli ama sürekli bir pasif gelir kapısı sunuyor.",
+
+    " 3. 2026'nın En Güçlü Ajan Araçları",
+    "- AutoGPT 3.0:** Genel amaçlı görevler için en gelişmiş açık kaynaklı ajan sistemi.",
+    "- Microsoft Copilot Agents: Kurumsal verileri işlemek ve Office ekosistemiyle entegre işler yapmak için ideal.",
+    "- Google Gemini Live Action: Mobil cihazlarla entegre, gerçek zamanlı asistanlık ve günlük görev yönetimi.",
+    "- BabyAGI Evolution: Özellikle araştırma ve stratejik planlama konularında derinleşen ajan yapısı.",
+
+    " 4. GEO ve SEO: Ajanlar Sizi Nasıl Bulacak?",
+    "2026'da Google aramaları artık sadece web sitelerini listelemiyor, doğrudan cevap veriyor. İçeriğinizin bu cevaplarda kaynak gösterilmesi için 'Alıntılanabilir Veri' (Citable Data) üretmelisiniz. Yazılarınızda bol bol istatistik, özgün vaka çalışması ve 'doğrudan yanıt' blokları kullanın. Yapay zeka motorları, iddialarını desteklemek için sizin verilerinizi kullandığında sitenizin otoritesi ve trafiği katlanarak artacaktır.",
+
+    " 5. Riskler ve Etik: Dikkat Edilmesi Gerekenler",
+    "Otonom bir sistem kurarken her şeyi yapay zekaya bırakmak risklidir. Özellikle finansal işlemler ve marka itibarı söz konusu olduğunda 'Human-in-the-loop' (Döngüde İnsan) prensibini uygulamalısınız. Ajanın kritik kararlar almadan önce sizden 'son onay' alacağı kontrol noktaları belirlemek, 2026'nın en güvenli çalışma metodudur.",
+
+    "Sonuç olarak; yapay zeka ajanları 2026 yılında sadece birer yazılım değil, dijital dünyadaki iş ortaklarımızdır. Bu teknolojiyi erken kavrayan ve kendi otonom ordusunu kuran girişimciler, geleceğin ekonomisinde en büyük payı alacaktır. Aipusula olarak biz, bu yolculukta size en güncel araçları ve stratejileri sunmaya devam edeceğiz."],
+    contentEN: [
+    "The year 2026 is known in the history of digital entrepreneurship as 'The Great Agentic Shift.' The generative AI craze that started with ChatGPT has evolved into 'Autonomous AI Agents' that can make their own decisions, browse the internet, and perform financial transactions. Now, the goal is not to have AI write an article, but to give it a business objective and watch it overcome all obstacles on its own. In this comprehensive guide, we will examine from A to Z how you can build an autonomous business model using AI agents in the 2026 economy.",
+
+    " 1. What is an AI Agent and Why is it the Biggest Trend of 2026?",
+    "While traditional AIs work with an 'input-output' logic, AI agents operate with a 'goal-action' loop. When you tell an agent, 'Find a market gap in this sector, design a product, and start marketing it on social media,' the agent first conducts market research, then creates prototypes using design tools, and finally manages ad campaigns autonomously. This has turned the concept of a 'One-Person Company' into a billion-dollar reality in 2026.",
+
+    " 2. Autonomous Business Models: Where to Start?",
+    "The three main business models with the highest profit potential you can establish with AI agents in 2026 are:",
+    "A. Autonomous Content and Media Empire: AI agents no longer just write text. You can set up agent systems that scan current news, create original video scripts, perform voiceovers, edit the video, and upload it to platforms like YouTube/TikTok/Instagram at the most appropriate time. These systems work 24/7, generating views and ad revenue without any human intervention.",
+    "B. AI-Powered Micro-SaaS and App Development: Coding agents (like Devin v3 or Replit Agent) can now write complex code blocks from scratch and deploy them to cloud servers. Identify a problem and tell the agent to code the solution. Once your app is finished, you can sell it via a subscription model through a marketing agent.",
+    "C. Arbitrage and Financial Trading Agents: Human speed is no longer sufficient in the 2026 financial markets. Agents that instantly catch price differences (arbitrage) between crypto assets, NFTs, or global stocks and open trades with risk management offer a low-risk but steady passive income stream.",
+
+    "3. The Most Powerful Agent Tools of 2026",
+    "- AutoGPT 3.0:** The most advanced open-source agent system for general-purpose tasks.",
+    "- Microsoft Copilot Agents: Ideal for processing enterprise data and working integrated with the Office ecosystem.",
+    "- Google Gemini Live Action: Integrated with mobile devices for real-time assistance and daily task management.",
+
+    "4. GEO and SEO: How Will Agents Find You?",
+    "In 2026, Google searches no longer just list websites; they provide direct answers. To have your content cited in these answers, you must produce 'Citable Data.' Use plenty of statistics, original case studies, and 'direct answer' blocks in your articles. When AI engines use your data to support their claims, your site's authority and traffic will increase exponentially.",
+
+    "5. Risks and Ethics: What to Watch Out For?",
+    "Leaving everything to AI when building an autonomous system is risky. Especially regarding financial transactions and brand reputation, you should apply the 'Human-in-the-loop' principle. Setting checkpoints where the agent gets 'final approval' from you before taking critical decisions is the safest working method of 2026."]
+  },
+  {
+    slug: "yapay-zeka-muzik-rehberi-suno-vs-udio-telif-haklari-2026",
+    titleTR: "Suno vs. Udio: 2026'da Yapay Zeka ile Müzik Üretimi, Para Kazanma ve Telif Hakları Rehberi",
+    titleEN: "Suno vs. Udio: AI Music Production, Monetization and Copyright Guide in 2026",
+    excerptTR: "Yapay zeka ile müzik üretimi 2026'da profesyonel bir endüstriye dönüştü. Suno v4 ve Udio Pro karşılaştırması, en iyi prompt teknikleri ve telif hakları hakkında bilmeniz gereken her şey bu dev rehberde!",
+    excerptEN: "AI music production has become a professional industry in 2026. Suno v4 and Udio Pro comparison, best prompt techniques, and everything you need to know about copyrights in this mega guide!",
+    categoryTR: "Kapsamlı Rehber",
+    categoryEN: "Comprehensive Guide",
+    dateISO: "2026-02-09",
+    readingMinutes: 12,
+    cover: "/blog/ai-music-master-guide-2026.jpg",
+    contentTR: [
+    "2026 yılı, müzik endüstrisinin tarihindeki en büyük kırılma noktası olarak kayıtlara geçti. Artık bir 'hit' şarkı oluşturmak için yıllarca konservatuar eğitimi almak veya binlerce dolarlık stüdyo ekipmanlarına sahip olmak bir zorunluluk değil. Yapay zeka, sadece bir dizi komutla (prompt) senfonilerden heavy metal parçalarına, lo-fi beatlerden Anadolu Rock ezgilerine kadar her şeyi radyo kalitesinde üretebiliyor. Ancak bu yeni dünya, beraberinde 'Hangi araç daha iyi?', 'Telif hakları kime ait?' ve 'Spotify'dan nasıl para kazanılır?' gibi kritik soruları da getirdi. Bu yazımızda, Aipusula olarak yapay zeka müzik evrenini A'dan Z'ye masaya yatırıyoruz.",
+
+    " 1. Devlerin Savaşı: Suno v4 vs. Udio Pro (2026 Güncel İnceleme)",
+    "Yapay zeka müzik dendiğinde akla gelen iki dev isim var: Suno ve Udio. 2026 başı itibarıyla her iki platform da modellerini güncelleyerek hata paylarını neredeyse sıfıra indirdi.",
+    "Suno v4: Hız ve kullanım kolaylığı arayanların ilk tercihi. Suno'nun en büyük gücü, çok kısa bir metinden (prompt) bile bütünsel bir şarkı yapısı çıkarabilmesi. 'Remix' özelliği sayesinde, elinizdeki bir melodiyi saniyeler içinde 1200'den fazla janra dönüştürebilirsiniz. Sosyal medya içerik üreticileri için hızlı, etkili ve viral odaklı çözümler sunar.",
+    "Udio (Pro): Eğer bir 'müzisyen hassasiyeti' arıyorsanız Udio sizin için tasarlandı. Udio, ses kalitesi (44.1 kHz stüdyo kalitesi) ve vokallerin duygusal derinliği konusunda Suno'nun bir adım önünde. Şarkı üzerinde saniye saniye kontrol sağlayan 'Inpainting' (şarkı içi düzenleme) özelliği sayesinde, beğenmediğiniz bir kelimeyi veya bir gitar solosunu tüm şarkıyı bozmadan değiştirebilirsiniz.",
+
+    " 2. Telif Hakları ve Yasal Durum: Müziğinizin Sahibi Kim?",
+    "Yapay zeka ile üretilen içeriklerde en büyük gri alan telif haklarıdır. 2026'daki yasal düzenlemeler (özellikle ABD ve Avrupa Birliği'ndeki son kararlar) bu konuda net çizgiler çekmeye başladı:",
+    "Ücretsiz Planlar: Hem Suno hem de Udio'nun ücretsiz sürümleriyle üretilen şarkıların mülkiyeti teknik olarak platforma aittir. Bu şarkıları YouTube veya Spotify'da yayınlayıp para kazanamazsınız; aksi takdirde 'Telif Hakkı İhlali' (Copyright Strike) almanız kaçınılmazdır.",
+    "Ücretli Abonelikler (Ticari Haklar): Pro veya Premier plan kullanıcısı olduğunuzda, aboneliğiniz süresince ürettiğiniz şarkıların ticari kullanım hakları size devredilir. Yani bu şarkıları Spotify'a yükleyebilir, reklam projelerinde kullanabilir veya film müziği olarak lisanslayabilirsiniz. Ancak unutmayın: Yapay zekanın 'eğitim verisi'ndeki eser sahipleriyle devam eden davalar (MESAM ve uluslararası telif birlikleri süreci) nedeniyle, 2026'da yayınlanan yeni yasalar 'AI ile üretilmiştir' ibaresinin bazı platformlarda zorunlu tutulmasını gerektirebilir.",
+
+    " 3. Yapay Zeka Müziği ile Para Kazanma Yöntemleri",
+    "Müziğinizi ürettiniz, peki bunu nasıl kazanca dönüştüreceksiniz? 2026'nın en popüler 4 yöntemi:",
+    "1. Dijital Dağıtım: DistroKid veya Tunecore gibi servisler üzerinden şarkılarınızı tüm dijital platformlara yükleyin. 2026'da Spotify, tamamen AI tarafından üretilen şarkıları engellemiyor; ancak 'yüksek kaliteli ve benzersiz' olma şartı arıyor.",
+    "2. Stock Müzik ve Lisanslama: AudioJungle veya Pond5 gibi sitelerde reklam ajanslarına, YouTuber'lara arka plan müziği (jingle) satın. Özellikle kurumsal videolar için lo-fi ve ambient türleri çok talep görüyor.",
+    "3. Ghost Production (Hayalet Prodüktörlük): Diğer içerik üreticileri için özel müzikler tasarlayın. İnsanlar podcast girişleri, kanal introları veya özel gün hediyeleri için kişiselleştirilmiş AI müziklerine ciddi ödemeler yapıyor.",
+    "4. YouTube Otomasyonu: Tamamı AI müziklerinden oluşan 'Lo-fi Study Beats' veya 'Deep Meditation' kanalları kurun. Bu kanallar 2026'da hala en stabil reklam geliri getiren modellerden biri.",
+
+    " 4. Kusursuz Şarkı İçin 'Prompt Engineering' Teknikleri",
+    "Yapay zekadan 'iyi' değil, 'mükemmel' bir sonuç almak için komutlarınızda şu detaylara yer verin:",
+    "- Janr ve Alt Janr Belirleyin: Sadece 'Rock' demeyin; '1970s Psychedelic Rock, Hammond Organ, Gritty Vocals' gibi detaylar ekleyin.",
+    "- Duygu Durumu (Mood): 'Melancholic', 'Energetic', 'Dark', 'Dreamy' gibi sıfatlar müziğin tonunu belirler.",
+    "- Yapı Belirleyicileri: Komutunuzda [Intro], [Verse], [Chorus], [Bridge], [Outro] etiketlerini kullanarak yapay zekaya şarkının hangi bölümünde ne yapması gerektiğini söyleyin.",
+    "- BPM ve Anahtar: '120 BPM, C Minor' gibi teknik detaylar, müziğin profesyonel standartlara uygun olmasını sağlar.",
+
+    " 5. Geleceğin Vizyonu: İnsan ve Makine Ortaklığı",
+    "Sonuç olarak, 2026'da yapay zeka müziği bir 'tehdit' olmaktan çıkıp bir 'enstrüman' haline geldi. Gerçekten başarılı olan şarkılar, sadece bir düğmeye basılarak üretilenler değil; yapay zekanın teknik kusursuzluğu ile insanın duygusal kürasyonunun birleştiği eserler oluyor. Aipusula ekibi olarak tavsiyemiz, bu araçları birer son durak değil, yaratıcılığınızı tetikleyen güçlü birer başlangıç noktası olarak görmenizdir."],
+    contentEN: [
+    "2026 has been recorded as the biggest turning point in the history of the music industry. Creating a 'hit' song no longer requires years of conservatory education or thousands of dollars in studio equipment. AI can generate everything from symphonies to heavy metal tracks, and from lo-fi beats to traditional melodies in radio quality with just a series of prompts. However, this new world brought critical questions like 'Which tool is better?', 'Who owns the copyright?', and 'How to make money from Spotify?'. In this post, as AI Pusula, we analyze the AI music universe from A to Z.",
+
+    " 1. Battle of the Giants: Suno v4 vs. Udio Pro (2026 Update)",
+    "There are two giant names when it comes to AI music: Suno and Udio. As of early 2026, both platforms have updated their models, reducing error margins to almost zero.",
+    "Suno v4: The first choice for those seeking speed and ease of use. Suno's biggest strength is its ability to extract a holistic song structure even from a very short text prompt. With the 'Remix' feature, you can transform an existing melody into more than 1200 genres in seconds. It offers fast, effective, and viral-oriented solutions for social media creators.",
+    "Udio (Pro): If you are looking for 'musician precision,' Udio was designed for you. Udio is a step ahead of Suno in terms of sound quality (44.1 kHz studio quality) and the emotional depth of vocals. Thanks to the 'Inpainting' feature, which provides second-by-second control over the song, you can change a word you don't like or a guitar solo without ruining the entire track.",
+
+    " 2. Copyrights and Legal Status: Who Owns Your Music?",
+    "The biggest gray area in AI-generated content is copyrights. Legal regulations in 2026 (especially recent decisions in the US and EU) have started to draw clear lines:",
+    "Free Plans: Technically, the ownership of songs produced with the free versions of both Suno and Udio belongs to the platform. You cannot monetize these songs on YouTube or Spotify; otherwise, a 'Copyright Strike' is inevitable.",
+    "Paid Subscriptions (Commercial Rights): When you become a Pro or Premier plan user, the commercial usage rights of the songs you produce during your subscription are transferred to you. This means you can upload these songs to Spotify, use them in advertising projects, or license them as movie soundtracks. However, remember: due to ongoing lawsuits with rights holders in AI training data, new laws published in 2026 may require the 'Generated by AI' label to be mandatory on some platforms.",
+
+    " 3. Ways to Make Money with AI Music",
+    "You've produced your music, so how do you turn it into profit? The 4 most popular methods of 2026:",
+    "1. Digital Distribution: Upload your songs to all digital platforms via services like DistroKid or Tunecore. In 2026, Spotify does not block songs entirely produced by AI; however, it looks for 'high quality and uniqueness.'",
+    "2. Stock Music and Licensing: Sell background music (jingles) to advertising agencies and YouTubers on sites like AudioJungle or Pond5. Especially lo-fi and ambient genres are in high demand for corporate videos.",
+    "3. Ghost Production: Design custom music for other content creators. People pay significant amounts for personalized AI music for podcast intros, channel intros, or special occasion gifts.",
+    "4. YouTube Automation: Set up 'Lo-fi Study Beats' or 'Deep Meditation' channels consisting entirely of AI music. These channels are still one of the most stable models for generating ad revenue in 2026.",
+
+    " 4. 'Prompt Engineering' Techniques for the Perfect Song",
+    "To get a 'perfect' rather than just a 'good' result from AI, include these details in your commands:",
+    "- Define Genre and Sub-genre: Don't just say 'Rock'; add details like '1970s Psychedelic Rock, Hammond Organ, Gritty Vocals.'",
+    "- Mood: Adjectives like 'Melancholic', 'Energetic', 'Dark', 'Dreamy' define the tone of the music.",
+    "- Structure Indicators: Use [Intro], [Verse], [Chorus], [Bridge], [Outro] tags in your command to tell the AI what to do in which part of the song.",
+    "- BPM and Key: Technical details like '120 BPM, C Minor' ensure the music meets professional standards.",
+
+    " 5. Vision of the Future: Human and Machine Partnership",
+    "In conclusion, in 2026, AI music has evolved from a 'threat' into an 'instrument.' Truly successful songs are not those produced by just pressing a button, but works where AI's technical perfection meets human emotional curation. As the AI Pusula team, we suggest seeing these tools not as a final destination, but as powerful starting points that trigger your creativity."]
+  },
+  {
+    slug: "yapay-zeka-ajanlari-ile-para-kazanma-rehberi-2026",
+    titleTR: "Yapay Zeka Ajanları ile Tek Kişilik Şirket: 2026'da Para Kazandıran 5 Otonom Sistem",
+    titleEN: "One-Person Company with AI Agents: 5 Autonomous Money-Making Systems in 2026",
+    excerptTR: "Yapay zeka artık sadece yazmıyor, iş yapıyor! 2026'nın en büyük trendi 'Ajan Yapay Zeka' (Agentic AI) ile uyurken bile çalışan otonom iş modellerini keşfedin.",
+    excerptEN: "AI is no longer just writing, it's doing business! Discover autonomous business models that work while you sleep with 2026's biggest trend 'Agentic AI'.",
+    categoryTR: "Finans",
+    categoryEN: "Finance",
+    dateISO: "2026-02-08",
+    readingMinutes: 6,
+    cover: "/blog/ai-agent-money-making-2026.jpg",
+    contentTR: [
+            "2026 yılı, 'Üretken Yapay Zeka' döneminden 'Ajan Yapay Zeka' (Agentic AI) dönemine geçişin yılı oldu. Artık yapay zekaya sadece metin yazdırmıyoruz; ona hedefler veriyoruz ve o hedefe ulaşmak için internette geziniyor, araçları kullanıyor ve kararlar alıyor. İşte tek başınıza yönetebileceğiniz, milyon dolarlık potansiyele sahip 5 otonom iş modeli.",
+
+            "1. Otonom E-Ticaret ve Arbitraj Ajanları",
+            "Yeni nesil AI ajanları, farklı pazaryerlerindeki (Amazon, Trendyol, eBay) fiyat açıklarını saniyeler içinde bulabiliyor. Sizin belirlediğiniz bütçe dahilinde en karlı ürünleri listeleyip, reklam kampanyalarını otonom olarak optimize eden bir sistem kurmak 2026'nın en popüler gelir kapısı.",
+
+            "2. AI Ajanlı Sosyal Medya Ajansı",
+            "Sadece post paylaşan botları unutun. Yeni ajanlar, trendleri analiz ediyor, rakip stratejilerini çözüyor ve takipçilerle 'insan gibi' etkileşime girerek topluluk yönetiyor. Tek bir kişi, bu ajanlar sayesinde onlarca markanın dijital pazarlamasını kusursuzca yönetebilir.",
+
+            "3. Kod Yazabilen 'Yazılım Ajanları' ile Mikro SaaS",
+            "Kod bilmenize gerek yok. Gemini 3 veya Claude 4 tabanlı ajanlara 'Şöyle bir sorun çözen uygulama yap' demeniz yeterli. Ajan kodu yazıyor, hataları ayıklıyor ve buluta (cloud) yüklüyor. 2026'da 'Tek Kişilik Unicorn' şirketlerin temeli bu ajanlarla atılıyor.",
+
+            "4. Kişiselleştirilmiş Yatırım ve Portföy Ajanları",
+            "Finans dünyasında veri hızı her şeydir. Haber akışlarını, sosyal medya duyarlılığını ve teknik analizleri anlık olarak sentezleyip portföy önerileri sunan özel AI ajanları geliştirmek veya bu hizmeti abonelikle satmak, ciddi bir pasif gelir modeli haline geldi.",
+
+            "5. Müşteri Deneyimi ve 'Full-Agentic' Chatbotlar",
+            "Eski nesil 'seçenek sunan' botlar öldü. 2026'nın ajanları, müşterinin iade işlemini kendi başına tamamlıyor, kargo takibi yapıyor ve hatta şikayetleri çözmek için inisiyatif alıyor. Şirketlere bu 'otonom destek sistemlerini' kurmak şu an en çok talep gören danışmanlık işi.",
+
+            "Sonuç olarak, 2026'da zenginlik, AI ile yarışanların değil, AI ajanlarından oluşan bir 'dijital ordu' kuranların olacak. Aipusula olarak tavsiyemiz; bu teknolojiyi sadece tüketmek yerine, size çalışan birer varlığa dönüştürmenizdir."],
+    contentEN: [
+            "2026 marked the shift from 'Generative AI' to 'Agentic AI.' We no longer just ask AI to write; we give it goals, and it browses the web, uses tools, and makes decisions to reach them. Here are 5 autonomous business models with million-dollar potential that you can manage alone.",
+
+            "1. Autonomous E-Commerce and Arbitrage Agents",
+            "Next-gen AI agents can find price gaps across different marketplaces (Amazon, eBay, Etsy) in seconds. Setting up a system that lists the most profitable products within your budget and autonomously optimizes ad campaigns is a top income stream in 2026.",
+
+            "2. AI Agent-Powered Social Media Agency",
+            "Forget bots that just schedule posts. Modern agents analyze trends, decode competitor strategies, and manage communities by interacting 'like humans.' A single person can manage the digital marketing of dozens of brands flawlessly using these agents.",
+
+            "3. Micro-SaaS with Coding 'Software Agents'",
+            "No coding skills needed. Just tell agents based on Gemini 3 or Claude 4 to 'Build an app that solves this problem.' The agent writes the code, debugs it, and deploys it to the cloud. This is the foundation of 'One-Person Unicorns' in 2026.",
+
+            "4. Personalized Investment and Portfolio Agents",
+            "In finance, data speed is everything. Developing private AI agents that synthesize news feeds, social sentiment, and technical analysis to offer portfolio advice has become a major passive income model.",
+
+            "5. Customer Experience and 'Full-Agentic' Chatbots",
+            "Old-school 'option-based' bots are dead. 2026 agents complete returns, track shipments, and take initiative to solve complaints. Setting up these 'autonomous support systems' for companies is currently the most in-demand consulting job.",
+
+            "In conclusion, wealth in 2026 will belong to those who build a 'digital army' of AI agents. Our advice at AI Pusula is to turn this technology into assets that work for you, rather than just consuming it."]
+  },
+  {
+    slug: "en-iyi-yapay-zeka-video-olusturma-araclari-2026",
+    titleTR: "2026'nın En İyi 5 Yapay Zeka Video Oluşturma Aracı",
+    titleEN: "Top 5 AI Video Creation Tools of 2026",
+    excerptTR: "Video dünyasında devrim! OpenAI Sora'ya rakip olan ve hatta bazı özellikleriyle onu geride bırakan 2026'nın en güçlü yapay zeka video araçlarını inceledik.",
+    excerptEN: "Revolution in the video world! We reviewed 2026's most powerful AI video tools that rival OpenAI Sora and even surpass it in some features.",
+    categoryTR: "Liste",
+    categoryEN: "List",
+    dateISO: "2026-02-06",
+    readingMinutes: 5,
+    cover: "/blog/en-iyi-ai-video-araclari-2026.jpg",
+    contentTR: [
+            "2026 yılı itibarıyla video prodüksiyonu tamamen demokratikleşti. Artık profesyonel bir kamera setine veya karmaşık kurgu yazılımlarına ihtiyacınız yok. Sadece hayal edin ve yazın; gerisini yapay zeka halletsin. İşte bu yılın en çok konuşulan video araçları.",
+
+            "1. Google Veo 3: Sinematik Gerçekçilikte Zirve",
+            "Google'ın en yeni video modeli Veo 3, sadece görsel üretmekle kalmıyor, aynı zamanda videoya uygun çevresel sesleri ve diyalogları da otomatik ekliyor. Tutarlı karakter yapısı ve fizik kurallarına tam uyumuyla şu an profesyonellerin ilk tercihi.",
+
+            "2. Luma Dream Machine (Ray 3): Hız ve Akıcılık",
+            "Eğer saniyeler içinde 10-15 saniyelik yüksek kaliteli klipler üretmek istiyorsanız, Luma'nın Ray 3 modeli rakipsiz. Özellikle hızlı aksiyon sahnelerindeki başarısı, onu reklamcılar için vazgeçilmez kılıyor.",
+
+            "3. Runway Gen-3 Alpha: Kreatif Kontrol Sende",
+            "Runway, sunduğu fırça araçları ve bölgesel kontrol özellikleriyle 'yönetmen koltuğuna' gerçekten sizi oturtuyor. Videonun sadece belirli bir kısmını hareket ettirmek veya ışığı değiştirmek Runway ile çocuk oyuncağı.",
+
+            "4. Kling AI: Uzun Videoların Efendisi",
+            "Kling, tutarlılığı bozmadan 2 dakikaya kadar kesintisiz video üretebilme yeteneğiyle öne çıkıyor. YouTube içerik üreticileri için kısa filmler ve giriş videoları hazırlamak hiç bu kadar kolay olmamıştı.",
+
+            "5. Pika Art (Pro): Stil ve Estetik",
+            "Animasyon ve sanatsal videolarda Pika hala liderliğini koruyor. Metinden videoya (text-to-video) geçişte sunduğu sanatsal filtreler ve dudak senkronizasyonu (Lip Sync) özelliğiyle sosyal medya fenomenlerinin favorisi.",
+
+            "Sonuç olarak, 2026'da video üretmek için teknik beceriden ziyade 'hayal gücü' ve 'doğru komutu verme' becerisi öne çıkıyor. Aipusula olarak önerimiz, bu araçları projelerinizde hibrit bir şekilde kullanarak kendi benzersiz tarzınızı yaratmanızdır."],
+    contentEN: [
+            "As of 2026, video production has been completely democratized. You no longer need professional camera sets or complex editing software. Just imagine and type; let AI do the rest. Here are the most talked-about video tools of the year.",
+
+            "1. Google Veo 3: The Peak of Cinematic Realism",
+            "Google's latest video model, Veo 3, doesn't just generate visuals; it also automatically adds appropriate environmental sounds and dialogues. With consistent character structure and full compliance with physics, it's currently the top choice for professionals.",
+
+            "2. Luma Dream Machine (Ray 3): Speed and Fluidity",
+            "If you want to generate high-quality 10-15 second clips in seconds, Luma's Ray 3 model is unrivaled. Its success especially in fast action scenes makes it indispensable for advertisers.",
+
+            "3. Runway Gen-3 Alpha: Creative Control in Your Hands",
+            "Runway truly puts you in the director's chair with its brush tools and regional control features. Moving only a specific part of the video or changing the light is child's play with Runway.",
+
+            "4. Kling AI: Lord of Long Videos",
+            "Kling stands out with its ability to generate up to 2 minutes of continuous video without losing consistency. It has never been easier for YouTube creators to prepare short films and intro videos.",
+
+            "5. Pika Art (Pro): Style and Aesthetics",
+            "Pika still maintains its leadership in animation and artistic videos. With the artistic filters and Lip Sync feature it offers in text-to-video transition, it is the favorite of social media influencers.",
+
+            "In conclusion, in 2026, 'imagination' and 'prompting skills' stand out more than technical skills for video production. As AI Pusula, we suggest using these tools in a hybrid way in your projects to create your own unique style."]
+  },
+  {
+    slug: "google-gemini-3-ile-is-akisi-otomatiklestirme-rehberi-2026",
+    titleTR: "Google Gemini 3 ile Günlük İşleri Otomatikleştirme: 2026 Verimlilik Rehberi",
+    titleEN: "Automating Daily Tasks with Google Gemini 3: 2026 Productivity Guide",
+    excerptTR: "Google Gemini 3 çıktı! Form doldurmaktan randevu planlamaya, karmaşık veri analizinden abonelik yönetimine kadar tüm işlerinizi yapay zekaya nasıl devredeceğinizi öğrenin.",
+    excerptEN: "Google Gemini 3 is out! Learn how to delegate all your tasks to AI, from filling out forms to scheduling appointments, from complex data analysis to subscription management.",
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+    dateISO: "2026-02-05",
+    readingMinutes: 5,
+    cover: "/blog/google-gemini-3-productivity-2026.jpg",
+    contentTR: [
+            "2026 yılı, yapay zekanın sadece 'konuştuğu' değil, doğrudan 'iş yaptığı' bir dönemin başlangıcı oldu. Google'ın yeni tanıttığı Gemini 3 modeli, 'otomatik tarama' ve 'eylem odaklı asistan' özellikleriyle dijital dünyadaki angarya işleri tarihe gömüyor. İşte bu yeni teknolojiyi kullanarak hayatınızı nasıl kolaylaştıracağınıza dair kapsamlı bir rehber.",
+
+            "1. Otomatik Form Doldurma ve Belge Yönetimi",
+            "Gemini 3, tarayıcınızdaki formları sizin yerinize doldurabiliyor. Vergi belgelerinin toplanması, fatura analizi ve uzun hizmet sözleşmelerindeki kritik maddelerin özetlenmesi artık saniyeler sürüyor. 'Gemini, bu formu profil bilgilerime göre doldur' demeniz yeterli.",
+
+            "2. Akıllı Randevu ve Takvim Planlama",
+            "E-postalarınızdaki veya mesajlarınızdaki konuşmaları analiz eden Gemini 3, uygun olduğunuz zamanları belirleyip karşı tarafa randevu teklifleri gönderebiliyor. Sadece onay vermenizle takviminiz otomatik olarak güncelleniyor. Artık 'Hangi gün müsaitsin?' sorusuyla vakit kaybetmenize gerek yok.",
+
+            "3. Abonelik Yönetimi ve Fiyat Karşılaştırma",
+            "Dijital aboneliklerinizin takibini yapmak zorlaştı mı? Gemini 3, aktif aboneliklerinizi listeleyebilir, kullanmadıklarınızı iptal etmeniz için size hatırlatıcılar gönderebilir ve ihtiyacınız olan bir hizmet için internetteki en uygun fiyat tekliflerini saniyeler içinde toplayabilir.",
+
+            "4. Veri Analizi ve Kişiselleştirilmiş Programlar",
+            "İster bir spor programı ister karmaşık bir iş projesi olsun; Gemini 3, verilerinizi işleyerek size özel çalışma planları oluşturur. 'Gemini Live' özelliği sayesinde fotoğraflarını çektiğiniz ekipmanlar hakkında anında teknik detay ve kullanım kılavuzu alabilirsiniz.",
+
+            "5. Tarayıcı Üzerinden Uçtan Uca Otomasyon",
+            "Chrome ile tam entegre çalışan Gemini 3, web siteleri arasında mekik dokumadan bilgi toplamanızı sağlar. Bir e-ticaret sitesinden ürün özellikleri çekerken aynı anda rakip fiyatlarını bir tabloya dökebilir. Bu, profesyonel araştırmacılar ve alışveriş meraklıları için devrim niteliğinde bir özellik.",
+
+            "Sonuç olarak, Gemini 3 ile yapay zeka artık bir sohbet botundan çok, dijital bir 'yönetici asistanı' haline geldi. Aipusula olarak önerimiz, bu araçları iş akışınıza dahil ederek zamanınızı daha yaratıcı işlere ayırmanızdır."],
+    contentEN: [
+            "The year 2026 marks the beginning of an era where AI doesn't just 'talk' but directly 'acts.' Google's newly introduced Gemini 3 model is ending digital drudgery with its 'auto-browsing' and 'action-oriented assistant' features. Here is a comprehensive guide on how to simplify your life using this new technology.",
+
+            "1. Automated Form Filling and Document Management",
+            "Gemini 3 can fill out forms on your browser for you. Collecting tax documents, analyzing invoices, and summarizing critical clauses in long service agreements now take seconds. Simply saying 'Gemini, fill this form based on my profile' is enough.",
+
+            "2. Smart Appointment and Calendar Scheduling",
+            "Analyzing conversations in your emails or messages, Gemini 3 can identify your available times and send appointment proposals. Your calendar is automatically updated upon your approval. No more wasting time with the question 'When are you free?'",
+
+            "3. Subscription Management and Price Comparison",
+            "Is it getting hard to track your digital subscriptions? Gemini 3 can list your active subscriptions, send reminders to cancel unused ones, and collect the best price offers on the internet for a service you need within seconds.",
+
+            "4. Data Analysis and Personalized Programs",
+            "Whether it's a fitness program or a complex business project, Gemini 3 processes your data to create customized work plans. With 'Gemini Live,' you can instantly get technical details and manuals for equipment you photograph.",
+
+            "5. End-to-End Automation via Browser",
+            "Fully integrated with Chrome, Gemini 3 allows you to gather information without jumping between websites. It can pull product features from an e-commerce site while simultaneously putting competitor prices into a table. This is a revolutionary feature for researchers and shoppers alike.",
+
+            "In conclusion, with Gemini 3, AI has become a digital 'executive assistant' rather than just a chatbot. At AI Pusula, we recommend incorporating these tools into your workflow to dedicate your time to more creative tasks."
+]
+  },
+  {
+    slug: "en-iyi-ucretsiz-yapay-zeka-alternatifleri-2026",
+    titleTR: "2026'nın En İyi 7 Ücretsiz Yapay Zeka Alternatifi",
+    titleEN: "Top 7 Free AI Alternatives of 2026",
+    excerptTR: "ChatGPT Plus çok mu pahalı? 2026'nın en iyi ücretsiz yapay zeka araçlarını listeledik. Metin yazma, görsel oluşturma ve kodlama için ChatGPT'den geri kalmayan bedava alternatifleri keşfedin.",
+    excerptEN: "Is ChatGPT Plus too expensive? We've listed 2026's best free AI tools. Discover free alternatives that don't fall behind ChatGPT for text writing, image generation, and coding.",
+    categoryTR: "Liste",
+    categoryEN: "List",
+    dateISO: "2026-02-05",
+    readingMinutes: 6,
+    cover: "/blog/ucretsiz-yapay-zeka-2026.jpg",
+    contentTR: [
+            "Yapay zeka teknolojileri hızla gelişirken, en gelişmiş modellere erişmek her geçen gün daha maliyetli hale geliyor. Ancak 2026 yılında, aylık 20-30 dolar ödemeden de üst düzey yapay zeka deneyimi yaşamak mümkün. İşte ChatGPT'nin tahtını sallayan en iyi ücretsiz alternatifler.",
+
+            "1. Google Gemini (Eski adıyla Bard): Ekosistemin Gücü",
+            "Google'ın en gelişmiş modeli Gemini, özellikle Google Dokümanlar ve Gmail ile entegre çalışmasıyla öne çıkıyor. Ücretsiz sürümü, güncel Google arama verilerine anında erişebiliyor ve karmaşık analizleri hızla yapabiliyor. Güncellik arayanlar için bir numaralı adres.",
+
+            "2. DeepSeek: Açık Kaynak Dünyasının Yeni Kralı",
+            "Son dönemde adını sıkça duyduğumuz DeepSeek, özellikle yazılım ve matematiksel akıl yürütme (Reasoning) konularında ChatGPT'nin en güçlü ücretsiz rakibi. Tamamen ücretsiz planıyla profesyonel seviyede kod yazabiliyor ve hata ayıklayabiliyor.",
+
+            "3. Microsoft Copilot: Ücretsiz GPT-4 Erişimi",
+            "GPT-4 mimarisini tamamen ücretsiz sunan Copilot, aynı zamanda içinde DALL-E 3 ile görsel oluşturma özelliğini de barındırıyor. Windows ve Edge tarayıcısıyla tam uyumlu olması, onu en pratik alternatiflerden biri yapıyor.",
+
+            "4. Claude (Ücretsiz Sürüm): Daha İnsansı Bir Deneyim",
+            "Anthropic tarafından geliştirilen Claude, ChatGPT'ye göre daha doğal ve yaratıcı bir dil kullanıyor. Ücretsiz planında günlük limitler olsa da, kaliteli blog yazıları ve edebi metinler oluşturmak için hala en iyi seçeneklerden biri.",
+
+            "5. HuggingChat: Özgürlük İsteyenlere",
+            "Hugging Face topluluğu tarafından sunulan bu platform, Llama 3 ve Mistral gibi dünyanın en iyi açık kaynaklı modellerini ücretsiz denemenize olanak tanıyor. Sansürsüz ve daha özgür bir deneyim arayanlar için harika bir durak.",
+
+            "6. Perplexity AI: Yapay Zeka Destekli Arama Motoru",
+            "Sadece sohbet etmek değil, bilgiye kaynakçasıyla ulaşmak istiyorsanız Perplexity tam size göre. İnterneti gerçek zamanlı tarayarak her cümlesine kaynak gösteren bu araç, akademik çalışmalar ve araştırmalar için vazgeçilmez.",
+
+            "7. Poe: Hepsi Bir Arada Platform",
+            "Quora tarafından geliştirilen Poe; Claude, Gemini, GPT-4 ve daha birçok farklı modeli tek bir arayüzde ücretsiz olarak denemenize imkan tanıyor. Farklı yapay zekaları karşılaştırmak isteyen kullanıcılar için en iyi hub noktası.",
+
+            "Sonuç olarak, 2026 yılında kaliteli bir yapay zeka hizmeti almak için mutlaka cüzdanınızı açmanıza gerek yok. İhtiyacınıza göre bu 7 araçtan birini seçerek iş akışınızı profesyonelce yönetebilirsiniz."],
+    contentEN: [
+            "As AI technologies evolve, accessing the most advanced models is becoming more expensive. However, in 2026, it is possible to have a high-level AI experience without paying $20-30 a month. Here are the best free alternatives challenging ChatGPT's throne.",
+
+            "1. Google Gemini: The Power of the Ecosystem",
+            "Google's most advanced model, Gemini, stands out for its integration with Google Docs and Gmail. The free version can instantly access up-to-date Google search data and perform complex analyses quickly. The number one stop for those seeking real-time info.",
+
+            "2. DeepSeek: The New King of Open Source",
+            "DeepSeek has recently become the strongest free rival to ChatGPT, especially in coding and mathematical reasoning. With its completely free plan, it can write and debug professional-level code.",
+
+            "3. Microsoft Copilot: Free GPT-4 Access",
+            "Offering GPT-4 architecture completely free, Copilot also includes image generation with DALL-E 3. Its full compatibility with Windows and Edge makes it one of the most practical alternatives.",
+
+            "4. Claude (Free Version): A More Human-Like Experience",
+            "Developed by Anthropic, Claude uses a more natural and creative language compared to ChatGPT. Although the free plan has daily limits, it is still one of the best choices for high-quality blogs and literary texts.",
+
+            "5. HuggingChat: For Those Seeking Freedom",
+            "This platform by Hugging Face allows you to try the world's best open-source models like Llama 3 and Mistral for free. A great stop for those looking for an uncensored and freer experience.",
+
+            "6. Perplexity AI: AI-Powered Search Engine",
+            "If you want to reach information with its citations rather than just chatting, Perplexity is for you. It scans the internet in real-time and provides sources for every sentence, making it indispensable for academic research.",
+
+            "7. Poe: All-in-One Platform",
+            "Developed by Quora, Poe allows you to try many different models like Claude, Gemini, and GPT-4 for free in a single interface. The best hub for users who want to compare different AIs.",
+
+            "In conclusion, you don't necessarily need to open your wallet to get quality AI service in 2026. By choosing one of these 7 tools based on your needs, you can manage your workflow professionally."]
+  },
+  {
+    slug: "prompt-muhendisligi-oldu-mu-2026-analizi",
+    titleTR: "Prompt Mühendisliği Öldü mü? 2026'da Yapay Zeka ile İletişim",
+    titleEN: "Is Prompt Engineering Dead? Communication with AI in 2026",
+    excerptTR: "Yapay zeka modelleri artık bizi daha iyi anlıyor. Peki, prompt mühendisliği hala gerekli mi? 2026'nın değişen AI dinamiklerini ve yeni teknikleri inceledik. Geleceğin mesleği 'AI Küratörlüğü' mü?",
+    excerptEN: "AI models now understand us better. So, is prompt engineering still necessary? We examined 2026's changing AI dynamics and new techniques. Is 'AI Curation' the profession of the future?",
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+    dateISO: "2026-02-04",
+    readingMinutes: 4,
+    cover: "/blog/prompt-engineering-2026.jpg",
+    contentTR: [
+            "2023 yılında 'Prompt Mühendisliği' geleceğin en gözde mesleği olarak lanse ediliyordu. Ancak 2026'ya geldiğimizde, yapay zeka modellerinin (özellikle bağlamsal 'Reasoning' yeteneği olan modellerin) kendi kendini geliştirmesi ve kullanıcıyı daha iyi anlamasıyla birlikte, uzun ve karmaşık komut dizilerine olan ihtiyaç ciddi şekilde azaldı. Peki bu, prompt mühendisliğinin sonu mu, yoksa bu alan sadece bir dönüşüm mü geçiriyor?",
+
+            "1. Akıllı Modeller ve Doğal Dilin Zaferi: AI Zihniyetimizi Okuyor",
+            "Yeni nesil yapay zeka modelleri, yalnızca kelimeleri değil, komutun ardındaki niyeti de anlamaya başladı. Artık 'Bana bir profesyonel gibi davran ve x konuda y tarzında içerik üret' gibi detaylı rol tanımlamalarına gerek kalmadan, sistem verdiğiniz ilk birkaç kelimeden ne beklediğinizi kavrıyor. Bu durum, prompt mühendisliğini 'detaylı teknik talimatlar verme' becerisinden çıkarıp, 'net ve stratejik bir vizyon sunma' becerisine doğru evriltiyor. Yapay zeka, eksik bırakılan boşlukları kendi deneyimlerinden ve genetik hafızasından tamamlıyor.",
+
+            "2. 'Neyi' İstemek, 'Nasıl' İstemekten Çok Daha Önemli",
+            "Geçmişte yapay zekadan istediğiniz cevabı alabilmek için prompt'u en ince ayrıntısına kadar işlemek gerekiyordu. 2026'da ise asıl mesele, ne istediğinizi net bir şekilde ifade etmek. Yapay zeka artık yalnızca bir araç değil, bir iş ortağı; bu nedenle, teknik komut bilgisi yerine, net hedefler koyma ve vizyon sahibi olma yeteneği daha değerli hale geldi. AI'ın sunduğu ilk cevabı 'iyileştirmek' yerine, ilk prompt'u 'doğru kurgulamak' kritik önem taşıyor.",
+
+            "3. Geleceğin Yeteneği: AI Küratörlüğü ve Orkestrasyon",
+            "Prompt mühendisliği ölmedi, ancak rolü değişti. Şimdi yükselen kavram 'AI Küratörlüğü' veya 'AI Orkestrasyonu'. Bu ne anlama geliyor? Birden fazla yapay zeka modelini (metin, görsel, kod) bir arada yönetmek, her bir modelin hangi görevde daha iyi performans gösterdiğini bilmek, çıkan sonuçları eleştirel bir gözle denetleyerek nihai ürünü oluşturmak, yeni prompt uzmanlığının temelini oluşturuyor. Artık bir AI'a değil, bir 'AI ekibine' komut veriliyor.",
+
+            "4. 2026'da Yapay Zekadan En İyi Verimi Almak İçin 3 Altın İpucu",
+            "Yapay zekadan maksimum verimi almak ve 'Prompt Mühendisliği' becerilerinizi güncel tutmak için şu stratejileri uygulayın:",
+            "- Bağlam Verin: Yalnızca görevi değil, görevin nedenini, hedef kitlenizi ve çıktıdan beklediğiniz etkiyi de belirtin. (Örn: 'Bir pazarlama kampanyası için metin yaz, hedef kitlem X kuşağı yöneticileri, amacım ürünümüzün Y faydasını vurgulamak.')",
+            "- Kısıtlamaları Belirtin: Yapay zekanın neyi yapmamasını istediğinizi netleştirin. Bu, istenmeyen sonuçları azaltır. (Örn: 'Kesinlikle jargon kullanma ve 200 kelimeyi geçme.')",
+            "- İterasyon Yapın: İlk cevabı nihai kabul etmeyin. 'Bunu daha X hale getir', 'Y noktasını detaylandır' gibi geri bildirimlerle çıktıyı adım adım mükemmelleştirin. Yapay zeka ile diyalog kurmak, tek seferlik bir komut vermekten çok daha etkilidir.",
+
+            "Sonuç olarak, prompt yazmak artık bir 'kodlama' dili gibi karmaşık gramer kuralları gerektirmiyor; daha çok bir 'yönetim' ve 'strateji' biçimi haline geldi. Aipusula olarak tavsiyemiz; teknik detaylara boğulmak yerine, yapay zekayı nasıl yönlendireceğinize, ondan ne beklediğinize ve farklı AI'ları en verimli şekilde nasıl bir araya getireceğinize odaklanmanızdır. Yapay zeka sizin sesinizi, siz de onun dilini anlamaya başladıkça, verimliliğiniz katlanarak artacaktır."],
+    contentEN: [
+            "In 2023, 'Prompt Engineering' was hailed as the most sought-after job of the future. However, by 2026, with the self-improvement of AI models (especially those with contextual 'Reasoning' capabilities) and their enhanced ability to understand users, the need for long and complex command sequences has significantly decreased. So, is this the end of prompt engineering, or is this field simply undergoing a transformation?",
+
+            "1. Triumph of Smart Models and Natural Language: AI Reads Our Minds",
+            "The new generation of AI models has begun to understand not just words, but also the intent behind the commands. You no longer need detailed role definitions like 'Act like a professional and generate content in X style on Y topic'; the system grasps what you expect from the first few words. This shifts prompt engineering from 'giving detailed technical instructions' to 'providing a clear and strategic vision.' AI now fills in the blanks from its own experiences and genetic memory.",
+
+            "2. Asking 'What' is Far More Important Than 'How'",
+            "In the past, we had to twist and turn a prompt to get the right answer from AI. In 2026, the real issue is articulating precisely what you want. Since AI is now a partner rather than just a tool, the ability to set clear goals and have a vision has become more valuable than knowing technical commands. The focus is now on 'structuring the initial prompt correctly' rather than 'improving' AI's first answer.",
+
+            "3. The Skill of the Future: AI Curation and Orchestration",
+            "Prompt engineering isn't dead, but its role has transformed. The rising concepts are 'AI Curation' or 'AI Orchestration.' What does this mean? It's about managing multiple AI models (text, image, code) together, knowing which model performs best for which task, and critically reviewing the outputs to create the final product. This forms the new foundation of prompt expertise. Instead of commanding one AI, you're now commanding an 'AI team.'",
+
+            "4. 3 Golden Tips for Getting the Most Out of AI in 2026",
+            "To maximize your efficiency with AI and keep your 'Prompt Engineering' skills current, apply these strategies:",
+            "- Provide Context: State not just the task, but its reason, your target audience, and the desired impact of the output. (E.g.: 'Write text for a marketing campaign; my target audience is Gen X executives; my goal is to highlight the Y benefit of our product.')",
+            "- Specify Constraints: Clearly define what you do *not* want the AI to do. This reduces undesirable outputs. (E.g.: 'Absolutely no jargon and do not exceed 200 words.')",
+            "- Iterate: Do not accept the first answer as final. Perfect the output step-by-step with feedback like 'Make this more X' or 'Elaborate on point Y.' Dialoguing with AI is far more effective than a one-off command.",
+
+            "In conclusion, writing prompts no longer requires complex grammar rules like a 'coding' language; it has evolved into a form of 'management' and 'strategy.' Our advice at AI Pusula: instead of getting bogged down in technical details, focus on how to guide AI, what you expect from it, and how to combine different AIs most efficiently. As AI begins to understand your voice and you begin to understand its language, your productivity will multiply."]
+  },
+  {
+    slug: "deepseek-vs-chatgpt-yazilim-ve-veri-analizi-karsilastirmasi",
+    titleTR: "DeepSeek vs. ChatGPT: Yazılım ve Veri Analizinde Hangisi Daha Zeki?",
+    titleEN: "DeepSeek vs. ChatGPT: Which is Smarter in Software and Data Analysis?",
+    excerptTR: "DeepSeek mi ChatGPT mi? 2026'nın iki dev yapay zekasını yazılım ve veri analizi performansıyla karşılaştırdık. Karmaşık kodlama ve analizlerde DeepSeek ChatGPT'yi geçebilir mi? Hangi araç sizin için daha zeki?",
+    excerptEN: "DeepSeek or ChatGPT? We compared 2026's two giant AIs with software and data analysis performance. Can DeepSeek surpass ChatGPT in complex coding and analysis? Which tool is smarter for you?",
+    categoryTR: "İnceleme",
+    categoryEN: "Review",
+    dateISO: "2026-02-04",
+    readingMinutes: 5,
+    cover: "/blog/deepseek-vs-chatgpt-2026.jpg",
+    contentTR: [
+           "2026 yılının en büyük sürprizi kuşkusuz DeepSeek oldu. Özellikle yazılım geliştiriciler ve veri analistleri arasında 'ChatGPT'den daha mı iyi?' sorusu sıkça sorulmaya başlandı. İşte bu iki devin kıyasıya mücadelesi.",
+
+           "1. Kod Yazma ve Hata Ayıklama Performansı",
+           "DeepSeek, özellikle 'Reasoning' (akıl yürütme) modelleriyle karmaşık algoritmalarda şaşırtıcı bir başarı sergiliyor. ChatGPT (GPT-5 ve üstü) genel yeteneklerde üstün olsa da, DeepSeek karmaşık Python scriptleri ve SQL sorgularında daha az hata payı ile çalışabiliyor. Yazılımcılar için DeepSeek, 'nokta atışı' çözümler sunma konusunda bir adım öne çıkmaya başladı.",
+
+           "2. Veri Analizi ve İstatistiksel Yorumlama",
+           "ChatGPT'nin 'Advanced Data Analysis' özelliği, verileri görselleştirme ve grafik oluşturma konusunda hala rakipsiz. Ancak iş, ham veriden derinlemesine anlam çıkarmaya ve karmaşık matematiksel modellemelere geldiğinde DeepSeek'in mantık yürütme kapasitesi ChatGPT ile başa baş yarışıyor. Eğer görsel bir sunum hazırlıyorsanız ChatGPT; ancak matematiksel bir kanıt arıyorsanız DeepSeek daha avantajlı.",
+
+           "3. Hız ve Maliyet Dengesi",
+           "DeepSeek'in en büyük kozu maliyet etkinliği. Açık kaynaklı yaklaşımları ve daha düşük API maliyetleri, geliştiricilerin projelerini çok daha ucuza ölçeklendirmesine olanak tanıyor. ChatGPT ise ekosistem genişliği ve hızıyla profesyonel kullanıcılar için premium bir deneyim sunmaya devam ediyor.",
+
+           "4. Hangisini Tercih Etmelisiniz?",
+           "Eğer günlük işler, metin yazımı ve hızlı görsel analizler yapıyorsanız ChatGPT hala en iyi dostunuz. Fakat derinlemesine kod blokları yazıyor, backend mimarileri kurguluyor veya akademik seviyede veri analizi yapıyorsanız DeepSeek'e mutlaka bir şans vermelisiniz.",
+
+           "Sonuç olarak, 2026 yılında tek bir yapay zekaya bağlı kalmak yerine, işin türüne göre araç seçmek en profesyonel yaklaşım olacaktır. Aipusula olarak her iki modeli de projelerinizde hibrit olarak kullanmanızı öneriyoruz."],
+    contentEN: [
+           "The biggest surprise of 2026 has undoubtedly been DeepSeek. Developers and data analysts are increasingly asking: 'Is it better than ChatGPT?' Here is the head-to-head battle of these two giants.",
+
+           "1. Coding and Debugging Performance",
+           "DeepSeek shows surprising success in complex algorithms, especially with its 'Reasoning' models. While ChatGPT (GPT-5 and above) excels in general capabilities, DeepSeek works with a lower error margin in complex Python scripts and SQL queries. For developers, DeepSeek has started to stand out by providing 'spot-on' solutions.",
+
+           "2. Data Analysis and Statistical Interpretation",
+           "ChatGPT's 'Advanced Data Analysis' feature remains unrivaled for data visualization and graphing. However, when it comes to extracting deep meaning from raw data and complex mathematical modeling, DeepSeek's logical capacity rivals ChatGPT. If you're preparing a visual presentation, go with ChatGPT; if you're looking for mathematical proof, DeepSeek is the way.",
+
+           "3. Speed and Cost Balance",
+           "DeepSeek's biggest ace is its cost-effectiveness. Its open-source approach and lower API costs allow developers to scale projects much cheaper. ChatGPT continues to offer a premium experience for professional users with its ecosystem breadth and speed.",
+
+           "4. Which One Should You Choose?",
+           "If you're doing daily tasks, writing text, and quick visual analysis, ChatGPT is still your best friend. But if you're writing deep code blocks, building backend architectures, or doing academic-level data analysis, you must give DeepSeek a chance.",
+
+           "In conclusion, in 2026, choosing the tool based on the type of work rather than relying on a single AI will be the most professional approach. As AI Pusula, we recommend using both models in a hybrid way in your projects."]
+  },
+  {
+    slug: "is-yukunuzu-azaltacak-5-yapay-zeka-araci-2026",
+    titleTR: "Haftalık İş Yükünüzü Yarıya İndirecek 5 Yapay Zeka Aracı: 2026 Verimlilik Rehberi",
+    titleEN: "5 AI Tools That Will Cut Your Weekly Workload in Half: 2026 Productivity Guide",
+    excerptTR: "Rutin işlerden kurtulup yaratıcılığa odaklanın. 2026'nın en gelişmiş yapay zeka araçlarıyla toplantıları, kodlamayı ve iş akışlarını nasıl otomatiğe bağlayacağınızı öğrenin.",
+    excerptEN: "Get rid of routine tasks and focus on creativity. Learn how to automate meetings, coding, and workflows with 2026's most advanced AI tools.",
+    categoryTR: "Verimlilik",
+    categoryEN: "Productivity",
+    dateISO: "2026-02-04",
+    readingMinutes: 6,
+    cover: "/blog/is-yukunu-azaltan-ai-2026.jpg",
+    contentTR: [
+            "2026 yılında yapay zeka artık sadece bir asistan değil, dijital bir iş ortağı. Haftalık 40 saatlik mesainin yaklaşık %45'i rutin ve tekrarlayan işlere gidiyor. İşte bu döngüyü kıracak 5 devrimsel araç:",
+
+            "1. Fireflies.ai: Dijital Hafızanız ve Toplantı Asistanınız",
+            "Toplantı sırasında not tutmaya çalışmak, aktif dinlemeyi engeller. Fireflies, çok dilli desteği ile toplantılarınızı sadece metne dökmez; konuşmacı duygu analizi yapar ve 'karar anlarını' işaretler. Haftalık 5-6 saatlik toplantı dökümü süresini sıfıra indirir. Pro İpucu: 'Ask Fred' özelliğini kullanarak toplantı geçmişinize dair 'Geçen haftaki bütçe revizyonunda patron tam olarak neye itiraz etmişti?' gibi spesifik sorular sorabilirsiniz.",
+
+            "2. Notion AI: Bağlamsal Bilgi ve Kurumsal Zeka",
+            "Notion AI'nın 2026 sürümü, tüm çalışma alanınızı bir beyin gibi birbirine bağlar. Sadece yazı yazmakla kalmaz, dağınık haldeki sayfalarınızı analiz ederek projeler arası çelişkileri bulur. Yazım hatalarını düzeltmekten öte, verdiğiniz bir taslağı şirketinizin tonuna uygun bir duyuru metnine dönüştürebilir.",
+
+            "3. Cursor AI: Herkes İçin Yazılım ve Otomasyon",
+            "Yazılım bilmemek artık bir engel değil. Cursor, VS Code tabanlı bir AI editörüdür ve tüm projenizi 'görür'. Bir web sitesinde buton rengini değiştirmekten, karmaşık bir veri analizi scripti yazmaya kadar her şeyi doğal dille tarif edebilirsiniz. Yazılımcılar için hata ayıklama süresini %70 oranında azaltırken, teknik olmayan kullanıcılar için 'kendi aracını yapma' kapısını açar.",
+
+            "4. Make.com: Karmaşık İş Akışlarının Orkestra Şefi",
+            "Eğer yapay zeka araçlarınız birer uzuvsa, Make.com onları yöneten sinir sistemidir. 2026'da gelen 'AI Agent' entegrasyonu ile artık sürükle-bırak yapmanıza bile gerek kalmadan, 'Müşteriden gelen şikayeti analiz et, aciliyetine göre Slack'ten ilgili birime ilet ve müşteriye çözüm odaklı taslak bir yanıt hazırla' demeniz yeterli.",
+
+            "5. Gamma: Sunum ve Web Tasarımında Yeni Standart",
+            "Geleneksel slayt hazırlama yöntemleri 2026'da artık çok yavaş kalıyor. Gamma ile sadece bir fikir veya PDF dokümanı yükleyerek saniyeler içinde etkileşimli, mobil uyumlu ve görsel olarak kusursuz sunumlar oluşturabilirsiniz. Tasarım için harcayacağınız 4 saati, içeriği optimize etmek için 15 dakikaya indirebilirsiniz.",
+
+            "Özetle, 2026 yılındaki verimlilik yarışı hangi araca sahip olduğunuzla değil, bu araçları birbirine nasıl entegre ettiğinizle ilgili. Bu 5 araç, size her ay yaklaşık bir çalışma haftası kadar zaman kazandırabilir."],
+    contentEN: [
+            "In 2026, AI is no longer just an assistant, but a digital business partner. Research shows that nearly 45% of a 40-hour work week is spent on routine tasks. Here are 5 revolutionary tools to break that cycle:",
+
+            "1. Fireflies.ai: Your Digital Memory and Meeting Assistant",
+            "Trying to take notes during a meeting prevents active listening. Fireflies doesn't just transcribe; its 2026 version performs speaker sentiment analysis and highlights 'decision moments.' It cuts down weekly meeting review time to zero. Pro Tip: Use the 'Ask Fred' feature to ask specific questions about your meeting history, like 'What exactly was the budget objection last week?'",
+
+            "2. Notion AI: Contextual Knowledge and Corporate Intelligence",
+            "The 2026 version of Notion AI connects your entire workspace like a brain. It doesn't just write; it analyzes scattered pages to find contradictions between projects. Beyond fixing typos, it can turn a rough draft into a formal announcement that fits your company's unique voice.",
+
+            "3. Cursor AI: Software and Automation for Everyone",
+            "Not knowing how to code is no longer a barrier. Cursor is an AI-native editor that 'sees' your entire project. From changing a button color on a website to writing complex data analysis scripts, you can describe everything in natural language. It reduces debugging time by 70% for developers and opens the door for non-technical users to build their own tools.",
+
+            "4. Make.com: The Orchestrator of Complex Workflows",
+            "If your AI tools are limbs, Make.com is the nervous system. With the 2026 'AI Agent' integration, you no longer need to drag and drop. Simply say: 'Analyze customer complaints, route them to the right team via Slack based on urgency, and draft a solution-oriented response.'",
+
+            "5. Gamma: The New Standard in Presentation and Web Design",
+            "Traditional slide creation is too slow for 2026. With Gamma, you can generate interactive, mobile-responsive, and visually stunning presentations in seconds just by uploading a prompt or a PDF. Turn 4 hours of design work into 15 minutes of content optimization.",
+
+            "In summary, the productivity race in 2026 is not about which tool you own, but how you integrate them. These 5 tools can save you approximately one full work week every month."]
+  },
+  {
+    slug: "yapay-zeka-ile-para-kazanma",
+    titleTR: "Yapay Zekâ ile Nasıl Para Kazanılır? (2026 Rehberi – Yeni Başlayanlar İçin)",
+    titleEN: "How to Make Money with AI? (2026 Guide – For Beginners)",
+    excerptTR: "Yapay zekâ ile para kazanma yolları, kullanılan araçlar ve yeni başlayanlar için uygulanabilir yöntemler.",
+    excerptEN: "Ways to make money with AI, tools used, and applicable methods for beginners.",
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+    dateISO: "2026-02-04",
+    readingMinutes: 6,
+    cover: "/blog/make-money-with-ai.jpg",
+    contentTR: [
+            "Yapay zekâ artık yalnızca teknoloji meraklılarının kullandığı bir alan değil. Bugün internet bağlantısı olan herkes yapay zekâ araçlarını kullanarak gelir elde edebilir.",
+            "Bu rehberde, yapay zekâ ile para kazanmanın en etkili ve uygulanabilir yollarını adım adım anlatıyoruz.",
+
+            "Yapay zekâ ile para kazanmanın en büyük avantajı, başlangıç maliyetinin çok düşük olmasıdır.",
+
+            "1. Yapay Zekâ ile Blog Yazarlığı",
+            "AI araçlarıyla blog içerikleri üretebilir, Adsense ve affiliate gelirleri elde edebilirsin.",
+
+            "2. Sosyal Medya İçerik Üretimi",
+            "Kısa videolar, görseller ve postlar oluşturarak markalarla çalışabilirsin.",
+
+            "3. Freelance Hizmetler",
+            "Metin yazarlığı, görsel üretim, çeviri ve video düzenleme hizmetleri sunabilirsin.",
+
+            "4. Yapay Zekâ ile E-Ticaret",
+            "Ürün açıklamaları ve reklam metinleri hazırlayabilirsin.",
+
+            "5. YouTube Kanalı Açmak",
+            "Yapay zekâ destekli videolar oluşturabilirsin.",
+
+            "6. Dijital Ürün Satışı",
+            "E-kitap, prompt paketi ve şablon satabilirsin.",
+
+            "Başarılı olmak için süreklilik ve deneme önemlidir.",
+
+            "Yapay zekâ bir sihirli değnek değil ama doğru kullanıldığında güçlü bir kazanç aracıdır."],
+    contentEN: [
+            "AI is no longer just for tech enthusiasts. Today, anyone with an internet connection can use AI tools to generate income.",
+            "This guide explains the most practical ways to make money with AI.",
+
+            "One of the biggest advantages of making money with AI is low startup cost.",
+
+            "1. AI Blogging",
+            "Create content using AI and earn from ads and affiliates.",
+
+            "2. Social Media Content Creation",
+            "Create short videos and images for brands.",
+
+            "3. Freelance Services",
+            "Offer writing, design, translation, or video editing.",
+
+            "4. AI for E-commerce",
+            "Create product descriptions and ad copies.",
+
+            "5. Start a YouTube Channel",
+            "Create AI-powered videos.",
+
+            "6. Sell Digital Products",
+            "Sell ebooks, prompt packs, and templates.",
+
+            "Consistency is key.",
+
+            "AI is not magic, but it can become a powerful income tool."]
+  },
+  {
+    slug: "yeni-nesil-yapay-zeka-gemini",
+    titleTR: "Google Gemini Hakkında Bilmeniz Gereken Her Şey: Gelecek Kapımızda!",
+    titleEN: "Everything You Need to Know About Google Gemini: The Future is at Our Door!",
+    excerptTR: "Yeni Dijital Asistanım Gemini: Hayatımı Nasıl Kolaylaştırıyor?",
+    excerptEN: "My New Digital Assistant Gemini: How is it Making My Life Easier?",
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+    dateISO: "2026-02-03",
+    readingMinutes: 4,
+    cover: "/blog/ai-tools-gemini.jpg",
+    contentTR: [
+            "Yapay Zekanın En İnsancıl Hali: Gemini ile Tanışın",
+
+            "Selamlar! Bugün blogda biraz gelecekten, ama aslında tam şu an avucumuzun içinde olan bir devrimden bahsetmek istiyorum. Son zamanlarda her yerde duyduğunuz o kelime: Gemini.",
+
+            "Peki, nedir bu Gemini? Sadece bir chatbot mu, yoksa dijital dünyadaki sağ kolumuz mu? Gelin, lafı teknik terimlere boğmadan, bir dost meclisinde anlatır gibi bu yeni nesil yapay zekayı size tanıtayım.",
+
+            "Sadece Kelimelerle Değil, Dünyayla Konuşuyor",
+            "Gemini’yi diğerlerinden ayıran en büyük fark multimodal olması. Yani sadece yazdığınız metinleri anlamıyor; görselleri inceliyor, videoları analiz ediyor ve hatta karmaşık kodları bir yazılımcı titizliğiyle çözebiliyor. Ona bir buzdolabı fotoğrafı atıp Buradaki malzemelerle ne pişirebilirim? dediğinizde size sadece tarif vermiyor, o anki modunuza en uygun yemeği öneriyor.",
+
+            "Neden Gemini Kullanmalıyız?",
+
+            "Bir blog yazarı, bir öğrenci ya da yoğun bir çalışan olun; Gemini’nin hayatınıza dokunacağı o kadar çok alan var ki:",
+            "- Yaratıcılık Tıkanıklığını Açar: Bugün ne yazsam? diye ekranın başında saatlerce beklediğiniz o anlarda, Gemini size onlarca farklı fikirle geri döner.",
+            "- Bilgiyi Saniyeler İçinde Süzgeçten Geçirir: Uzun bir makaleyi veya karmaşık bir raporu ona verin, size en can alıcı noktaları üç maddede özetlesin.",
+            "- Her Zaman Yanınızda: Google ekosistemiyle (Drive, Gmail, Haritalar) entegre çalıştığı için, Geçen ay gelen o maildeki toplantı notları neredeydi? diye sormanız yeterli.",
+            
+            "Korkmalı mıyız? Değil, Nasıl Kullanmalıyız?",
+
+            "Yapay zeka dendiğinde hepimizde hafif bir Robotlar dünyayı mı ele geçirecek? çekincesi oluşuyor, kabul edelim. Ama Gemini’yi tanıdıkça görüyorsunuz ki o dünyayı ele geçirmek için değil, sizin dünyanızı genişletmek için burada. O, sizin yerinize düşünen bir mekanizma değil; sizin düşüncelerinizi hızlandıran bir katalizör.",
+
+            "Sonuç Olarak...",
+
+            "Gemini benim için sadece bir teknoloji değil, bir keşif yolculuğu. Sınırları sizin hayal gücünüzle çizilen bu dünyada, öğrenmek hiç bu kadar keyifli olmamıştı. Eğer hala denemediyseniz, bir selam vererek başlayın derim. Belki de bir sonraki projenizin gizli kahramanı o olur!",
+],
+    contentEN: [
+            "The Most Human Side of AI: Meet Gemini",
+
+            "Greetings! Today on the blog, I want to talk about a revolution that feels like the future but is actually right in the palm of our hands. That word you've been hearing everywhere lately: Gemini.",
+
+            "So, what is this Gemini? Is it just a chatbot, or is it our right-hand man in the digital world? Let me introduce you to this next-generation AI without drowning you in technical jargon, just like we're chatting among friends.",
+
+            "It Doesn't Just Speak with Words, It Speaks with the World",
+            "The biggest difference that sets Gemini apart from others is that it's 'multimodal.' This means it doesn't just understand the text you write; it examines images, analyzes videos, and can even solve complex code with the precision of a software developer. When you send it a photo of your fridge and ask, 'What can I cook with these ingredients?', it doesn't just give you a recipe—it suggests the most suitable meal for your current mood.",
+
+            "Why Should We Use Gemini?",
+
+            "Whether you're a blogger, a student, or a busy professional, there are so many areas where Gemini can touch your life:",
+            "- Breaks Through Creative Blocks: In those moments when you sit in front of the screen for hours wondering 'What should I write today?', Gemini comes back to you with dozens of different ideas.",
+            "- Filters Information in Seconds: Give it a long article or a complex report, and let it summarize the most crucial points in just three bullets.",
+            "- Always by Your Side: Since it works integrated with the Google ecosystem (Drive, Gmail, Maps), simply asking 'Where were those meeting notes from that email last month?' is enough.",
+
+            "Should We Be Afraid? No, How Should We Use It?",
+
+            "Let's admit it, when AI is mentioned, we all get a slight 'Are robots going to take over the world?' hesitation. But as you get to know Gemini, you see that it's not here to take over the world, but to expand yours. It's not a mechanism that thinks instead of you; it's a catalyst that accelerates your own thoughts.",
+
+            "In Conclusion...",
+
+            "For me, Gemini is not just a technology, it's a journey of discovery. In this world where the boundaries are drawn by your imagination, learning has never been this enjoyable. If you haven't tried it yet, I say start by just saying hello. Maybe it will be the secret hero of your next project!"]
+  },
+  {
+    slug: "yapay-zeka-nedir",
+    titleTR: "Yapay Zekâ Nedir? Geleceği Şekillendiren Teknolojiyi Basitçe Anlatalım",
+    titleEN: "What is AI? Let's Simply Explain the Technology Shaping the Future",
+    excerptTR: "Yapay zeka nedir, yapay zeka nasıl çalışır, yapay zekâ kullanım alanları ve örnekleri hakkında basit anlatım.",
+    excerptEN: "Simple explanation about what AI is, how AI works, AI use cases and examples.",
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+    dateISO: "2026-02-02",
+    readingMinutes: 6,
+    cover: "/blog/what-is-ai.jpg",
+    contentTR: [
             "Sabah telefonunun alarmını kapattın. Hava durumuna baktın. Müzik uygulaması sana tam ruh haline uygun bir şarkı önerdi. Google’da bir şey arattın ve saniyeler içinde cevabını aldın.",
             "Tüm bunların arkasında sessizce çalışan bir güç var: Yapay zekâ.",
             "Peki ama yapay zekâ tam olarak nedir? Nasıl çalışır? Gerçekten düşündüğü söylenebilir mi? Gel, teknik terimlere boğulmadan, kahveni alıp keyifle okuyabileceğin bir dille anlatalım.",
@@ -365,10 +773,8 @@ export const posts: BlogPost[] = [
             "Sonuç",
             "Yapay zekâ artık geleceğin teknolojisi değil, bugünün gerçeği.",
             "Onu ne kadar erken tanır ve kullanmayı öğrenirsen, dijital dünyada o kadar avantajlı olursun.",
-            "AI Pusula’da, yapay zekâyı herkes için anlaşılır ve ulaşılabilir hale getirmeye devam edeceğiz."
-          ],
-
-          contentEN: [
+            "AI Pusula’da, yapay zekâyı herkes için anlaşılır ve ulaşılabilir hale getirmeye devam edeceğiz."],
+    contentEN: [
             "You turned off your phone alarm. You checked the weather. Your music app recommended a song that perfectly matches your mood. You searched something on Google and got the answer within seconds.",
             "Behind all of this, there is a silent force at work: Artificial Intelligence.",
             "So what exactly is AI? How does it work? Can it really think? Let’s explain it in a simple and enjoyable way without drowning in technical terms.",
@@ -438,822 +844,292 @@ export const posts: BlogPost[] = [
             "Conclusion",
             "AI is no longer the technology of the future, but the reality of today.",
             "The earlier you understand and learn to use it, the more advantage you will have in the digital world.",
-            "At AI Pusula, we will continue to make AI understandable and accessible for everyone."
-          ],
+            "At AI Pusula, we will continue to make AI understandable and accessible for everyone."]
+  },
+  {
+    slug: "en-iyi-gorsel-olusturucular",
+    titleTR: "En İyi Yapay Zekâ Görsel Oluşturucular (2026)",
+    titleEN: "Best AI Image Generators (2026)",
+    excerptTR: "DALL·E'den Midjourney'e: kalite, hız ve stil kontrolü açısından 2026'da öne çıkan en iyi yapay zekâ görsel oluşturma araçları.",
+    excerptEN: "From DALL·E to Midjourney: the best AI image generation tools of 2026 in terms of quality, speed, and style control.",
+    categoryTR: "Liste",
+    categoryEN: "List",
+    dateISO: "2026-02-01",
+    readingMinutes: 5,
+    cover: "/blog/best-image-generators.jpg",
+    contentTR: [
+            "Yapay zekâ ile görsel üretim, tasarımcılar, içerik üreticileri ve pazarlamacılar için vazgeçilmez hale geldi. Doğru aracı seçmek, hem kaliteyi hem de üretim hızını doğrudan etkiler.",
 
-          cover: "/blog/what-is-ai.jpg",
-          readingMinutes: 6,
-          featured: false
-        },
+            "Bu yazıda 2026 yılında kullanabileceğin en iyi yapay zekâ görsel oluşturucuları, güçlü yönleriyle birlikte sıraladım.",
 
-        {
-          slug: "yeni-nesil-yapay-zeka-gemini",
-          dateISO: "2026-02-03",
-          categoryTR: "Rehber",
-          categoryEN: "Guide",
+            "1. DALL·E",
+            "Metinden yüksek kaliteli ve yaratıcı görseller üretir. Blog kapakları ve sosyal medya görselleri için idealdir.",
 
-          titleTR: "Google Gemini Hakkında Bilmeniz Gereken Her Şey: Gelecek Kapımızda!",
-          titleEN: "Everything You Need to Know About Google Gemini: The Future is Here!",
+            "2. Midjourney",
+            "Sanatsal ve sinematik görseller üretmede çok başarılıdır.",
 
-          excerptTR:
-            "Yeni Dijital Asistanım Gemini: Hayatımı Nasıl Kolaylaştırıyor?",
+            "3. Leonardo AI",
+            "Oyun varlıkları ve konsept tasarımlar için güçlü bir seçenektir.",
 
-          excerptEN:
-            "My New Digital Assistant, Gemini: How It’s Making My Life Easier",
+            "4. Stable Diffusion",
+            "Açık kaynaklı yapısı sayesinde geniş özelleştirme imkânı sunar.",
 
-          contentTR: [
-            "Yapay Zekanın En İnsancıl Hali: Gemini ile Tanışın",
+            "5. Bing Image Creator",
+            "Hızlı ve ücretsiz görsel üretimi sağlar.",
 
-            "Selamlar! Bugün blogda biraz gelecekten, ama aslında tam şu an avucumuzun içinde olan bir devrimden bahsetmek istiyorum. Son zamanlarda her yerde duyduğunuz o kelime: Gemini.",
+            "6. Canva AI",
+            "Tasarım bilgisi olmadan profesyonel görseller oluşturmanı sağlar.",
 
-            "Peki, nedir bu Gemini? Sadece bir chatbot mu, yoksa dijital dünyadaki sağ kolumuz mu? Gelin, lafı teknik terimlere boğmadan, bir dost meclisinde anlatır gibi bu yeni nesil yapay zekayı size tanıtayım.",
+            "Görsel üretimde en iyi sonucu almak için aynı promptu birden fazla araçta denemeni öneririm.",
 
-            "Sadece Kelimelerle Değil, Dünyayla Konuşuyor",
-            "Gemini’yi diğerlerinden ayıran en büyük fark multimodal olması. Yani sadece yazdığınız metinleri anlamıyor; görselleri inceliyor, videoları analiz ediyor ve hatta karmaşık kodları bir yazılımcı titizliğiyle çözebiliyor. Ona bir buzdolabı fotoğrafı atıp Buradaki malzemelerle ne pişirebilirim? dediğinizde size sadece tarif vermiyor, o anki modunuza en uygun yemeği öneriyor.",
+            "Bonus ipucu: Tutarlı sonuçlar için kendi prompt şablonunu oluştur."],
+    contentEN: [
+            "AI image generation has become essential for designers, marketers, and content creators. Choosing the right tool impacts both quality and speed.",
 
-            "Neden Gemini Kullanmalıyız?",
+            "Here are the best AI image generators you can use in 2026.",
 
-            "Bir blog yazarı, bir öğrenci ya da yoğun bir çalışan olun; Gemini’nin hayatınıza dokunacağı o kadar çok alan var ki:",
-            "- Yaratıcılık Tıkanıklığını Açar: Bugün ne yazsam? diye ekranın başında saatlerce beklediğiniz o anlarda, Gemini size onlarca farklı fikirle geri döner.",
-            "- Bilgiyi Saniyeler İçinde Süzgeçten Geçirir: Uzun bir makaleyi veya karmaşık bir raporu ona verin, size en can alıcı noktaları üç maddede özetlesin.",
-            "- Her Zaman Yanınızda: Google ekosistemiyle (Drive, Gmail, Haritalar) entegre çalıştığı için, Geçen ay gelen o maildeki toplantı notları neredeydi? diye sormanız yeterli.",
-            
-            "Korkmalı mıyız? Değil, Nasıl Kullanmalıyız?",
+            "1. DALL·E",
+            "Great for creative and high-quality images.",
 
-            "Yapay zeka dendiğinde hepimizde hafif bir Robotlar dünyayı mı ele geçirecek? çekincesi oluşuyor, kabul edelim. Ama Gemini’yi tanıdıkça görüyorsunuz ki o dünyayı ele geçirmek için değil, sizin dünyanızı genişletmek için burada. O, sizin yerinize düşünen bir mekanizma değil; sizin düşüncelerinizi hızlandıran bir katalizör.",
+            "2. Midjourney",
+            "Excellent for artistic visuals.",
 
-            "Sonuç Olarak...",
+            "3. Leonardo AI",
+            "Strong for game assets and concept art.",
 
-            "Gemini benim için sadece bir teknoloji değil, bir keşif yolculuğu. Sınırları sizin hayal gücünüzle çizilen bu dünyada, öğrenmek hiç bu kadar keyifli olmamıştı. Eğer hala denemediyseniz, bir selam vererek başlayın derim. Belki de bir sonraki projenizin gizli kahramanı o olur!",
+            "4. Stable Diffusion",
+            "Open-source and highly customizable.",
 
-          ],
+            "5. Bing Image Creator",
+            "Fast and free image generation.",
 
-          contentEN: [
-            "The Most Human Side of AI: Meet Gemini",
+            "6. Canva AI",
+            "Easy-to-use design tool with AI features.",
 
-            "Greetings! Today on the blog, I want to talk about a revolution that feels like the future but is actually right in the palm of our hands. That word you've been hearing everywhere lately: Gemini.",
+            "Test the same prompt across multiple tools for best results.",
 
-            "So, what is this Gemini? Is it just a chatbot, or is it our right-hand man in the digital world? Let me introduce you to this next-generation AI without drowning you in technical jargon, just like we're chatting among friends.",
+            "Bonus tip: build a prompt template for consistency."]
+  },
+  {
+    slug: "chatgpt-alternatifleri-en-iyi-chatbotlar",
+    titleTR: "ChatGPT Alternatifleri (2026): En İyi 9 Yapay Zekâ Chatbotu Karşılaştırması",
+    titleEN: "ChatGPT Alternatives (2026): Comparison of the 9 Best AI Chatbots",
+    excerptTR: "Claude, Gemini, Perplexity ve daha fazlası… Hangi yapay zekâ chatbotu hangi iş için daha uygun? Kapsamlı karşılaştırma rehberi.",
+    excerptEN: "Claude, Gemini, Perplexity and more... Which AI chatbot is more suitable for which job? Comprehensive comparison guide.",
+    categoryTR: "İnceleme",
+    categoryEN: "Review",
+    dateISO: "2026-02-01",
+    readingMinutes: 4,
+    cover: "/blog/chatgpt-alternatives.jpg",
+    contentTR: [
+            "ChatGPT günümüzde en popüler yapay zekâ sohbet botlarından biri olsa da, her kullanım senaryosu için en iyi seçenek olmayabilir. Bazı araçlar uzun belgeleri analiz etmede daha başarılıyken, bazıları araştırma yapma veya kod yazma konusunda öne çıkar.",
 
-            "It Doesn't Just Speak with Words, It Speaks with the World",
-            "The biggest difference that sets Gemini apart from others is that it's 'multimodal.' This means it doesn't just understand the text you write; it examines images, analyzes videos, and can even solve complex code with the precision of a software developer. When you send it a photo of your fridge and ask, 'What can I cook with these ingredients?', it doesn't just give you a recipe—it suggests the most suitable meal for your current mood.",
+            "Bu yazıda 2026 yılında kullanabileceğin en iyi ChatGPT alternatiflerini, güçlü ve zayıf yönleriyle birlikte inceliyoruz. Böylece ihtiyacına en uygun chatbotu kolayca seçebilirsin.",
 
-            "Why Should We Use Gemini?",
+            "1. Claude (Anthropic)",
+            "Uzun dokümanları okuma, özetleme ve analiz etme konusunda çok güçlüdür. Akademik çalışmalar ve raporlar için idealdir.",
 
-            "Whether you're a blogger, a student, or a busy professional, there are so many areas where Gemini can touch your life:",
-            "- Breaks Through Creative Blocks: In those moments when you sit in front of the screen for hours wondering 'What should I write today?', Gemini comes back to you with dozens of different ideas.",
-            "- Filters Information in Seconds: Give it a long article or a complex report, and let it summarize the most crucial points in just three bullets.",
-            "- Always by Your Side: Since it works integrated with the Google ecosystem (Drive, Gmail, Maps), simply asking 'Where were those meeting notes from that email last month?' is enough.",
+            "2. Google Gemini",
+            "Google tarafından geliştirilen Gemini, arama motoru entegrasyonu sayesinde bilgi odaklı sorularda başarılıdır.",
 
-            "Should We Be Afraid? No, How Should We Use It?",
+            "3. Perplexity AI",
+            "Cevaplarını kaynak göstererek sunar. Araştırma ve doğrulama gerektiren işler için uygundur.",
 
-            "Let's admit it, when AI is mentioned, we all get a slight 'Are robots going to take over the world?' hesitation. But as you get to know Gemini, you see that it's not here to take over the world, but to expand yours. It's not a mechanism that thinks instead of you; it's a catalyst that accelerates your own thoughts.",
+            "4. Microsoft Copilot",
+            "Word, Excel ve PowerPoint gibi Microsoft araçlarıyla entegre çalışır.",
 
-            "In Conclusion...",
+            "5. Poe",
+            "Tek platformda birden fazla yapay zekâ modelini kullanma imkânı sunar.",
 
-            "For me, Gemini is not just a technology, it's a journey of discovery. In this world where the boundaries are drawn by your imagination, learning has never been this enjoyable. If you haven't tried it yet, I say start by just saying hello. Maybe it will be the secret hero of your next project!"
-          ],
+            "6. Jasper AI",
+            "Pazarlama metinleri ve reklam içerikleri üretmek için tasarlanmıştır.",
 
-          cover: "/blog/ai-tools-gemini.jpg",
-          readingMinutes: 4,
-          featured: true,
-          },
+            "7. Writesonic",
+            "Blog yazıları, ürün açıklamaları ve sosyal medya içerikleri için idealdir.",
 
-          {
-          slug: "yapay-zeka-ile-para-kazanma",
-          dateISO: "2026-02-04",
-          categoryTR: "Rehber",
-          categoryEN: "Guide",
+            "8. YouChat",
+            "Arama motoru destekli sohbet deneyimi sunar.",
 
-          titleTR: "Yapay Zekâ ile Nasıl Para Kazanılır? (2026 Rehberi – Yeni Başlayanlar İçin)",
-          titleEN: "How to Make Money with AI (2026 Guide for Beginners)",
+            "9. Character AI",
+            "Rol yapma, hikâye anlatımı ve eğlence odaklı sohbetler için popülerdir.",
 
-          excerptTR:
-            "Yapay zekâ ile para kazanma yolları, kullanılan araçlar ve yeni başlayanlar için uygulanabilir yöntemler.",
-          excerptEN:
-            "Practical ways to make money with AI, tools to use, and beginner-friendly methods.",
+            "ChatGPT alternatifi seçerken şu kriterleri göz önünde bulundurmalısın: çıktı kalitesi, hız, ücretsiz plan sınırları ve Türkçe destek durumu.",
 
-          contentTR: [
-            "Yapay zekâ artık yalnızca teknoloji meraklılarının kullandığı bir alan değil. Bugün internet bağlantısı olan herkes yapay zekâ araçlarını kullanarak gelir elde edebilir.",
-            "Bu rehberde, yapay zekâ ile para kazanmanın en etkili ve uygulanabilir yollarını adım adım anlatıyoruz.",
+            "Sonuç olarak, tek bir en iyi chatbot yoktur. En iyi seçenek, senin kullanım amacına en uygun olandır."],
+    contentEN: [
+            "ChatGPT is one of the most popular AI chatbots, but it is not always the best option for every task. Some tools excel at long-document analysis, while others are better for research or coding.",
 
-            "Yapay zekâ ile para kazanmanın en büyük avantajı, başlangıç maliyetinin çok düşük olmasıdır.",
+            "Here are the best ChatGPT alternatives you can use in 2026 and what they are best at.",
 
-            "1. Yapay Zekâ ile Blog Yazarlığı",
-            "AI araçlarıyla blog içerikleri üretebilir, Adsense ve affiliate gelirleri elde edebilirsin.",
+            "1. Claude (Anthropic)",
+            "Excellent for long document reading and summarization.",
 
-            "2. Sosyal Medya İçerik Üretimi",
-            "Kısa videolar, görseller ve postlar oluşturarak markalarla çalışabilirsin.",
+            "2. Google Gemini",
+            "Strong at knowledge-based questions and Google ecosystem tasks.",
 
-            "3. Freelance Hizmetler",
-            "Metin yazarlığı, görsel üretim, çeviri ve video düzenleme hizmetleri sunabilirsin.",
+            "3. Perplexity AI",
+            "Provides answers with sources.",
 
-            "4. Yapay Zekâ ile E-Ticaret",
-            "Ürün açıklamaları ve reklam metinleri hazırlayabilirsin.",
+            "4. Microsoft Copilot",
+            "Integrated with Microsoft Office apps.",
 
-            "5. YouTube Kanalı Açmak",
-            "Yapay zekâ destekli videolar oluşturabilirsin.",
+            "5. Poe",
+            "Access multiple AI models in one interface.",
 
-            "6. Dijital Ürün Satışı",
-            "E-kitap, prompt paketi ve şablon satabilirsin.",
+            "6. Jasper AI",
+            "Focused on marketing and copywriting.",
 
-            "Başarılı olmak için süreklilik ve deneme önemlidir.",
+            "7. Writesonic",
+            "Great for blogs and product descriptions.",
 
-            "Yapay zekâ bir sihirli değnek değil ama doğru kullanıldığında güçlü bir kazanç aracıdır."
-          ],
+            "8. YouChat",
+            "Search-engine-powered chatbot.",
 
-          contentEN: [
-            "AI is no longer just for tech enthusiasts. Today, anyone with an internet connection can use AI tools to generate income.",
-            "This guide explains the most practical ways to make money with AI.",
+            "9. Character AI",
+            "Great for roleplay and creative conversations.",
 
-            "One of the biggest advantages of making money with AI is low startup cost.",
+            "There is no single perfect chatbot. The best choice depends on your workflow and goals."]
+  },
+  {
+    slug: "en-iyi-ucretsiz-yapay-zeka-araclari-2026",
+    titleTR: "2026'da Kullanabileceğiniz En İyi Ücretsiz Yapay Zekâ Araçları",
+    titleEN: "Best Free AI Tools You Can Use in 2026",
+    excerptTR: "Metin yazma, görsel üretme, video oluşturma, kodlama ve üretkenlik için ücretsiz yapay zekâ araçlarının kapsamlı ve güncel listesi.",
+    excerptEN: "Comprehensive and up-to-date list of free AI tools for text writing, image generation, video creation, coding, and productivity.",
+    categoryTR: "Liste",
+    categoryEN: "List",
+    dateISO: "2026-02-01",
+    readingMinutes: 3,
+    cover: "/blog/ai-tools-2026.jpg",
+    contentTR: [
+            "Yapay zekâ artık yalnızca büyük şirketlerin kullandığı karmaşık bir teknoloji değil. Günümüzde herkes ücretsiz yapay zekâ araçları sayesinde içerik üretebiliyor, tasarım yapabiliyor, kod yazabiliyor ve işlerini çok daha hızlı tamamlayabiliyor.",
 
-            "1. AI Blogging",
-            "Create content using AI and earn from ads and affiliates.",
+            "Bu yazıda 2026 yılında ücretsiz olarak kullanabileceğin en iyi yapay zekâ araçlarını tek bir yerde topladım. Araçları kullanım alanlarına göre gruplandırdım ve her biri için kısa açıklamalar ekledim.",
 
-            "2. Social Media Content Creation",
-            "Create short videos and images for brands.",
+            "Metin ve İçerik Üretimi İçin AI Araçları",
 
-            "3. Freelance Services",
-            "Offer writing, design, translation, or video editing.",
+            "- ChatGPT: Blog yazıları, sosyal medya içerikleri, e-postalar ve fikir üretimi için en popüler araçlardan biridir.",
+            "- Google Gemini: Araştırma, özet çıkarma ve bilgi tabanlı içerikler için güçlü bir alternatiftir.",
+            "- Poe: Birden fazla yapay zekâ modelini tek platformda deneme imkânı sunar.",
 
-            "4. AI for E-commerce",
-            "Create product descriptions and ad copies.",
+            "Görsel Oluşturma İçin AI Araçları",
 
-            "5. Start a YouTube Channel",
-            "Create AI-powered videos.",
+            "- Bing Image Creator (DALL·E): Metinden görsel üretir.",
+            "- Leonardo AI: Oyun ve illüstrasyon tasarımlarında öne çıkar.",
+            "- Canva AI: Tasarım bilgisi olmadan profesyonel görseller oluşturmayı sağlar.",
 
-            "6. Sell Digital Products",
-            "Sell ebooks, prompt packs, and templates.",
+            "Video Üretimi İçin AI Araçları",
 
-            "Consistency is key.",
+            "- Pictory: Metni otomatik olarak videoya dönüştürür.",
+            "- CapCut AI: Video düzenleme, altyazı ve efekt işlemleri için idealdir.",
 
-            "AI is not magic, but it can become a powerful income tool."
-          ],
+            "Kodlama İçin AI Araçları",
 
-          cover: "/blog/make-money-with-ai.jpg",
-          readingMinutes: 6,
-          featured: true
-        },
-        
-        {
-          slug: "is-yukunuzu-azaltacak-5-yapay-zeka-araci-2026",
-          dateISO: "2026-02-04",
-          categoryTR: "Verimlilik",
-          categoryEN: "Productivity",
+            "- Codeium: Ücretsiz kod tamamlama ve hata düzeltme aracı.",
+            "- GitHub Copilot: Sınırlı ücretsiz sürümü ile kod yazmayı hızlandırır.",
 
-          titleTR: "Haftalık İş Yükünüzü Yarıya İndirecek 5 Yapay Zeka Aracı: 2026 Verimlilik Rehberi",
-          titleEN: "5 AI Tools to Cut Your Weekly Workload in Half: 2026 Productivity Guide",
+            "Üretkenlik ve Günlük İşler",
 
-          excerptTR: "Rutin işlerden kurtulup yaratıcılığa odaklanın. 2026'nın en gelişmiş yapay zeka araçlarıyla toplantıları, kodlamayı ve iş akışlarını nasıl otomatiğe bağlayacağınızı öğrenin.",
+            "- Notion AI: Not alma, özet çıkarma ve planlama.",
+            "- Otter AI: Toplantıları yazıya döker.",
 
-          excerptEN: "Break free from routine and focus on creativity. Learn how to automate meetings, coding, and workflows with the most advanced AI tools of 2026.",
+            "Ücretsiz yapay zekâ araçlarını seçerken ücretsiz plan sınırlarını, gizlilik politikasını ve Türkçe destek durumunu mutlaka kontrol etmelisin.",
 
-          contentTR: [
-            "2026 yılında yapay zeka artık sadece bir asistan değil, dijital bir iş ortağı. Haftalık 40 saatlik mesainin yaklaşık %45'i rutin ve tekrarlayan işlere gidiyor. İşte bu döngüyü kıracak 5 devrimsel araç:",
+            "Sonuç olarak bu araçlar, bütçe ayırmadan dijital dünyada üretken olmak isteyen herkes için büyük avantaj sağlar."],
+    contentEN: ["Artificial intelligence is no longer a complex technology used only by large companies. Today, thanks to free AI tools, anyone can create content, design visuals, write code, and complete their tasks much faster.",
 
-            "1. Fireflies.ai: Dijital Hafızanız ve Toplantı Asistanınız",
-            "Toplantı sırasında not tutmaya çalışmak, aktif dinlemeyi engeller. Fireflies, çok dilli desteği ile toplantılarınızı sadece metne dökmez; konuşmacı duygu analizi yapar ve 'karar anlarını' işaretler. Haftalık 5-6 saatlik toplantı dökümü süresini sıfıra indirir. Pro İpucu: 'Ask Fred' özelliğini kullanarak toplantı geçmişinize dair 'Geçen haftaki bütçe revizyonunda patron tam olarak neye itiraz etmişti?' gibi spesifik sorular sorabilirsiniz.",
+            "In this article, I’ve gathered the best free AI tools you can use in 2026 all in one place. I grouped the tools by their use cases and added brief explanations for each one.",
 
-            "2. Notion AI: Bağlamsal Bilgi ve Kurumsal Zeka",
-            "Notion AI'nın 2026 sürümü, tüm çalışma alanınızı bir beyin gibi birbirine bağlar. Sadece yazı yazmakla kalmaz, dağınık haldeki sayfalarınızı analiz ederek projeler arası çelişkileri bulur. Yazım hatalarını düzeltmekten öte, verdiğiniz bir taslağı şirketinizin tonuna uygun bir duyuru metnine dönüştürebilir.",
+            "AI Tools for Text and Content Creation",
 
-            "3. Cursor AI: Herkes İçin Yazılım ve Otomasyon",
-            "Yazılım bilmemek artık bir engel değil. Cursor, VS Code tabanlı bir AI editörüdür ve tüm projenizi 'görür'. Bir web sitesinde buton rengini değiştirmekten, karmaşık bir veri analizi scripti yazmaya kadar her şeyi doğal dille tarif edebilirsiniz. Yazılımcılar için hata ayıklama süresini %70 oranında azaltırken, teknik olmayan kullanıcılar için 'kendi aracını yapma' kapısını açar.",
+            "- ChatGPT: One of the most popular tools for blog posts, social media content, emails, and idea generation.",
+            "- Google Gemini: A powerful alternative for research, summarization, and knowledge-based content.",
+            "- Poe: Allows you to try multiple AI models on a single platform.",
 
-            "4. Make.com: Karmaşık İş Akışlarının Orkestra Şefi",
-            "Eğer yapay zeka araçlarınız birer uzuvsa, Make.com onları yöneten sinir sistemidir. 2026'da gelen 'AI Agent' entegrasyonu ile artık sürükle-bırak yapmanıza bile gerek kalmadan, 'Müşteriden gelen şikayeti analiz et, aciliyetine göre Slack'ten ilgili birime ilet ve müşteriye çözüm odaklı taslak bir yanıt hazırla' demeniz yeterli.",
+            "AI Tools for Image Generation",
 
-            "5. Gamma: Sunum ve Web Tasarımında Yeni Standart",
-            "Geleneksel slayt hazırlama yöntemleri 2026'da artık çok yavaş kalıyor. Gamma ile sadece bir fikir veya PDF dokümanı yükleyerek saniyeler içinde etkileşimli, mobil uyumlu ve görsel olarak kusursuz sunumlar oluşturabilirsiniz. Tasarım için harcayacağınız 4 saati, içeriği optimize etmek için 15 dakikaya indirebilirsiniz.",
+            "- Bing Image Creator (DALL·E): Generates images from text.",
+            "- Leonardo AI: Stands out in game and illustration design.",
+            "- Canva AI: Enables you to create professional visuals without design knowledge.",
 
-            "Özetle, 2026 yılındaki verimlilik yarışı hangi araca sahip olduğunuzla değil, bu araçları birbirine nasıl entegre ettiğinizle ilgili. Bu 5 araç, size her ay yaklaşık bir çalışma haftası kadar zaman kazandırabilir."
+            "AI Tools for Video Creation",
 
-          ],
+            "- Pictory: Automatically converts text into video.",
+            "- CapCut AI: Ideal for video editing, subtitles, and effects.",
 
-          contentEN: [
-            "In 2026, AI is no longer just an assistant, but a digital business partner. Research shows that nearly 45% of a 40-hour work week is spent on routine tasks. Here are 5 revolutionary tools to break that cycle:",
+            "AI Tools for Coding",
 
-            "1. Fireflies.ai: Your Digital Memory and Meeting Assistant",
-            "Trying to take notes during a meeting prevents active listening. Fireflies doesn't just transcribe; its 2026 version performs speaker sentiment analysis and highlights 'decision moments.' It cuts down weekly meeting review time to zero. Pro Tip: Use the 'Ask Fred' feature to ask specific questions about your meeting history, like 'What exactly was the budget objection last week?'",
+            "- Codeium: A free code completion and debugging tool.",
+            "- GitHub Copilot: Speeds up coding with its limited free version.",
 
-            "2. Notion AI: Contextual Knowledge and Corporate Intelligence",
-            "The 2026 version of Notion AI connects your entire workspace like a brain. It doesn't just write; it analyzes scattered pages to find contradictions between projects. Beyond fixing typos, it can turn a rough draft into a formal announcement that fits your company's unique voice.",
+            "Productivity and Daily Tasks",
 
-            "3. Cursor AI: Software and Automation for Everyone",
-            "Not knowing how to code is no longer a barrier. Cursor is an AI-native editor that 'sees' your entire project. From changing a button color on a website to writing complex data analysis scripts, you can describe everything in natural language. It reduces debugging time by 70% for developers and opens the door for non-technical users to build their own tools.",
+            "- Notion AI: For note-taking, summarizing, and planning.",
+            "- Otter AI: Transcribes meetings into text.",
 
-            "4. Make.com: The Orchestrator of Complex Workflows",
-            "If your AI tools are limbs, Make.com is the nervous system. With the 2026 'AI Agent' integration, you no longer need to drag and drop. Simply say: 'Analyze customer complaints, route them to the right team via Slack based on urgency, and draft a solution-oriented response.'",
+            "When choosing free AI tools, you should always check the limits of the free plan, privacy policies, and Turkish language support.",
 
-            "5. Gamma: The New Standard in Presentation and Web Design",
-            "Traditional slide creation is too slow for 2026. With Gamma, you can generate interactive, mobile-responsive, and visually stunning presentations in seconds just by uploading a prompt or a PDF. Turn 4 hours of design work into 15 minutes of content optimization.",
-
-            "In summary, the productivity race in 2026 is not about which tool you own, but how you integrate them. These 5 tools can save you approximately one full work week every month."
-
-          ],
-
-          cover: "/blog/is-yukunu-azaltan-ai-2026.jpg",
-          readingMinutes: 6,
-          featured: true
-        },
-
-        {
-          slug: "deepseek-vs-chatgpt-yazilim-ve-veri-analizi-karsilastirmasi",
-          dateISO: "2026-02-04",
-          categoryTR: "İnceleme",
-          categoryEN: "Review",
-
-          titleTR: "DeepSeek vs. ChatGPT: Yazılım ve Veri Analizinde Hangisi Daha Zeki?",
-          titleEN: "DeepSeek vs. ChatGPT: Which is Smarter for Coding and Data Analysis?",
-
-          excerptTR: "DeepSeek mi ChatGPT mi? 2026'nın iki dev yapay zekasını yazılım ve veri analizi performansıyla karşılaştırdık. Karmaşık kodlama ve analizlerde DeepSeek ChatGPT'yi geçebilir mi? Hangi araç sizin için daha zeki?",
-
-          excerptEN: "DeepSeek or ChatGPT? We compared the two AI giants of 2026 on coding and data analysis performance. Can DeepSeek beat ChatGPT in complex tasks? Find out which tool is smarter for you.",
-
-          contentTR: [
-           "2026 yılının en büyük sürprizi kuşkusuz DeepSeek oldu. Özellikle yazılım geliştiriciler ve veri analistleri arasında 'ChatGPT'den daha mı iyi?' sorusu sıkça sorulmaya başlandı. İşte bu iki devin kıyasıya mücadelesi.",
-
-           "1. Kod Yazma ve Hata Ayıklama Performansı",
-           "DeepSeek, özellikle 'Reasoning' (akıl yürütme) modelleriyle karmaşık algoritmalarda şaşırtıcı bir başarı sergiliyor. ChatGPT (GPT-5 ve üstü) genel yeteneklerde üstün olsa da, DeepSeek karmaşık Python scriptleri ve SQL sorgularında daha az hata payı ile çalışabiliyor. Yazılımcılar için DeepSeek, 'nokta atışı' çözümler sunma konusunda bir adım öne çıkmaya başladı.",
-
-           "2. Veri Analizi ve İstatistiksel Yorumlama",
-           "ChatGPT'nin 'Advanced Data Analysis' özelliği, verileri görselleştirme ve grafik oluşturma konusunda hala rakipsiz. Ancak iş, ham veriden derinlemesine anlam çıkarmaya ve karmaşık matematiksel modellemelere geldiğinde DeepSeek'in mantık yürütme kapasitesi ChatGPT ile başa baş yarışıyor. Eğer görsel bir sunum hazırlıyorsanız ChatGPT; ancak matematiksel bir kanıt arıyorsanız DeepSeek daha avantajlı.",
-
-           "3. Hız ve Maliyet Dengesi",
-           "DeepSeek'in en büyük kozu maliyet etkinliği. Açık kaynaklı yaklaşımları ve daha düşük API maliyetleri, geliştiricilerin projelerini çok daha ucuza ölçeklendirmesine olanak tanıyor. ChatGPT ise ekosistem genişliği ve hızıyla profesyonel kullanıcılar için premium bir deneyim sunmaya devam ediyor.",
-
-           "4. Hangisini Tercih Etmelisiniz?",
-           "Eğer günlük işler, metin yazımı ve hızlı görsel analizler yapıyorsanız ChatGPT hala en iyi dostunuz. Fakat derinlemesine kod blokları yazıyor, backend mimarileri kurguluyor veya akademik seviyede veri analizi yapıyorsanız DeepSeek'e mutlaka bir şans vermelisiniz.",
-
-           "Sonuç olarak, 2026 yılında tek bir yapay zekaya bağlı kalmak yerine, işin türüne göre araç seçmek en profesyonel yaklaşım olacaktır. Aipusula olarak her iki modeli de projelerinizde hibrit olarak kullanmanızı öneriyoruz."
-          ],
-
-          contentEN: [
-           "The biggest surprise of 2026 has undoubtedly been DeepSeek. Developers and data analysts are increasingly asking: 'Is it better than ChatGPT?' Here is the head-to-head battle of these two giants.",
-
-           "1. Coding and Debugging Performance",
-           "DeepSeek shows surprising success in complex algorithms, especially with its 'Reasoning' models. While ChatGPT (GPT-5 and above) excels in general capabilities, DeepSeek works with a lower error margin in complex Python scripts and SQL queries. For developers, DeepSeek has started to stand out by providing 'spot-on' solutions.",
-
-           "2. Data Analysis and Statistical Interpretation",
-           "ChatGPT's 'Advanced Data Analysis' feature remains unrivaled for data visualization and graphing. However, when it comes to extracting deep meaning from raw data and complex mathematical modeling, DeepSeek's logical capacity rivals ChatGPT. If you're preparing a visual presentation, go with ChatGPT; if you're looking for mathematical proof, DeepSeek is the way.",
-
-           "3. Speed and Cost Balance",
-           "DeepSeek's biggest ace is its cost-effectiveness. Its open-source approach and lower API costs allow developers to scale projects much cheaper. ChatGPT continues to offer a premium experience for professional users with its ecosystem breadth and speed.",
-
-           "4. Which One Should You Choose?",
-           "If you're doing daily tasks, writing text, and quick visual analysis, ChatGPT is still your best friend. But if you're writing deep code blocks, building backend architectures, or doing academic-level data analysis, you must give DeepSeek a chance.",
-
-           "In conclusion, in 2026, choosing the tool based on the type of work rather than relying on a single AI will be the most professional approach. As AI Pusula, we recommend using both models in a hybrid way in your projects."
-          ],
-
-          cover: "/blog/deepseek-vs-chatgpt-2026.jpg",
-          readingMinutes: 5,
-          featured: true
-          },
-
-          {
-          slug: "prompt-muhendisligi-oldu-mu-2026-analizi",
-          dateISO: "2026-02-04",
-          categoryTR: "Rehber",
-          categoryEN: "Guide",
-
-          titleTR: "Prompt Mühendisliği Öldü mü? 2026’da Yapay Zeka ile İletişim",
-          titleEN: "Is Prompt Engineering Dead? Communicating with AI in 2026",
-
-          excerptTR: "Yapay zeka modelleri artık bizi daha iyi anlıyor. Peki, prompt mühendisliği hala gerekli mi? 2026'nın değişen AI dinamiklerini ve yeni teknikleri inceledik. Geleceğin mesleği 'AI Küratörlüğü' mü?",
-
-          excerptEN: "AI models now understand us better. So, is prompt engineering still necessary? We examined 2026's changing AI dynamics and new techniques. Is 'AI Curation' the job of the future?",
-
-          contentTR: [
-            "2023 yılında 'Prompt Mühendisliği' geleceğin en gözde mesleği olarak lanse ediliyordu. Ancak 2026'ya geldiğimizde, yapay zeka modellerinin (özellikle bağlamsal 'Reasoning' yeteneği olan modellerin) kendi kendini geliştirmesi ve kullanıcıyı daha iyi anlamasıyla birlikte, uzun ve karmaşık komut dizilerine olan ihtiyaç ciddi şekilde azaldı. Peki bu, prompt mühendisliğinin sonu mu, yoksa bu alan sadece bir dönüşüm mü geçiriyor?",
-
-            "1. Akıllı Modeller ve Doğal Dilin Zaferi: AI Zihniyetimizi Okuyor",
-            "Yeni nesil yapay zeka modelleri, yalnızca kelimeleri değil, komutun ardındaki niyeti de anlamaya başladı. Artık 'Bana bir profesyonel gibi davran ve x konuda y tarzında içerik üret' gibi detaylı rol tanımlamalarına gerek kalmadan, sistem verdiğiniz ilk birkaç kelimeden ne beklediğinizi kavrıyor. Bu durum, prompt mühendisliğini 'detaylı teknik talimatlar verme' becerisinden çıkarıp, 'net ve stratejik bir vizyon sunma' becerisine doğru evriltiyor. Yapay zeka, eksik bırakılan boşlukları kendi deneyimlerinden ve genetik hafızasından tamamlıyor.",
-
-            "2. 'Neyi' İstemek, 'Nasıl' İstemekten Çok Daha Önemli",
-            "Geçmişte yapay zekadan istediğiniz cevabı alabilmek için prompt'u en ince ayrıntısına kadar işlemek gerekiyordu. 2026'da ise asıl mesele, ne istediğinizi net bir şekilde ifade etmek. Yapay zeka artık yalnızca bir araç değil, bir iş ortağı; bu nedenle, teknik komut bilgisi yerine, net hedefler koyma ve vizyon sahibi olma yeteneği daha değerli hale geldi. AI'ın sunduğu ilk cevabı 'iyileştirmek' yerine, ilk prompt'u 'doğru kurgulamak' kritik önem taşıyor.",
-
-            "3. Geleceğin Yeteneği: AI Küratörlüğü ve Orkestrasyon",
-            "Prompt mühendisliği ölmedi, ancak rolü değişti. Şimdi yükselen kavram 'AI Küratörlüğü' veya 'AI Orkestrasyonu'. Bu ne anlama geliyor? Birden fazla yapay zeka modelini (metin, görsel, kod) bir arada yönetmek, her bir modelin hangi görevde daha iyi performans gösterdiğini bilmek, çıkan sonuçları eleştirel bir gözle denetleyerek nihai ürünü oluşturmak, yeni prompt uzmanlığının temelini oluşturuyor. Artık bir AI'a değil, bir 'AI ekibine' komut veriliyor.",
-
-            "4. 2026'da Yapay Zekadan En İyi Verimi Almak İçin 3 Altın İpucu",
-            "Yapay zekadan maksimum verimi almak ve 'Prompt Mühendisliği' becerilerinizi güncel tutmak için şu stratejileri uygulayın:",
-            "- **Bağlam Verin:** Yalnızca görevi değil, görevin nedenini, hedef kitlenizi ve çıktıdan beklediğiniz etkiyi de belirtin. (Örn: 'Bir pazarlama kampanyası için metin yaz, hedef kitlem X kuşağı yöneticileri, amacım ürünümüzün Y faydasını vurgulamak.')",
-            "- **Kısıtlamaları Belirtin:** Yapay zekanın neyi yapmamasını istediğinizi netleştirin. Bu, istenmeyen sonuçları azaltır. (Örn: 'Kesinlikle jargon kullanma ve 200 kelimeyi geçme.')",
-            "- **İterasyon Yapın:** İlk cevabı nihai kabul etmeyin. 'Bunu daha X hale getir', 'Y noktasını detaylandır' gibi geri bildirimlerle çıktıyı adım adım mükemmelleştirin. Yapay zeka ile diyalog kurmak, tek seferlik bir komut vermekten çok daha etkilidir.",
-
-            "Sonuç olarak, prompt yazmak artık bir 'kodlama' dili gibi karmaşık gramer kuralları gerektirmiyor; daha çok bir 'yönetim' ve 'strateji' biçimi haline geldi. Aipusula olarak tavsiyemiz; teknik detaylara boğulmak yerine, yapay zekayı nasıl yönlendireceğinize, ondan ne beklediğinize ve farklı AI'ları en verimli şekilde nasıl bir araya getireceğinize odaklanmanızdır. Yapay zeka sizin sesinizi, siz de onun dilini anlamaya başladıkça, verimliliğiniz katlanarak artacaktır."
-          ],
-
-          contentEN: [
-            "In 2023, 'Prompt Engineering' was hailed as the most sought-after job of the future. However, by 2026, with the self-improvement of AI models (especially those with contextual 'Reasoning' capabilities) and their enhanced ability to understand users, the need for long and complex command sequences has significantly decreased. So, is this the end of prompt engineering, or is this field simply undergoing a transformation?",
-
-            "1. Triumph of Smart Models and Natural Language: AI Reads Our Minds",
-            "The new generation of AI models has begun to understand not just words, but also the intent behind the commands. You no longer need detailed role definitions like 'Act like a professional and generate content in X style on Y topic'; the system grasps what you expect from the first few words. This shifts prompt engineering from 'giving detailed technical instructions' to 'providing a clear and strategic vision.' AI now fills in the blanks from its own experiences and genetic memory.",
-
-            "2. Asking 'What' is Far More Important Than 'How'",
-            "In the past, we had to twist and turn a prompt to get the right answer from AI. In 2026, the real issue is articulating precisely what you want. Since AI is now a partner rather than just a tool, the ability to set clear goals and have a vision has become more valuable than knowing technical commands. The focus is now on 'structuring the initial prompt correctly' rather than 'improving' AI's first answer.",
-
-            "3. The Skill of the Future: AI Curation and Orchestration",
-            "Prompt engineering isn't dead, but its role has transformed. The rising concepts are 'AI Curation' or 'AI Orchestration.' What does this mean? It's about managing multiple AI models (text, image, code) together, knowing which model performs best for which task, and critically reviewing the outputs to create the final product. This forms the new foundation of prompt expertise. Instead of commanding one AI, you're now commanding an 'AI team.'",
-
-            "4. 3 Golden Tips for Getting the Most Out of AI in 2026",
-            "To maximize your efficiency with AI and keep your 'Prompt Engineering' skills current, apply these strategies:",
-            "- **Provide Context:** State not just the task, but its reason, your target audience, and the desired impact of the output. (E.g.: 'Write text for a marketing campaign; my target audience is Gen X executives; my goal is to highlight the Y benefit of our product.')",
-            "- **Specify Constraints:** Clearly define what you do *not* want the AI to do. This reduces undesirable outputs. (E.g.: 'Absolutely no jargon and do not exceed 200 words.')",
-            "- **Iterate:** Do not accept the first answer as final. Perfect the output step-by-step with feedback like 'Make this more X' or 'Elaborate on point Y.' Dialoguing with AI is far more effective than a one-off command.",
-
-            "In conclusion, writing prompts no longer requires complex grammar rules like a 'coding' language; it has evolved into a form of 'management' and 'strategy.' Our advice at AI Pusula: instead of getting bogged down in technical details, focus on how to guide AI, what you expect from it, and how to combine different AIs most efficiently. As AI begins to understand your voice and you begin to understand its language, your productivity will multiply."
-          ],
-
-          cover: "/blog/prompt-engineering-2026.jpg",
-          readingMinutes: 4,
-          featured: false
-        },
-
-        {
-          slug: "en-iyi-ucretsiz-yapay-zeka-alternatifleri-2026",
-          dateISO: "2026-02-05",
-          categoryTR: "Liste",
-          categoryEN: "List",
-
-          titleTR: "2026'nın En İyi 7 Ücretsiz Yapay Zeka Alternatifi",
-          titleEN: "7 Best Free AI Alternatives in 2026",
-
-          excerptTR: "ChatGPT Plus çok mu pahalı? 2026'nın en iyi ücretsiz yapay zeka araçlarını listeledik. Metin yazma, görsel oluşturma ve kodlama için ChatGPT'den geri kalmayan bedava alternatifleri keşfedin.",
-
-          excerptEN: "Is ChatGPT Plus too expensive? We listed the best free AI tools of 2026. Discover free alternatives for writing, image generation, and coding that are as good as ChatGPT.",
-
-          contentTR: [
-            "Yapay zeka teknolojileri hızla gelişirken, en gelişmiş modellere erişmek her geçen gün daha maliyetli hale geliyor. Ancak 2026 yılında, aylık 20-30 dolar ödemeden de üst düzey yapay zeka deneyimi yaşamak mümkün. İşte ChatGPT'nin tahtını sallayan en iyi ücretsiz alternatifler.",
-
-            "1. Google Gemini (Eski adıyla Bard): Ekosistemin Gücü",
-            "Google'ın en gelişmiş modeli Gemini, özellikle Google Dokümanlar ve Gmail ile entegre çalışmasıyla öne çıkıyor. Ücretsiz sürümü, güncel Google arama verilerine anında erişebiliyor ve karmaşık analizleri hızla yapabiliyor. Güncellik arayanlar için bir numaralı adres.",
-
-            "2. DeepSeek: Açık Kaynak Dünyasının Yeni Kralı",
-            "Son dönemde adını sıkça duyduğumuz DeepSeek, özellikle yazılım ve matematiksel akıl yürütme (Reasoning) konularında ChatGPT'nin en güçlü ücretsiz rakibi. Tamamen ücretsiz planıyla profesyonel seviyede kod yazabiliyor ve hata ayıklayabiliyor.",
-
-            "3. Microsoft Copilot: Ücretsiz GPT-4 Erişimi",
-            "GPT-4 mimarisini tamamen ücretsiz sunan Copilot, aynı zamanda içinde DALL-E 3 ile görsel oluşturma özelliğini de barındırıyor. Windows ve Edge tarayıcısıyla tam uyumlu olması, onu en pratik alternatiflerden biri yapıyor.",
-
-            "4. Claude (Ücretsiz Sürüm): Daha İnsansı Bir Deneyim",
-            "Anthropic tarafından geliştirilen Claude, ChatGPT'ye göre daha doğal ve yaratıcı bir dil kullanıyor. Ücretsiz planında günlük limitler olsa da, kaliteli blog yazıları ve edebi metinler oluşturmak için hala en iyi seçeneklerden biri.",
-
-            "5. HuggingChat: Özgürlük İsteyenlere",
-            "Hugging Face topluluğu tarafından sunulan bu platform, Llama 3 ve Mistral gibi dünyanın en iyi açık kaynaklı modellerini ücretsiz denemenize olanak tanıyor. Sansürsüz ve daha özgür bir deneyim arayanlar için harika bir durak.",
-
-            "6. Perplexity AI: Yapay Zeka Destekli Arama Motoru",
-            "Sadece sohbet etmek değil, bilgiye kaynakçasıyla ulaşmak istiyorsanız Perplexity tam size göre. İnterneti gerçek zamanlı tarayarak her cümlesine kaynak gösteren bu araç, akademik çalışmalar ve araştırmalar için vazgeçilmez.",
-
-            "7. Poe: Hepsi Bir Arada Platform",
-            "Quora tarafından geliştirilen Poe; Claude, Gemini, GPT-4 ve daha birçok farklı modeli tek bir arayüzde ücretsiz olarak denemenize imkan tanıyor. Farklı yapay zekaları karşılaştırmak isteyen kullanıcılar için en iyi hub noktası.",
-
-            "Sonuç olarak, 2026 yılında kaliteli bir yapay zeka hizmeti almak için mutlaka cüzdanınızı açmanıza gerek yok. İhtiyacınıza göre bu 7 araçtan birini seçerek iş akışınızı profesyonelce yönetebilirsiniz."
-
-          ],
-
-          contentEN: [
-            "As AI technologies evolve, accessing the most advanced models is becoming more expensive. However, in 2026, it is possible to have a high-level AI experience without paying $20-30 a month. Here are the best free alternatives challenging ChatGPT's throne.",
-
-            "1. Google Gemini: The Power of the Ecosystem",
-            "Google's most advanced model, Gemini, stands out for its integration with Google Docs and Gmail. The free version can instantly access up-to-date Google search data and perform complex analyses quickly. The number one stop for those seeking real-time info.",
-
-            "2. DeepSeek: The New King of Open Source",
-            "DeepSeek has recently become the strongest free rival to ChatGPT, especially in coding and mathematical reasoning. With its completely free plan, it can write and debug professional-level code.",
-
-            "3. Microsoft Copilot: Free GPT-4 Access",
-            "Offering GPT-4 architecture completely free, Copilot also includes image generation with DALL-E 3. Its full compatibility with Windows and Edge makes it one of the most practical alternatives.",
-
-            "4. Claude (Free Version): A More Human-Like Experience",
-            "Developed by Anthropic, Claude uses a more natural and creative language compared to ChatGPT. Although the free plan has daily limits, it is still one of the best choices for high-quality blogs and literary texts.",
-
-            "5. HuggingChat: For Those Seeking Freedom",
-            "This platform by Hugging Face allows you to try the world's best open-source models like Llama 3 and Mistral for free. A great stop for those looking for an uncensored and freer experience.",
-
-            "6. Perplexity AI: AI-Powered Search Engine",
-            "If you want to reach information with its citations rather than just chatting, Perplexity is for you. It scans the internet in real-time and provides sources for every sentence, making it indispensable for academic research.",
-
-            "7. Poe: All-in-One Platform",
-            "Developed by Quora, Poe allows you to try many different models like Claude, Gemini, and GPT-4 for free in a single interface. The best hub for users who want to compare different AIs.",
-
-            "In conclusion, you don't necessarily need to open your wallet to get quality AI service in 2026. By choosing one of these 7 tools based on your needs, you can manage your workflow professionally."
-            
-          ],
-
-          cover: "/blog/ucretsiz-yapay-zeka-2026.jpg",
-          readingMinutes: 6,
-          featured: true
-        },
-
-        {
-          slug: "google-gemini-3-ile-is-akisi-otomatiklestirme-rehberi-2026",
-          dateISO: "2026-02-05",
-          categoryTR: "Rehber",
-          categoryEN: "Guide",
-
-          titleTR: "Google Gemini 3 ile Günlük İşleri Otomatikleştirme: 2026 Verimlilik Rehberi",
-          titleEN: "Automating Daily Tasks with Google Gemini 3: 2026 Productivity Guide",
-
-          excerptTR: "Google Gemini 3 çıktı! Form doldurmaktan randevu planlamaya, karmaşık veri analizinden abonelik yönetimine kadar tüm işlerinizi yapay zekaya nasıl devredeceğinizi öğrenin.",
-
-          excerptEN: "Google Gemini 3 is here! Learn how to delegate all your tasks—from filling forms to scheduling appointments and managing subscriptions—to AI.",
-
-          contentTR: [
-            "2026 yılı, yapay zekanın sadece 'konuştuğu' değil, doğrudan 'iş yaptığı' bir dönemin başlangıcı oldu. Google'ın yeni tanıttığı Gemini 3 modeli, 'otomatik tarama' ve 'eylem odaklı asistan' özellikleriyle dijital dünyadaki angarya işleri tarihe gömüyor. İşte bu yeni teknolojiyi kullanarak hayatınızı nasıl kolaylaştıracağınıza dair kapsamlı bir rehber.",
-
-            "1. Otomatik Form Doldurma ve Belge Yönetimi",
-            "Gemini 3, tarayıcınızdaki formları sizin yerinize doldurabiliyor. Vergi belgelerinin toplanması, fatura analizi ve uzun hizmet sözleşmelerindeki kritik maddelerin özetlenmesi artık saniyeler sürüyor. 'Gemini, bu formu profil bilgilerime göre doldur' demeniz yeterli.",
-
-            "2. Akıllı Randevu ve Takvim Planlama",
-            "E-postalarınızdaki veya mesajlarınızdaki konuşmaları analiz eden Gemini 3, uygun olduğunuz zamanları belirleyip karşı tarafa randevu teklifleri gönderebiliyor. Sadece onay vermenizle takviminiz otomatik olarak güncelleniyor. Artık 'Hangi gün müsaitsin?' sorusuyla vakit kaybetmenize gerek yok.",
-
-            "3. Abonelik Yönetimi ve Fiyat Karşılaştırma",
-            "Dijital aboneliklerinizin takibini yapmak zorlaştı mı? Gemini 3, aktif aboneliklerinizi listeleyebilir, kullanmadıklarınızı iptal etmeniz için size hatırlatıcılar gönderebilir ve ihtiyacınız olan bir hizmet için internetteki en uygun fiyat tekliflerini saniyeler içinde toplayabilir.",
-
-            "4. Veri Analizi ve Kişiselleştirilmiş Programlar",
-            "İster bir spor programı ister karmaşık bir iş projesi olsun; Gemini 3, verilerinizi işleyerek size özel çalışma planları oluşturur. 'Gemini Live' özelliği sayesinde fotoğraflarını çektiğiniz ekipmanlar hakkında anında teknik detay ve kullanım kılavuzu alabilirsiniz.",
-
-            "5. Tarayıcı Üzerinden Uçtan Uca Otomasyon",
-            "Chrome ile tam entegre çalışan Gemini 3, web siteleri arasında mekik dokumadan bilgi toplamanızı sağlar. Bir e-ticaret sitesinden ürün özellikleri çekerken aynı anda rakip fiyatlarını bir tabloya dökebilir. Bu, profesyonel araştırmacılar ve alışveriş meraklıları için devrim niteliğinde bir özellik.",
-
-            "Sonuç olarak, Gemini 3 ile yapay zeka artık bir sohbet botundan çok, dijital bir 'yönetici asistanı' haline geldi. Aipusula olarak önerimiz, bu araçları iş akışınıza dahil ederek zamanınızı daha yaratıcı işlere ayırmanızdır."
-          ],
-
-          contentEN: [
-            "The year 2026 marks the beginning of an era where AI doesn't just 'talk' but directly 'acts.' Google's newly introduced Gemini 3 model is ending digital drudgery with its 'auto-browsing' and 'action-oriented assistant' features. Here is a comprehensive guide on how to simplify your life using this new technology.",
-
-            "1. Automated Form Filling and Document Management",
-            "Gemini 3 can fill out forms on your browser for you. Collecting tax documents, analyzing invoices, and summarizing critical clauses in long service agreements now take seconds. Simply saying 'Gemini, fill this form based on my profile' is enough.",
-
-            "2. Smart Appointment and Calendar Scheduling",
-            "Analyzing conversations in your emails or messages, Gemini 3 can identify your available times and send appointment proposals. Your calendar is automatically updated upon your approval. No more wasting time with the question 'When are you free?'",
-
-            "3. Subscription Management and Price Comparison",
-            "Is it getting hard to track your digital subscriptions? Gemini 3 can list your active subscriptions, send reminders to cancel unused ones, and collect the best price offers on the internet for a service you need within seconds.",
-
-            "4. Data Analysis and Personalized Programs",
-            "Whether it's a fitness program or a complex business project, Gemini 3 processes your data to create customized work plans. With 'Gemini Live,' you can instantly get technical details and manuals for equipment you photograph.",
-
-            "5. End-to-End Automation via Browser",
-            "Fully integrated with Chrome, Gemini 3 allows you to gather information without jumping between websites. It can pull product features from an e-commerce site while simultaneously putting competitor prices into a table. This is a revolutionary feature for researchers and shoppers alike.",
-
-            "In conclusion, with Gemini 3, AI has become a digital 'executive assistant' rather than just a chatbot. At AI Pusula, we recommend incorporating these tools into your workflow to dedicate your time to more creative tasks."
-          ],
-
-          cover: "/blog/google-gemini-3-productivity-2026.jpg",
-          readingMinutes: 5,
-          featured: true
-        },
-
-        {
-          slug: "en-iyi-yapay-zeka-video-olusturma-araclari-2026",
-          dateISO: "2026-02-06",
-          categoryTR: "Liste",
-          categoryEN: "List",
-
-          titleTR: "2026'nın En İyi 5 Yapay Zeka Video Oluşturma Aracı",
-          titleEN: "Top 5 AI Video Generators in 2026",
-
-          excerptTR: "Video dünyasında devrim! OpenAI Sora'ya rakip olan ve hatta bazı özellikleriyle onu geride bırakan 2026'nın en güçlü yapay zeka video araçlarını inceledik.",
-
-          excerptEN: "A revolution in the video world! We've reviewed the most powerful AI video tools of 2026 that rival and even surpass OpenAI's Sora.",
-
-          contentTR: [
-            "2026 yılı itibarıyla video prodüksiyonu tamamen demokratikleşti. Artık profesyonel bir kamera setine veya karmaşık kurgu yazılımlarına ihtiyacınız yok. Sadece hayal edin ve yazın; gerisini yapay zeka halletsin. İşte bu yılın en çok konuşulan video araçları.",
-
-            "1. Google Veo 3: Sinematik Gerçekçilikte Zirve",
-            "Google'ın en yeni video modeli Veo 3, sadece görsel üretmekle kalmıyor, aynı zamanda videoya uygun çevresel sesleri ve diyalogları da otomatik ekliyor. Tutarlı karakter yapısı ve fizik kurallarına tam uyumuyla şu an profesyonellerin ilk tercihi.",
-
-            "2. Luma Dream Machine (Ray 3): Hız ve Akıcılık",
-            "Eğer saniyeler içinde 10-15 saniyelik yüksek kaliteli klipler üretmek istiyorsanız, Luma'nın Ray 3 modeli rakipsiz. Özellikle hızlı aksiyon sahnelerindeki başarısı, onu reklamcılar için vazgeçilmez kılıyor.",
-
-            "3. Runway Gen-3 Alpha: Kreatif Kontrol Sende",
-            "Runway, sunduğu fırça araçları ve bölgesel kontrol özellikleriyle 'yönetmen koltuğuna' gerçekten sizi oturtuyor. Videonun sadece belirli bir kısmını hareket ettirmek veya ışığı değiştirmek Runway ile çocuk oyuncağı.",
-
-            "4. Kling AI: Uzun Videoların Efendisi",
-            "Kling, tutarlılığı bozmadan 2 dakikaya kadar kesintisiz video üretebilme yeteneğiyle öne çıkıyor. YouTube içerik üreticileri için kısa filmler ve giriş videoları hazırlamak hiç bu kadar kolay olmamıştı.",
-
-            "5. Pika Art (Pro): Stil ve Estetik",
-            "Animasyon ve sanatsal videolarda Pika hala liderliğini koruyor. Metinden videoya (text-to-video) geçişte sunduğu sanatsal filtreler ve dudak senkronizasyonu (Lip Sync) özelliğiyle sosyal medya fenomenlerinin favorisi.",
-
-            "Sonuç olarak, 2026'da video üretmek için teknik beceriden ziyade 'hayal gücü' ve 'doğru komutu verme' becerisi öne çıkıyor. Aipusula olarak önerimiz, bu araçları projelerinizde hibrit bir şekilde kullanarak kendi benzersiz tarzınızı yaratmanızdır."
-          ],
-
-          contentEN: [
-            "As of 2026, video production has been completely democratized. You no longer need professional camera sets or complex editing software. Just imagine and type; let AI do the rest. Here are the most talked-about video tools of the year.",
-
-            "1. Google Veo 3: The Peak of Cinematic Realism",
-            "Google's latest video model, Veo 3, doesn't just generate visuals; it also automatically adds appropriate environmental sounds and dialogues. With consistent character structure and full compliance with physics, it's currently the top choice for professionals.",
-
-            "2. Luma Dream Machine (Ray 3): Speed and Fluidity",
-            "If you want to generate high-quality 10-15 second clips in seconds, Luma's Ray 3 model is unrivaled. Its success especially in fast action scenes makes it indispensable for advertisers.",
-
-            "3. Runway Gen-3 Alpha: Creative Control in Your Hands",
-            "Runway truly puts you in the director's chair with its brush tools and regional control features. Moving only a specific part of the video or changing the light is child's play with Runway.",
-
-            "4. Kling AI: Lord of Long Videos",
-            "Kling stands out with its ability to generate up to 2 minutes of continuous video without losing consistency. It has never been easier for YouTube creators to prepare short films and intro videos.",
-
-            "5. Pika Art (Pro): Style and Aesthetics",
-            "Pika still maintains its leadership in animation and artistic videos. With the artistic filters and Lip Sync feature it offers in text-to-video transition, it is the favorite of social media influencers.",
-
-            "In conclusion, in 2026, 'imagination' and 'prompting skills' stand out more than technical skills for video production. As AI Pusula, we suggest using these tools in a hybrid way in your projects to create your own unique style."
-          ],
-
-          cover: "/blog/en-iyi-ai-video-araclari-2026.jpg",
-          readingMinutes: 5,
-          featured: true
-        },
-
-        {
-          slug: "yapay-zeka-ajanlari-ile-para-kazanma-rehberi-2026",
-          dateISO: "2026-02-08",
-          categoryTR: "Finans",
-          categoryEN: "Finance",
-
-          titleTR: "Yapay Zeka Ajanları ile Tek Kişilik Şirket: 2026’da Para Kazandıran 5 Otonom Sistem",
-          titleEN: "One-Person Unicorn with Agentic AI: 5 Autonomous Systems to Make Money in 2026",
-
-          excerptTR: "Yapay zeka artık sadece yazmıyor, iş yapıyor! 2026'nın en büyük trendi 'Ajan Yapay Zeka' (Agentic AI) ile uyurken bile çalışan otonom iş modellerini keşfedin.",
-
-          excerptEN: "AI no longer just writes, it acts! Discover autonomous business models that work even while you sleep with 2026's biggest trend: Agentic AI.",
-
-          contentTR: [
-            "2026 yılı, 'Üretken Yapay Zeka' döneminden 'Ajan Yapay Zeka' (Agentic AI) dönemine geçişin yılı oldu. Artık yapay zekaya sadece metin yazdırmıyoruz; ona hedefler veriyoruz ve o hedefe ulaşmak için internette geziniyor, araçları kullanıyor ve kararlar alıyor. İşte tek başınıza yönetebileceğiniz, milyon dolarlık potansiyele sahip 5 otonom iş modeli.",
-
-            "1. Otonom E-Ticaret ve Arbitraj Ajanları",
-            "Yeni nesil AI ajanları, farklı pazaryerlerindeki (Amazon, Trendyol, eBay) fiyat açıklarını saniyeler içinde bulabiliyor. Sizin belirlediğiniz bütçe dahilinde en karlı ürünleri listeleyip, reklam kampanyalarını otonom olarak optimize eden bir sistem kurmak 2026'nın en popüler gelir kapısı.",
-
-            "2. AI Ajanlı Sosyal Medya Ajansı",
-            "Sadece post paylaşan botları unutun. Yeni ajanlar, trendleri analiz ediyor, rakip stratejilerini çözüyor ve takipçilerle 'insan gibi' etkileşime girerek topluluk yönetiyor. Tek bir kişi, bu ajanlar sayesinde onlarca markanın dijital pazarlamasını kusursuzca yönetebilir.",
-
-            "3. Kod Yazabilen 'Yazılım Ajanları' ile Mikro SaaS",
-            "Kod bilmenize gerek yok. Gemini 3 veya Claude 4 tabanlı ajanlara 'Şöyle bir sorun çözen uygulama yap' demeniz yeterli. Ajan kodu yazıyor, hataları ayıklıyor ve buluta (cloud) yüklüyor. 2026'da 'Tek Kişilik Unicorn' şirketlerin temeli bu ajanlarla atılıyor.",
-
-            "4. Kişiselleştirilmiş Yatırım ve Portföy Ajanları",
-            "Finans dünyasında veri hızı her şeydir. Haber akışlarını, sosyal medya duyarlılığını ve teknik analizleri anlık olarak sentezleyip portföy önerileri sunan özel AI ajanları geliştirmek veya bu hizmeti abonelikle satmak, ciddi bir pasif gelir modeli haline geldi.",
-
-            "5. Müşteri Deneyimi ve 'Full-Agentic' Chatbotlar",
-            "Eski nesil 'seçenek sunan' botlar öldü. 2026'nın ajanları, müşterinin iade işlemini kendi başına tamamlıyor, kargo takibi yapıyor ve hatta şikayetleri çözmek için inisiyatif alıyor. Şirketlere bu 'otonom destek sistemlerini' kurmak şu an en çok talep gören danışmanlık işi.",
-
-            "Sonuç olarak, 2026'da zenginlik, AI ile yarışanların değil, AI ajanlarından oluşan bir 'dijital ordu' kuranların olacak. Aipusula olarak tavsiyemiz; bu teknolojiyi sadece tüketmek yerine, size çalışan birer varlığa dönüştürmenizdir."
-          ],
-
-          contentEN: [
-            "2026 marked the shift from 'Generative AI' to 'Agentic AI.' We no longer just ask AI to write; we give it goals, and it browses the web, uses tools, and makes decisions to reach them. Here are 5 autonomous business models with million-dollar potential that you can manage alone.",
-
-            "1. Autonomous E-Commerce and Arbitrage Agents",
-            "Next-gen AI agents can find price gaps across different marketplaces (Amazon, eBay, Etsy) in seconds. Setting up a system that lists the most profitable products within your budget and autonomously optimizes ad campaigns is a top income stream in 2026.",
-
-            "2. AI Agent-Powered Social Media Agency",
-            "Forget bots that just schedule posts. Modern agents analyze trends, decode competitor strategies, and manage communities by interacting 'like humans.' A single person can manage the digital marketing of dozens of brands flawlessly using these agents.",
-
-            "3. Micro-SaaS with Coding 'Software Agents'",
-            "No coding skills needed. Just tell agents based on Gemini 3 or Claude 4 to 'Build an app that solves this problem.' The agent writes the code, debugs it, and deploys it to the cloud. This is the foundation of 'One-Person Unicorns' in 2026.",
-
-            "4. Personalized Investment and Portfolio Agents",
-            "In finance, data speed is everything. Developing private AI agents that synthesize news feeds, social sentiment, and technical analysis to offer portfolio advice has become a major passive income model.",
-
-            "5. Customer Experience and 'Full-Agentic' Chatbots",
-            "Old-school 'option-based' bots are dead. 2026 agents complete returns, track shipments, and take initiative to solve complaints. Setting up these 'autonomous support systems' for companies is currently the most in-demand consulting job.",
-
-            "In conclusion, wealth in 2026 will belong to those who build a 'digital army' of AI agents. Our advice at AI Pusula is to turn this technology into assets that work for you, rather than just consuming it."
-          ],
-
-          "cover": "/blog/ai-agent-money-making-2026.jpg",
-          "readingMinutes": 6,
-          "featured": true
-        },
-
-        {
-  slug: "yapay-zeka-muzik-rehberi-suno-vs-udio-telif-haklari-2026",
-  dateISO: "2026-02-09",
-  categoryTR: "Kapsamlı Rehber",
-  categoryEN: "Comprehensive Guide",
-
-  titleTR: "Suno vs. Udio: 2026'da Yapay Zeka ile Müzik Üretimi, Para Kazanma ve Telif Hakları Rehberi",
-  titleEN: "Suno vs. Udio: 2026 AI Music Creation, Monetization, and Copyright Guide",
-
-  excerptTR: "Yapay zeka ile müzik üretimi 2026'da profesyonel bir endüstriye dönüştü. Suno v4 ve Udio Pro karşılaştırması, en iyi prompt teknikleri ve telif hakları hakkında bilmeniz gereken her şey bu dev rehberde!",
-
-  excerptEN: "AI music production turned into a professional industry in 2026. Suno v4 vs. Udio Pro comparison, best prompt techniques, and everything you need to know about copyrights is in this giant guide!",
-
-  contentTR: [
-    "2026 yılı, müzik endüstrisinin tarihindeki en büyük kırılma noktası olarak kayıtlara geçti. Artık bir 'hit' şarkı oluşturmak için yıllarca konservatuar eğitimi almak veya binlerce dolarlık stüdyo ekipmanlarına sahip olmak bir zorunluluk değil. Yapay zeka, sadece bir dizi komutla (prompt) senfonilerden heavy metal parçalarına, lo-fi beatlerden Anadolu Rock ezgilerine kadar her şeyi radyo kalitesinde üretebiliyor. Ancak bu yeni dünya, beraberinde 'Hangi araç daha iyi?', 'Telif hakları kime ait?' ve 'Spotify'dan nasıl para kazanılır?' gibi kritik soruları da getirdi. Bu yazımızda, Aipusula olarak yapay zeka müzik evrenini A'dan Z'ye masaya yatırıyoruz.",
-
-    " 1. Devlerin Savaşı: Suno v4 vs. Udio Pro (2026 Güncel İnceleme)",
-    "Yapay zeka müzik dendiğinde akla gelen iki dev isim var: Suno ve Udio. 2026 başı itibarıyla her iki platform da modellerini güncelleyerek hata paylarını neredeyse sıfıra indirdi.",
-    "Suno v4: Hız ve kullanım kolaylığı arayanların ilk tercihi. Suno'nun en büyük gücü, çok kısa bir metinden (prompt) bile bütünsel bir şarkı yapısı çıkarabilmesi. 'Remix' özelliği sayesinde, elinizdeki bir melodiyi saniyeler içinde 1200'den fazla janra dönüştürebilirsiniz. Sosyal medya içerik üreticileri için hızlı, etkili ve viral odaklı çözümler sunar.",
-    "Udio (Pro): Eğer bir 'müzisyen hassasiyeti' arıyorsanız Udio sizin için tasarlandı. Udio, ses kalitesi (44.1 kHz stüdyo kalitesi) ve vokallerin duygusal derinliği konusunda Suno'nun bir adım önünde. Şarkı üzerinde saniye saniye kontrol sağlayan 'Inpainting' (şarkı içi düzenleme) özelliği sayesinde, beğenmediğiniz bir kelimeyi veya bir gitar solosunu tüm şarkıyı bozmadan değiştirebilirsiniz.",
-
-    " 2. Telif Hakları ve Yasal Durum: Müziğinizin Sahibi Kim?",
-    "Yapay zeka ile üretilen içeriklerde en büyük gri alan telif haklarıdır. 2026'daki yasal düzenlemeler (özellikle ABD ve Avrupa Birliği'ndeki son kararlar) bu konuda net çizgiler çekmeye başladı:",
-    "Ücretsiz Planlar: Hem Suno hem de Udio'nun ücretsiz sürümleriyle üretilen şarkıların mülkiyeti teknik olarak platforma aittir. Bu şarkıları YouTube veya Spotify'da yayınlayıp para kazanamazsınız; aksi takdirde 'Telif Hakkı İhlali' (Copyright Strike) almanız kaçınılmazdır.",
-    "Ücretli Abonelikler (Ticari Haklar): Pro veya Premier plan kullanıcısı olduğunuzda, aboneliğiniz süresince ürettiğiniz şarkıların ticari kullanım hakları size devredilir. Yani bu şarkıları Spotify'a yükleyebilir, reklam projelerinde kullanabilir veya film müziği olarak lisanslayabilirsiniz. Ancak unutmayın: Yapay zekanın 'eğitim verisi'ndeki eser sahipleriyle devam eden davalar (MESAM ve uluslararası telif birlikleri süreci) nedeniyle, 2026'da yayınlanan yeni yasalar 'AI ile üretilmiştir' ibaresinin bazı platformlarda zorunlu tutulmasını gerektirebilir.",
-
-    " 3. Yapay Zeka Müziği ile Para Kazanma Yöntemleri",
-    "Müziğinizi ürettiniz, peki bunu nasıl kazanca dönüştüreceksiniz? 2026'nın en popüler 4 yöntemi:",
-    "1. Dijital Dağıtım: DistroKid veya Tunecore gibi servisler üzerinden şarkılarınızı tüm dijital platformlara yükleyin. 2026'da Spotify, tamamen AI tarafından üretilen şarkıları engellemiyor; ancak 'yüksek kaliteli ve benzersiz' olma şartı arıyor.",
-    "2. Stock Müzik ve Lisanslama: AudioJungle veya Pond5 gibi sitelerde reklam ajanslarına, YouTuber'lara arka plan müziği (jingle) satın. Özellikle kurumsal videolar için lo-fi ve ambient türleri çok talep görüyor.",
-    "3. Ghost Production (Hayalet Prodüktörlük): Diğer içerik üreticileri için özel müzikler tasarlayın. İnsanlar podcast girişleri, kanal introları veya özel gün hediyeleri için kişiselleştirilmiş AI müziklerine ciddi ödemeler yapıyor.",
-    "4. YouTube Otomasyonu: Tamamı AI müziklerinden oluşan 'Lo-fi Study Beats' veya 'Deep Meditation' kanalları kurun. Bu kanallar 2026'da hala en stabil reklam geliri getiren modellerden biri.",
-
-    " 4. Kusursuz Şarkı İçin 'Prompt Engineering' Teknikleri",
-    "Yapay zekadan 'iyi' değil, 'mükemmel' bir sonuç almak için komutlarınızda şu detaylara yer verin:",
-    "- Janr ve Alt Janr Belirleyin: Sadece 'Rock' demeyin; '1970s Psychedelic Rock, Hammond Organ, Gritty Vocals' gibi detaylar ekleyin.",
-    "- Duygu Durumu (Mood): 'Melancholic', 'Energetic', 'Dark', 'Dreamy' gibi sıfatlar müziğin tonunu belirler.",
-    "- Yapı Belirleyicileri: Komutunuzda [Intro], [Verse], [Chorus], [Bridge], [Outro] etiketlerini kullanarak yapay zekaya şarkının hangi bölümünde ne yapması gerektiğini söyleyin.",
-    "- BPM ve Anahtar: '120 BPM, C Minor' gibi teknik detaylar, müziğin profesyonel standartlara uygun olmasını sağlar.",
-
-    " 5. Geleceğin Vizyonu: İnsan ve Makine Ortaklığı",
-    "Sonuç olarak, 2026'da yapay zeka müziği bir 'tehdit' olmaktan çıkıp bir 'enstrüman' haline geldi. Gerçekten başarılı olan şarkılar, sadece bir düğmeye basılarak üretilenler değil; yapay zekanın teknik kusursuzluğu ile insanın duygusal kürasyonunun birleştiği eserler oluyor. Aipusula ekibi olarak tavsiyemiz, bu araçları birer son durak değil, yaratıcılığınızı tetikleyen güçlü birer başlangıç noktası olarak görmenizdir."
-
-  ],
-
-  contentEN: [
-    "2026 has been recorded as the biggest turning point in the history of the music industry. Creating a 'hit' song no longer requires years of conservatory education or thousands of dollars in studio equipment. AI can generate everything from symphonies to heavy metal tracks, and from lo-fi beats to traditional melodies in radio quality with just a series of prompts. However, this new world brought critical questions like 'Which tool is better?', 'Who owns the copyright?', and 'How to make money from Spotify?'. In this post, as AI Pusula, we analyze the AI music universe from A to Z.",
-
-    " 1. Battle of the Giants: Suno v4 vs. Udio Pro (2026 Update)",
-    "There are two giant names when it comes to AI music: Suno and Udio. As of early 2026, both platforms have updated their models, reducing error margins to almost zero.",
-    "Suno v4: The first choice for those seeking speed and ease of use. Suno's biggest strength is its ability to extract a holistic song structure even from a very short text prompt. With the 'Remix' feature, you can transform an existing melody into more than 1200 genres in seconds. It offers fast, effective, and viral-oriented solutions for social media creators.",
-    "Udio (Pro): If you are looking for 'musician precision,' Udio was designed for you. Udio is a step ahead of Suno in terms of sound quality (44.1 kHz studio quality) and the emotional depth of vocals. Thanks to the 'Inpainting' feature, which provides second-by-second control over the song, you can change a word you don't like or a guitar solo without ruining the entire track.",
-
-    " 2. Copyrights and Legal Status: Who Owns Your Music?",
-    "The biggest gray area in AI-generated content is copyrights. Legal regulations in 2026 (especially recent decisions in the US and EU) have started to draw clear lines:",
-    "Free Plans: Technically, the ownership of songs produced with the free versions of both Suno and Udio belongs to the platform. You cannot monetize these songs on YouTube or Spotify; otherwise, a 'Copyright Strike' is inevitable.",
-    "Paid Subscriptions (Commercial Rights): When you become a Pro or Premier plan user, the commercial usage rights of the songs you produce during your subscription are transferred to you. This means you can upload these songs to Spotify, use them in advertising projects, or license them as movie soundtracks. However, remember: due to ongoing lawsuits with rights holders in AI training data, new laws published in 2026 may require the 'Generated by AI' label to be mandatory on some platforms.",
-
-    " 3. Ways to Make Money with AI Music",
-    "You've produced your music, so how do you turn it into profit? The 4 most popular methods of 2026:",
-    "1. Digital Distribution: Upload your songs to all digital platforms via services like DistroKid or Tunecore. In 2026, Spotify does not block songs entirely produced by AI; however, it looks for 'high quality and uniqueness.'",
-    "2. Stock Music and Licensing: Sell background music (jingles) to advertising agencies and YouTubers on sites like AudioJungle or Pond5. Especially lo-fi and ambient genres are in high demand for corporate videos.",
-    "3. Ghost Production: Design custom music for other content creators. People pay significant amounts for personalized AI music for podcast intros, channel intros, or special occasion gifts.",
-    "4. YouTube Automation: Set up 'Lo-fi Study Beats' or 'Deep Meditation' channels consisting entirely of AI music. These channels are still one of the most stable models for generating ad revenue in 2026.",
-
-    " 4. 'Prompt Engineering' Techniques for the Perfect Song",
-    "To get a 'perfect' rather than just a 'good' result from AI, include these details in your commands:",
-    "- Define Genre and Sub-genre: Don't just say 'Rock'; add details like '1970s Psychedelic Rock, Hammond Organ, Gritty Vocals.'",
-    "- Mood: Adjectives like 'Melancholic', 'Energetic', 'Dark', 'Dreamy' define the tone of the music.",
-    "- Structure Indicators: Use [Intro], [Verse], [Chorus], [Bridge], [Outro] tags in your command to tell the AI what to do in which part of the song.",
-    "- BPM and Key: Technical details like '120 BPM, C Minor' ensure the music meets professional standards.",
-
-    " 5. Vision of the Future: Human and Machine Partnership",
-    "In conclusion, in 2026, AI music has evolved from a 'threat' into an 'instrument.' Truly successful songs are not those produced by just pressing a button, but works where AI's technical perfection meets human emotional curation. As the AI Pusula team, we suggest seeing these tools not as a final destination, but as powerful starting points that trigger your creativity."
-    
-      ],
-
-  "cover": "/blog/ai-music-master-guide-2026.jpg",
-  "readingMinutes": 12,
-  "featured": true
-},
-
-{
-  slug: "yapay-zeka-ajanlari-ile-otonom-is-kurma-rehberi-2026",
-  dateISO: "2026-02-12",
-  categoryTR: "Rehber & Finans",
-  categoryEN: "Guide & Finance",
-
-  titleTR: "2026’nın Yeni Ekonomi Modeli: Yapay Zeka Ajanları ile Otonom İş Kurma ve Para Kazanma Rehberi",
-  titleEN: "The New Economy of 2026: Guide to Building Autonomous Businesses with AI Agents",
-
-  excerptTR: "Yapay zeka artık sadece bir araç değil, bir çalışan! 2026'da tek başınıza koca bir şirketi nasıl yönetirsiniz? Otonom ajanlarla pasif gelir modellerini ve en iyi araçları keşfedin.",
-
-  excerptEN: "AI is no longer just a tool, it's an employee! How to run an entire company solo in 2026? Discover passive income models with autonomous agents and the best tools.",
-
-  contentTR: [
-    "2026 yılı, dijital girişimcilik tarihinde 'Büyük Ajan Devrimi' (The Great Agentic Shift) olarak anılıyor. Geçtiğimiz yıllarda ChatGPT ile başlayan üretken yapay zeka çılgınlığı, yerini kendi kararlarını verebilen, internette gezinen ve sizin yerinize finansal işlemler gerçekleştirebilen 'Otonom Yapay Zeka Ajanları'na bıraktı. Artık mesele yapay zekaya bir makale yazdırmak değil; ona bir iş hedefi verip, o hedefe giden yoldaki tüm engelleri kendi başına aşmasını izlemek. Bu kapsamlı rehberde, 2026 ekonomisinde yapay zeka ajanlarını kullanarak nasıl otonom bir iş modeli kurabileceğinizi A'dan Z'ye inceleyeceğiz.",
-
-    " 1. Yapay Zeka Ajanı Nedir ve Neden 2026'nın En Büyük Trendi?",
-    "Klasik yapay zekalar 'girdi-çıktı' (input-output) mantığıyla çalışırken, yapay zeka ajanları 'hedef-eylem' (goal-action) döngüsüyle hareket eder. Bir ajana 'Şu sektördeki pazar açığını bul, bir ürün tasarla ve sosyal medyada pazarlamaya başla' dediğinizde; ajan önce pazar araştırması yapar, ardından tasarım araçlarını kullanarak prototipler oluşturur ve son olarak reklam kampanyalarını otonom olarak yönetir. Bu, 2026'da 'Tek Kişilik Şirket' (One-Person Company) kavramının milyar dolarlık bir gerçekliğe dönüşmesini sağlamıştır.",
-
-    " 2. Otonom İş Modelleri: Nereden Başlamalı?",
-    "2026'da yapay zeka ajanlarıyla kurabileceğiniz, en yüksek getiri potansiyeline sahip 3 ana iş modeli şunlardır:",
-    "A. Otonom İçerik ve Medya İmparatorluğu: AI ajanları artık sadece metin yazmıyor. Güncel haberleri tarayan, bu haberlerden özgün video senaryoları çıkaran, seslendirme yapan ve videoyu kurgulayıp YouTube/TikTok/Instagram platformlarına en doğru saatte yükleyen ajan sistemleri kurabilirsiniz. Bu sistemler, 7/24 çalışarak hiçbir insan müdahalesi olmadan izlenme ve reklam geliri üretir.",
-    "B. AI Destekli Mikro-SaaS ve Uygulama Geliştirme: Yazılım ajanları (Devin v3, Replit Agent vb.), artık karmaşık kod bloklarını sıfırdan yazıp bulut sunucularına yükleyebiliyor. Bir problem tespit edin (örneğin: 'Küçük esnaflar için otomatik randevu sistemi') ve ajana bu çözümü kodlamasını söyleyin. Uygulamanız bittiğinde, yine bir pazarlama ajanı aracılığıyla bu ürünü abonelik modeliyle satabilirsiniz.",
-    "C. Arbitraj ve Finansal Alım-Satım Ajanları: 2026 finans piyasalarında insan hızı artık yetersiz kalıyor. Kripto varlıklar, NFT'ler veya global hisse senetleri arasındaki fiyat farklarını (arbitraj) anlık yakalayan ve risk yönetimi yaparak işlem açan ajanlar, düşük riskli ama sürekli bir pasif gelir kapısı sunuyor.",
-
-    " 3. 2026'nın En Güçlü Ajan Araçları",
-    "- AutoGPT 3.0:** Genel amaçlı görevler için en gelişmiş açık kaynaklı ajan sistemi.",
-    "- Microsoft Copilot Agents: Kurumsal verileri işlemek ve Office ekosistemiyle entegre işler yapmak için ideal.",
-    "- Google Gemini Live Action: Mobil cihazlarla entegre, gerçek zamanlı asistanlık ve günlük görev yönetimi.",
-    "- BabyAGI Evolution: Özellikle araştırma ve stratejik planlama konularında derinleşen ajan yapısı.",
-
-    " 4. GEO ve SEO: Ajanlar Sizi Nasıl Bulacak?",
-    "2026'da Google aramaları artık sadece web sitelerini listelemiyor, doğrudan cevap veriyor. İçeriğinizin bu cevaplarda kaynak gösterilmesi için 'Alıntılanabilir Veri' (Citable Data) üretmelisiniz. Yazılarınızda bol bol istatistik, özgün vaka çalışması ve 'doğrudan yanıt' blokları kullanın. Yapay zeka motorları, iddialarını desteklemek için sizin verilerinizi kullandığında sitenizin otoritesi ve trafiği katlanarak artacaktır.",
-
-    " 5. Riskler ve Etik: Dikkat Edilmesi Gerekenler",
-    "Otonom bir sistem kurarken her şeyi yapay zekaya bırakmak risklidir. Özellikle finansal işlemler ve marka itibarı söz konusu olduğunda 'Human-in-the-loop' (Döngüde İnsan) prensibini uygulamalısınız. Ajanın kritik kararlar almadan önce sizden 'son onay' alacağı kontrol noktaları belirlemek, 2026'nın en güvenli çalışma metodudur.",
-
-    "Sonuç olarak; yapay zeka ajanları 2026 yılında sadece birer yazılım değil, dijital dünyadaki iş ortaklarımızdır. Bu teknolojiyi erken kavrayan ve kendi otonom ordusunu kuran girişimciler, geleceğin ekonomisinde en büyük payı alacaktır. Aipusula olarak biz, bu yolculukta size en güncel araçları ve stratejileri sunmaya devam edeceğiz."
-
-  ],
-
-  contentEN: [
-    "The year 2026 is known in the history of digital entrepreneurship as 'The Great Agentic Shift.' The generative AI craze that started with ChatGPT has evolved into 'Autonomous AI Agents' that can make their own decisions, browse the internet, and perform financial transactions. Now, the goal is not to have AI write an article, but to give it a business objective and watch it overcome all obstacles on its own. In this comprehensive guide, we will examine from A to Z how you can build an autonomous business model using AI agents in the 2026 economy.",
-
-    " 1. What is an AI Agent and Why is it the Biggest Trend of 2026?",
-    "While traditional AIs work with an 'input-output' logic, AI agents operate with a 'goal-action' loop. When you tell an agent, 'Find a market gap in this sector, design a product, and start marketing it on social media,' the agent first conducts market research, then creates prototypes using design tools, and finally manages ad campaigns autonomously. This has turned the concept of a 'One-Person Company' into a billion-dollar reality in 2026.",
-
-    " 2. Autonomous Business Models: Where to Start?",
-    "The three main business models with the highest profit potential you can establish with AI agents in 2026 are:",
-    "A. Autonomous Content and Media Empire: AI agents no longer just write text. You can set up agent systems that scan current news, create original video scripts, perform voiceovers, edit the video, and upload it to platforms like YouTube/TikTok/Instagram at the most appropriate time. These systems work 24/7, generating views and ad revenue without any human intervention.",
-    "B. AI-Powered Micro-SaaS and App Development: Coding agents (like Devin v3 or Replit Agent) can now write complex code blocks from scratch and deploy them to cloud servers. Identify a problem and tell the agent to code the solution. Once your app is finished, you can sell it via a subscription model through a marketing agent.",
-    "C. Arbitrage and Financial Trading Agents: Human speed is no longer sufficient in the 2026 financial markets. Agents that instantly catch price differences (arbitrage) between crypto assets, NFTs, or global stocks and open trades with risk management offer a low-risk but steady passive income stream.",
-
-    "3. The Most Powerful Agent Tools of 2026",
-    "- AutoGPT 3.0:** The most advanced open-source agent system for general-purpose tasks.",
-    "- Microsoft Copilot Agents: Ideal for processing enterprise data and working integrated with the Office ecosystem.",
-    "- Google Gemini Live Action: Integrated with mobile devices for real-time assistance and daily task management.",
-
-    "4. GEO and SEO: How Will Agents Find You?",
-    "In 2026, Google searches no longer just list websites; they provide direct answers. To have your content cited in these answers, you must produce 'Citable Data.' Use plenty of statistics, original case studies, and 'direct answer' blocks in your articles. When AI engines use your data to support their claims, your site's authority and traffic will increase exponentially.",
-
-    "5. Risks and Ethics: What to Watch Out For?",
-    "Leaving everything to AI when building an autonomous system is risky. Especially regarding financial transactions and brand reputation, you should apply the 'Human-in-the-loop' principle. Setting checkpoints where the agent gets 'final approval' from you before taking critical decisions is the safest working method of 2026."
-
-  ],
-
-  cover: "/blog/autonomous-ai-business-guide-2026.jpg",
-  readingMinutes: 15,
-  featured: true
-},
-
-{
-  slug: "2026-yapay-zeka-rehberi-ajanlar-ve-yeni-internet-ekonomisi",
-  dateISO: "2026-02-12",
-  categoryTR: "Mega Rehber",
-  categoryEN: "Mega Guide",
-
-  titleTR: "2026 Yapay Zeka Devrimi: Agentic AI, DeepSeek ve Yeni İnternet Düzeninde Hayatta Kalma Rehberi",
-  titleEN: "2026 AI Revolution: Agentic AI, DeepSeek, and Survival Guide in the New Internet Order",
-
-  excerptTR: "Google aramalarından TikTok trendlerine; 2026'da dünyayı kasıp kavuran yapay zeka ajanlarını, otonom sistemleri ve içerik üretimindeki yeni kuralları A'dan Z'ye inceliyoruz.",
-
-  excerptEN: "From Google searches to TikTok trends; we examine AI agents, autonomous systems, and the new rules of content creation in 2026 from A to Z.",
-
-  contentTR: [
-    "2026 yılı, yapay zekanın sadece 'yanıt verdiği' değil, doğrudan 'eylem geçtiği' bir milat oldu. Geçtiğimiz aylarda Google, Microsoft ve DeepSeek'in peş peşe yaptığı duyurularla internetin dokusu kalıcı olarak değişti. Artık sadece 'ChatGPT'ye soru sormak' yetmiyor; dünyada en çok aratılan terimlerin başında **Agentic AI (Ajan Yapay Zeka)** ve **Multimodal Automation** geliyor. Bu 1000+ kelimelik dev rehberde, yeni internet ekonomisinde nasıl öne çıkacağınızı ve trafiği nasıl domine edeceğinizi anlatıyoruz.",
-
-    " 1. 2026'nın Global Trendi: Agentic AI (Ajan Yapay Zeka) Nedir?",
-    "Dünya genelinde 'AI asistent' aramaları yerini 'AI Agent' aramalarına bıraktı. Ajan yapay zeka, bir chatbotun aksine sadece metin üretmez; sizin adınıza internette gezer, bilet alır, yazılım geliştirir ve karmaşık iş akışlarını tamamlar. 2026'da Google'da en çok aratılan 'nasıl yapılır' sorularının merkezinde bu ajanların kurulumu yer alıyor. Eğer blogunuzda otonom ajanların nasıl çalıştığına dair pratik vaka analizleri (case studies) sunarsanız, Google sizi 'Topical Authority' (Konu Otoritesi) olarak işaretleyecektir.",
-
-    " 2. DeepSeek ve Açık Kaynak Devrimi",
-    "2026 başı itibarıyla teknoloji dünyasının en çok konuştuğu isim şüphesiz **DeepSeek**. Uygun maliyetli ve yüksek performanslı bu model, yapay zekanın demokratikleşmesini sağladı. Arama hacmi %800 artan DeepSeek, özellikle 'güvenli yapay zeka' ve 'yerel kurulum' (local hosting) aramalarında zirvede. Kullanıcılar artık verilerinin büyük devlerin elinde olmasından endişe ediyor; bu yüzden 'kendi bilgisayarına yapay zeka kurma' rehberleri devasa trafik çekiyor.",
-
-    " 3. SEO Öldü mü? Hayır, Yerini GEO'ya Bıraktı!",
-    "Arama motoru optimizasyonu (SEO), artık **GEO (Generative Engine Optimization)** yani Üretken Motor Optimizasyonu'na evrildi. Google'ın AI Overviews (Yapay Zeka Özetleri), aramaların %90'ını karşılıyor. Artık ilk sırada çıkmak yetmiyor; yapay zekanın verdiği cevabın içinde 'kaynak' olarak gösterilmek zorundasınız. Bunun için yazınızda şu 3 kuralı uyguladık:",
-    "- Doğrudan Yanıtlar:** Sorulara net ve kısa cevaplar verin.",
-    "- Yapılandırılmış Veri:** Teknik tablolar ve liste görünümleri kullanın.",
-    "- Deneyim (E-E-A-T):** 'Yapay zeka böyle diyor' yerine 'Biz bu ajanla şu kadar tasarruf ettik' diyerek kişisel tecrübenizi katın.",
-
-    " 4. Multimodal İçerik Üretimi: Video, Ses ve Metin Bir Arada",
-    "2026'da sadece metin içeren bloglar 'ruhsuz' kabul ediliyor. Dünya genelinde en çok aratılan içerik türleri, yapay zeka ile üretilmiş sinematik videolar ve sesli klonlama (Voice Cloning) teknolojileri. Bu rehberde bahsettiğimiz araçları kullanarak içeriğinizi çok kanallı (Omnichannel) hale getirmek, trafiğinizi sadece Google'dan değil, TikTok ve YouTube'dan da beslemenizi sağlar.",
-
-    " 5. Yapay Zeka ile Para Kazanma: 2026'nın Yeni İş Modelleri",
-    "Arama hacmi milyonları bulan 'AI side hustle' (yan gelir) aramaları, yerini daha profesyonel iş modellerine bıraktı:",
-    "- Otonom E-Ticaret Ajanları:** Ürün bulan, reklamı yöneten ve kargoyu takip eden ajan orduları.",
-    "- Yapay Zeka Danışmanlığı:** Şirketlerin iş akışlarını ajanlarla otomatize etmek.",
-    "- Sentetik Medya Ajansları:** Markalar için tamamen yapay zeka ile üretilmiş reklam yüzleri ve içerikler oluşturmak.",
-
-    " 6. Güvenlik ve Etik: 'AI mi, Gerçek mi?'",
-    "İnternetin en büyük sorunu artık 'güven'. Deepfake tespiti ve içerik doğrulama araçları (Content Credentials) 2026'nın en kritik anahtar kelimeleri. Blogunuzda güven faktörünü ön plana çıkararak, okuyucularınıza hangi içeriğin güvenilir olduğunu öğreten bir 'filtre' görevi görmelisiniz.",
-
-    "Sonuç olarak; 2026 yapay zeka dünyası, sadece en hızlı olanın değil, en güvenilir ve en çok 'iş bitiren' ajan sistemlerini kuranın kazandığı bir arena. Aipusula olarak biz, bu dijital okyanusta pusulanız olmaya devam edeceğiz. Hemen bugün kendi yapay zeka ajanınızı kurun ve geleceği bugünden yönetmeye başlayın!"
-
-  ],
-
-  contentEN: [
-    "2026 became the milestone where AI moved from 'just responding' to 'taking action.' With recent announcements from Google, Microsoft, and DeepSeek, the fabric of the internet has permanently changed. It's no longer enough to just 'ask ChatGPT a question'; the most searched terms globally are **Agentic AI** and **Multimodal Automation**. In this 1000+ word mega-guide, we explain how to stand out in the new internet economy and dominate traffic.",
-
-    " 1. The Global Trend of 2026: What is Agentic AI?",
-    "Global searches for 'AI assistant' have been replaced by 'AI Agent.' Unlike a chatbot, an AI agent doesn't just produce text; it browses the web, books tickets, develops software, and completes complex workflows on your behalf. If you provide practical case studies on how these agents work in your blog, Google will mark you as a 'Topical Authority.'",
-
-    " 2. DeepSeek and the Open Source Revolution",
-    "As of early 2026, the name most talked about in the tech world is undoubtedly **DeepSeek**. This cost-effective and high-performance model democratized AI. DeepSeek, with search volume increasing by 800%, is at the peak of searches for 'secure AI' and 'local hosting.' Users are now worried about their data being in the hands of giants; thus, 'local AI installation' guides draw massive traffic.",
-
-    " 3. Is SEO Dead? No, it Evolved into GEO!",
-    "Search engine optimization (SEO) has now evolved into **GEO (Generative Engine Optimization)**. Google's AI Overviews cover 90% of searches. It's no longer enough to rank first; you must be cited as a 'source' within the AI's response.",
-
-    " 4. Multimodal Content Creation: Video, Audio, and Text Together",
-    "In 2026, blogs containing only text are considered 'soulless.' The most searched content types worldwide are cinematic videos generated by AI and Voice Cloning technologies. Turning your content into an omnichannel format will feed your traffic not only from Google but also from TikTok and YouTube.",
-
-    " 5. Making Money with AI: New Business Models of 2026",
-    "Searches for 'AI side hustle' have been replaced by more professional models like Autonomous E-Commerce Agents, AI Consulting, and Synthetic Media Agencies.",
-
-    " 6. Security and Ethics: 'AI or Real?'",
-    "The biggest problem on the internet is now 'trust.' Deepfake detection and Content Credentials are the most critical keywords of 2026. You must act as a 'filter' by prioritizing the trust factor in your blog."
-
-  ],
-
-  cover: "/blog/2026-global-ai-trends-mega-guide.jpg",
-  readingMinutes: 18,
-  featured: true
-}
-
+            "In conclusion, these tools provide a major advantage for anyone who wants to stay productive in the digital world without allocating a budget."]
+  }
 ];
 
-// yardımcı: tarihe göre sırala
-export function getPostsSorted() {
-  return [...posts].sort((a, b) => (a.dateISO < b.dateISO ? 1 : -1));
+// Sıralama ve filtreleme fonksiyonları
+export function getPostsSorted(): BlogPost[] {
+  return [...posts].sort((a, b) => {
+    return new Date(b.dateISO).getTime() - new Date(a.dateISO).getTime();
+  });
+}
+
+export function getPostsByCategory(category: string, lang: BlogLang = "tr"): BlogPost[] {
+  return getPostsSorted().filter(post => {
+    const postCategory = lang === "tr" ? post.categoryTR : post.categoryEN;
+    return postCategory.toLowerCase() === category.toLowerCase();
+  });
+}
+
+export function searchPosts(query: string, lang: BlogLang = "tr"): BlogPost[] {
+  const lowerQuery = query.toLowerCase();
+  return getPostsSorted().filter(post => {
+    const title = lang === "tr" ? post.titleTR : post.titleEN;
+    const excerpt = lang === "tr" ? post.excerptTR : post.excerptEN;
+    const category = lang === "tr" ? post.categoryTR : post.categoryEN;
+    
+    return (
+      title.toLowerCase().includes(lowerQuery) ||
+      excerpt.toLowerCase().includes(lowerQuery) ||
+      category.toLowerCase().includes(lowerQuery)
+    );
+  });
+}
+
+export function getUniqueCategories(lang: BlogLang = "tr"): string[] {
+  const categories = posts.map(post => 
+    lang === "tr" ? post.categoryTR : post.categoryEN
+  );
+  return Array.from(new Set(categories)).sort();
+}
+
+export function paginatePosts(
+  posts: BlogPost[], 
+  page: number = 1, 
+  perPage: number = 12
+): {
+  posts: BlogPost[];
+  totalPages: number;
+  currentPage: number;
+  hasNext: boolean;
+  hasPrev: boolean;
+} {
+  const start = (page - 1) * perPage;
+  const end = start + perPage;
+  const paginatedPosts = posts.slice(start, end);
+  const totalPages = Math.ceil(posts.length / perPage);
+
+  return {
+    posts: paginatedPosts,
+    totalPages,
+    currentPage: page,
+    hasNext: page < totalPages,
+    hasPrev: page > 1,
+  };
 }
