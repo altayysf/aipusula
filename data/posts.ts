@@ -50,7 +50,7 @@ export const posts: BlogPost[] = [
       "Sonuç: Korkmayın, Yönetin!",
       "Sonuç olarak; yapay zeka sizi işinizden etmeyecek, yapay zeka kullanmayı bilen birisi işinizi elinizden alacak. 2026, pasif izleyicilerin değil, otonom sistemleri yöneten 'yeni nesil profesyonellerin' yılıdır. Aipusula olarak kariyer yolculuğunuzda en güncel araçları ve stratejik hamleleri paylaşmaya devam edeceğiz.",
 
-      "Siz kariyerinizi AI çağına hazırlamak için hangi adımı attınız? Hangi yeteneğin gelecekte daha önemli olacağını düşünüyorsunuz? Yorumlarda buluşalım!"
+      "Siz kariyerinizi AI çağına hazırlamak için hangi adımı attınız? Hangi yeteneğin gelecekte daha önemli olacağını düşünüyorsunuz?"
     ],
     contentEN: [
       "2026 is defined as 'The Great Adaptation' in the business world. The question is no longer about the existence of AI, but how to work alongside it. Global searches for 'AI jobs 2026' and 'career future-proofing' have increased by 450%. In this mega-guide, we examine from A to Z which professions AI is transforming and the skill sets that will make you indispensable.",
