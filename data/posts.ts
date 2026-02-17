@@ -17,6 +17,64 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+    {
+    slug: "2026-yapay-zeka-kariyer-ve-yetenek-donusumu-rehberi",
+    titleTR: "AI Çağında Kariyer Rehberi: 2026'da İşinizi Kaybetmemek İçin Öğrenmeniz Gereken 5 Temel Yetenek",
+    titleEN: "Career Guide in the AI Era: 5 Essential Skills You Must Learn in 2026 to Stay Employable",
+    excerptTR: "Yapay zeka işimizi elimizden mi alacak yoksa yeni fırsatlar mı yaratacak? 2026'nın en çok aranan AI yeteneklerini ve kariyerinizi geleceğe hazırlama yollarını inceliyoruz.",
+    excerptEN: "Will AI take our jobs or create new opportunities? We examine the most sought-after AI skills of 2026 and ways to future-proof your career.",
+    categoryTR: "Mega Rehber",
+    categoryEN: "Mega Guide",
+    dateISO: "2026-02-17",
+    readingMinutes: 7,
+    cover: "/blog/2026-ai-career-transformation-guide.jpg",
+    featured: true,
+    contentTR: [
+      "2026 yılı, iş dünyasında 'Büyük Adaptasyon' (The Great Adaptation) dönemi olarak tanımlanıyor. Artık mesele yapay zekanın varlığı değil, onunla nasıl yan yana çalışılacağı. Google aramalarında 'AI jobs 2026' ve 'career future-proofing' terimleri %450 artış gösterdi. Bu dev rehberde, yapay zekanın hangi meslekleri dönüştürdüğünü ve yeni düzende 'vazgeçilmez' olmanızı sağlayacak yetenek setlerini A'dan Z'ye inceliyoruz.",
+
+      "1. Yeni Nesil Okuryazarlık: AI Okuryazarlığı (AI Literacy)",
+      "2026'da okuma-yazma bilmek kadar önemli olan tek şey AI okuryazarlığıdır. Bu, sadece ChatGPT kullanmak değil; büyük dil modellerinin (LLM) nasıl çalıştığını anlamak, halüsinasyonları (yanlış bilgileri) ayırt edebilmek ve hangi iş için hangi yapay zeka aracının (DeepSeek, Claude 4, Gemini 3) en verimli sonucu vereceğini bilmektir. İşverenler artık özgeçmişlerde 'Office Programları' yerine 'AI Workflow Management' (AI İş Akışı Yönetimi) becerisi arıyor.",
+
+      "2. Prompt Mühendisliğinden 'Ajan Mimarlığına' Geçiş",
+      "Geçen yılın popüler mesleği Prompt Engineering, 2026'da evrim geçirerek yerini 'Ajan Mimarlığına' bıraktı. Artık sadece soru sormuyoruz; birbirine bağlı 10 farklı yapay zeka ajanının bir şirketin müşteri hizmetlerini veya yazılım departmanını otonom olarak yönetmesini sağlayan sistemler tasarlıyoruz. Bu yetenek, 2026'nın en yüksek maaşlı pozisyonlarının temelini oluşturuyor.",
+
+      "3. Duygusal Zeka (EQ) ve İnsan Odaklı Karar Verme",
+      "Yapay zeka veri işleme ve analizde kusursuz olsa da, 2026'da 'insan' kalabilmek en büyük rekabet avantajı haline geldi. Empati kurma, etik yargılama, kriz yönetimi ve yapay zekanın ürettiği sonuçları insan değerlerine göre filtreleme yeteneği, makinelerin asla taklit edemediği alanlar. Kariyerinizi sağlama almak istiyorsanız, teknik becerilerinizi yüksek bir duygusal zekayla harmanlamalısınız.",
+
+      "4. Veri Kürasyonu ve Stratejik AI Yönetimi",
+      "2026'da veri yeni petrol değil, yeni topraktır. Bu toprağı işleyebilen 'Veri Küratörleri', yapay zekanın eğitimi için hangi verinin kaliteli olduğunu seçen kritik aktörlerdir. Şirketler, kendi özel verilerini (Proprietary Data) yapay zekayla güvenli bir şekilde nasıl eğiteceklerini bilen stratejistlere devasa bütçeler ayırıyor.",
+
+      "5. Sürekli Öğrenme (Lifelong Learning) Kültürü",
+      "Yapay zeka araçları her 3 ayda bir köklü değişim geçiriyor. 2026 kariyer modelinde 'okulu bitirdim, bitti' mantığı tamamen çöktü. Haftalık mesainizin en az %10'unu yeni çıkan modelleri (Multimodal AI, Agentic AI) denemeye ve sertifikasyon süreçlerine (Google Cloud AI, Microsoft Applied AI vb.) ayırmalısınız. Sitenizde bu eğitim yollarını gösteren içerikler, 'nasıl yapılır' trafiğini domine edecektir.",
+
+      "Sonuç: Korkmayın, Yönetin!",
+      "Sonuç olarak; yapay zeka sizi işinizden etmeyecek, yapay zeka kullanmayı bilen birisi işinizi elinizden alacak. 2026, pasif izleyicilerin değil, otonom sistemleri yöneten 'yeni nesil profesyonellerin' yılıdır. Aipusula olarak kariyer yolculuğunuzda en güncel araçları ve stratejik hamleleri paylaşmaya devam edeceğiz.",
+
+      "Siz kariyerinizi AI çağına hazırlamak için hangi adımı attınız? Hangi yeteneğin gelecekte daha önemli olacağını düşünüyorsunuz? Yorumlarda buluşalım!"
+    ],
+    contentEN: [
+      "2026 is defined as 'The Great Adaptation' in the business world. The question is no longer about the existence of AI, but how to work alongside it. Global searches for 'AI jobs 2026' and 'career future-proofing' have increased by 450%. In this mega-guide, we examine from A to Z which professions AI is transforming and the skill sets that will make you indispensable.",
+
+      "1. New Era Literacy: AI Literacy",
+      "In 2026, the only thing as important as basic literacy is AI literacy. This isn't just about using ChatGPT; it's about understanding how LLMs work and knowing which tool (DeepSeek, Claude 4, Gemini 3) yields the most efficient results.",
+
+      "2. Transition from Prompt Engineering to Agent Architecture",
+      "The popular job of last year, Prompt Engineering, has evolved into 'Agent Architecture' in 2026. We are now designing systems where multiple AI agents manage departments autonomously.",
+
+      "## 3. Emotional Intelligence (EQ) and Human-Centric Decision Making",
+      "While AI is flawless in data analysis, staying 'human' has become the biggest competitive advantage. Empathy, ethical judgment, and crisis management are areas machines cannot mimic.",
+
+      "4. Data Curation and Strategic AI Management",
+      "In 2026, data is the new soil. 'Data Curators' who select high-quality data for AI training are critical actors. Companies allocate massive budgets to strategists who know how to train AI with proprietary data securely.",
+
+      "5. Lifelong Learning Culture",
+      "The logic of 'I finished school, it's over' has completely collapsed. You must dedicate at least 10% of your weekly work to testing new models and certification processes.",
+
+      "Conclusion: Don't Fear, Lead!",
+      "In conclusion; AI won't take your job, but someone who knows how to use AI will. 2026 is the year of the 'next-gen professionals' who manage autonomous systems."
+    ]
+  },
+
   {
     slug: "2026-yapay-zeka-rehberi-ajanlar-ve-yeni-internet-ekonomisi",
     titleTR: "2026 Yapay Zeka Devrimi: Agentic AI, DeepSeek ve Yeni İnternet Düzeninde Hayatta Kalma Rehberi",
