@@ -17,7 +17,73 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-   {
+    {
+    slug: "chatgpt-nasil-kullanilir-2026-prompt-ornekleri",
+    titleTR: "ChatGPT Nasıl Kullanılır? 2026 İçin En İyi Prompt Örnekleri (İş, Okul, Para Kazanma)",
+    titleEN: "How to Use ChatGPT: Best Prompt Examples for 2026 (Work, Study, Making Money)",
+    excerptTR: "ChatGPT’yi doğru kullanmak istiyorsan bu rehber tam senlik: en iyi prompt örnekleri, hazır şablonlar, iş akışları ve 2026 trend kullanım senaryoları.",
+    excerptEN: "Want to use ChatGPT the right way? This guide covers the best prompt examples, ready-made templates, workflows, and trending 2026 use cases.",
+    categoryTR: "Uygulamalı Rehber",
+    categoryEN: "Practical Guide",
+    dateISO: "2026-02-18",
+    readingMinutes: 8,
+    cover: "/blog/chatgpt-how-to-use-2026-prompts.jpg",
+    featured: true,
+
+    contentTR: [
+      "Google'da her gün milyonlarca kişi 'ChatGPT nasıl kullanılır', 'en iyi prompt örnekleri', 'ChatGPT ile para kazanma' ve 'ChatGPT iş için nasıl kullanılır' gibi terimleri aratıyor. Sorun şu: ChatGPT’yi herkes açıp bir şeyler yazıyor ama verimi %10’da kalıyor. Çünkü farkı yaratan şey 'ne sorduğun' değil, 'nasıl bir sistemle sorduğun'. Bu rehberde 2026 için en iyi ChatGPT kullanım yöntemlerini, kopyala-yapıştır prompt şablonlarını ve gerçek iş akışlarını tek yerde topladık.",
+
+      "1. ChatGPT Nedir ve Ne İşe Yarar?",
+      "ChatGPT bir büyük dil modeli (LLM) tabanlı yapay zekadır. Metin üretir, özetler, plan yapar, fikir verir, kod yazar, analiz yapar ve senin verdiğin bağlama göre adım adım çözüm üretir. Ama unutma: ChatGPT bir 'otorite' değil, bir 'üretim motoru'dur. Çıktıyı doğrulamak ve yönlendirmek kullanıcı sorumluluğudur.",
+
+      "2. ChatGPT'yi Doğru Kullanmanın Altın Kuralı: 4 Parçalı Prompt",
+      "En iyi sonuç için prompt'un şu 4 şeyi içermesi gerekir: (1) Rol (2) Amaç (3) Bağlam/Veri (4) Format. Örnek: 'Bir SEO uzmanı gibi davran. AI araçları üzerine blog yazısı yaz. Hedef kitle: yeni başlayanlar. Çıktıyı başlıklar ve madde işaretleriyle ver.'",
+
+      "3. En İyi Prompt Örnekleri (Kopyala-Yapıştır)",
+      "A) İş için (E-posta): 'Bir müşteri temsilcisi gibi yaz. Aşağıdaki şikayete profesyonel ve empatik cevap oluştur. Ton: net, sakin. 3 alternatif üret.'",
+      "B) Okul için (Özet): 'Bu metni 8 maddede özetle. Sonra 5 tane sınav sorusu üret. Zorluk: orta.'",
+      "C) İçerik üretimi (SEO): 'Bir içerik editörü gibi davran. Ana keyword: yapay zeka nedir. 15 başlıklı içerik planı çıkar. H2/H3 hiyerarşisi ve FAQ ekle.'",
+      "D) Para kazanma: 'Bir iş geliştirme danışmanı gibi davran. Bütçe: 0-1000 TL. Hedef: yapay zeka ile online gelir. 7 günlük aksiyon planı yaz ve araç öner.'",
+
+      "4. ChatGPT ile Para Kazanma: En Hızlı 5 Kullanım Senaryosu",
+      "2026'da en çok aranan konulardan biri 'ChatGPT ile para kazanma'. En pratik yöntemler: SEO blog içerikleri üretmek, freelance metin yazarlığı, sosyal medya içerik paketleri, ürün açıklaması ve e-ticaret otomasyonu, mini dijital ürün (PDF/şablon) üretmek.",
+
+      "5. 2026 Trend: Prompt Mühendisliği Değil, Workflow (İş Akışı) Kurma",
+      "2026’da kazananlar tek prompt yazanlar değil; tekrar eden işleri bir sisteme bağlayanlar. Örnek workflow: (1) Konu araştırması (2) Başlık seçimi (3) Taslak (4) SEO optimizasyonu (5) Görsel brief (6) Yayın planı. ChatGPT burada her adımda ayrı rol üstlenir.",
+
+      "6. ChatGPT Hataları: Halüsinasyon ve Doğrulama",
+      "ChatGPT bazen çok emin bir dille yanlış bilgi üretebilir (halüsinasyon). Özellikle istatistik, tarih, yasa, tıbbi/finansal bilgi gibi alanlarda mutlaka kontrol et. Kaynak iste, link iste, karşılaştırma yaptır ve 'emin olmadığın yerleri belirt' diye talimat ver.",
+
+      "Sonuç: Doğru Prompt + Doğru Sistem = 10 Kat Verim",
+      "ChatGPT’yi verimli kullanmak tek bir 'mükemmel prompt' bulmak değil, tekrar edilebilir bir iş akışı kurmaktır. Bu rehberdeki şablonları kendi işine uyarlarsan 2026’da yapay zekayı gerçekten avantajına çevirirsin.",
+
+      "Sen ChatGPT’yi en çok ne için kullanıyorsun: iş, okul, içerik üretimi, para kazanma? İstersen hedefini yaz; sana kişisel prompt seti hazırlayayım."
+    ],
+
+    contentEN: [
+      "Millions of people search Google daily for terms like 'how to use ChatGPT', 'best prompt examples', and 'make money with ChatGPT'. The problem is: most people get only 10% of the value because they don't use a system. In this guide, we share ready-to-copy prompt templates and real workflows for 2026.",
+
+      "1. What is ChatGPT and What Can It Do?",
+      "ChatGPT is an LLM-based AI that can draft, summarize, plan, generate ideas, write code, and analyze information. But it's not an authority — you must guide and verify outputs.",
+
+      "2. The 4-Part Prompt Framework",
+      "Great prompts include: (1) Role (2) Goal (3) Context/Data (4) Output format.",
+
+      "3. Best Prompt Examples (Copy & Paste)",
+      "We include templates for work emails, study summaries, SEO outlines, and monetization plans.",
+
+      "4. Making Money with ChatGPT",
+      "Fast paths include SEO content, freelancing, social media packages, e-commerce copy & automation, and digital products.",
+
+      "5. 2026 Trend: Workflows Over Single Prompts",
+      "Winners build repeatable workflows: research → outline → draft → SEO → publish.",
+
+      "Conclusion",
+      "The right prompt plus the right system can 10x your productivity."
+    ]
+  },
+
+  {
     slug: "2026-yapay-zeka-nedir-ai-araclari-ve-para-kazanma-rehberi",
     titleTR: "Yapay Zeka Nedir? 2026 AI Araçları, ChatGPT Kullanımı ve Yapay Zeka ile Para Kazanma Rehberi",
     titleEN: "What is Artificial Intelligence? 2026 AI Tools, ChatGPT Guide and How to Make Money with AI",
