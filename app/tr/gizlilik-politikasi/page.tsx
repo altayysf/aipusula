@@ -135,7 +135,7 @@ export default function PrivacyTR() {
                 Gizlilik politikamızla ilgili sorularınız için bize yazın:
               </p>
               <a
-                href="mailto:aipusula2026@gmail.com?subject=AI%20Pusula%20-%20Gizlilik%20Politikasi"
+                href="mailto:info@aipusula.com?subject=AI%20Pusula%20-%20Gizlilik%20Politikasi"
                 className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
                 info@aipusula.com →

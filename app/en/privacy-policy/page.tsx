@@ -131,7 +131,7 @@ export default function PrivacyEN() {
                 For questions about this policy, contact us:
               </p>
               <a
-                href="mailto:aipusula2026@gmail.com?subject=AI%20Pusula%20-%20Privacy%20Policy"
+                href="mailto:info@aipusula.com?subject=AI%20Pusula%20-%20Privacy%20Policy"
                 className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
                 info@aipusula.com →
