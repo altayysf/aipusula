@@ -17,6 +17,246 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+    {
+    slug: "openai-codex-nedir-codex-ile-kod-yazma-rehberi-prompt-ornekleri",
+    titleTR: "Codex Nedir? Codex ile Kod Yazma Rehberi (Prompt Örnekleri + Çıktı Senaryoları)",
+    titleEN: "What is Codex? Coding with Codex Guide (Prompt Examples + Output Scenarios)",
+
+    excerptTR: "Codex ile kod yazdırma, refactor yaptırma, test üretme ve küçük bir projeyi sıfırdan çıkartma: bol örnekli, kopyala-yapıştır prompt rehberi.",
+    excerptEN: "Make Codex write code, refactor, generate tests, and build a project from scratch: a practical copy-paste prompt guide.",
+
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+
+    dateISO: "2026-02-21",
+    readingMinutes: 14,
+    cover: "/blog/codex-rehberi.jpg",
+    featured: true,
+
+    contentTR: [
+
+      "Codex hakkında Google'da en çok aranan soruların başında 'Codex nedir', 'Codex ile kod yazdırma', 'AI ile yazılım geliştirme', 'prompt örnekleri' ve 'otomatik kod üretme' geliyor. Codex, doğru yönlendirildiğinde yazılım geliştirme sürecini büyük ölçüde hızlandırabilen güçlü bir yapay zeka kod asistanıdır.",
+
+      "Bu kapsamlı rehberin amacı basit: Yazıyı okuduktan sonra Codex ile gerçek projeler geliştirmek isteyeceksin. Bu rehberde sadece teori değil, doğrudan kullanabileceğin prompt örnekleri ve beklenen çıktı senaryoları yer alıyor.",
+
+      "1. Codex Nedir?",
+      "Codex, doğal dil komutlarını anlayarak kod yazabilen yapay zeka modelidir. Kullanıcıların verdiği komutlara göre fonksiyon yazabilir, hataları düzeltebilir, test oluşturabilir ve komple projeler üretebilir.",
+      "Yazılım geliştiriciler için Codex üretkenliği ciddi şekilde artıran bir yardımcıdır.",
+
+      "2. Codex'ten Maksimum Verim Alma Mantığı",
+      "Codex'ten iyi sonuç almak için üç şey gerekir:",
+      "• Hedef: Ne üretmesini istiyorsun?",
+      "• Bağlam: Hangi teknoloji kullanılacak?",
+      "• Çıktı formatı: Nasıl teslim edilsin?",
+
+      "Örnek yapı:",
+      "• Rol: Kıdemli backend geliştirici gibi davran",
+      "• Hedef: API yaz",
+      "• Teknoloji: Node.js ve Express",
+      "• Çıktı: Dosya yapısı + kod + kurulum",
+
+      "3. İlk Proje: Basit API Oluşturma",
+      "Prompt:",
+      "Node.js (Express) ile /health endpoint'i olan minimal bir API oluştur. Dosya ağacını yaz ve çalıştırma komutlarını ekle.",
+
+      "Beklenen çıktı:",
+      "• Proje klasör yapısı",
+      "• Express server kodu",
+      "• npm çalıştırma komutları",
+      "• JSON response dönen endpoint",
+
+      "Bu basit örnek bile Codex'in gerçek projeler üretme gücünü gösterir.",
+
+      "4. Sıfırdan Proje Oluşturma",
+      "Prompt:",
+      "Express ve SQLite kullanan Todo API projesi oluştur. CRUD endpointleri yaz. Dosya ağacıyla birlikte tüm dosyaları ayrı ayrı ver.",
+
+      "Beklenen çıktı:",
+      "• Veritabanı bağlantısı",
+      "• CRUD endpointleri",
+      "• API route dosyaları",
+      "• Test istek örnekleri",
+
+      "Bu yaklaşım ile dakikalar içinde çalışan backend projeleri oluşturabilirsin.",
+
+      "5. Kod Refactor Ettirme",
+      "Mevcut kodunu daha temiz hale getirmek için Codex kullanılabilir.",
+
+      "Prompt:",
+      "Aşağıdaki kodu refactor et. Fonksiyonları küçült, hata yönetimi ekle ve tekrar eden kodları kaldır.",
+
+      "Beklenen çıktı:",
+      "• Kod sorunlarının listesi",
+      "• Temizlenmiş versiyon",
+      "• Daha okunabilir yapı",
+
+      "6. Otomatik Test Yazdırma",
+      "Test yazmak yazılım kalitesini artırır ve Codex bu süreci hızlandırır.",
+
+      "Prompt:",
+      "Aşağıdaki fonksiyon için Jest testleri yaz. Edge case senaryolarını ekle.",
+
+      "Beklenen çıktı:",
+      "• Test senaryoları",
+      "• Test dosyası",
+      "• Test çalıştırma komutları",
+
+      "7. Hata Analizi ve Debugging",
+      "Prompt:",
+      "Bu hata logunu analiz et ve olası nedenleri söyle. Çözüm adımlarını ver.",
+
+      "Beklenen çıktı:",
+      "• Hata nedenleri",
+      "• Çözüm önerileri",
+      "• Alternatif yaklaşımlar",
+
+      "8. Codex'i Daha Güçlü Kullanmak İçin Prompt Teknikleri",
+      "• Rol belirt",
+      "• Teknoloji belirt",
+      "• Format belirt",
+      "• Test iste",
+      "• Güvenlik iste",
+      "• Performans iste",
+      "• Eksikleri kontrol ettir",
+
+      "Net promptlar daha kaliteli sonuç üretir.",
+
+      "9. Hazır Prompt Şablonları",
+
+      "Landing Page + API:",
+      "Next.js ile landing page ve Express API oluştur. Email formu ekle ve verileri SQLite'a kaydet.",
+
+      "Chrome Extension:",
+      "Aktif sayfadaki metni özetleyen Chrome extension yaz. Manifest v3 kullan.",
+
+      "Python Otomasyon:",
+      "Bir klasördeki PDF dosyalarını yeniden adlandıran Python script yaz.",
+
+      "10. Codex ile Mini Ürün Geliştirme Planı",
+      "• Gün 1: Fikir ve gereksinimler",
+      "• Gün 2: MVP oluşturma",
+      "• Gün 3: Veri katmanı",
+      "• Gün 4: Testler",
+      "• Gün 5: İyileştirme",
+      "• Gün 6: Deploy",
+      "• Gün 7: Dokümantasyon",
+
+      "Sonuç: Codex Yazılım Geliştirmeyi Hızlandıran Güçlü Bir Araç",
+      "Codex doğru kullanıldığında yazılım geliştirme sürecini büyük ölçüde hızlandırır. İyi tanımlanmış komutlar ve iteratif çalışma ile kısa sürede gerçek projeler geliştirmek mümkündür."
+    ],
+
+    contentEN: [
+
+      "Among the most searched questions about Codex on Google are 'what is Codex', 'coding with Codex', 'AI software development', 'prompt examples', and 'automatic code generation'. Codex is a powerful AI coding assistant that can significantly accelerate the software development process when guided correctly.",
+
+      "The goal of this comprehensive guide is simple: after reading this article, you will want to build real projects using Codex. This guide includes not only theory but also practical prompt examples and expected output scenarios that you can use directly.",
+
+      "1. What is Codex?",
+      "Codex is an artificial intelligence model that can generate code by understanding natural language commands. It can write functions, fix errors, create tests, and generate complete projects based on user instructions.",
+      "For software developers, Codex is a tool that significantly increases productivity.",
+
+      "2. The Logic of Getting Maximum Performance from Codex",
+      "To get good results from Codex, three things are required:",
+      "• Goal: What do you want it to generate?",
+      "• Context: Which technology will be used?",
+      "• Output format: How should the result be delivered?",
+
+      "Example structure:",
+      "• Role: Act like a senior backend developer",
+      "• Goal: Write an API",
+      "• Technology: Node.js and Express",
+      "• Output: File structure + code + setup instructions",
+
+      "3. First Project: Creating a Simple API",
+      "Prompt:",
+      "Create a minimal API with a /health endpoint using Node.js (Express). Provide the file tree and include run commands.",
+
+      "Expected output:",
+      "• Project folder structure",
+      "• Express server code",
+      "• npm run commands",
+      "• Endpoint returning a JSON response",
+
+      "Even this simple example demonstrates Codex’s ability to generate real projects.",
+
+      "4. Building a Project from Scratch",
+      "Prompt:",
+      "Create a Todo API project using Express and SQLite. Write CRUD endpoints. Provide all files separately with the file tree.",
+
+      "Expected output:",
+      "• Database connection",
+      "• CRUD endpoints",
+      "• API route files",
+      "• Test request examples",
+
+      "With this approach, you can build working backend projects within minutes.",
+
+      "5. Refactoring Code",
+      "Codex can be used to make your existing code cleaner.",
+
+      "Prompt:",
+      "Refactor the following code. Reduce function size, add error handling, and remove duplicated logic.",
+
+      "Expected output:",
+      "• List of code issues",
+      "• Cleaned version",
+      "• More readable structure",
+
+      "6. Automatic Test Generation",
+      "Writing tests improves software quality and Codex accelerates this process.",
+
+      "Prompt:",
+      "Write Jest tests for the following function. Include edge case scenarios.",
+
+      "Expected output:",
+      "• Test scenarios",
+      "• Test file",
+      "• Commands to run tests",
+
+      "7. Error Analysis and Debugging",
+      "Prompt:",
+      "Analyze this error log and explain possible causes. Provide solution steps.",
+
+      "Expected output:",
+      "• Error causes",
+      "• Solution suggestions",
+      "• Alternative approaches",
+
+      "8. Prompt Techniques to Use Codex More Effectively",
+      "• Specify a role",
+      "• Specify the technology",
+      "• Specify the format",
+      "• Request tests",
+      "• Request security",
+      "• Request performance",
+      "• Check for missing parts",
+
+      "Clear prompts produce higher quality results.",
+
+      "9. Ready Prompt Templates",
+
+      "Landing Page + API:",
+      "Create a landing page using Next.js and an Express API. Add an email form and store data in SQLite.",
+
+      "Chrome Extension:",
+      "Build a Chrome extension that summarizes text on the active page. Use Manifest v3.",
+
+      "Python Automation:",
+      "Write a Python script that renames PDF files in a folder.",
+
+      "10. Mini Product Development Plan with Codex",
+      "• Day 1: Idea and requirements",
+      "• Day 2: Build MVP",
+      "• Day 3: Data layer",
+      "• Day 4: Tests",
+      "• Day 5: Improvements",
+      "• Day 6: Deploy",
+      "• Day 7: Documentation",
+
+      "Conclusion: Codex is a Powerful Tool that Accelerates Software Development",
+      "When used correctly, Codex significantly speeds up the software development process. With well-defined commands and iterative work, it is possible to build real projects in a short time."
+    ]
+  },
   {
     slug: "gemini-lyria-3-nedir-ai-muzik-uretimi",
     titleTR: "Gemini Lyria 3 Nedir? Google'ın AI Müzik Üretim Teknolojisi Nasıl Çalışır?",
@@ -25,8 +265,8 @@ export const posts: BlogPost[] = [
     excerptTR: "Gemini Lyria 3 nedir, AI ile müzik nasıl üretilir ve Google'ın yeni yapay zeka müzik teknolojisi ne sunuyor? 2026 rehberi.",
     excerptEN: "What is Gemini Lyria 3, how is music generated with AI, and what does Google's new AI music technology offer? 2026 guide.",
 
-    categoryTR: "AI Araç",
-    categoryEN: "AI Tool",
+    categoryTR: "İnceleme",
+    categoryEN: "Review",
 
     dateISO: "2026-02-21",
     readingMinutes: 11,
