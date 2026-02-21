@@ -17,7 +17,181 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-    {
+  {
+    slug: "gemini-lyria-3-nedir-ai-muzik-uretimi",
+    titleTR: "Gemini Lyria 3 Nedir? Google'ın AI Müzik Üretim Teknolojisi Nasıl Çalışır?",
+    titleEN: "What is Gemini Lyria 3? How Google's AI Music Generation Technology Works",
+
+    excerptTR: "Gemini Lyria 3 nedir, AI ile müzik nasıl üretilir ve Google'ın yeni yapay zeka müzik teknolojisi ne sunuyor? 2026 rehberi.",
+    excerptEN: "What is Gemini Lyria 3, how is music generated with AI, and what does Google's new AI music technology offer? 2026 guide.",
+
+    categoryTR: "AI Araç",
+    categoryEN: "AI Tool",
+
+    dateISO: "2026-02-21",
+    readingMinutes: 11,
+    cover: "/blog/gemini-lyria-3-ai-music.jpg",
+    featured: true,
+
+    contentTR: [
+
+      "Google'da hızla yükselen yapay zeka arama trendlerinden biri 'AI müzik üretme', 'text to music AI', 'Gemini AI özellikleri' ve 'Lyria 3 nedir' konularıdır. Google'ın geliştirdiği Gemini Lyria 3 teknolojisi, metin komutlarından müzik üretebilen yeni nesil yapay zeka sistemlerinden biridir. Bu teknoloji içerik üreticileri, müzisyenler ve dijital medya üreticileri için müzik üretim süreçlerini kökten değiştirme potansiyeline sahiptir.",
+
+      "Bu rehberde Gemini Lyria 3 teknolojisinin ne olduğunu, nasıl çalıştığını, kullanım alanlarını ve AI müzik üretiminin geleceğini detaylı şekilde inceliyoruz.",
+
+      "1. Gemini Lyria 3 Nedir?",
+      "Gemini Lyria 3, Google'ın yapay zeka modeli Gemini ile entegre çalışan metinden müzik üretme teknolojisidir. Kullanıcıların yazdığı komutlara göre melodi, ritim, enstrüman ve müzik stili oluşturabilir.",
+      "Bu sistem üretken yapay zeka teknolojisini kullanarak saniyeler içinde özgün müzik parçaları oluşturur.",
+
+      "Lyria 3 teknolojisi özellikle:",
+      "• Arka plan müziği üretimi",
+      "• Video içerikleri için müzik",
+      "• Oyun müzikleri",
+      "• Reklam müzikleri",
+      "• Deneysel müzik üretimi",
+      "alanlarında kullanılmaktadır.",
+
+      "2. Gemini Lyria 3 Nasıl Çalışır?",
+      "Gemini Lyria 3, büyük veri setleri üzerinde eğitilmiş derin öğrenme modelleri kullanır. Sistem kullanıcıdan gelen metin komutlarını analiz ederek müzik kompozisyonu oluşturur.",
+
+      "AI müzik üretim süreci:",
+      "• Kullanıcı müzik tarzını belirtir",
+      "• Yapay zeka ritim ve melodi üretir",
+      "• Enstrüman seçimi yapılır",
+      "• Ses düzenleme ve optimizasyon gerçekleştirilir",
+
+      "Bu süreç tamamen otomatik şekilde gerçekleşir ve teknik müzik bilgisi gerektirmez.",
+
+      "3. Gemini Lyria 3 Özellikleri",
+      "Gemini Lyria 3'ün öne çıkan özellikleri:",
+      "• Metinden müzik üretme (text-to-music)",
+      "• Farklı müzik türlerini destekleme",
+      "• Yüksek kaliteli ses üretimi",
+      "• Gerçek zamanlı müzik oluşturma",
+      "• Gemini AI ile entegrasyon",
+      "• Video ve içerik üretimi için optimizasyon",
+
+      "Bu özellikler Lyria 3'ü AI müzik üretimi alanında güçlü bir araç haline getirir.",
+
+      "4. AI ile Müzik Üretiminin Avantajları",
+      "AI müzik üretimi geleneksel müzik üretimine göre birçok avantaj sunar:",
+      "• Hızlı üretim süreci",
+      "• Düşük maliyet",
+      "• Teknik bilgi gerektirmemesi",
+      "• Sonsuz varyasyon üretimi",
+      "• İçerik üreticileri için kolay kullanım",
+
+      "Bu avantajlar özellikle YouTube içerik üreticileri ve dijital pazarlamacılar için büyük fırsatlar sunmaktadır.",
+
+      "5. Gemini Lyria 3 Kimler İçin Uygun?",
+      "Gemini Lyria 3 farklı kullanıcı grupları için uygundur:",
+
+      "İçerik üreticileri:",
+      "• Video arka plan müziği üretimi",
+      "• Podcast müzikleri",
+      "• Sosyal medya içerikleri",
+
+      "Geliştiriciler:",
+      "• Oyun müzikleri",
+      "• Uygulama içi sesler",
+
+      "Müzisyenler:",
+      "• İlham üretimi",
+      "• Demo oluşturma",
+      "• Deneysel müzik çalışmaları",
+
+      "6. AI Müzik Teknolojisinin Geleceği",
+      "Uzmanlara göre AI müzik üretim teknolojileri müzik endüstrisini büyük ölçüde dönüştürecektir. Yapay zeka destekli müzik üretimi içerik üretimini hızlandıracak ve kişiselleştirilmiş müzik deneyimleri sunacaktır.",
+      "Gelecekte AI sistemleri kullanıcı tercihlerini analiz ederek tamamen kişiye özel müzik üretimi sağlayabilir.",
+
+      "7. AI ile Müzik Üretirken Dikkat Edilmesi Gerekenler",
+      "AI ile üretilen müziklerde telif hakları, lisanslama ve etik kullanım konularına dikkat edilmelidir. Kullanım koşulları platforma göre değişebilir.",
+
+      "Sonuç: AI Müzik Üretimi Yeni Bir Dönem Başlatıyor",
+      "Gemini Lyria 3 gibi teknolojiler müzik üretimini demokratikleştirerek herkes için erişilebilir hale getiriyor. Yapay zeka destekli müzik üretimi dijital içerik dünyasının önemli bir parçası haline gelmektedir.",
+      "En güncel AI araçları ve teknolojileri için AI Pusula'yı takip edebilirsin."
+    ],
+
+    contentEN: [
+
+      "One of the rapidly rising artificial intelligence search trends on Google is 'AI music generation', 'text to music AI', 'Gemini AI features', and 'what is Lyria 3'. Gemini Lyria 3 technology developed by Google is one of the next-generation AI systems that can generate music from text commands. This technology has the potential to fundamentally transform music production processes for content creators, musicians, and digital media producers.",
+
+      "In this guide, we examine in detail what Gemini Lyria 3 technology is, how it works, its use cases, and the future of AI music generation.",
+
+      "1. What is Gemini Lyria 3?",
+      "Gemini Lyria 3 is a text-to-music generation technology integrated with Google's artificial intelligence model Gemini. It can create melody, rhythm, instruments, and music style based on user prompts.",
+      "This system uses generative AI technology to create original music tracks within seconds.",
+
+      "Lyria 3 technology is mainly used for:",
+      "• Background music production",
+      "• Music for video content",
+      "• Game soundtracks",
+      "• Advertising music",
+      "• Experimental music production",
+
+      "2. How Does Gemini Lyria 3 Work?",
+      "Gemini Lyria 3 uses deep learning models trained on large datasets. The system analyzes text prompts from users and generates a music composition.",
+
+      "AI music generation process:",
+      "• The user specifies the music style",
+      "• AI generates rhythm and melody",
+      "• Instrument selection is performed",
+      "• Sound editing and optimization are applied",
+
+      "This process is fully automated and does not require technical music knowledge.",
+
+      "3. Gemini Lyria 3 Features",
+      "Key features of Gemini Lyria 3:",
+      "• Text-to-music generation",
+      "• Support for different music genres",
+      "• High-quality audio production",
+      "• Real-time music creation",
+      "• Integration with Gemini AI",
+      "• Optimization for video and content production",
+
+      "These features make Lyria 3 a powerful tool in AI music generation.",
+
+      "4. Advantages of AI Music Generation",
+      "AI music generation offers many advantages compared to traditional music production:",
+      "• Fast production process",
+      "• Low cost",
+      "• No technical knowledge required",
+      "• Infinite variation generation",
+      "• Easy use for content creators",
+
+      "These advantages provide major opportunities especially for YouTube creators and digital marketers.",
+
+      "5. Who is Gemini Lyria 3 Suitable For?",
+      "Gemini Lyria 3 is suitable for different user groups:",
+
+      "Content creators:",
+      "• Background music production for videos",
+      "• Podcast music",
+      "• Social media content",
+
+      "Developers:",
+      "• Game music",
+      "• In-app audio",
+
+      "Musicians:",
+      "• Idea generation",
+      "• Demo creation",
+      "• Experimental music work",
+
+      "6. The Future of AI Music Technology",
+      "According to experts, AI music generation technologies will significantly transform the music industry. AI-powered music production will accelerate content creation and provide personalized music experiences.",
+      "In the future, AI systems may analyze user preferences and generate fully personalized music.",
+
+      "7. Things to Consider When Using AI Music",
+      "Copyright, licensing, and ethical use should be considered when using AI-generated music. Usage conditions may vary by platform.",
+
+      "Conclusion: AI Music Generation Starts a New Era",
+      "Technologies like Gemini Lyria 3 democratize music production and make it accessible to everyone. AI-powered music generation is becoming an important part of the digital content world.",
+      "You can follow AI Pusula for the latest AI tools and technologies."
+    ]
+  },
+  
+  {
     slug: "en-iyi-yapay-zeka-araclari-2026-ai-tools-listesi",
     titleTR: "2026'nın En İyi Yapay Zeka Araçları: İş, Eğitim ve Günlük Hayat İçin 25 AI Tool Rehberi",
     titleEN: "Best AI Tools of 2026: Top 25 Artificial Intelligence Tools for Work, Study, and Daily Life",
