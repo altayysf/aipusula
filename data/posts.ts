@@ -18,6 +18,179 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
     {
+    slug: "sora-ai-nedir-ai-video-uretme-rehberi",
+    titleTR: "Sora AI Nedir? AI ile Video Üretme Rehberi (Text to Video Teknolojisi)",
+    titleEN: "What is Sora AI? AI Video Generation Guide (Text to Video Technology)",
+
+    excerptTR: "Sora AI nedir, metinden video nasıl üretilir ve AI video üretimi nasıl çalışır? 2026'nın en kapsamlı Sora rehberi.",
+    excerptEN: "What is Sora AI, how is video generated from text, and how does AI video generation work? The complete 2026 Sora guide.",
+
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
+
+    dateISO: "2026-02-21",
+    readingMinutes: 13,
+    cover: "/blog/sora-ai-rehberi.jpg",
+    featured: true,
+
+    contentTR: [
+
+      "Google'da son yılların en hızlı yükselen arama trendlerinden biri 'Sora AI nedir', 'AI video üretme', 'text to video AI' ve 'AI ile video yapma' konularıdır. Sora, metin komutlarından gerçekçi video üretebilen yeni nesil yapay zeka teknolojisidir. Bu teknoloji içerik üretimi, pazarlama ve medya dünyasında büyük dönüşüm yaratmaktadır.",
+
+      "Bu kapsamlı rehberde Sora AI'ın ne olduğunu, nasıl çalıştığını, kullanım alanlarını ve AI video üretiminin geleceğini detaylı şekilde inceliyoruz.",
+
+      "1. Sora AI Nedir?",
+      "Sora AI, kullanıcıların yazdığı metin komutlarına göre video üretebilen yapay zeka modelidir. Kullanıcı sahneyi tanımlar ve yapay zeka bu tanıma göre video oluşturur.",
+      "Sistem sahne, hareket, ışık, kamera açısı ve karakter davranışlarını simüle edebilir.",
+
+      "Sora AI özellikle şu alanlarda kullanılmaktadır:",
+      "• Video içerik üretimi",
+      "• Reklam videoları",
+      "• Eğitim içerikleri",
+      "• Sosyal medya videoları",
+      "• Film ön görselleştirme",
+
+      "2. Sora AI Nasıl Çalışır?",
+      "Sora AI büyük video veri setleri üzerinde eğitilmiş derin öğrenme modelleri kullanır. Sistem metin komutlarını analiz ederek sahne oluşturur ve video üretir.",
+
+      "AI video üretim süreci:",
+      "• Kullanıcı sahneyi tanımlar",
+      "• Yapay zeka sahneyi analiz eder",
+      "• Hareket ve kamera simülasyonu oluşturulur",
+      "• Video render edilir",
+
+      "Bu süreç teknik video üretim bilgisi gerektirmez.",
+
+      "3. Sora AI Özellikleri",
+      "Sora AI'ın öne çıkan özellikleri:",
+      "• Metinden video üretme",
+      "• Gerçekçi sahne oluşturma",
+      "• Fizik simülasyonu",
+      "• Yüksek çözünürlüklü video",
+      "• Karmaşık sahne oluşturma",
+      "• Yaratıcı içerik üretimi",
+
+      "Bu özellikler Sora'yı AI video üretimi alanında güçlü bir araç haline getirir.",
+
+      "4. AI ile Video Üretmenin Avantajları",
+      "AI video üretimi geleneksel video üretimine göre birçok avantaj sunar:",
+      "• Düşük maliyet",
+      "• Hızlı üretim",
+      "• Kamera ve ekipman gerektirmemesi",
+      "• Sınırsız yaratıcılık",
+      "• Ölçeklenebilir içerik üretimi",
+
+      "Bu avantajlar özellikle içerik üreticileri ve pazarlamacılar için büyük fırsatlar sunar.",
+
+      "5. Sora AI Kimler İçin Uygun?",
+      "Sora AI farklı kullanıcı grupları için uygundur:",
+
+      "İçerik üreticileri:",
+      "• YouTube videoları",
+      "• Sosyal medya içerikleri",
+      "• Dijital medya üretimi",
+
+      "Şirketler:",
+      "• Reklam ve pazarlama videoları",
+      "• Ürün tanıtımları",
+
+      "Eğitim sektörü:",
+      "• Eğitim videoları",
+      "• Görsel anlatım içerikleri",
+
+      "6. AI Video Teknolojisinin Geleceği",
+      "Uzmanlara göre AI video üretim teknolojileri film ve medya sektörünü kökten değiştirecektir. Gelecekte yapay zeka tamamen otomatik video üretimi sağlayabilir.",
+
+      "Kişiselleştirilmiş video içerikleri ve otonom medya üretimi yaygın hale gelebilir.",
+
+      "7. AI Video Üretirken Dikkat Edilmesi Gerekenler",
+      "AI ile üretilen videolarda telif hakları, etik kullanım ve içerik doğruluğu kontrol edilmelidir. Kullanım koşulları platforma göre değişebilir.",
+
+      "Sonuç: AI Video Üretimi Yeni Bir Çağ Başlatıyor",
+      "Sora AI gibi teknolojiler video üretimini herkes için erişilebilir hale getiriyor. Yapay zeka destekli video üretimi dijital içerik dünyasının geleceğini şekillendiriyor.",
+      "En güncel AI araçları ve teknolojileri için AI Pusula'yı takip edebilirsin."
+    ],
+
+    contentEN: [
+
+      "One of the fastest rising search trends on Google in recent years is 'what is Sora AI', 'AI video generation', 'text to video AI', and 'creating videos with AI'. Sora is a next-generation artificial intelligence technology that can generate realistic videos from text prompts. This technology is creating major transformation in content creation, marketing, and media industries.",
+
+      "In this comprehensive guide, we examine in detail what Sora AI is, how it works, its use cases, and the future of AI video generation.",
+
+      "1. What is Sora AI?",
+      "Sora AI is an artificial intelligence model that can generate videos based on text prompts written by users. The user describes a scene and the AI creates a video based on that description.",
+      "The system can simulate scenes, motion, lighting, camera angles, and character behavior.",
+
+      "Sora AI is mainly used in the following areas:",
+      "• Video content production",
+      "• Advertising videos",
+      "• Educational content",
+      "• Social media videos",
+      "• Film pre-visualization",
+
+      "2. How Does Sora AI Work?",
+      "Sora AI uses deep learning models trained on large video datasets. The system analyzes text prompts and generates video scenes.",
+
+      "AI video generation process:",
+      "• The user describes the scene",
+      "• The AI analyzes the scene",
+      "• Motion and camera simulation are created",
+      "• The video is rendered",
+
+      "This process does not require technical video production knowledge.",
+
+      "3. Sora AI Features",
+      "Key features of Sora AI:",
+      "• Text-to-video generation",
+      "• Realistic scene creation",
+      "• Physics simulation",
+      "• High-resolution video",
+      "• Complex scene generation",
+      "• Creative content production",
+
+      "These features make Sora a powerful tool in AI video generation.",
+
+      "4. Advantages of AI Video Generation",
+      "AI video generation offers many advantages compared to traditional video production:",
+      "• Low cost",
+      "• Fast production",
+      "• No camera or equipment required",
+      "• Unlimited creativity",
+      "• Scalable content production",
+
+      "These advantages provide major opportunities especially for content creators and marketers.",
+
+      "5. Who is Sora AI Suitable For?",
+      "Sora AI is suitable for different user groups:",
+
+      "Content creators:",
+      "• YouTube videos",
+      "• Social media content",
+      "• Digital media production",
+
+      "Companies:",
+      "• Advertising and marketing videos",
+      "• Product promotions",
+
+      "Education sector:",
+      "• Educational videos",
+      "• Visual learning content",
+
+      "6. The Future of AI Video Technology",
+      "According to experts, AI video generation technologies will fundamentally transform the film and media industry. In the future, artificial intelligence may enable fully automated video production.",
+
+      "Personalized video content and autonomous media production may become widespread.",
+
+      "7. Things to Consider When Using AI Video",
+      "Copyright, ethical use, and content accuracy should be reviewed when using AI-generated videos. Usage conditions may vary by platform.",
+
+      "Conclusion: AI Video Generation Starts a New Era",
+      "Technologies like Sora AI make video production accessible to everyone. AI-powered video generation is shaping the future of digital content.",
+      "You can follow AI Pusula for the latest AI tools and technologies."
+    ]
+  },
+    
+  {
     slug: "openai-codex-nedir-codex-ile-kod-yazma-rehberi-prompt-ornekleri",
     titleTR: "Codex Nedir? Codex ile Kod Yazma Rehberi (Prompt Örnekleri + Çıktı Senaryoları)",
     titleEN: "What is Codex? Coding with Codex Guide (Prompt Examples + Output Scenarios)",
