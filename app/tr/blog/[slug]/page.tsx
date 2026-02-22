@@ -80,11 +80,6 @@ export default async function BlogTRDetail({
                 <span className="rounded-full bg-white border border-black/10 px-3 py-1">
                   {post.categoryTR}
                 </span>
-                {post.readingMinutes && (
-                  <span className="rounded-full bg-white border border-black/10 px-3 py-1">
-                    {post.readingMinutes} dk okuma
-                  </span>
-                )}
               </div>
             </header>
 

@@ -60,7 +60,6 @@ export default async function BlogENDetail({
       "@id": `https://www.aipusula.com/en/blog/${post.slug}`
     },
     "articleSection": post.categoryEN,
-    ...(post.readingMinutes && { "timeRequired": `PT${post.readingMinutes}M` })
   };
 
   const breadcrumbSchema = generateBreadcrumbSchema([
@@ -107,11 +106,6 @@ export default async function BlogENDetail({
                 <span className="rounded-full bg-white border border-black/10 px-3 py-1">
                   {post.categoryEN}
                 </span>
-                {post.readingMinutes && (
-                  <span className="rounded-full bg-white border border-black/10 px-3 py-1">
-                    {post.readingMinutes} min read
-                  </span>
-                )}
               </div>
             </header>
 

@@ -57,13 +57,6 @@ export default function BlogCard({
             <span className="rounded-full bg-white border border-black/10 px-3 py-1 text-gray-700">
               {category}
             </span>
-            {post.readingMinutes ? (
-              <span className="rounded-full bg-white border border-black/10 px-3 py-1 text-gray-700">
-                {lang === "tr"
-                  ? `${post.readingMinutes} dk`
-                  : `${post.readingMinutes} min`}
-              </span>
-            ) : null}
           </div>
 
           <h3 className="mt-3 text-[24px] md:text-[28px] font-extrabold text-gray-900 leading-tight">

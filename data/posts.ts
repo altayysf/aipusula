@@ -9,7 +9,7 @@ export interface BlogPost {
   categoryTR: string;
   categoryEN: string;
   dateISO: string; // YYYY-MM-DD
-  readingMinutes?: number;
+
   cover: string;
   featured?: boolean;
   contentTR: string[];
@@ -17,6 +17,258 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
+    {
+      slug: "poe-ai-nedir-poe-nasil-kullanilir-rehberi",
+      titleTR: "Poe AI Nedir? Poe Nasıl Kullanılır? (Tüm Özellikler + Prompt Örnekleri)",
+      titleEN: "What is Poe AI? How to Use Poe (Features + Prompt Examples)",
+
+      excerptTR: "Poe nedir, nasıl kullanılır ve farklı AI modellerine tek yerden nasıl erişilir? Poe AI kullanım rehberi ve örnek promptlar.",
+      excerptEN: "What is Poe, how to use it, and how to access multiple AI models in one place? Poe AI guide with example prompts.",
+
+      categoryTR: "AI Araç",
+      categoryEN: "AI Tool",
+
+      dateISO: "2026-02-21",
+      cover: "/blog/poe-ai-rehberi.jpg",
+      featured: true,
+
+      contentTR: [
+
+        "Google'da son yıllarda hızla yükselen arama trendlerinden biri 'Poe AI nedir', 'Poe nasıl kullanılır', 'AI chatbot platformu' ve 'tek platformda birden fazla AI kullanma' konularıdır. Poe, farklı yapay zeka modellerine tek bir platform üzerinden erişim sağlayan güçlü bir AI araçtır.",
+
+        "Bu kapsamlı rehberde Poe'nun ne olduğunu, nasıl çalıştığını, nasıl kullanılacağını ve gerçek kullanım örneklerini detaylı şekilde inceliyoruz.",
+
+        "1. Poe AI Nedir?",
+        "Poe, Quora tarafından geliştirilen bir yapay zeka platformudur. Kullanıcıların farklı AI modelleriyle tek bir arayüz üzerinden sohbet etmesini sağlar.",
+        "Poe sayesinde ChatGPT benzeri modeller, farklı dil modelleri ve özel AI botları arasında kolayca geçiş yapılabilir.",
+        "Bu yapı Poe'yu AI araçlarını karşılaştırmak ve farklı modelleri test etmek için ideal hale getirir.",
+
+        "2. Poe Nasıl Çalışır?",
+        "Poe, farklı yapay zeka modellerini tek platformda birleştirir. Kullanıcı bir model seçer ve sohbet başlatarak komut verir.",
+
+        "Poe kullanım süreci:",
+        "• Hesap oluştur",
+        "• AI modelini seç",
+        "• Mesaj yaz",
+        "• Sonucu al",
+        "• Farklı modelle karşılaştır",
+
+        "Bu süreç teknik bilgi gerektirmez.",
+
+        "3. Poe'nun Öne Çıkan Özellikleri",
+        "Poe platformunun sunduğu temel özellikler:",
+        "• Tek platformda birden fazla AI modeli",
+        "• Hızlı model değiştirme",
+        "• Özel bot oluşturma",
+        "• Sohbet geçmişi",
+        "• Farklı kullanım senaryoları",
+        "• Basit kullanıcı arayüzü",
+
+        "Bu özellikler Poe'yu güçlü bir AI merkezi haline getirir.",
+
+        "4. Poe Nasıl Kullanılır? (Adım Adım)",
+        "Poe kullanmak oldukça kolaydır.",
+
+        "Adım 1: Poe platformuna giriş yap.",
+        "Adım 2: Kullanmak istediğin AI modelini seç.",
+        "Adım 3: Sorunu veya görevini yaz.",
+        "Adım 4: Sonucu incele ve gerekirse yeni komut ver.",
+
+        "Bu basit akış sayesinde herkes AI modellerini kolayca kullanabilir.",
+
+        "5. Poe Kullanım Örnekleri",
+
+        "İçerik üretimi:",
+        "Prompt:",
+        "SEO uyumlu yapay zeka blog yazısı yaz.",
+
+        "Beklenen çıktı:",
+        "• Blog başlığı",
+        "• İçerik metni",
+        "• SEO yapısı",
+
+        "Özet çıkarma:",
+        "Prompt:",
+        "Bu metni 5 maddede özetle.",
+
+        "Beklenen çıktı:",
+        "• Kısa özet",
+        "• Ana fikirler",
+
+        "Kod üretimi:",
+        "Prompt:",
+        "Python ile basit hesap makinesi uygulaması yaz.",
+
+        "Beklenen çıktı:",
+        "• Çalışan kod",
+        "• Açıklamalar",
+
+        "Çeviri:",
+        "Prompt:",
+        "Bu metni İngilizceye çevir.",
+
+        "Beklenen çıktı:",
+        "• Çeviri metni",
+
+        "6. Poe ile Özel Bot Oluşturma",
+        "Poe kullanıcıların kendi AI botlarını oluşturmasına izin verir. Bu botlar belirli görevler için optimize edilebilir.",
+        "Örneğin içerik yazarı botu, eğitim botu veya kod yardımcısı botu oluşturulabilir.",
+
+        "7. Poe Kimler İçin Uygun?",
+        "Poe farklı kullanıcı grupları için uygundur:",
+
+        "Öğrenciler:",
+        "• Araştırma",
+        "• Özet çıkarma",
+        "• Öğrenme desteği",
+
+        "Geliştiriciler:",
+        "• Kod yazma",
+        "• Debugging",
+        "• Teknik sorular",
+
+        "İçerik üreticileri:",
+        "• Blog yazısı",
+        "• Sosyal medya içerikleri",
+
+        "Profesyoneller:",
+        "• İş otomasyonu",
+        "• Metin üretimi",
+
+        "8. Poe Kullanmanın Avantajları",
+        "• Tek platformda çoklu AI erişimi",
+        "• Farklı modelleri karşılaştırma",
+        "• Hızlı sonuç alma",
+        "• Kullanım kolaylığı",
+        "• Esnek kullanım",
+
+        "9. Poe'nun Geleceği",
+        "Uzmanlara göre AI platformları gelecekte tüm dijital iş akışlarının merkezi haline gelecektir. Poe gibi platformlar AI kullanımını daha erişilebilir hale getirmektedir.",
+
+        "Sonuç: Poe AI Tüm Yapay Zeka Modellerine Açılan Tek Kapı",
+        "Poe, farklı yapay zeka modellerini tek platformda sunarak AI kullanımını kolaylaştırır. Yapay zekayı günlük iş akışına entegre etmek isteyen herkes için güçlü bir araçtır.",
+        "En güncel AI araçları için AI Pusula'yı takip edebilirsin."
+      ],
+
+      contentEN: [
+
+        "One of the rapidly rising search trends on Google in recent years is 'what is Poe AI', 'how to use Poe', 'AI chatbot platform', and 'using multiple AI models in one platform'. Poe is a powerful AI tool that provides access to different artificial intelligence models from a single platform.",
+
+        "In this comprehensive guide, we examine in detail what Poe is, how it works, how to use it, and real usage examples.",
+
+        "1. What is Poe AI?",
+        "Poe is an artificial intelligence platform developed by Quora. It allows users to interact with different AI models through a single interface.",
+        "With Poe, users can easily switch between ChatGPT-like models, different language models, and custom AI bots.",
+        "This structure makes Poe ideal for comparing AI tools and testing different models.",
+
+        "2. How Does Poe Work?",
+        "Poe combines different AI models in one platform. The user selects a model and starts a conversation by sending a prompt.",
+
+        "Poe usage process:",
+        "• Create an account",
+        "• Select an AI model",
+        "• Write a message",
+        "• Get the result",
+        "• Compare with another model",
+
+        "This process does not require technical knowledge.",
+
+        "3. Key Features of Poe",
+        "Core features of the Poe platform:",
+        "• Multiple AI models in one platform",
+        "• Fast model switching",
+        "• Custom bot creation",
+        "• Chat history",
+        "• Different use cases",
+        "• Simple user interface",
+
+        "These features make Poe a powerful AI hub.",
+
+        "4. How to Use Poe (Step by Step)",
+        "Using Poe is very simple.",
+
+        "Step 1: Log in to the Poe platform.",
+        "Step 2: Select the AI model you want to use.",
+        "Step 3: Write your question or task.",
+        "Step 4: Review the result and send a new prompt if needed.",
+
+        "This simple flow allows anyone to use AI models easily.",
+
+        "5. Poe Usage Examples",
+
+        "Content creation:",
+        "Prompt:",
+        "Write an SEO-optimized blog post about artificial intelligence.",
+
+        "Expected output:",
+        "• Blog title",
+        "• Content text",
+        "• SEO structure",
+
+        "Summarization:",
+        "Prompt:",
+        "Summarize this text in 5 bullet points.",
+
+        "Expected output:",
+        "• Short summary",
+        "• Key ideas",
+
+        "Code generation:",
+        "Prompt:",
+        "Write a simple calculator application in Python.",
+
+        "Expected output:",
+        "• Working code",
+        "• Explanations",
+
+        "Translation:",
+        "Prompt:",
+        "Translate this text into English.",
+
+        "Expected output:",
+        "• Translated text",
+
+        "6. Creating Custom Bots with Poe",
+        "Poe allows users to create their own AI bots. These bots can be optimized for specific tasks.",
+        "For example, users can create a content writer bot, education bot, or coding assistant bot.",
+
+        "7. Who is Poe Suitable For?",
+        "Poe is suitable for different user groups:",
+
+        "Students:",
+        "• Research",
+        "• Summarization",
+        "• Learning support",
+
+        "Developers:",
+        "• Coding",
+        "• Debugging",
+        "• Technical questions",
+
+        "Content creators:",
+        "• Blog writing",
+        "• Social media content",
+
+        "Professionals:",
+        "• Business automation",
+        "• Text generation",
+
+        "8. Advantages of Using Poe",
+        "• Access multiple AI models in one platform",
+        "• Compare different models",
+        "• Fast results",
+        "• Ease of use",
+        "• Flexible usage",
+
+        "9. The Future of Poe",
+        "According to experts, AI platforms will become the center of digital workflows in the future. Platforms like Poe make AI usage more accessible.",
+
+        "Conclusion: Poe AI is a Single Gateway to All AI Models",
+        "Poe simplifies AI usage by offering different AI models in one platform. It is a powerful tool for anyone who wants to integrate artificial intelligence into daily workflows.",
+        "You can follow AI Pusula for the latest AI tools."
+      ]
+    },
+  
     {
     slug: "sora-ai-nedir-ai-video-uretme-rehberi",
     titleTR: "Sora AI Nedir? AI ile Video Üretme Rehberi (Text to Video Teknolojisi)",
@@ -29,7 +281,6 @@ export const posts: BlogPost[] = [
     categoryEN: "Guide",
 
     dateISO: "2026-02-21",
-    readingMinutes: 13,
     cover: "/blog/sora-ai-rehberi.jpg",
     featured: true,
 
@@ -202,7 +453,6 @@ export const posts: BlogPost[] = [
     categoryEN: "Guide",
 
     dateISO: "2026-02-21",
-    readingMinutes: 14,
     cover: "/blog/codex-rehberi.jpg",
     featured: true,
 
@@ -442,7 +692,6 @@ export const posts: BlogPost[] = [
     categoryEN: "Review",
 
     dateISO: "2026-02-21",
-    readingMinutes: 11,
     cover: "/blog/gemini-lyria-3-ai-music.jpg",
     featured: true,
 
@@ -613,7 +862,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Liste",
     categoryEN: "List",
     dateISO: "2026-02-19",
-    readingMinutes: 11,
     cover: "/blog/best-ai-tools-2026-list.jpg",
     featured: true,
 
@@ -700,7 +948,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber & Finans",
     categoryEN: "Guide & Finance",
     dateISO: "2026-02-18",
-    readingMinutes: 8,
     cover: "/blog/chatgpt-how-to-use-2026-prompts.jpg",
     featured: true,
 
@@ -766,7 +1013,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Mega Rehber",
     categoryEN: "Mega Guide",
     dateISO: "2026-02-18",
-    readingMinutes: 9,
     cover: "/blog/2026-ai-tools-and-money-guide.jpg",
     featured: true,
 
@@ -836,7 +1082,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Mega Rehber",
     categoryEN: "Mega Guide",
     dateISO: "2026-02-17",
-    readingMinutes: 7,
     cover: "/blog/2026-ai-career-transformation-guide.jpg",
     featured: true,
     contentTR: [
@@ -894,7 +1139,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Mega Rehber",
     categoryEN: "Mega Guide",
     dateISO: "2026-02-12",
-    readingMinutes: 18,
     cover: "/blog/2026-global-ai-trends-mega-guide.jpg",
     featured: true,
     contentTR: [
@@ -955,7 +1199,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber & Finans",
     categoryEN: "Guide & Finance",
     dateISO: "2026-02-12",
-    readingMinutes: 15,
     cover: "/blog/autonomous-ai-business-guide-2026.jpg",
     contentTR: [
     "2026 yılı, dijital girişimcilik tarihinde 'Büyük Ajan Devrimi' (The Great Agentic Shift) olarak anılıyor. Geçtiğimiz yıllarda ChatGPT ile başlayan üretken yapay zeka çılgınlığı, yerini kendi kararlarını verebilen, internette gezinen ve sizin yerinize finansal işlemler gerçekleştirebilen 'Otonom Yapay Zeka Ajanları'na bıraktı. Artık mesele yapay zekaya bir makale yazdırmak değil; ona bir iş hedefi verip, o hedefe giden yoldaki tüm engelleri kendi başına aşmasını izlemek. Bu kapsamlı rehberde, 2026 ekonomisinde yapay zeka ajanlarını kullanarak nasıl otonom bir iş modeli kurabileceğinizi A'dan Z'ye inceleyeceğiz.",
@@ -1014,7 +1257,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber",
     categoryEN: "Guide",
     dateISO: "2026-02-09",
-    readingMinutes: 12,
     cover: "/blog/ai-music-master-guide-2026.jpg",
     contentTR: [
     "2026 yılı, müzik endüstrisinin tarihindeki en büyük kırılma noktası olarak kayıtlara geçti. Artık bir 'hit' şarkı oluşturmak için yıllarca konservatuar eğitimi almak veya binlerce dolarlık stüdyo ekipmanlarına sahip olmak bir zorunluluk değil. Yapay zeka, sadece bir dizi komutla (prompt) senfonilerden heavy metal parçalarına, lo-fi beatlerden Anadolu Rock ezgilerine kadar her şeyi radyo kalitesinde üretebiliyor. Ancak bu yeni dünya, beraberinde 'Hangi araç daha iyi?', 'Telif hakları kime ait?' ve 'Spotify'dan nasıl para kazanılır?' gibi kritik soruları da getirdi. Bu yazımızda, Aipusula olarak yapay zeka müzik evrenini A'dan Z'ye masaya yatırıyoruz.",
@@ -1084,7 +1326,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Finans",
     categoryEN: "Finance",
     dateISO: "2026-02-08",
-    readingMinutes: 6,
     cover: "/blog/ai-agent-money-making-2026.jpg",
     contentTR: [
             "2026 yılı, 'Üretken Yapay Zeka' döneminden 'Ajan Yapay Zeka' (Agentic AI) dönemine geçişin yılı oldu. Artık yapay zekaya sadece metin yazdırmıyoruz; ona hedefler veriyoruz ve o hedefe ulaşmak için internette geziniyor, araçları kullanıyor ve kararlar alıyor. İşte tek başınıza yönetebileceğiniz, milyon dolarlık potansiyele sahip 5 otonom iş modeli.",
@@ -1134,7 +1375,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Liste",
     categoryEN: "List",
     dateISO: "2026-02-06",
-    readingMinutes: 5,
     cover: "/blog/en-iyi-ai-video-araclari-2026.jpg",
     contentTR: [
             "2026 yılı itibarıyla video prodüksiyonu tamamen demokratikleşti. Artık profesyonel bir kamera setine veya karmaşık kurgu yazılımlarına ihtiyacınız yok. Sadece hayal edin ve yazın; gerisini yapay zeka halletsin. İşte bu yılın en çok konuşulan video araçları.",
@@ -1184,7 +1424,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber",
     categoryEN: "Guide",
     dateISO: "2026-02-05",
-    readingMinutes: 5,
     cover: "/blog/google-gemini-3-productivity-2026.jpg",
     contentTR: [
             "2026 yılı, yapay zekanın sadece 'konuştuğu' değil, doğrudan 'iş yaptığı' bir dönemin başlangıcı oldu. Google'ın yeni tanıttığı Gemini 3 modeli, 'otomatik tarama' ve 'eylem odaklı asistan' özellikleriyle dijital dünyadaki angarya işleri tarihe gömüyor. İşte bu yeni teknolojiyi kullanarak hayatınızı nasıl kolaylaştıracağınıza dair kapsamlı bir rehber.",
@@ -1235,7 +1474,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Liste",
     categoryEN: "List",
     dateISO: "2026-02-05",
-    readingMinutes: 6,
     cover: "/blog/ucretsiz-yapay-zeka-2026.jpg",
     contentTR: [
             "Yapay zeka teknolojileri hızla gelişirken, en gelişmiş modellere erişmek her geçen gün daha maliyetli hale geliyor. Ancak 2026 yılında, aylık 20-30 dolar ödemeden de üst düzey yapay zeka deneyimi yaşamak mümkün. İşte ChatGPT'nin tahtını sallayan en iyi ücretsiz alternatifler.",
@@ -1297,7 +1535,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber",
     categoryEN: "Guide",
     dateISO: "2026-02-04",
-    readingMinutes: 4,
     cover: "/blog/prompt-engineering-2026.jpg",
     contentTR: [
             "2023 yılında 'Prompt Mühendisliği' geleceğin en gözde mesleği olarak lanse ediliyordu. Ancak 2026'ya geldiğimizde, yapay zeka modellerinin (özellikle bağlamsal 'Reasoning' yeteneği olan modellerin) kendi kendini geliştirmesi ve kullanıcıyı daha iyi anlamasıyla birlikte, uzun ve karmaşık komut dizilerine olan ihtiyaç ciddi şekilde azaldı. Peki bu, prompt mühendisliğinin sonu mu, yoksa bu alan sadece bir dönüşüm mü geçiriyor?",
@@ -1347,7 +1584,6 @@ export const posts: BlogPost[] = [
     categoryTR: "İnceleme",
     categoryEN: "Review",
     dateISO: "2026-02-04",
-    readingMinutes: 5,
     cover: "/blog/deepseek-vs-chatgpt-2026.jpg",
     contentTR: [
            "2026 yılının en büyük sürprizi kuşkusuz DeepSeek oldu. Özellikle yazılım geliştiriciler ve veri analistleri arasında 'ChatGPT'den daha mı iyi?' sorusu sıkça sorulmaya başlandı. İşte bu iki devin kıyasıya mücadelesi.",
@@ -1391,7 +1627,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Verimlilik",
     categoryEN: "Productivity",
     dateISO: "2026-02-04",
-    readingMinutes: 6,
     cover: "/blog/is-yukunu-azaltan-ai-2026.jpg",
     contentTR: [
             "2026 yılında yapay zeka artık sadece bir asistan değil, dijital bir iş ortağı. Haftalık 40 saatlik mesainin yaklaşık %45'i rutin ve tekrarlayan işlere gidiyor. İşte bu döngüyü kıracak 5 devrimsel araç:",
@@ -1441,7 +1676,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber",
     categoryEN: "Guide",
     dateISO: "2026-02-04",
-    readingMinutes: 6,
     cover: "/blog/make-money-with-ai.jpg",
     contentTR: [
             "Yapay zekâ artık yalnızca teknoloji meraklılarının kullandığı bir alan değil. Bugün internet bağlantısı olan herkes yapay zekâ araçlarını kullanarak gelir elde edebilir.",
@@ -1507,7 +1741,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber",
     categoryEN: "Guide",
     dateISO: "2026-02-03",
-    readingMinutes: 4,
     cover: "/blog/ai-tools-gemini.jpg",
     contentTR: [
             "Yapay Zekanın En İnsancıl Hali: Gemini ile Tanışın",
@@ -1568,7 +1801,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Rehber",
     categoryEN: "Guide",
     dateISO: "2026-02-02",
-    readingMinutes: 6,
     cover: "/blog/what-is-ai.jpg",
     contentTR: [
             "Sabah telefonunun alarmını kapattın. Hava durumuna baktın. Müzik uygulaması sana tam ruh haline uygun bir şarkı önerdi. Google’da bir şey arattın ve saniyeler içinde cevabını aldın.",
@@ -1723,7 +1955,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Liste",
     categoryEN: "List",
     dateISO: "2026-02-01",
-    readingMinutes: 5,
     cover: "/blog/best-image-generators.jpg",
     contentTR: [
             "Yapay zekâ ile görsel üretim, tasarımcılar, içerik üreticileri ve pazarlamacılar için vazgeçilmez hale geldi. Doğru aracı seçmek, hem kaliteyi hem de üretim hızını doğrudan etkiler.",
@@ -1787,7 +2018,6 @@ export const posts: BlogPost[] = [
     categoryTR: "İnceleme",
     categoryEN: "Review",
     dateISO: "2026-02-01",
-    readingMinutes: 4,
     cover: "/blog/chatgpt-alternatives.jpg",
     contentTR: [
             "ChatGPT günümüzde en popüler yapay zekâ sohbet botlarından biri olsa da, her kullanım senaryosu için en iyi seçenek olmayabilir. Bazı araçlar uzun belgeleri analiz etmede daha başarılıyken, bazıları araştırma yapma veya kod yazma konusunda öne çıkar.",
@@ -1867,7 +2097,6 @@ export const posts: BlogPost[] = [
     categoryTR: "Liste",
     categoryEN: "List",
     dateISO: "2026-02-01",
-    readingMinutes: 3,
     cover: "/blog/ai-tools-2026.jpg",
     contentTR: [
             "Yapay zekâ artık yalnızca büyük şirketlerin kullandığı karmaşık bir teknoloji değil. Günümüzde herkes ücretsiz yapay zekâ araçları sayesinde içerik üretebiliyor, tasarım yapabiliyor, kod yazabiliyor ve işlerini çok daha hızlı tamamlayabiliyor.",
