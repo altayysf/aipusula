@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost, BlogLang } from "../data/posts";
+import { getLocalizedBlogSlug } from "../lib/blog-slugs";
 
 function formatDate(lang: BlogLang, iso: string) {
   const d = new Date(iso + "T00:00:00");
@@ -35,7 +36,10 @@ export default function BlogCard({
   const title = lang === "tr" ? post.titleTR : post.titleEN;
   const excerpt = lang === "tr" ? post.excerptTR : post.excerptEN;
   const category = lang === "tr" ? post.categoryTR : post.categoryEN;
-  const href = lang === "tr" ? `/tr/blog/${post.slug}` : `/en/blog/${post.slug}`;
+  const href =
+    lang === "tr"
+      ? `/tr/blog/${post.slug}`
+      : `/en/blog/${getLocalizedBlogSlug(post, "en")}`;
 
   return (
     <Link

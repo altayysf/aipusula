@@ -28,7 +28,7 @@ export const posts: BlogPost[] = [
       categoryTR: "AI Araç",
       categoryEN: "AI Tool",
 
-      dateISO: "2026-02-21",
+      dateISO: "2026-02-22",
       cover: "/blog/poe-ai-rehberi.jpg",
       featured: true,
 

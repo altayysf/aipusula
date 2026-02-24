@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { getLocalizedBlogSlug } from "./blog-slugs";
 
 // Blog Ana Sayfa Metadata
 export const blogMetadata: Metadata = {
@@ -61,11 +62,17 @@ export function generateBlogPostMetadata(post: {
   cover: string;
   dateISO: string;
   categoryTR: string;
+  categoryEN?: string;
   readingMinutes?: number;
 }, lang: "tr" | "en" = "tr"): Metadata {
   const title = lang === "tr" ? post.titleTR : post.titleEN;
   const description = lang === "tr" ? post.excerptTR : post.excerptEN;
-  const url = `https://www.aipusula.com/${lang}/blog/${post.slug}`;
+  const trSlug = post.slug;
+  const enSlug = getLocalizedBlogSlug(post, "en");
+  const url =
+    lang === "tr"
+      ? `https://www.aipusula.com/tr/blog/${trSlug}`
+      : `https://www.aipusula.com/en/blog/${enSlug}`;
   const imageUrl = post.cover.startsWith("http") 
     ? post.cover 
     : `https://www.aipusula.com${post.cover}`;
@@ -77,8 +84,8 @@ export function generateBlogPostMetadata(post: {
     alternates: {
       canonical: url,
       languages: {
-        "tr": `https://www.aipusula.com/tr/blog/${post.slug}`,
-        "en": `https://www.aipusula.com/en/blog/${post.slug}`,
+        "tr": `https://www.aipusula.com/tr/blog/${trSlug}`,
+        "en": `https://www.aipusula.com/en/blog/${enSlug}`,
       },
     },
     
@@ -91,7 +98,7 @@ export function generateBlogPostMetadata(post: {
       locale: lang === "tr" ? "tr_TR" : "en_US",
       publishedTime: post.dateISO,
       authors: ["AI Pusula"],
-      section: lang === "tr" ? post.categoryTR : post.categoryTR,
+      section: lang === "tr" ? post.categoryTR : post.categoryEN ?? post.categoryTR,
       images: [
         {
           url: imageUrl,

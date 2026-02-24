@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { tools } from "../data/tools";
 import { posts } from "../data/posts";
+import { getLocalizedBlogSlug } from "../lib/blog-slugs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.aipusula.com";
@@ -29,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog detail pages
   const blogRoutesTR = posts.map((p) => `/tr/blog/${p.slug}`);
-  const blogRoutesEN = posts.map((p) => `/en/blog/${p.slug}`);
+  const blogRoutesEN = posts.map((p) => `/en/blog/${getLocalizedBlogSlug(p, "en")}`);
 
   const allRoutes = Array.from(
     new Set([
