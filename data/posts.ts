@@ -17,7 +17,193 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-    {
+      {
+      slug: "prompt-engineering-nedir-nasil-yapilir-rehberi",
+      titleTR: "Prompt Engineering Nedir? En Etkili Prompt Yazma Teknikleri (Örneklerle Rehber)",
+      titleEN: "What is Prompt Engineering? Best Prompt Writing Techniques (Guide with Examples)",
+
+      excerptTR: "Prompt engineering nedir, etkili prompt nasıl yazılır ve ChatGPT'den en iyi sonuç nasıl alınır? Örneklerle kapsamlı rehber.",
+      excerptEN: "What is prompt engineering, how to write effective prompts, and how to get the best results from ChatGPT? A complete guide with examples.",
+
+      categoryTR: "Rehber",
+      categoryEN: "Guide",
+
+      dateISO: "2026-02-24",
+      cover: "/blog/prompt-engineering-rehberi.jpg",
+      featured: true,
+
+      contentTR: [
+
+        "Google'da son yılların en hızlı yükselen aramalarından biri 'prompt engineering nedir', 'prompt nasıl yazılır', 'ChatGPT prompt örnekleri' ve 'AI prompt teknikleri' konularıdır. Yapay zeka araçlarının yaygınlaşmasıyla birlikte doğru komut yazma becerisi dijital çağın en önemli yetkinliklerinden biri haline gelmiştir.",
+
+        "Prompt engineering, yapay zeka modellerinden en doğru ve kaliteli çıktıyı almak için komutları bilinçli ve stratejik şekilde yazma sürecidir. Bu rehberde prompt engineering kavramını, temel teknikleri ve gerçek kullanım örneklerini detaylı şekilde inceleyeceğiz.",
+
+        "1. Prompt Engineering Nedir?",
+        "Prompt engineering, yapay zekaya verilen komutların optimize edilmesi sürecidir. Aynı soruyu farklı şekillerde sormak farklı sonuçlar üretir.",
+        "Doğru yapılandırılmış bir prompt, daha net, daha doğru ve daha kullanışlı çıktı sağlar.",
+
+        "2. Neden Prompt Yazma Becerisi Önemlidir?",
+        "Yapay zeka araçları komutlara göre çalışır. Komut net değilse sonuç da net olmaz.",
+        "Etkili prompt yazabilen kişiler:",
+        "• Daha kaliteli içerik üretir",
+        "• Daha doğru kod çıktısı alır",
+        "• Daha iyi analiz sonuçları elde eder",
+        "• Zamandan tasarruf eder",
+
+        "3. Etkili Prompt Yazmanın Temel Kuralları",
+
+        "Kural 1: Net ve spesifik ol",
+        "Zayıf prompt:",
+        "Yapay zeka hakkında yaz.",
+        "Güçlü prompt:",
+        "SEO uyumlu, 800 kelimelik yapay zeka blog yazısı yaz. Alt başlıklar ve sonuç bölümü ekle.",
+
+        "Kural 2: Rol tanımla",
+        "Bir yazılım mühendisi gibi düşünerek Python kodu yaz.",
+        "Bir SEO uzmanı gibi analiz yap.",
+
+        "Kural 3: Çıktı formatı belirt",
+        "Madde madde yaz.",
+        "Tablo formatında hazırla.",
+        "JSON çıktısı ver.",
+
+        "Kural 4: Kısıt ekle",
+        "En fazla 200 kelime.",
+        "Basit dil kullan.",
+        "Teknik terim kullanma.",
+
+        "4. Gerçek Prompt Örnekleri",
+
+        "İçerik üretimi:",
+        "Prompt:",
+        "Freelance çalışanlar için 10 verimlilik önerisini madde madde açıkla.",
+
+        "Kod yazma:",
+        "Prompt:",
+        "Node.js ile basit REST API oluştur. GET ve POST endpointleri ekle.",
+
+        "Özet çıkarma:",
+        "Prompt:",
+        "Bu makaleyi 5 maddede özetle ve ana fikri belirt.",
+
+        "Analiz:",
+        "Prompt:",
+        "Bu iş fikrini SWOT analizi şeklinde değerlendir.",
+
+        "5. İleri Seviye Prompt Teknikleri",
+
+        "Chain of Thought tekniği:",
+        "Adım adım düşünerek çöz.",
+
+        "Few-shot prompting:",
+        "Örnek vererek çıktı üretmesini sağla.",
+
+        "Rol + bağlam + hedef tekniği:",
+        "Bir yatırım danışmanı gibi davran. 10 yıllık yatırım planı hazırla. Risk seviyesi orta olsun.",
+
+        "6. Prompt Engineering ile Para Kazanma",
+        "Prompt engineering becerisi freelance işler, içerik üretimi ve AI danışmanlığı için yeni fırsatlar yaratmıştır.",
+        "Şirketler doğru prompt yazabilen uzmanlara ihtiyaç duymaktadır.",
+
+        "7. En Sık Yapılan Hatalar",
+        "• Çok genel komut yazmak",
+        "• Format belirtmemek",
+        "• Bağlam vermemek",
+        "• Çıktıyı kontrol etmemek",
+
+        "Sonuç: Prompt Yazma Dijital Çağın Yeni Süper Gücü",
+        "Prompt engineering, yapay zekadan maksimum verim almanın anahtarıdır. Doğru tekniklerle AI araçları üretkenliği katlayabilir.",
+        "Yapay zeka dünyasında öne çıkmak için prompt yazma becerisini geliştirmek artık kritik bir avantajdır.",
+        "En güncel AI rehberleri için AI Pusula'yı takip edebilirsin."
+      ],
+
+      contentEN: [
+
+        "One of the fastest rising search trends on Google in recent years is 'what is prompt engineering', 'how to write prompts', 'ChatGPT prompt examples', and 'AI prompt techniques'. As AI tools become more widespread, the ability to write effective prompts has become one of the most important digital skills of the modern era.",
+
+        "Prompt engineering is the process of strategically crafting commands to get the most accurate and high-quality output from AI models. In this guide, we will examine the concept of prompt engineering, core techniques, and real usage examples in detail.",
+
+        "1. What is Prompt Engineering?",
+        "Prompt engineering is the process of optimizing the instructions given to artificial intelligence. Asking the same question in different ways can produce different results.",
+        "A well-structured prompt generates clearer, more accurate, and more useful output.",
+
+        "2. Why is Prompt Writing Important?",
+        "AI tools operate based on commands. If the instruction is unclear, the result will also be unclear.",
+        "People who can write effective prompts:",
+        "• Produce higher quality content",
+        "• Get more accurate code outputs",
+        "• Obtain better analytical results",
+        "• Save time",
+
+        "3. Core Rules of Writing Effective Prompts",
+
+        "Rule 1: Be clear and specific",
+        "Weak prompt:",
+        "Write about artificial intelligence.",
+        "Strong prompt:",
+        "Write an SEO-optimized 800-word blog post about artificial intelligence. Include subheadings and a conclusion section.",
+
+        "Rule 2: Assign a role",
+        "Act like a software engineer and write Python code.",
+        "Act like an SEO expert and analyze.",
+
+        "Rule 3: Specify output format",
+        "Write in bullet points.",
+        "Prepare in table format.",
+        "Provide JSON output.",
+
+        "Rule 4: Add constraints",
+        "Maximum 200 words.",
+        "Use simple language.",
+        "Avoid technical terms.",
+
+        "4. Real Prompt Examples",
+
+        "Content creation:",
+        "Prompt:",
+        "Explain 10 productivity tips for freelancers in bullet points.",
+
+        "Coding:",
+        "Prompt:",
+        "Create a simple REST API with Node.js. Add GET and POST endpoints.",
+
+        "Summarization:",
+        "Prompt:",
+        "Summarize this article in 5 bullet points and state the main idea.",
+
+        "Analysis:",
+        "Prompt:",
+        "Evaluate this business idea using SWOT analysis format.",
+
+        "5. Advanced Prompt Techniques",
+
+        "Chain of Thought technique:",
+        "Think step by step before answering.",
+
+        "Few-shot prompting:",
+        "Provide examples before generating output.",
+
+        "Role + context + goal technique:",
+        "Act as an investment advisor. Prepare a 10-year investment plan. Risk level should be medium.",
+
+        "6. Making Money with Prompt Engineering",
+        "Prompt engineering skills have created new opportunities in freelance work, content creation, and AI consulting.",
+        "Companies need experts who can craft effective prompts.",
+
+        "7. Common Mistakes",
+        "• Writing overly general instructions",
+        "• Not specifying format",
+        "• Not providing context",
+        "• Not reviewing the output",
+
+        "Conclusion: Prompt Writing is the New Digital Superpower",
+        "Prompt engineering is the key to maximizing productivity with AI tools. With the right techniques, AI can significantly boost efficiency.",
+        "Developing prompt writing skills is now a critical advantage in the AI-driven world.",
+        "You can follow AI Pusula for the latest AI guides."
+      ]
+    },   
+  
+      {
       slug: "poe-ai-nedir-poe-nasil-kullanilir-rehberi",
       titleTR: "Poe AI Nedir? Poe Nasıl Kullanılır? (Tüm Özellikler + Prompt Örnekleri)",
       titleEN: "What is Poe AI? How to Use Poe (Features + Prompt Examples)",
