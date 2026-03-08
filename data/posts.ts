@@ -17,7 +17,230 @@ export interface BlogPost {
 }
 
 export const posts: BlogPost[] = [
-      {
+{
+  slug: "ai-ile-spotifydan-para-kazanma-rehberi-2026",
+  titleTR: "AI ile Spotify’dan Para Kazanma: Yapay Zeka ile Müzik Üreterek Gelir Elde Etme Rehberi",
+  titleEN: "Make Money on Spotify with AI: Guide to Earning Income by Creating Music with Artificial Intelligence",
+
+  excerptTR: "AI ile müzik üretip Spotify’a yükleyerek para kazanmak mümkün mü? Yapay zeka ile şarkı oluşturma, yayınlama ve gelir elde etme yöntemlerini öğrenin.",
+  excerptEN: "Is it possible to make money on Spotify using AI music? Learn how to create songs with AI, publish them, and generate income step by step.",
+
+  categoryTR: "Rehber",
+  categoryEN: "Guide",
+
+  dateISO: "2026-03-08",
+  cover: "/blog/ai-spotify-para-kazanma.jpg",
+
+  contentTR: [
+
+    "Son yıllarda Google'da hızla yükselen aramalardan biri 'AI ile Spotify para kazanma', 'yapay zeka müzik üretme', 'Spotify nasıl para kazandırır' ve 'AI ile şarkı yapma' konularıdır. Yapay zeka araçlarının gelişmesi sayesinde artık teknik müzik bilgisi olmadan bile şarkı üretmek ve bu şarkıları dijital platformlarda yayınlamak mümkün hale gelmiştir.",
+
+    "Bu rehberde yapay zeka kullanarak müzik üretme, Spotify’a yükleme ve bu içeriklerden gelir elde etme sürecini adım adım inceleyeceğiz.",
+
+    "1. Spotify’dan Para Kazanmak Nasıl Çalışır?",
+    "Spotify, sanatçılara dinlenme sayısına göre ödeme yapar. Bir şarkı ne kadar çok dinlenirse, o kadar fazla gelir elde edilir.",
+    "Spotify gelir sistemi genellikle şu şekilde işler:",
+    "• Şarkı platforma yüklenir",
+    "• Dinlenme sayısı artar",
+    "• Telif geliri oluşur",
+    "• Dağıtım şirketi üzerinden ödeme alınır",
+
+    "Bu sistem sayesinde bağımsız müzik üreticileri de gelir elde edebilir.",
+
+    "2. AI ile Müzik Üretmek Mümkün mü?",
+    "Evet. Günümüzde birçok yapay zeka aracı melodi, ritim, vokal ve şarkı sözü oluşturabilir.",
+    "AI müzik araçları sayesinde birkaç dakika içinde tamamen yeni bir şarkı üretmek mümkündür.",
+
+    "Popüler AI müzik araçları:",
+    "• Suno AI",
+    "• Udio",
+    "• AIVA",
+    "• Soundraw",
+    "• Boomy",
+
+    "Bu araçlar teknik müzik bilgisi olmadan içerik üretmeye imkan verir.",
+
+    "3. AI ile Şarkı Oluşturma Süreci",
+
+    "Genellikle süreç şu şekilde ilerler:",
+    "• Müzik türü seçilir",
+    "• Duygu ve tempo belirlenir",
+    "• Şarkı sözü oluşturulur",
+    "• AI melodi üretir",
+    "• Ses dosyası alınır",
+
+    "Bu süreç tamamen otomatik olabilir.",
+
+    "4. Şarkıyı Spotify’a Nasıl Yüklerim?",
+
+    "Spotify’a doğrudan yükleme yapılamaz.",
+    "Bir dağıtım platformu kullanmak gerekir.",
+
+    "En popüler müzik dağıtım siteleri:",
+    "• DistroKid",
+    "• TuneCore",
+    "• CD Baby",
+    "• Amuse",
+
+    "Bu platformlar şarkıyı Spotify, Apple Music ve diğer servislere gönderir.",
+
+    "5. AI ile Spotify’dan Para Kazanma Stratejileri",
+
+    "Strateji 1: Arka plan müziği üretmek",
+    "Lo-fi, ambient ve chill müzikler çok dinlenir.",
+
+    "Strateji 2: Çok sayıda şarkı yüklemek",
+    "Tek şarkı yerine çok içerik daha fazla dinlenme getirir.",
+
+    "Strateji 3: Playlist odaklı üretim",
+    "Uyku, ders, çalışma, meditasyon müzikleri yüksek dinlenir.",
+
+    "Strateji 4: Niş müzik üretmek",
+    "Oyun müziği, film müziği, motivasyon müziği gibi alanlar avantaj sağlar.",
+
+    "6. AI ile Şarkı Sözü Yazma",
+
+    "Örnek komut:",
+    "Motivasyon temalı İngilizce pop şarkı sözü yaz.",
+
+    "AI şunları oluşturabilir:",
+    "• Kıta",
+    "• Nakarat",
+    "• Köprü",
+    "• Tema",
+
+    "Bu sözler AI müzik araçlarında kullanılabilir.",
+
+    "7. AI ile Spotify Gelirini Artırma",
+
+    "• Düzenli içerik yükle",
+    "• Playlistlere gir",
+    "• Kapak görsellerini iyi hazırla",
+    "• Aynı tarzda seri üret",
+    "• Sosyal medya kullan",
+
+    "Spotify algoritması aktif sanatçıları daha çok önerir.",
+
+    "8. AI Müzik Kullanırken Dikkat Edilmesi Gerekenler",
+
+    "• Telif haklarını kontrol et",
+    "• Ticari kullanım izinlerini incele",
+    "• Aynı müziği tekrar yükleme",
+    "• Spam içerik üretme",
+
+    "Kurallara uyulmazsa hesap kapatılabilir.",
+
+    "Sonuç: AI ile Spotify Geliri Gerçekten Mümkün",
+    "Yapay zeka sayesinde müzik üretmek hiç olmadığı kadar kolay hale gelmiştir. Doğru araçlar ve doğru strateji ile Spotify üzerinden pasif gelir elde etmek mümkündür.",
+    "AI Pusula olarak önerimiz, AI müzik üretimini uzun vadeli bir içerik stratejisi olarak kullanmanızdır."
+  ],
+
+  contentEN: [
+
+    "One of the fastest rising searches in recent years is 'make money on Spotify with AI', 'AI music generation', 'how Spotify pays artists', and 'create songs with AI'. Thanks to modern AI tools, it is now possible to produce music without technical knowledge and publish it on digital platforms.",
+
+    "In this guide, we will explain step by step how to create music using artificial intelligence, upload it to Spotify, and generate income from it.",
+
+    "1. How Does Spotify Pay Artists?",
+    "Spotify pays artists based on the number of streams. The more a song is played, the more revenue it generates.",
+    "The system usually works like this:",
+    "• Upload the song",
+    "• Get streams",
+    "• Earn royalties",
+    "• Receive payment through distributor",
+
+    "Independent creators can also earn money this way.",
+
+    "2. Can AI Generate Music?",
+    "Yes. Modern AI tools can create melody, rhythm, vocals, and lyrics.",
+    "You can generate a full song in minutes.",
+
+    "Popular AI music tools:",
+    "• Suno AI",
+    "• Udio",
+    "• AIVA",
+    "• Soundraw",
+    "• Boomy",
+
+    "These tools allow music production without technical skills.",
+
+    "3. AI Song Creation Process",
+
+    "Typical workflow:",
+    "• Choose genre",
+    "• Set mood and tempo",
+    "• Generate lyrics",
+    "• AI creates melody",
+    "• Export audio",
+
+    "The process can be fully automatic.",
+
+    "4. How to Upload Music to Spotify",
+
+    "You cannot upload directly.",
+    "You need a distributor.",
+
+    "Popular distributors:",
+    "• DistroKid",
+    "• TuneCore",
+    "• CD Baby",
+    "• Amuse",
+
+    "They send your music to Spotify and other platforms.",
+
+    "5. Strategies to Make Money with AI Music",
+
+    "Strategy 1: Background music",
+    "Lo-fi and ambient music get many streams.",
+
+    "Strategy 2: Upload many songs",
+    "More content = more streams.",
+
+    "Strategy 3: Playlist music",
+    "Study, sleep, focus music performs well.",
+
+    "Strategy 4: Niche genres",
+    "Game music, cinematic music, meditation music.",
+
+    "6. Writing Lyrics with AI",
+
+    "Example prompt:",
+    "Write an English motivational pop song lyric.",
+
+    "AI can generate:",
+    "• Verse",
+    "• Chorus",
+    "• Bridge",
+    "• Theme",
+
+    "These lyrics can be used in AI music tools.",
+
+    "7. Increasing Spotify Income",
+
+    "• Upload regularly",
+    "• Target playlists",
+    "• Use good covers",
+    "• Keep same style",
+    "• Promote on social media",
+
+    "Spotify recommends active artists more.",
+
+    "8. Things to Watch Out For",
+
+    "• Check copyright rules",
+    "• Check commercial rights",
+    "• Avoid duplicates",
+    "• Avoid spam uploads",
+
+    "Breaking rules may cause account bans.",
+
+    "Conclusion: Making Money with AI Music is Possible",
+    "Artificial intelligence made music production easier than ever. With the right tools and strategy, passive income from Spotify is possible.",
+    "AI Pusula recommends using AI music as a long-term content strategy."
+  ]
+},
+
+  {
       slug: "prompt-engineering-nedir-nasil-yapilir-rehberi",
       titleTR: "Prompt Engineering Nedir? En Etkili Prompt Yazma Teknikleri (Örneklerle Rehber)",
       titleEN: "What is Prompt Engineering? Best Prompt Writing Techniques (Guide with Examples)",
