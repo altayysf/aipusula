@@ -60,20 +60,32 @@ export default function BlogTRPage() {
 
       <main className="min-h-screen bg-white">
         <div className="mx-auto max-w-6xl px-6 py-10">
-          {/* Header */}
-          <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+          {/* Header - Hafif görsellik */}
+          <header className="mb-10 pb-8 border-b border-gray-100">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-3">
               Blog
             </h1>
-            <p className="mt-3 text-gray-700 max-w-2xl">
+            <p className="text-lg text-gray-700 max-w-2xl leading-relaxed mb-4">
               Yapay zekâ ve teknoloji trendleri, incelemeler, ipuçları ve en iyi
               araç listeleri.
             </p>
+            
+            {/* Küçük istatistikler */}
+            <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+              <span className="flex items-center gap-1.5">
+                <span className="text-lg">📚</span>
+                <strong className="text-gray-900">{allPosts.length}</strong> yazı
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="text-lg">🏷️</span>
+                <strong className="text-gray-900">{categories.length}</strong> kategori
+              </span>
+            </div>
           </header>
 
           {/* Filtreleme Alanı */}
-          <div className="mb-8 space-y-4">
-            {/* Arama */}
+          <div className="mb-8 space-y-6">
+            {/* Arama - Daha modern */}
             <div className="relative">
               <input
                 type="text"
@@ -81,9 +93,9 @@ export default function BlogTRPage() {
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
-                  setCurrentPage(1); // Arama değiştiğinde ilk sayfaya dön
+                  setCurrentPage(1);
                 }}
-                className="w-full px-4 py-3 pl-12 pr-4 text-gray-900 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-5 py-3.5 pl-12 pr-5 text-gray-900 font-medium bg-white border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent placeholder:text-gray-500 placeholder:font-normal transition-all shadow-sm hover:border-gray-300"
               />
               <svg
                 className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -100,17 +112,17 @@ export default function BlogTRPage() {
               </svg>
             </div>
 
-            {/* Kategori Filtreleri */}
-            <div className="flex flex-wrap gap-2">
+            {/* Kategori Filtreleri - Daha belirgin */}
+            <div className="flex flex-wrap gap-2.5">
               <button
                 onClick={() => {
                   setSelectedCategory("all");
                   setCurrentPage(1);
                 }}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm ${
                   selectedCategory === "all"
-                    ? "bg-gray-900 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-gray-900 text-white shadow-md"
+                    : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
                 }`}
               >
                 Tümü ({allPosts.length})
@@ -127,10 +139,10 @@ export default function BlogTRPage() {
                       setSelectedCategory(category);
                       setCurrentPage(1);
                     }}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                    className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-sm ${
                       selectedCategory === category
-                        ? "bg-gray-900 text-white"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        ? "bg-gray-900 text-white shadow-md"
+                        : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
                     }`}
                   >
                     {category} ({count})
@@ -142,98 +154,13 @@ export default function BlogTRPage() {
               {hasActiveFilters && (
                 <button
                   onClick={resetFilters}
-                  className="px-4 py-2 rounded-full text-sm font-medium bg-red-50 text-red-600 hover:bg-red-100 transition"
+                  className="px-5 py-2.5 rounded-full text-sm font-semibold bg-red-50 text-red-600 hover:bg-red-100 transition-all border border-red-200 shadow-sm"
                 >
                   ✕ Filtreleri Temizle
                 </button>
               )}
             </div>
           </div>
-
-                    {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2 mt-10">
-              {/* Önceki Sayfa */}
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={!paginatedData.hasPrev}
-                className={`px-4 py-2 rounded-lg font-medium transition ${
-                  paginatedData.hasPrev
-                    ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    : "bg-gray-50 text-gray-400 cursor-not-allowed"
-                }`}
-              >
-                ← Önceki
-              </button>
-
-              {/* Sayfa Numaraları */}
-              <div className="flex gap-1">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                  (page) => {
-                    // İlk 2, son 2 ve mevcut sayfa civarındaki 2 sayfayı göster
-                    const showPage =
-                      page === 1 ||
-                      page === 2 ||
-                      page === totalPages ||
-                      page === totalPages - 1 ||
-                      Math.abs(page - currentPage) <= 1;
-
-                    // Nokta göster
-                    const showEllipsis =
-                      (page === 3 && currentPage > 4) ||
-                      (page === totalPages - 2 && currentPage < totalPages - 3);
-
-                    if (showEllipsis) {
-                      return (
-                        <span
-                          key={page}
-                          className="px-3 py-2 text-gray-400"
-                        >
-                          ...
-                        </span>
-                      );
-                    }
-
-                    if (!showPage) return null;
-
-                    return (
-                      <button
-                        key={page}
-                        onClick={() => handlePageChange(page)}
-                        className={`min-w-[40px] px-3 py-2 rounded-lg font-medium transition ${
-                          currentPage === page
-                            ? "bg-gray-900 text-white"
-                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                        }`}
-                      >
-                        {page}
-                      </button>
-                    );
-                  }
-                )}
-              </div>
-
-              {/* Sonraki Sayfa */}
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={!paginatedData.hasNext}
-                className={`px-4 py-2 rounded-lg font-medium transition ${
-                  paginatedData.hasNext
-                    ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    : "bg-gray-50 text-gray-400 cursor-not-allowed"
-                }`}
-              >
-                Sonraki →
-              </button>
-            </div>
-          )}
-
-          {/* Sayfa Bilgisi */}
-          {totalPages > 1 && (
-            <div className="text-center mt-4 text-sm text-gray-500">
-              Sayfa {currentPage} / {totalPages}
-            </div>
-          )}
 
           {/* Sonuç Sayısı */}
           {(searchQuery.trim() || selectedCategory !== "all") && (
@@ -253,33 +180,37 @@ export default function BlogTRPage() {
             </div>
           )}
 
-          {/* Blog Kartları */}
+          {/* Blog Kartları - 2 sütunlu grid */}
           {paginatedData.posts.length > 0 ? (
-            <div className="grid gap-5 mb-10">
-              {paginatedData.posts.map((post) => (
-                <BlogCard key={post.slug} lang="tr" post={post} />
-              ))}
-            </div>
+            <section className="mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {paginatedData.posts.map((post) => (
+                  <article key={post.slug}>
+                    <BlogCard lang="tr" post={post} />
+                  </article>
+                ))}
+              </div>
+            </section>
           ) : null}
 
-          {/* Pagination */}
+          {/* Pagination - Daha modern */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2 mt-10">
+            <nav className="flex justify-center items-center gap-2 mt-10">
               {/* Önceki Sayfa */}
               <button
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={!paginatedData.hasPrev}
-                className={`px-4 py-2 rounded-lg font-medium transition ${
+                className={`px-5 py-2.5 rounded-xl font-semibold transition-all shadow-sm ${
                   paginatedData.hasPrev
-                    ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    : "bg-gray-50 text-gray-400 cursor-not-allowed"
+                    ? "bg-white text-gray-900 hover:bg-gray-50 border border-gray-200"
+                    : "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
                 }`}
               >
                 ← Önceki
               </button>
 
               {/* Sayfa Numaraları */}
-              <div className="flex gap-1">
+              <div className="flex gap-1.5">
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                   (page) => {
                     // İlk 2, son 2 ve mevcut sayfa civarındaki 2 sayfayı göster
@@ -312,10 +243,10 @@ export default function BlogTRPage() {
                       <button
                         key={page}
                         onClick={() => handlePageChange(page)}
-                        className={`min-w-[40px] px-3 py-2 rounded-lg font-medium transition ${
+                        className={`min-w-[44px] px-4 py-2.5 rounded-xl font-semibold transition-all shadow-sm ${
                           currentPage === page
-                            ? "bg-gray-900 text-white"
-                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                            ? "bg-gray-900 text-white shadow-md"
+                            : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
                         }`}
                       >
                         {page}
@@ -329,21 +260,21 @@ export default function BlogTRPage() {
               <button
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={!paginatedData.hasNext}
-                className={`px-4 py-2 rounded-lg font-medium transition ${
+                className={`px-5 py-2.5 rounded-xl font-semibold transition-all shadow-sm ${
                   paginatedData.hasNext
-                    ? "bg-gray-100 text-gray-900 hover:bg-gray-200"
-                    : "bg-gray-50 text-gray-400 cursor-not-allowed"
+                    ? "bg-white text-gray-900 hover:bg-gray-50 border border-gray-200"
+                    : "bg-gray-100 text-gray-400 cursor-not-allowed border border-gray-200"
                 }`}
               >
                 Sonraki →
               </button>
-            </div>
+            </nav>
           )}
 
           {/* Sayfa Bilgisi */}
           {totalPages > 1 && (
-            <div className="text-center mt-4 text-sm text-gray-500">
-              Sayfa {currentPage} / {totalPages}
+            <div className="text-center mt-5 text-sm text-gray-600">
+              Sayfa <strong className="text-gray-900">{currentPage}</strong> / <strong className="text-gray-900">{totalPages}</strong>
             </div>
           )}
         </div>

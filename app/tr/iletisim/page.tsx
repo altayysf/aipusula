@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Link from "next/link";
 
-const CONTACT_TO = "info@aipusula.com"; // bilgi amaçlı yazı (asıl "to" server'da olacak)
+const CONTACT_TO = "info@aipusula.com";
 
 type FormType = "email" | "bug" | "tool" | "offer" | "web";
 
@@ -70,6 +70,7 @@ export default function ContactTR() {
         toolUrl: openType === "tool" ? toolUrl : undefined,
         company: openType === "offer" || openType === "web" ? company : undefined,
         budget: openType === "offer" || openType === "web" ? budget : undefined,
+        locale: "tr",
       };
 
       const res = await fetch("/api/contact", {
@@ -95,71 +96,94 @@ export default function ContactTR() {
       <Navbar lang="tr" />
 
       <main className="min-h-screen bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-10">
+        <div className="mx-auto max-w-3xl px-6 py-12 space-y-10">
           {/* Breadcrumb */}
-          <div className="text-sm text-gray-600 mb-6">
+          <nav className="text-sm text-gray-500">
             <Link href="/tr" className="hover:underline">
               Ana Sayfa
-            </Link>{" "}
-            / <span className="text-gray-900 font-medium">İletişim</span>
-          </div>
+            </Link>
+            {" / "}
+            <span className="text-gray-900 font-medium">İletişim</span>
+          </nav>
 
-          {/* Header card */}
-          <section className="rounded-[32px] border border-violet-500/40 bg-gradient-to-r from-violet-200 to-fuchsia-200 p-7 shadow-sm">
+          {/* Hero */}
+          <section>
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
               İletişim
             </h1>
-
-            <p className="mt-2 text-gray-800/80 max-w-2xl">
+            <p className="mt-4 text-gray-600 leading-relaxed">
               AI Pusula şu an geliştirme aşamasında. Hata bildirimi, yeni araç
               önerisi, iş birliği / reklam / ana sayfada sabitleme taleplerin
               için buradayız.
             </p>
+          </section>
 
-            {/* Web site hizmeti - aynı kart içinde, tasarımı bozmadan */}
-            <div className="mt-4 rounded-2xl bg-white/70 border border-black/10 p-4">
-              <div className="text-sm font-semibold text-gray-900">
-                Web sitesi yaptırmak mı istiyorsun?
-              </div>
-              <div className="mt-1 text-sm text-gray-700">
-                İhtiyacına uygun web sitesi (kişisel, kurumsal, landing page)
-                tasarlayıp geliştirebilirim. Ücret ve teslim süresi için talep
-                bırakabilirsin.
-              </div>
-              <button
-                onClick={() => openForm("web")}
-                className="mt-3 inline-flex rounded-full bg-gray-900 text-white px-5 py-2.5 text-sm font-medium hover:bg-black transition"
-              >
-                Web sitesi talebi →
-              </button>
-            </div>
+          {/* Website service */}
+          <section className="rounded-[28px] border border-black/8 bg-gray-50 p-7">
+            <h2 className="text-xl font-bold text-gray-900 mb-3">🌐 Web sitesi yaptırmak mı istiyorsun?</h2>
+            <p className="text-gray-600 leading-relaxed mb-3">
+              İhtiyacına uygun web sitesi (kişisel, kurumsal, landing page)
+              tasarlayıp geliştirebilirim. Ücret ve teslim süresi için talep
+              bırakabilirsin.
+            </p>
+            <button
+              onClick={() => openForm("web")}
+              className="inline-flex rounded-full bg-gray-900 text-white px-6 py-3 text-sm font-semibold hover:bg-black transition"
+            >
+              Web sitesi talebi →
+            </button>
 
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              {/* Eskiden mailto idi — artık form açıyoruz */}
+            {openType === "web" ? (
+              <InlineForm
+                type={openType}
+                title={TYPE_LABEL[openType]}
+                name={name}
+                setName={setName}
+                email={email}
+                setEmail={setEmail}
+                message={message}
+                setMessage={setMessage}
+                company={company}
+                setCompany={setCompany}
+                budget={budget}
+                setBudget={setBudget}
+                pageUrl={pageUrl}
+                setPageUrl={setPageUrl}
+                toolName={toolName}
+                setToolName={setToolName}
+                toolUrl={toolUrl}
+                setToolUrl={setToolUrl}
+                loading={loading}
+                sent={sent}
+                error={error}
+                canSend={canSend}
+                onSubmit={submit}
+              />
+            ) : null}
+          </section>
+
+          {/* Email CTA */}
+          <section className="rounded-[28px] bg-gradient-to-r from-violet-50 to-fuchsia-50 border border-violet-200 p-7 text-center">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Bize Ulaş</h2>
+            <p className="text-gray-600 text-sm mb-2">
+              E-posta: <span className="font-semibold">{CONTACT_TO}</span>
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-3">
               <button
                 onClick={() => openForm("email")}
-                className="rounded-full bg-gray-900 text-white px-6 py-3 text-sm font-medium hover:bg-black transition"
+                className="inline-flex rounded-full bg-gray-900 text-white px-6 py-3 text-sm font-semibold hover:bg-black transition"
               >
                 E-posta gönder →
               </button>
-
               <Link
                 href="/tr"
-                className="rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
+                className="inline-flex rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
               >
                 Tüm araçlara göz at
               </Link>
             </div>
 
-            <div className="mt-4 text-sm text-gray-700">
-              E-posta:{" "}
-              <span className="font-semibold underline decoration-black/20">
-                {CONTACT_TO}
-              </span>
-            </div>
-
-            {/* Header altına form (sadece email veya web seçilince açılır gibi kalsın) */}
-            {openType === "email" || openType === "web" ? (
+            {openType === "email" ? (
               <InlineForm
                 type={openType}
                 title={TYPE_LABEL[openType]}
@@ -189,20 +213,21 @@ export default function ContactTR() {
           </section>
 
           {/* 3 cards */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {/* Bug / feedback */}
-            <div className="rounded-[28px] border border-emerald-500/35 bg-gradient-to-r from-emerald-100 to-cyan-200 p-6 shadow-sm">
-              <h2 className="text-lg font-extrabold text-gray-900">
+            <div className="rounded-[28px] border border-black/8 bg-white p-6">
+              <div className="text-2xl mb-3">🐛</div>
+              <h2 className="text-lg font-extrabold text-gray-900 mb-2">
                 Hata bildir / öneri ver
               </h2>
-              <p className="mt-2 text-gray-700">
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">
                 Site yeni. Bir hata, eksik bilgi veya geliştirme fikrin varsa
                 yaz—hızlıca düzeltelim.
               </p>
 
               <button
                 onClick={() => openForm("bug")}
-                className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
+                className="inline-flex rounded-full bg-white border border-black/20 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition shadow-sm"
               >
                 Hata/öneri formu →
               </button>
@@ -236,19 +261,20 @@ export default function ContactTR() {
               ) : null}
             </div>
 
-            {/* Tool submission */}
-            <div className="rounded-[28px] border border-sky-500/35 bg-gradient-to-r from-indigo-200 to-sky-200 p-6 shadow-sm">
-              <h2 className="text-lg font-extrabold text-gray-900">
+            {/* New tool suggestion */}
+            <div className="rounded-[28px] border border-black/8 bg-white p-6">
+              <div className="text-2xl mb-3">🤖</div>
+              <h2 className="text-lg font-extrabold text-gray-900 mb-2">
                 Yeni AI aracı öner
               </h2>
-              <p className="mt-2 text-gray-700">
-                Yeni bir araç keşfettiysen linkini ve kısa açıklamasını gönder.
-                İnceleyip dizine ekleyelim.
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                Harika bir AI aracı biliyor musun? Bize öner—en iyilerini
+                ekliyoruz!
               </p>
 
               <button
                 onClick={() => openForm("tool")}
-                className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
+                className="inline-flex rounded-full bg-white border border-black/20 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition shadow-sm"
               >
                 Araç öner →
               </button>
@@ -282,20 +308,20 @@ export default function ContactTR() {
               ) : null}
             </div>
 
-            {/* Monetization */}
-            <div className="rounded-[28px] border border-amber-500/35 bg-gradient-to-r from-amber-200 to-rose-200 p-6 shadow-sm">
-              <h2 className="text-lg font-extrabold text-gray-900">
-                İş birliği / reklam / sabitleme
+            {/* Partnership / Ads */}
+            <div className="rounded-[28px] border border-black/8 bg-white p-6">
+              <div className="text-2xl mb-3">🤝</div>
+              <h2 className="text-lg font-extrabold text-gray-900 mb-2">
+                İş birliği / Reklam
               </h2>
-              <p className="mt-2 text-gray-700">
-                AI aracı sahibiysen ya da marka iş birliği düşünüyorsan: ana
-                sayfada sabitleme, sponsor alanı ve görünürlük seçeneklerini
-                konuşabiliriz.
+              <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                AI Pusula ile ortak olmak, reklam vermek veya öne çıkmak mı
+                istiyorsun? Teklifini buradan gönder.
               </p>
 
               <button
                 onClick={() => openForm("offer")}
-                className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
+                className="inline-flex rounded-full bg-white border border-black/20 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition shadow-sm"
               >
                 Teklif gönder →
               </button>
@@ -329,9 +355,6 @@ export default function ContactTR() {
               ) : null}
             </div>
           </div>
-
-          {/* Small note */}
-          <div className="mt-10 text-sm text-gray-600"></div>
         </div>
       </main>
     </>
@@ -349,7 +372,6 @@ function InlineForm(props: {
   message: string;
   setMessage: (v: string) => void;
 
-  // optional fields
   pageUrl: string;
   setPageUrl: (v: string) => void;
   toolName: string;
@@ -394,8 +416,8 @@ function InlineForm(props: {
   } = props;
 
   return (
-    <div className="mt-5 rounded-3xl border border-black/10 bg-white/70 p-5">
-      <div className="text-sm font-extrabold text-gray-900">{title}</div>
+    <div className="mt-5 rounded-2xl border border-black/10 bg-gray-50 p-5">
+      <div className="text-sm font-bold text-gray-900">{title}</div>
       <div className="mt-1 text-xs text-gray-600">
         Formu doldur ve gönder. Mesajın ekibe iletilecek.
       </div>
@@ -403,15 +425,15 @@ function InlineForm(props: {
       <div className="mt-4 grid gap-3">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <input
-            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
             placeholder="Ad Soyad"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
-            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
-
+            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
             placeholder="E-posta"
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -419,7 +441,7 @@ function InlineForm(props: {
 
         {type === "bug" ? (
           <input
-            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+            className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
             placeholder="Hata aldığın sayfa linki (opsiyonel)"
             value={pageUrl}
             onChange={(e) => setPageUrl(e.target.value)}
@@ -429,13 +451,13 @@ function InlineForm(props: {
         {type === "tool" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
               placeholder="Araç adı (önerilir)"
               value={toolName}
               onChange={(e) => setToolName(e.target.value)}
             />
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
               placeholder="Resmi link (https://...)"
               value={toolUrl}
               onChange={(e) => setToolUrl(e.target.value)}
@@ -446,14 +468,13 @@ function InlineForm(props: {
         {type === "offer" || type === "web" ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
-
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
               placeholder="Şirket / Marka (opsiyonel)"
               value={company}
               onChange={(e) => setCompany(e.target.value)}
             />
             <input
-              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+              className="w-full rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
               placeholder="Bütçe aralığı (opsiyonel)"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
@@ -462,7 +483,7 @@ function InlineForm(props: {
         ) : null}
 
         <textarea
-          className="min-h-[140px] w-full resize-none rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-black font-medium placeholder:text-gray-500 placeholder:opacity-100"
+          className="min-h-[140px] w-full resize-none rounded-2xl border border-black/10 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white text-gray-900 font-medium placeholder:text-gray-500 placeholder:font-normal"
           placeholder={
             type === "web"
               ? "Ne tür site istiyorsun? (ör. kurumsal, kişisel, landing page) İçerik, örnek site linkleri, istediğin özellikler…"
@@ -511,7 +532,7 @@ function InlineForm(props: {
 
         {type === "tool" ? (
           <div className="text-xs text-gray-600">
-            Not: “Araç adı” veya “resmi link” alanlarından en az birini doldur.
+            Not: "Araç adı" veya "resmi link" alanlarından en az birini doldur.
           </div>
         ) : null}
       </div>

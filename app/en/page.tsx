@@ -62,16 +62,6 @@ export default function AllToolsEN() {
               Click any tool to explore detailed reviews, pricing comparisons,
               and real-world usage examples.
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {FILTERS.slice(1).map((f) => (
-                <span
-                  key={f.key}
-                  className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500"
-                >
-                  {f.emoji} {f.label} ({counts[f.key]})
-                </span>
-              ))}
-            </div>
           </section>
 
           {/* ── 2. EDITOR'S PICKS ────────────────────────────────── */}

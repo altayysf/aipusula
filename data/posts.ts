@@ -211,8 +211,8 @@ export const posts: BlogPost[] = [
       excerptTR: "Poe nedir, nasıl kullanılır ve farklı AI modellerine tek yerden nasıl erişilir? Poe AI kullanım rehberi ve örnek promptlar.",
       excerptEN: "What is Poe, how to use it, and how to access multiple AI models in one place? Poe AI guide with example prompts.",
 
-      categoryTR: "AI Araç",
-      categoryEN: "AI Tool",
+      categoryTR: "Liste",
+      categoryEN: "List",
 
       dateISO: "2026-02-22",
       cover: "/blog/poe-ai-rehberi.jpg",
@@ -1810,8 +1810,8 @@ export const posts: BlogPost[] = [
     titleEN: "5 AI Tools That Will Cut Your Weekly Workload in Half: 2026 Productivity Guide",
     excerptTR: "Rutin işlerden kurtulup yaratıcılığa odaklanın. 2026'nın en gelişmiş yapay zeka araçlarıyla toplantıları, kodlamayı ve iş akışlarını nasıl otomatiğe bağlayacağınızı öğrenin.",
     excerptEN: "Get rid of routine tasks and focus on creativity. Learn how to automate meetings, coding, and workflows with 2026's most advanced AI tools.",
-    categoryTR: "Verimlilik",
-    categoryEN: "Productivity",
+    categoryTR: "Rehber",
+    categoryEN: "Guide",
     dateISO: "2026-02-04",
     cover: "/blog/is-yukunu-azaltan-ai-2026.jpg",
     contentTR: [

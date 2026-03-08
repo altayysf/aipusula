@@ -1,147 +1,131 @@
+// app/en/privacy/page.tsx
 import Navbar from "../../../components/Navbar";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | AI Pusula",
+  description: "AI Pusula privacy policy — how we collect, use, and protect your data.",
+  alternates: { canonical: "/en/privacy" },
+};
+
+const LAST_UPDATED = "February 21, 2026";
+const CONTACT_EMAIL = "info@aipusula.com";
 
 export default function PrivacyEN() {
-  const updatedAt = "February 05, 2026";
-
   return (
     <>
       <Navbar lang="en" />
-
       <main className="min-h-screen bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-10">
-          {/* Breadcrumb */}
-          <div className="text-sm text-gray-600 mb-6">
-            <Link href="/en" className="hover:underline">
-              Home
-            </Link>{" "}
-            / <span className="text-gray-900 font-medium">Privacy Policy</span>
-          </div>
+        <div className="mx-auto max-w-3xl px-6 py-12">
 
-          {/* Header card */}
-          <section className="rounded-[32px] border border-violet-500/40 bg-gradient-to-r from-violet-200 to-fuchsia-200 p-7 shadow-sm">
-            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-              Privacy Policy
-            </h1>
-            <p className="mt-2 text-gray-800/80 max-w-3xl">
-              At AI Pusula (“Site”), we respect your privacy. This page explains
-              what data may be collected, how it may be used, and your options.
-            </p>
+          <nav className="text-sm text-gray-500 mb-8">
+            <Link href="/en" className="hover:underline">Home</Link>
+            {" / "}
+            <span className="text-gray-900 font-medium">Privacy Policy</span>
+          </nav>
 
-            <div className="mt-5 flex flex-wrap items-center gap-2">
-              <span className="rounded-full bg-white/70 border border-black/10 px-3 py-1 text-[11px] text-gray-800 whitespace-nowrap">
-                Last updated: {updatedAt}
-              </span>
-              <span className="rounded-full bg-white/70 border border-black/10 px-3 py-1 text-[11px] text-gray-800 whitespace-nowrap">
-                Contact: info@aipusula.com
-              </span>
-            </div>
-          </section>
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
+          <p className="text-sm text-gray-400 mb-10">Last updated: {LAST_UPDATED}</p>
 
-          {/* Content */}
-          <div className="mt-10 space-y-6">
-            <section className="rounded-[28px] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-xl font-extrabold text-gray-900">
-                1) Information we may collect
-              </h2>
-              <p className="mt-2 text-gray-700 leading-relaxed">
-                We do not require your identity to browse the Site. However, the
-                following data may be collected technically:
+          <div className="space-y-8 text-sm leading-relaxed text-gray-700">
+
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">1. Overview</h2>
+              <p>
+                This Privacy Policy explains how <strong>aipusula.com</strong> ("Site")
+                collects, uses, and protects information from visitors. By using the Site,
+                you agree to the practices described here.
               </p>
-              <ul className="mt-3 list-disc pl-6 text-gray-700 space-y-1">
-                <li>
-                  <b>Technical logs:</b> IP address, browser type, device info,
-                  referrer, timestamps, and similar diagnostics.
-                </li>
-                <li>
-                  <b>Cookies:</b> small files used to improve the browsing
-                  experience.
-                </li>
-                <li>
-                  <b>Analytics (optional):</b> anonymous stats like page views
-                  and clicks.
-                </li>
-              </ul>
             </section>
 
-            <section className="rounded-[28px] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-xl font-extrabold text-gray-900">
-                2) How we may use the information
-              </h2>
-              <ul className="mt-3 list-disc pl-6 text-gray-700 space-y-1">
-                <li>Maintain performance and security</li>
-                <li>Detect issues and improve the Site</li>
-                <li>Enhance user experience</li>
-                <li>Run anonymous, statistical analysis</li>
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">2. Information We Collect</h2>
+              <p className="mb-3">
+                The Site does not have a registration system. The following data is
+                collected automatically:
+              </p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>IP address and browser information (server logs)</li>
+                <li>Pages visited and time spent (analytics tools)</li>
+                <li>Ad interaction data (Google AdSense)</li>
+                <li>Cookie data</li>
               </ul>
+              <p className="mt-3">
+                If you use the contact form, your name, email address, and message are
+                used solely to respond to your inquiry and are not shared with third parties.
+              </p>
             </section>
 
-            <section className="rounded-[28px] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-xl font-extrabold text-gray-900">
-                3) Third-party services (Google/Ads/Analytics)
-              </h2>
-              <p className="mt-2 text-gray-700 leading-relaxed">
-                The Site may use third-party services for measurement, ads, and
-                analytics (e.g., Google Analytics and/or Google AdSense). These
-                services may collect anonymous usage data via cookies and may
-                show personalized ads.
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">3. Cookies</h2>
+              <ul className="list-disc pl-5 space-y-1">
+                <li><strong>Essential cookies:</strong> Required for core site functions.</li>
+                <li><strong>Analytics cookies:</strong> Anonymously measure visitor behavior.</li>
+                <li><strong>Advertising cookies:</strong> Used by Google AdSense for personalized ads.</li>
+              </ul>
+              <p className="mt-3">
+                You can disable cookies in your browser settings; however some features
+                may not work correctly as a result.
               </p>
-              <p className="mt-3 text-gray-700 leading-relaxed">
-                To manage ad personalization:
-                <span className="ml-1">
-                  <a
-                    className="underline decoration-black/20 hover:decoration-black/60"
-                    href="https://adssettings.google.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Google Ads Settings
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">4. Google AdSense</h2>
+              <p className="mb-3">
+                The Site displays ads through Google AdSense. Google may use cookies
+                to serve interest-based ads. For more information:
+              </p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">
+                    Google Privacy Policy
                   </a>
-                </span>
+                </li>
+                <li>
+                  <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">
+                    Manage your Google Ad preferences
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">5. Third-Party Links</h2>
+              <p>
+                The Site links to official websites of reviewed AI tools. We are not
+                responsible for the privacy practices of those sites.
               </p>
             </section>
 
-            <section className="rounded-[28px] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-xl font-extrabold text-gray-900">
-                4) External links
-              </h2>
-              <p className="mt-2 text-gray-700 leading-relaxed">
-                AI Pusula links to official websites of listed tools. We are not
-                responsible for the privacy practices of external sites. We
-                recommend reviewing each site’s privacy policy.
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">6. Data Retention</h2>
+              <p>
+                Server logs are retained for a maximum of 90 days. Messages received
+                via the contact form are deleted within a reasonable period after
+                your inquiry has been resolved.
               </p>
             </section>
 
-            <section className="rounded-[28px] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-xl font-extrabold text-gray-900">
-                5) Cookies
-              </h2>
-              <p className="mt-2 text-gray-700 leading-relaxed">
-                Cookies may be used to remember preferences and improve overall
-                performance. You can delete or block cookies via your browser
-                settings.
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">7. Policy Updates</h2>
+              <p>
+                This policy may be updated periodically. The "Last updated" date at
+                the top of this page will reflect any significant changes. Continued
+                use of the Site constitutes acceptance of the updated policy.
               </p>
             </section>
 
-            <section className="rounded-[28px] border border-black/10 bg-white p-7 shadow-sm">
-              <h2 className="text-xl font-extrabold text-gray-900">
-                6) Contact
-              </h2>
-              <p className="mt-2 text-gray-700 leading-relaxed">
-                For questions about this policy, contact us:
+            <section>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">8. Contact</h2>
+              <p>
+                For questions about this privacy policy:{" "}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-violet-600 hover:underline">
+                  {CONTACT_EMAIL}
+                </a>
               </p>
-              <a
-                href="mailto:info@aipusula.com?subject=AI%20Pusula%20-%20Privacy%20Policy"
-                className="mt-4 inline-flex rounded-full bg-white/85 border border-black/20 px-6 py-3 text-sm font-semibold text-gray-900 hover:bg-white transition shadow-sm"
-              >
-                info@aipusula.com →
-              </a>  
             </section>
 
-            <div className="text-sm text-gray-600">
-              This policy may be updated from time to time. Updates will be
-              posted on this page.
-            </div>
           </div>
         </div>
       </main>
