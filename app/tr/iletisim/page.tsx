@@ -112,9 +112,11 @@ export default function ContactTR() {
               İletişim
             </h1>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              AI Pusula şu an geliştirme aşamasında. Hata bildirimi, yeni araç
-              önerisi, iş birliği / reklam / ana sayfada sabitleme taleplerin
-              için buradayız.
+                AI Pusula ekibiyle iletişime geçmek; yapay zeka araçları hakkında geri bildirimde bulunmak veya iş birliği yapmak için aşağıdaki kanalları kullanabilirsiniz. Vizyonumuz, en güncel ve işlevsel yapay zeka teknolojilerini herkes için erişilebilir kılmaktır.
+                Şu konularda bize yazabilirsiniz:
+                İş Birliği ve Reklam: Projelerinizde birlikte çalışmak veya platformumuzda yer almak için.
+                Araç Önerisi: İncelememizi istediğiniz yeni bir yapay zeka aracı keşfettiyseniz.
+                Teknik Destek ve Hata Bildirimi: Sitemizde karşılaştığınız sorunları çözmemiz için.
             </p>
           </section>
 

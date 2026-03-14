@@ -112,9 +112,11 @@ export default function ContactEN() {
               Contact
             </h1>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              AI Pusula is currently in development. Use this page to report
-              issues, suggest new tools, or discuss partnerships / ads / featured
-              placement.
+                You can use the following channels to contact the AI Pusula team, provide feedback on AI tools, or explore collaboration opportunities. Our vision is to make the most up-to-date and functional artificial intelligence technologies accessible to everyone.
+                You can write to us regarding the following topics:
+                Collaboration and Advertising: To work together on your projects or to request a featured placement on our platform.
+                Tool Recommendations: If you have discovered a new AI tool that you would like us to review.
+                Technical Support and Bug Reports: To help us resolve any issues you encounter on our website.
             </p>
           </section>
 
